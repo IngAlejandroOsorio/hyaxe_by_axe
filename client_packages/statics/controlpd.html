@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap 4 nav-tabs</title>
+  
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+  <script src="libs/jquery-3.3.1.min.js"></script>
+  
+  
+</head>
+
+<body style="background-color: rgba(128, 128, 128, 0.0);">
+
+  <!-- Bootstrap CSS -->
+<!-- jQuery first, then Bootstrap JS. -->
+<!-- Nav tabs -->
+<br><br>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6" style="padding-top: 250px;">
+    <center><br>
+     <div class="card">
+       <div class="card-body" style="background-color:aliceblue;"><br>
+        <a href="#" id="conoluz" class="btn btn-primary">Cono con luz</a>&nbsp;&nbsp;&nbsp;
+        <a href="#" id="cono" class="btn btn-primary">Cono</a>&nbsp;&nbsp;&nbsp;
+        <a href="#" id="pivoteluz" class="btn btn-primary">Pivote con luz</a>&nbsp;&nbsp;&nbsp;
+        <a href="#" id="barrerapaso" class="btn btn-primary">Barrera prohibido el paso</a><br><br>
+        <a href="#" id="barrera" class="btn btn-primary">Barrera</a>&nbsp;&nbsp;&nbsp;
+        <a href="#" id="barreradesvio" class="btn btn-primary">Barrera desvio</a><br><br>
+        <a href="#" id="cerrarproppanel" class="btn btn-danger btn-sm">Cerrar</a>
+        <br><br>
+       </div>
+     </div>
+      <br>
+  </center>
+    
+  </div>
+  <div class="col-md-3"></div>
+</div>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js'></script>
+<script>
+      $('#conoluz').click(() => {
+      mp.trigger('objeto_lspd', 1);
+      });
+      $('#cono').click(() => {
+      mp.trigger('objeto_lspd', 2);
+      });
+      $('#pivoteluz').click(() => {
+      mp.trigger('objeto_lspd', 3);
+      });
+      $('#barrerapaso').click(() => {
+      mp.trigger('objeto_lspd', 4);
+      });
+      $('#barrera').click(() => {
+      mp.trigger('objeto_lspd', 5);
+      });
+      $('#barreradesvio').click(() => {
+      mp.trigger('objeto_lspd', 6);
+      });
+      $('#cerrarproppanel').click(() => {
+      mp.trigger('objeto_lspd', 1000);
+      });
+
+      </script>
+  
+
+</body>
+
+</html>

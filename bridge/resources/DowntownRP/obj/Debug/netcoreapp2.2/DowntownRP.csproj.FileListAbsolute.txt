@@ -1,0 +1,75 @@
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.deps.json
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.dll
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.pdb
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Colorful.Console.dll
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Ben.Demystifier.dll
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\xxHash.dll
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Bootstrapper.xml
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.csprojAssemblyReference.cache
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.AssemblyInfoInputs.cache
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.AssemblyInfo.cs
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.csproj.CopyComplete
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.dll
+C:\Users\user\Documents\condadozero\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.pdb
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.deps.json
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.dll
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.pdb
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Colorful.Console.dll
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Ben.Demystifier.dll
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\xxHash.dll
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Bootstrapper.xml
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.csprojAssemblyReference.cache
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.AssemblyInfoInputs.cache
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.AssemblyInfo.cs
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.csproj.CopyComplete
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.dll
+C:\Users\user\Documents\vespucci-downtown\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.pdb
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.dll
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.deps.json
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.pdb
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Colorful.Console.dll
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Ben.Demystifier.dll
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\xxHash.dll
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Bootstrapper.xml
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.csprojAssemblyReference.cache
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.AssemblyInfoInputs.cache
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.AssemblyInfo.cs
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.csproj.CopyComplete
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.dll
+C:\Users\user\Documents\gtalife\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.pdb
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.deps.json
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.dll
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.pdb
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Colorful.Console.dll
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Ben.Demystifier.dll
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\xxHash.dll
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Bootstrapper.xml
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.AssemblyInfo.cs
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.csproj.CopyComplete
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.dll
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.pdb
+C:\Users\user\Desktop\HYAXE RAGE\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.csprojAssemblyReference.cache
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.deps.json
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.dll
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\DowntownRP.pdb
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Colorful.Console.dll
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Ben.Demystifier.dll
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\xxHash.dll
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\bin\Debug\netcoreapp2.2\Bootstrapper.xml
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.csprojAssemblyReference.cache
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.AssemblyInfoInputs.cache
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.AssemblyInfo.cs
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.csproj.CopyComplete
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.dll
+C:\HYAXE\hyaxe-v\bridge\resources\DowntownRP\obj\Debug\netcoreapp2.2\DowntownRP.pdb

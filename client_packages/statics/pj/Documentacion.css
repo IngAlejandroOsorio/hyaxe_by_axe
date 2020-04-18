@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@media (max-width: 1174px){
+}
+
+.derecha{
+	text-align: right;
+}
+
+textarea {
+  width: 400px;
+  height: 125px;
+}

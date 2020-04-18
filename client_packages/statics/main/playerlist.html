@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Downtown RP | Login</title>
+    <link rel='stylesheet' href='../libs/bootstrap.min.css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src='../libs/jquery-3.3.1.min.js'></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0);
+        }
+        
+        .as-full {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .form-control {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        .iconinput {
+            position: relative;
+            z-index: 1;
+            left: 10px;
+            top: -31px;
+            width: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="container-fluid as-full">
+        <div class="row as-full d-flex justify-content-center">
+            <div class="col-7 align-self-center">
+              <center><img src="../img/logo.png" style="width: 220px;"></center>
+              <table id="usersOn" class="table table-sm table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+    </div>
+  </div>
+</div>
+
+    <script>
+    
+        </script>
+    <!-- partial -->
+    <script src='../libs/bootstrap.min.js'></script>
+    <script>
+    function usersOnline(id, user) {
+      var table = document.getElementById("usersOn");
+      var row = table.insertRow();
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      cell1.innerHTML = user;
+      cell2.innerHTML = id;
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.deps.json
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.dll
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.pdb
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\bin\Debug\netcoreapp2.2\rage-sharp.dll
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.dll
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\bin\Debug\netcoreapp2.2\xxHash.dll
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\bin\Debug\netcoreapp2.2\rage-sharp.xml
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.csprojAssemblyReference.cache
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.AssemblyInfoInputs.cache
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.AssemblyInfo.cs
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.csproj.CopyComplete
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.dll
+C:\Users\user\Documents\condadozero\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.pdb
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.deps.json
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.dll
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.pdb
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\bin\Debug\netcoreapp2.2\rage-sharp.dll
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.dll
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\bin\Debug\netcoreapp2.2\xxHash.dll
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\bin\Debug\netcoreapp2.2\rage-sharp.xml
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.csprojAssemblyReference.cache
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.AssemblyInfoInputs.cache
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.AssemblyInfo.cs
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.csproj.CopyComplete
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.dll
+C:\Users\user\Documents\gtalife\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.pdb
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.deps.json
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.dll
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.pdb
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\bin\Debug\netcoreapp2.2\rage-sharp.dll
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.dll
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\bin\Debug\netcoreapp2.2\xxHash.dll
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\bin\Debug\netcoreapp2.2\rage-sharp.xml
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.csprojAssemblyReference.cache
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.AssemblyInfo.cs
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.csproj.CopyComplete
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.dll
+C:\Users\user\Desktop\HYAXE RAGE\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.pdb
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.deps.json
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.dll
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\bin\Debug\netcoreapp2.2\DowntownRP-cs.pdb
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\bin\Debug\netcoreapp2.2\rage-sharp.dll
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.dll
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.CSharp.dll
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\bin\Debug\netcoreapp2.2\xxHash.dll
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\bin\Debug\netcoreapp2.2\rage-sharp.xml
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.csprojAssemblyReference.cache
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.AssemblyInfoInputs.cache
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.AssemblyInfo.cs
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.csproj.CopyComplete
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.dll
+C:\HYAXE\hyaxe-v\client_packages\cs_packages\obj\Debug\netcoreapp2.2\DowntownRP-cs.pdb

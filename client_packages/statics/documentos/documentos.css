@@ -1,0 +1,33 @@
+/* CSS Document */
+
+.card{
+	background-color:aqua;
+	width: 430px;
+	height: 270px;
+	position: relative;
+	
+}
+.set{
+	position:absolute;
+	left: 300px;
+	top: 20px;
+}
+h1, h3, b {display: inline;}
+.columna{
+	display:inline-block;
+}
+
+#numdiv{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+
+#cerrar{
+	margin-top: 10px;
+	border-radius: 64px 64px 64px 64px;
+	height: 25px;
+	background-color:#F80004;
+	
+	width: 430px;
+}

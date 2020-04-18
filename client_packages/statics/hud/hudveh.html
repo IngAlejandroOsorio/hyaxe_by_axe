@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="STYE.css" rel="stylesheet" type="text/css">
+<link href="speedometer.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="HUD_VEH"><center>
+	<!-- Indicadores Vel/gas -->
+		<img src="../img/HUD/Coche_Nada.png" width="60" height="60" alt=""/><br>
+		<input id="speed"></input>
+		<h2 id="velocimetro">999KM/H</h2>
+		<img src="../img/HUD/BIDON.png" width="30" height="30" alt=""/>
+		<h2 id="gasolina">999L</h2>
+	
+	<!--Puntos Asientos-->
+		<img src="../img/HUD/Maletero.png" width="60" height="60" alt="" class="maletero" id="maletero"/>
+		<img src="../img/HUD/COCHE_VACIO.png" width="6" height="6" alt="" style="position:absolute;left:52px;top:20px" id="conductor"/>
+		<img src="../img/HUD/COCHE_VACIO.png" width="6" height="6" alt="" style="position:absolute;left:62px;top:20px" id="copiloto"/>
+		<img src="../img/HUD/COCHE_VACIO.png" width="6" height="6" alt="" style="position:absolute;left:52px;top:35px" id="tras_conductor"/>
+		<img src="../img/HUD/COCHE_VACIO.png" width="6" height="6" alt="" style="position:absolute;left:62px;top:35px" id="tras_copiloto"/>
+		<img src="../img/HUD/COCHE_USR.png" width="6" height="6" alt="" style="position:absolute;left:52px;top:20px" id="pl"/>
+	
+	<!--Puertas-->
+		<img src="../img/HUD/Puerta_OPEN.png" width="50" height="50" alt="" style="position:absolute;left:11px;top:15px" id="p_conductor"/>
+		<img src="../img/HUD/Puerta_OPEN.png" width="50" height="50" alt="" style="position:absolute;right:10px;top:15px;transform: scaleX(-1);" id="p_copiloto"/>
+		<img src="../img/HUD/Puerta_OPEN.png" width="50" height="50" alt="" style="position:absolute;left:11px;top:30px" id="p_t_conductor"/>
+		<img src="../img/HUD/Puerta_OPEN.png" width="50" height="50" alt="" style="position:absolute;right:10px;top:30px;transform: scaleX(-1);" id="p_t_copiloto"/>
+</center></div>
+	
+	
+	
+</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/speedometer.js"></script>
+	<script>
+	$("#speed").myfunc({divFact:10,eventListenerType:'keyup'}); 
+	
+	function stMaletero (bool){
+		if(bool == true){
+			document.querySelector('#maletero').style.display = "block";
+		}else{
+			document.querySelector('#maletero').style.display = "none";
+		}
+	}
+		
+	function stNums (que, val){
+		switch(que){
+			case "gas":
+				document.querySelector('#gasolina').innerHTML = val+" L";
+				break;
+			case "vel":
+				sp = val;
+				break;
+		
+		}
+		
+	}
+	function setPL(id){
+		var npos = [];
+		switch(id){
+			case 1:
+				npos[0] = document.querySelector('#conductor').style.top;
+				npos[1] = document.querySelector('#conductor').style.left;
+				break;
+			case 2:
+				npos[0] = document.querySelector('#copiloto').style.top;
+				npos[1] = document.querySelector('#copiloto').style.left;
+				break;
+			case 3:
+				npos[0] = document.querySelector('#tras_conductor').style.top;
+				npos[1] = document.querySelector('#tras_conductor').style.left;
+				break;
+			case 4:
+				npos[0] = document.querySelector('#tras_copiloto').style.top;
+				npos[1] = document.querySelector('#tras_copiloto').style.left;
+				break;
+		}
+		document.querySelector('#pl').style.top = npos[0];
+		document.querySelector('#pl').style.left = npos[1];
+				
+	}
+		
+	function setOc(id, type){
+		var src;
+		if(type == false){
+			src = "../img/HUD/COCHE_VACIO.png"
+		}else{
+			src = "../img/HUD/COCHE_LLENO.png"
+		}
+		switch(id){
+			case 1:
+				document.querySelector('#conductor').src = src;
+				break;
+			case 2:
+				document.querySelector('#copiloto').src = src;
+				break;
+			case 3:
+				document.querySelector('#tras_conductor').src = src;
+				break;
+			case 4:
+				document.querySelector('#tras_copiloto').src = src;
+				break;
+		}
+				
+	}
+		
+	function setP(id, type){
+		var src;
+		if(type == false){
+			src = "../img/HUD/Puerta_CLOSED.png"
+		}else{
+			src = "../img/HUD/Puerta_OPEN.png"
+		}
+		switch(id){
+			case 1:
+				document.querySelector('#p_conductor').src = src;
+				break;
+			case 2:
+				document.querySelector('#p_copiloto').src = src;
+				break;
+			case 3:
+				document.querySelector('#p_t_conductor').src = src;
+				break;
+			case 4:
+				document.querySelector('#p_t_copiloto').src = src;
+				break;
+		}
+				
+	}
+	
+	</script>
+	
+
+</html>

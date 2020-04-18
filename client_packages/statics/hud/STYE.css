@@ -1,0 +1,13 @@
+@charset "utf-8";
+.HUD_VEH {
+	position: relative;
+	width: 120px;
+	height: 130px;
+	background-color: aqua;
+}
+.maletero{
+	position: absolute;
+	top:5px;
+	left:30px;
+}
+h1, h2, b {display: inline;}

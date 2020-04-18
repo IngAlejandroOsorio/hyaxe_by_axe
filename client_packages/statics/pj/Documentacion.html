@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="Documentacion.css" rel="stylesheet" type="text/css">
+	<link rel='stylesheet' href='../libs/bootstrap.min.css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src='../libs/jquery-3.3.1.min.js'></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../libs/colorpalettepicker.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid as-full">
+        <div class="row as-full d-flex justify-content-center">
+            
+            <div class="col-6 align-self-center col-xl-8">
+                <br>
+                <div class="card" style="background-color: rgba(255, 255, 255, 0.8)">
+                    <div class="card-body text-white">
+
+                            <div class="card" style="background-color: rgba(0, 0, 0, 0.8);">
+                                    <div class="card-body text-white">
+										<img src="./../img/LSPD.png" width="200" height="202" alt=""/>
+			
+									<img src="./../img/logo.png" style="float:right;" alt="" width="265" height="200"/>
+                                      <center>
+										  
+										  <h1> Solicitud de documentación:</h1>
+										  Nombre:     <input type="text" widht=> <br>
+										  Fecha de Nacimiento: <input type="date" widht=> <br>
+										  Tipo: 
+										  <input list="tipos" name="Tipos Documentación">
+										  			<datalist id="tipos">
+													  <option value="Sin Papeles">
+										  			  <option value="Residencia Temporal">
+													  <option value="Residencia Permanente">
+													  <option value="Nacionalidad">
+													</datalist> <br>
+										  <h2>Escribe tu historia</h2>
+										  <textarea id="historia"></textarea>
+										  <h2>De que estudios y/o experiencia tienes? "Legal"</h2>
+										  <textarea id="Academico"></textarea>
+										  
+										  <h2>De que estudios y/o experiencia tienes? "Ilegal"</h2>
+										  <textarea id="Ilegal_EXP"> Esta información es orientativa y está disponible desde la PCU para facilitar tener fija una historia. Es inaccesible IC para la policia.</textarea>
+                                    </center>
+                                </div>
+                                </div>
+
+                                <br>
+                                
+                                <br>
+                                
+                                <button id="returnBtn" class="btn btn-primary btn-block">Volver</button>
+                                <button id="exitBtn" class="btn btn-danger btn-block">Salir</button>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
