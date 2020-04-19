@@ -45,6 +45,10 @@
                             <div class="form-group">
                                   </div>
                                   <div class="form-group">
+                                    <label for="exampleInputPassword1">¿Qué nombre tiene tu personaje?</label>
+                                    <input type="number" class="form-control" id="charname" placeholder="Pepito Perez">
+                                  </div>
+                                  <div class="form-group">
                                     <label for="exampleInputPassword1">¿Qué edad tiene tu personaje?</label>
                                     <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Ej: 21">
                                   </div>
@@ -253,7 +257,7 @@
                               </div>
                         <div class="card-body text-white">
                                 <label for="customRange3">Tipo</label>
-                                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="camisaTipo">
+                                <input type="range" class="custom-range" min="0" max="93" step="1" id="camisaTipo">
                                 <label for="customRange3">Color</label>
                                 <div id="colorCamisaPaleta"></div>
                         </div>
@@ -424,59 +428,59 @@
         });
 
         $('#colorLabiosPaleta').colorPalettePicker({
-			lines:4,
-			onSelected: function(color){
-				console.log(color);
-			}
+      lines:4,
+      onSelected: function(color){
+        console.log(color);
+      }
         });
 
         $('#colorPeloPaleta').colorPalettePicker({
-			lines:4,
-			onSelected: function(color){
-				console.log(color);
-			}
+      lines:4,
+      onSelected: function(color){
+        console.log(color);
+      }
         });
         $('#colorBarbaPaleta').colorPalettePicker({
-			lines:4,
-			onSelected: function(color){
-				console.log(color);
-			}
+      lines:4,
+      onSelected: function(color){
+        console.log(color);
+      }
         });
         $('#colorMaquillajePaleta').colorPalettePicker({
-			lines:4,
-			onSelected: function(color){
-				console.log(color);
-			}
-		});
+      lines:4,
+      onSelected: function(color){
+        console.log(color);
+      }
+    });
         $('#colorCamisaPaleta').colorPalettePicker({
-			lines:4,
-			onSelected: function(color){
-				console.log(color);
-			}
-		});
+      lines:4,
+      onSelected: function(color){
+        console.log(color);
+      }
+    });
         $('#colorAbajoPaleta').colorPalettePicker({
-			lines:4,
-			onSelected: function(color){
-				console.log(color);
-			}
-		});
+      lines:4,
+      onSelected: function(color){
+        console.log(color);
+      }
+    });
         $('#colorArribaPaleta').colorPalettePicker({
-			lines:4,
-			onSelected: function(color){
-				console.log(color);
-			}
-		});
+      lines:4,
+      onSelected: function(color){
+        console.log(color);
+      }
+    });
         $('#colorPantalonesPaleta').colorPalettePicker({
-			lines:4,
-			onSelected: function(color){
-				console.log(color);
-			}
-		});
+      lines:4,
+      onSelected: function(color){
+        console.log(color);
+      }
+    });
         $('#colorShoesPaleta').colorPalettePicker({
-			lines:4,
-			onSelected: function(color){
-				console.log(color);
-			}
+      lines:4,
+      onSelected: function(color){
+        console.log(color);
+      }
         });
         
         $('#rotarPersonaje').click(() => {
@@ -493,10 +497,12 @@
         
         $('#btnHombre').click(() => {
             console.log("hombre");
+            mp.trigger("ChangeCharacterGender", 0);
         });
 
         $('#btnMujer').click(() => {
             console.log("mujer");
+            mp.trigger("ChangeCharacterGender", 1);
         });
 
         $('#genesPaternos').click(() => {
@@ -612,8 +618,15 @@
         });
 
         $('#camisaTipo').click(() => {
-            console.log($('#camisaTipo').val());
+            //console.log($('#camisaTipo').val());
+          
         });
+
+          $(document).on('input', '#camisaTipo', function() {
+
+              mp.trigger("resource.Sounds.PlaySelectSound");
+                mp.trigger("SelectCharacterClothes", JSON.stringify(character_components[gender][0][current_item_variation]));
+          });        
 
         $('#conjuntoAbajo').click(() => {
             console.log($('#conjuntoAbajo').val());
@@ -632,11 +645,13 @@
         });
 
         $('#crearBtn').click(() => {
-            $("#modalError").modal();
+            mp.trigger("finishCharacterCreation", $("#charname").val());
         });
 
         $('#volverBtn').click(() => {
             console.log("volver");
+            mp.trigger("resource.Sounds.PlaySelectSound");
+            mp.trigger("GoBackToSelection");
         });
 
     </script>

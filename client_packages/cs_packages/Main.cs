@@ -7,7 +7,7 @@ using RAGE.Elements;
 namespace DowntownRP_cs
 {
     public class Main : Events.Script
-    {
+    {//solo un coment y ya
         public Main()
         {
             Events.OnGuiReady += OnGuiReadyEvent;

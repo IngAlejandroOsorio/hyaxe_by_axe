@@ -12,7 +12,7 @@ require('fly.js');
 require('doorsPD.js');
 require('death.js');
 require('attachs.js');
-require('./velocimetro_axe/index.js');
+require('./axe/velocimetro_axe/index.js');
 
 mp.gui.chat.show(false);
 let chatbox = mp.browsers.new('package://chat_old/index.html');
