@@ -1,4 +1,5 @@
-require('character/creator.js');
+require('./axe/creador/creador.js');
+//require('character/creator.js');
 require('character/selector.js');
 require('character/animations/anim.js');
 require('hud/index.js');
@@ -14,10 +15,11 @@ require('death.js');
 require('attachs.js');
 require('./axe/velocimetro_axe/index.js');
 
+
 mp.gui.chat.show(false);
-let chatbox = mp.browsers.new('package://chat_old/index.html');
-chatbox.markAsChat();
-chatbox.execute('show()');
+var chatbox2 = mp.browsers.new('package://chat_old/index.html');
+chatbox2.markAsChat();
+chatbox2.execute('show()');
 
 mp.game.vehicle.defaultEngineBehaviour = false;
 mp.game.player.restoreStamina(1.0);

@@ -8253,3 +8253,1604 @@ MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@x' has already b
    at async Task DowntownRP.Axe.Creador.Main.UpdateUserPosition(int idpj, double x, double y, double z) in C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\resources\DowntownRP\Axe\Creador\Main.cs:line 399
    at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
 =========================================================
+
+==================[23/04/2020 1:20:26 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:20:27 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:44:27 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:44:27 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:45:35 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:45:35 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:47:22 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:47:23 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:48:11 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:48:12 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:48:37 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:48:38 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:48:58 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:48:59 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:49:34 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:49:34 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:50:31 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:50:32 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:54:33 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:54:33 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:54:33 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@x' has already been defined.
+   at MySqlParameter MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, int index)
+=========================================================
+
+==================[23/04/2020 1:54:33 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@x' has already been defined.
+   at MySqlParameter MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, int index)
+   at async Task DowntownRP.Axe.Creador.Main.UpdateUserPosition(int idpj, double x, double y, double z) in C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\resources\DowntownRP\Axe\Creador\Main.cs:line 399
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[23/04/2020 1:55:48 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 1:55:48 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 2:55:49 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 2:55:49 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 2:59:45 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 2:59:46 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 3:58:19 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 3:58:20 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 4:12:10 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 4:12:10 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 4:14:05 p. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+=========================================================
+
+==================[23/04/2020 4:14:05 p. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at SafeFileHandle System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options)
+   at async void GTANetworkInternals.Program.FileWriteAsync(string filePath, string messaage)
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[23/04/2020 4:14:05 p. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at SafeFileHandle System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options)
+   at async void GTANetworkInternals.Program.FileWriteAsync(string filePath, string messaage)
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[23/04/2020 4:14:14 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 4:14:15 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 4:25:39 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 4:25:40 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 4:31:24 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 4:31:24 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 4:31:24 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@x' has already been defined.
+   at MySqlParameter MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, int index)
+=========================================================
+
+==================[23/04/2020 4:31:24 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@x' has already been defined.
+   at MySqlParameter MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, int index)
+   at async Task DowntownRP.Axe.Creador.Main.UpdateUserPosition(int idpj, double x, double y, double z) in C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\resources\DowntownRP\Axe\Creador\Main.cs:line 399
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[23/04/2020 5:20:19 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 5:20:20 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 9:19:39 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 9:19:40 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 9:23:25 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 9:23:25 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 9:43:41 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 9:43:42 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 9:51:14 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 9:51:15 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 10:18:41 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 10:18:42 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 10:19:10 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 10:19:11 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 10:51:46 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 10:51:46 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 11:00:16 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 11:00:16 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 11:04:21 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 11:04:22 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 11:10:23 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 11:10:23 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 11:15:41 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 11:15:41 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[23/04/2020 11:59:59 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 12:00:00 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 12:48:19 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 12:48:20 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 12:55:28 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 12:55:29 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 1:04:06 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 1:04:07 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 12:05:46 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 12:05:47 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 12:31:16 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[24/04/2020 12:31:17 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 12:26:58 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 12:26:58 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 1:19:16 a. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+=========================================================
+
+==================[25/04/2020 1:19:16 a. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at SafeFileHandle System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options)
+   at async void GTANetworkInternals.Program.FileWriteAsync(string filePath, string messaage)
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 1:19:16 a. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at SafeFileHandle System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options)
+   at async void GTANetworkInternals.Program.FileWriteAsync(string filePath, string messaage)
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 1:19:25 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 1:19:26 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 1:21:00 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 1:21:00 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 1:21:00 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@x' has already been defined.
+   at MySqlParameter MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, int index)
+=========================================================
+
+==================[25/04/2020 1:21:00 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@x' has already been defined.
+   at MySqlParameter MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, int index)
+   at async Task DowntownRP.Axe.Creador.Main.UpdateUserPosition(int idpj, double x, double y, double z) in C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\resources\DowntownRP\Axe\Creador\Main.cs:line 399
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:17:13 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 7:17:14 p. m.]==================
+System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:17:15 p. m.]==================
+System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+=========================================================
+
+==================[25/04/2020 7:17:15 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 7:17:15 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 7:17:15 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+=========================================================
+
+==================[25/04/2020 7:17:15 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[25/04/2020 7:17:15 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[25/04/2020 7:17:15 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+=========================================================
+
+==================[25/04/2020 7:17:15 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at Task System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:17:15 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at Task System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+   at async void DowntownRP.World.Banks.DatabaseFunctions.SpawnBank() in C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\resources\DowntownRP\World\Banks\DatabaseFunctions.cs:line 17
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:17:15 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at Task System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+   at async void DowntownRP.World.Banks.DatabaseFunctions.SpawnBank() in C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\resources\DowntownRP\World\Banks\DatabaseFunctions.cs:line 17
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:18:53 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at Task System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at Task System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+   at async void DowntownRP.World.Banks.DatabaseFunctions.SpawnBank() in C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\resources\DowntownRP\World\Banks\DatabaseFunctions.cs:line 17
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:18:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at bool System.Threading.Tasks.Task.Wait(int millisecondsTimeout, CancellationToken cancellationToken)
+   at Stream MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at void System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at void System.Threading.Tasks.TaskFactory<TResult>.FromAsyncCoreLogic(IAsyncResult iar, Func<IAsyncResult, TResult> endFunction, Action<IAsyncResult> endAction, Task<TResult> promise, bool requiresSynchronization)<---
+
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at void MySql.Data.MySqlClient.MySqlConnection.Open()
+   at Task System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+   at async void DowntownRP.World.Banks.DatabaseFunctions.SpawnBank() in C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\resources\DowntownRP\World\Banks\DatabaseFunctions.cs:line 17
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:20:08 p. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+=========================================================
+
+==================[25/04/2020 7:20:08 p. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at SafeFileHandle System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options)
+   at async void GTANetworkInternals.Program.FileWriteAsync(string filePath, string messaage)
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:20:08 p. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at SafeFileHandle System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options)
+   at async void GTANetworkInternals.Program.FileWriteAsync(string filePath, string messaage)
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[25/04/2020 7:21:04 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 7:21:05 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 8:22:15 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 8:22:15 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 8:41:51 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 8:41:52 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 8:44:08 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 8:44:08 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 9:03:31 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 9:03:31 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 9:08:58 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 9:08:59 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 9:54:07 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 9:54:08 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 10:11:38 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 10:11:38 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 11:52:23 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 11:52:24 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 11:55:33 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[25/04/2020 11:55:33 p. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:10:12 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:10:13 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:26:47 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:26:47 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:28:39 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:28:39 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:29:32 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:29:32 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:37:47 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:37:48 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:38:57 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:38:58 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:38:59 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:38:59 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:39:19 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:39:19 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:41:46 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:41:46 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 12:44:11 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:11 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:13 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:13 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:14 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:14 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:14 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:15 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:15 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:16 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:16 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:17 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:17 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:18 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 12:44:18 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 1:12:28 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:12:29 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:13:17 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:13:18 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:14:08 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:14:08 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:15:16 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:15:16 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:18:58 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:18:59 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:20:55 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:20:55 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:28:29 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:28:29 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:36:38 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:36:38 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:40:51 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:40:52 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:46:56 a. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+=========================================================
+
+==================[26/04/2020 1:46:56 a. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at SafeFileHandle System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options)
+   at async void GTANetworkInternals.Program.FileWriteAsync(string filePath, string messaage)
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[26/04/2020 1:46:56 a. m.]==================
+System.IO.IOException: The process cannot access the file 'C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\server_logs.txt' because it is being used by another process.
+   at SafeFileHandle System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at SafeFileHandle System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at new System.IO.FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options)
+   at async void GTANetworkInternals.Program.FileWriteAsync(string filePath, string messaage)
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[26/04/2020 1:47:52 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:47:52 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:52:17 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:52:18 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:54:17 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:54:17 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:56:14 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:56:14 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:58:31 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:58:31 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:59:01 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:59:01 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'MySql.Data.resources'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 1:59:01 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@x' has already been defined.
+   at MySqlParameter MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, int index)
+=========================================================
+
+==================[26/04/2020 1:59:01 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@x' has already been defined.
+   at MySqlParameter MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, int index)
+   at async Task DowntownRP.Axe.Creador.Main.UpdateUserPosition(int idpj, double x, double y, double z) in C:\Users\Alejo\Documents\hyaxe_by_axe\bridge\resources\DowntownRP\Axe\Creador\Main.cs:line 399
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[26/04/2020 2:06:19 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 2:06:20 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 2:43:46 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 2:43:47 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 2:44:55 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 2:44:55 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 2:48:10 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 2:48:10 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 3:36:43 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 3:36:43 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 4:08:25 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 4:08:25 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 4:20:16 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 4:20:16 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 4:28:06 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 4:28:06 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 4:33:19 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 4:33:19 a. m.]==================
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at void GTANetworkInternals.RemoteEventParser.Parse(Client sender, ulong eventNameHash, object[] args)
+=========================================================
+
+==================[26/04/2020 4:36:20 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================
+
+==================[26/04/2020 4:36:20 a. m.]==================
+System.IO.FileNotFoundException: Could not load the specified file.
+File name: 'Renci.SshNet'
+   at Assembly System.Runtime.Loader.AssemblyLoadContext.ResolveUsingEvent(AssemblyName assemblyName)
+=========================================================

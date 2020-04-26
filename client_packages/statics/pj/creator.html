@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Downtown RP | Login</title>
-    <link rel='stylesheet' href='../libs/bootstrap.min.css'>
+    <title>Hy AxE | Login</title>
+    <link rel='stylesheet' href='./axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='./axe/axe.css'>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src='../libs/jquery-3.3.1.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js" type="text/javascript"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
     <script src="../libs/colorpalettepicker.js"></script>
     <style>
@@ -26,7 +28,7 @@
 
         /* Darker background on mouse-over */
         .butt:hover {
-        background-color: RoyalBlue;
+          background-color: #68040e;
         }
     </style>
 
@@ -38,15 +40,15 @@
         <div class="row">
             <div class="col-md-3">
                 <br>
-                <center><img src="../img/logo.png" class="img-fluid img-responsive" style="height: 120px;"></center>
+                <center><img src="../img/logoaxe.png" class="img-fluid img-responsive"></center>
                 <br>
                 <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                     <div class="card-body text-white">
                             <div class="form-group">
                                   </div>
                                   <div class="form-group">
-                                    <label for="exampleInputPassword1">¿Qué nombre tiene tu personaje?</label>
-                                    <input type="number" class="form-control" id="charname" placeholder="Pepito Perez">
+                                    <label for="charname">¿Qué nombre tiene tu personaje?</label>
+                                    <input type="text" class="form-control" id="charname" placeholder="Formato: Nombre Apellidos (Sin _)">
                                   </div>
                                   <div class="form-group">
                                     <label for="exampleInputPassword1">¿Qué edad tiene tu personaje?</label>
@@ -61,7 +63,6 @@
                                 <button class="butt" id="pj-settings">👤</button>
                                 <button class="butt" id="face-settings">😶</button>
                                 <button class="butt" id="hair-settings">✂️</button>
-                                <button class="butt" id="lips-settings">👄</button>
                                 <button class="butt" id="shirt-settings">👕</button>
                                 <button class="butt" id="jeans-settings">👖</button>
                                 <button class="butt" id="shoes-settings">👟</button>
@@ -72,11 +73,11 @@
                     <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                             <div class="card-body text-white">
                                             <label for="customRange3">Rotar personaje</label>
-                                            <input type="range" class="custom-range" min="0" max="5" step="0.5" id="rotarPersonaje">
+                                            <input type="range" class="custom-range" min="0" max="360" step="10" oninput="set_rot(this.value)" onchange="set_rot(this.value)" id="rotarPersonaje">
                                                 <label for="customRange3">Alejar/acercar</label>
-                                                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="alejarPersonaje">
+                                                <input type="range" class="custom-range" min="-999.542" max="-996.999" step="0.02" oninput="alejar_(this.value)" onchange="alejar_(this.value)" id="alejarPersonaje">
                                                     <label for="customRange3">Subir/bajar</label>
-                                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="subirPersonaje">
+                                                    <input type="range" class="custom-range" min="-99.90404" max="-97.00404" step="0.02" oninput="alejar_2(this.value)" onchange="alejar_2(this.value)" id="subirPersonaje">
                             </div>
         
                         </div><br>
@@ -103,11 +104,11 @@
                                   </div>
                             <div class="card-body text-white">
                                     <label for="customRange3">Genes paternos</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="genesPaternos">
+                                    <input type="range" class="custom-range" min="0" max="45" step="1" id="genesPaternos" oninput="gen_pat(this.value)" onchange="gen_pat(this.value)">
                                     <label for="customRange3">Genes maternos</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="genesMaternos">
+                                    <input type="range" class="custom-range" min="0" max="45" step="1" id="genesMaternos" oninput="gen_mat(this.value)" onchange="gen_mat(this.value)">
                                     <label for="customRange3">Mix</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="genesMix">
+                                    <input type="range" class="custom-range" min="0" max="9" step="1" id="genesMix" oninput="gen_mix(this.value)" onchange="gen_mix(this.value)">
                             </div>
                       </div>
                       <br>
@@ -117,11 +118,11 @@
                                   </div>
                             <div class="card-body text-white">
                                     <label for="customRange3">Etnia paterna</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="etniaPaterna">
+                                    <input type="range" class="custom-range" min="0" max="45" step="1" id="etniaPaterna" oninput="etn_pat(this.value)" onchange="etn_pat(this.value)">
                                     <label for="customRange3">Etnia materna</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="etniaMaterna">
+                                    <input type="range" class="custom-range" min="0" max="45" step="1" id="etniaMaterna" oninput="etn_mat(this.value)" onchange="etn_mat(this.value)">
                                     <label for="customRange3">Mix</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="etniaMix">
+                                    <input type="range" class="custom-range" min="0" max="9" step="1" id="etniaMix" oninput="etn_mix(this.value)" onchange="etn_mix(this.value)">
                             </div>
                             
                       </div>
@@ -134,15 +135,15 @@
                                   </div>
                             <div class="card-body text-white">
                                     <label for="customRange3">Ancho</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="narizAncho">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" id="selCaraAncho" oninput="selCara(0,this.value)" onchange="selCara(0,this.value)">
                                     <label for="customRange3">Alto</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="narizAlto">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" id="selCaraAlto" oninput="selCara(1,this.value)" onchange="selCara(1,this.value)">
                                     <label for="customRange3">Largo</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="narizLargo">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" id="selCaraLargo" oninput="selCara(2,this.value)" onchange="selCara(2,this.value)">
                                     <label for="customRange3">Punta</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="narizPunta">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" id="selCaraLargo" oninput="selCara(4,this.value)" onchange="selCara(4,this.value)">
                                     <label for="customRange3">Dorso</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="narizDorso">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" id="selCaraLargo" oninput="selCara(3,this.value)" onchange="selCara(3,this.value)">
                             </div>
                       </div>
                       <br>
@@ -152,11 +153,11 @@
                                   </div>
                             <div class="card-body text-white">
                                     <label for="customRange3">Tamaño</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="pomulosTamaño">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" oninput="selCara(10,this.value)" onchange="selCara(10,this.value)" id="pomulosTamaño">
                                     <label for="customRange3">Ancho</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="pomulosAncho">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" oninput="selCara(9,this.value)" onchange="selCara(9,this.value)"id="pomulosAncho">
                                     <label for="customRange3">Alto</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="pomulosAlto">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" oninput="selCara(8,this.value)" onchange="selCara(8,this.value)" id="pomulosAlto">
                             </div>
                       </div>
                       <br>
@@ -166,9 +167,9 @@
                                   </div>
                             <div class="card-body text-white">
                                     <label for="customRange3">Tamaño</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="mandibulaTamaño">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" oninput="selCara(14,this.value)" onchange="selCara(14,this.value)" id="mandibulaTamaño">
                                     <label for="customRange3">Ancho</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="mandibulaAncho">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" oninput="selCara(13,this.value)" onchange="selCara(13,this.value)" step="0.5" id="mandibulaAncho">
                             </div>
                       </div>
                       <br>
@@ -178,13 +179,13 @@
                                   </div>
                             <div class="card-body text-white">
                                     <label for="customRange3">Tamaño</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="barbillaTamaño">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" oninput="selCara(15,this.value)" onchange="selCara(15,this.value)" step="0.5" id="barbillaTamaño">
                                     <label for="customRange3">Ancho</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="barbillaAncho">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" oninput="selCara(17,this.value)" onchange="selCara(17,this.value)" step="0.5" id="barbillaAncho">
                                     <label for="customRange3">Alto</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="barbillaAlto">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" oninput="selCara(16,this.value)" onchange="selCara(16,this.value)" step="0.5" id="barbillaAlto">
                                     <label for="customRange3">Curva</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="barbillaCurva">
+                                    <input type="range" class="custom-range" min="-1" max="1" step="0.1" oninput="selCara(18,this.value)" onchange="selCara(18,this.value)" step="0.5" id="barbillaCurva">
                             </div>
                       </div>
                       <br>
@@ -197,9 +198,9 @@
                                 </div>
                           <div class="card-body text-white">
                                   <label for="customRange3">Tipo</label>
-                                  <input type="range" class="custom-range" min="0" max="5" step="0.5" id="peloTipo">
+                                  <input type="range" class="custom-range" min="0" max="36" step="1" oninput="pelo_tipo(this.value)" onchange="pelo_tipo(this.value)" id="peloTipo">
                                   <label for="customRange3">Brillo</label>
-                                  <input type="range" class="custom-range" min="0" max="5" step="0.5" id="peloBrillo">
+                                  <input type="range" class="custom-range" min="0" max="63" step="1" oninput="pelo_ilu(this.value)" onchange="pelo_ilu(this.value)" id="peloBrillo">
                                   <label for="customRange3">Color</label>
                                   <div id="colorPeloPaleta"></div>
                           </div>
@@ -207,49 +208,29 @@
                     <br>
                     <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                             <div class="alert alert-primary" role="alert">
-                                    Barba
+                                    Barba / Labios
                                   </div>
                             <div class="card-body text-white">
                                     <label for="customRange3">Tipo</label>
-                                  <input type="range" class="custom-range" min="0" max="5" step="0.5" id="barbaTipo">
-                                  <label for="customRange3">Brillo</label>
-                                  <input type="range" class="custom-range" min="0" max="5" step="0.5" id="barbaBrillo">
+                                  <input type="range" class="custom-range" min="0" max="29" step="1" oninput="barba_tipo(this.value)" onchange="barba_tipo(this.value)" id="barbaTipo">
                                   <label for="customRange3">Color</label>
                                   <div id="colorBarbaPaleta"></div>
                             </div>
                       </div>
                     <br>
-             </div>
-             <div id="creator-lips">
                     <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Labios
-                                  </div>
-                            <div class="card-body text-white">
-                                    <label for="customRange3">Grosor</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="labiosGrosor">
-                                    <label for="customRange3">Labial</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="labiosLabial">
-                                    <label for="customRange3">Opacidad</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="labiosOpacidad">
-                                    <label for="customRange3">Color</label>
-                                    <div id="colorLabiosPaleta"></div>
-                            </div>
-                      </div>
-                      <br>
-                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                             <div class="alert alert-primary" role="alert">
                                     Maquillaje
                                   </div>
                             <div class="card-body text-white">
                                     <label for="customRange3">Tipo</label>
-                                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="maquillajeTipo">
+                                    <input type="range" class="custom-range" min="0" max="74" step="1" oninput="maqui_tipo(this.value)" onchange="maqui_tipo(this.value)" id="maquillajeTipo">
                                     <label for="customRange3">Color</label>
                                     <div id="colorMaquillajePaleta"></div>
                             </div>
                       </div>
-                      <br>
              </div>
+
              <div id="creator-shirt">
                 <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                         <div class="alert alert-primary" role="alert">
@@ -257,9 +238,9 @@
                               </div>
                         <div class="card-body text-white">
                                 <label for="customRange3">Tipo</label>
-                                <input type="range" class="custom-range" min="0" max="93" step="1" id="camisaTipo">
-                                <label for="customRange3">Color</label>
-                                <div id="colorCamisaPaleta"></div>
+                                <input type="range" class="custom-range" min="0" max="93" step="1" oninput="ropa_tipo(0,this.value)" onchange="ropa_tipo(0,this.value)" id="camisaTipo"><br>
+                                <label for="customRange3">Hoodies / Vestidos</label>
+                                <input type="range" class="custom-range" min="0" max="50" step="1" oninput="ropa_tipo(1,this.value)" onchange="ropa_tipo(1,this.value)" id="camisaTipo2">
                         </div>
                   </div>
                   <br>
@@ -269,13 +250,9 @@
                               </div>
                         <div class="card-body text-white">
                                 <label for="customRange3">Parte inferior</label>
-                                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="conjuntoAbajo">
-                                <label for="customRange3">Color</label>
-                                <div id="colorAbajoPaleta"></div><br>
+                                <input type="range" class="custom-range" min="0" max="30" step="1" oninput="ropa_tipo(2,this.value)" onchange="ropa_tipo(2,this.value)" id="conjuntoAbajo"><br>
                                 <label for="customRange3">Parte superior</label>
-                                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="conjuntoArriba">
-                                <label for="customRange3">Color</label>
-                                <div id="colorArribaPaleta"></div>
+                                <input type="range" class="custom-range" min="0" max="30" step="1" oninput="ropa_vari(this.value)" onchange="ropa_vari(this.value)" id="conjuntoArriba">
                         </div>
                   </div>
                   <br>
@@ -286,10 +263,10 @@
                             Pantalones
                           </div>
                     <div class="card-body text-white">
-                            <label for="customRange3">Tipo</label>
-                            <input type="range" class="custom-range" min="0" max="5" step="0.5" id="pantalonesTipo">
-                            <label for="customRange3">Color</label>
-                            <div id="colorPantalonesPaleta"></div>
+                            <label for="customRange3">Largos</label>
+                            <input type="range" class="custom-range" min="0" max="56" step="1" oninput="ropa_tipo(3,this.value)" onchange="ropa_tipo(3,this.value)" id="pantalonesTipo"><br>
+                            <label for="customRange3">Cortos</label>
+                            <input type="range" class="custom-range" min="0" max="12" step="1" oninput="ropa_tipo(4,this.value)" onchange="ropa_tipo(4,this.value)" id="pantalonesTipo2">
                     </div>
               </div>
               <br>
@@ -300,10 +277,12 @@
                         Zapatos
                       </div>
                 <div class="card-body text-white">
-                        <label for="customRange3">Tipo</label>
-                        <input type="range" class="custom-range" min="0" max="5" step="0.5" id="zapatosTipo">
-                        <label for="customRange3">Color</label>
-                        <div id="colorShoesPaleta"></div>
+                        <label for="customRange3">Zapatos</label>
+                        <input type="range" class="custom-range" min="0" max="20" step="1" oninput="ropa_tipo(5,this.value)" onchange="ropa_tipo(5,this.value)" id="zapatosTipo"><br>
+                        <label for="customRange3">Deportivos</label>
+                        <input type="range" class="custom-range" min="0" max="31" step="1" oninput="ropa_tipo(6,this.value)" onchange="ropa_tipo(6,this.value)" id="zapatosTipo2"><br>
+                        <label for="customRange3">Playa</label>
+                        <input type="range" class="custom-range" min="0" max="4" step="1" oninput="ropa_tipo(7,this.value)" onchange="ropa_tipo(7,this.value)" id="zapatosTipo3">
                 </div>
           </div>
           <br>
@@ -333,9 +312,31 @@
           </div>
         </div>
       </div>
-
+    <script src="assets/js/character-clothes.js"></script>
+    <script src="assets/js/colores.js"></script>
     <script>
         var current;
+        var genero = 0;
+
+        //Rasgos
+        var genMat = 0;
+        var genPat = 0;        
+        var faceMix = 0;
+        var etnPat = 0;
+        var etnMat = 0;
+        var etnMix = 0;
+        var peloCol = 0;
+        var peloTipo = 0;
+        var peloIlu = 0;
+        var barbaTipo = 0;
+        var barbaCol = 0;
+        var maquiTipo = 0;
+        var maquiCol = 0;
+        var ropaTipo = 0;
+        var ropaVari = 0;
+        var alejar = -998.5422; 
+        var alejar2 = -99.00404;
+        var rot = 176.891;
 
         function showError(error){
             document.getElementById("mensajeError").innerHTML = error;
@@ -427,37 +428,37 @@
             }
         });
 
-        $('#colorLabiosPaleta').colorPalettePicker({
+      $('#colorLabiosPaleta').colorPalettePicker({
       lines:4,
+      buttonPreviewName:"labiox",
       onSelected: function(color){
-        console.log(color);
+        labio_color(colores(color));
       }
         });
 
         $('#colorPeloPaleta').colorPalettePicker({
       lines:4,
+      buttonPreviewName:"pelox",
       onSelected: function(color){
-        console.log(color);
+        pelo_color(colores(color));
       }
         });
         $('#colorBarbaPaleta').colorPalettePicker({
       lines:4,
+      buttonPreviewName:"barbax",
       onSelected: function(color){
-        console.log(color);
+        barba_color(colores(color));
       }
         });
         $('#colorMaquillajePaleta').colorPalettePicker({
       lines:4,
+      buttonPreviewName:"maquix",
       onSelected: function(color){
-        console.log(color);
+        maqui_color(colores(color));
       }
     });
-        $('#colorCamisaPaleta').colorPalettePicker({
-      lines:4,
-      onSelected: function(color){
-        console.log(color);
-      }
-    });
+
+
         $('#colorAbajoPaleta').colorPalettePicker({
       lines:4,
       onSelected: function(color){
@@ -483,13 +484,6 @@
       }
         });
         
-        $('#rotarPersonaje').click(() => {
-            console.log($('#rotarPersonaje').val());
-        });
-
-        $('#alejarPersonaje').click(() => {
-            console.log($('#alejarPersonaje').val());
-        });
 
         $('#subirPersonaje').click(() => {
             console.log($('#subirPersonaje').val());
@@ -497,155 +491,130 @@
         
         $('#btnHombre').click(() => {
             console.log("hombre");
+            genero = 0;
+            $('#barbaTipo').attr('max', 29);
             mp.trigger("ChangeCharacterGender", 0);
         });
 
         $('#btnMujer').click(() => {
             console.log("mujer");
+            genero = 1;
+            $('#barbaTipo').attr('max', 12);
             mp.trigger("ChangeCharacterGender", 1);
         });
 
-        $('#genesPaternos').click(() => {
-            console.log($('#genesPaternos').val());
-        });
-
-        $('#genesMaternos').click(() => {
-            console.log($('#genesMaternos').val());
-        });
-
-        $('#genesMix').click(() => {
-            console.log($('#genesMix').val());
-        });
-
-        $('#etniaPaterna').click(() => {
-            console.log($('#etniaPaterna').val());
-        });
-
-        $('#etniaMaterna').click(() => {
-            console.log($('#etniaMaterna').val());
-        });
-
-        $('#etniaMix').click(() => {
-            console.log($('#etniaMix').val());
-        });
-
-        $('#narizAncho').click(() => {
-            console.log($('#narizAncho').val());
-        });
-
-        $('#narizAlto').click(() => {
-            console.log($('#narizAlto').val());
-        });
-
-        $('#narizLargo').click(() => {
-            console.log($('#narizLargo').val());
-        });
-
-        $('#narizPunta').click(() => {
-            console.log($('#narizPunta').val());
-        });
-
-        $('#narizDorso').click(() => {
-            console.log($('#narizDorso').val());
-        });
-
-        $('#pomulosTamaño').click(() => {
-            console.log($('#pomulosTamaño').val());
-        });
-
-        $('#pomulosAncho').click(() => {
-            console.log($('#pomulosAncho').val());
-        });
-
-        $('#pomulosAlto').click(() => {
-            console.log($('#pomulosAlto').val());
-        });
-
-        $('#mandibulaTamaño').click(() => {
-            console.log($('#mandibulaTamaño').val());
-        });
-
-        $('#mandibulaAncho').click(() => {
-            console.log($('#mandibulaAncho').val());
-        });
-
-        $('#barbillaTamaño').click(() => {
-            console.log($('#barbillaTamaño').val());
-        });
-
-        $('#barbillaAncho').click(() => {
-            console.log($('#barbillaAncho').val());
-        });
-
-        $('#barbillaAlto').click(() => {
-            console.log($('#barbillaAlto').val());
-        });
-
-        $('#barbillaCurva').click(() => {
-            console.log($('#barbillaCurva').val());
-        });
-
-        $('#peloTipo').click(() => {
-            console.log($('#peloTipo').val());
-        });
-
-        $('#peloBrillo').click(() => {
-            console.log($('#peloBrillo').val());
-        });
-
-        $('#barbaTipo').click(() => {
-            console.log($('#barbaTipo').val());
-        });
-
-        $('#barbaBrillo').click(() => {
-            console.log($('#barbaBrillo').val());
-        });
-
-        $('#labiosGrosor').click(() => {
-            console.log($('#labiosGrosor').val());
-        });
-
-        $('#labiosLabial').click(() => {
-            console.log($('#labiosLabial').val());
-        });
-
-        $('#labiosOpacidad').click(() => {
-            console.log($('#labiosOpacidad').val());
-        });
-
-        $('#maquillajeTipo').click(() => {
-            console.log($('#maquillajeTipo').val());
-        });
-
-        $('#camisaTipo').click(() => {
-            //console.log($('#camisaTipo').val());
-          
-        });
-
-          $(document).on('input', '#camisaTipo', function() {
-
-              mp.trigger("resource.Sounds.PlaySelectSound");
-                mp.trigger("SelectCharacterClothes", JSON.stringify(character_components[gender][0][current_item_variation]));
-          });        
-
-        $('#conjuntoAbajo').click(() => {
-            console.log($('#conjuntoAbajo').val());
-        });
-
-        $('#conjuntoArriba').click(() => {
-            console.log($('#conjuntoArriba').val());
-        });
         
-        $('#pantalonesTipo').click(() => {
-            console.log($('#pantalonesTipo').val());
-        });
+        function gen_pat(valu){
+          genPat = valu; 
+          console.log("gen_pat cef*"+genPat);
+          SelComponenteRasgos(13,genPat,genMat,faceMix);
+        }
+        //$('#genesPaternos').click(() => {});
 
-        $('#zapatosTipo').click(() => {
-            console.log($('#zapatosTipo').val());
-        });
+        function gen_mat(valu){
+          console.log("gen_mat cef*");
+          genMat = valu;
+          SelComponenteRasgos(13,genPat,genMat,faceMix);
+        }
+        //$('#genesMaternos').click(() => {});
 
+        function gen_mix(valu){
+          console.log("gen_mat cef*");
+          faceMix = valu;
+          SelComponenteRasgos(13,genPat,genMat,faceMix);
+        }
+
+        function etn_pat(valu){
+          etnPat = valu;
+          SelComponenteRasgos(17,etnPat,etnMat,etnMix);                            
+        }
+
+        function etn_mat(valu){
+          etnMat = valu;
+          SelComponenteRasgos(17,etnPat,etnMat,etnMix);               
+        }
+
+        function etn_mix(valu){
+          etnMix = valu;
+          SelComponenteRasgos(17,etnPat,etnMat,etnMix);                 
+        }
+
+        function pelo_tipo(valu){
+          peloTipo = valu;
+          SelComponenteRasgos(15,peloTipo,peloCol,peloIlu); 
+        }
+
+        function pelo_color(valu){
+          peloCol = valu;
+          SelComponenteRasgos(15,peloTipo,peloCol,peloIlu); 
+        }
+
+        function pelo_ilu(valu){
+          peloIlu = valu;
+          SelComponenteRasgos(15,peloTipo,peloCol,peloIlu); 
+        }
+
+        function barba_tipo(valu){
+          barbaTipo = valu;
+          SelComponenteRasgos(16,barbaTipo,barbaCol);
+        }
+
+        function barba_color(valu){
+          barbaCol = valu;
+          SelComponenteRasgos(16,barbaTipo,barbaCol);
+        }
+
+        function maqui_tipo(valu){
+          maquiTipo = valu;
+          SelMaqui(maquiTipo,maquiCol);
+        }
+
+        function maqui_color(valu){
+          maquiCol = valu;
+          SelMaqui(maquiTipo,maquiCol);
+        }
+
+        function ropa_tipo(index,valu){
+          ropaTipo = valu;
+          SelRopa(index,ropaTipo);
+        }
+
+        function ropa_vari(valu){
+          ropaVari = valu;
+          SelRopa2(ropaVari);
+        }
+
+        function alejar_(valu){
+          alejar = valu;
+          alejar_cam(alejar,alejar2);
+        }
+
+        function alejar_2(valu){
+          alejar2 = valu;
+          alejar_cam(alejar,alejar2);
+        }
+
+        function set_rot(valu){
+          rot = valu;
+          rot_cam(rot);
+        }
+
+        var regx = /^[A-Z][-'a-zA-Z]+,?\s[A-Z][-'a-zA-Z]{0,19}$/;
         $('#crearBtn').click(() => {
-            mp.trigger("finishCharacterCreation", $("#charname").val());
+            
+            if($("#charname").val().length < 4)
+                    alert("Usar al menos <b>4</b> caracteres.");
+
+                else if(!regx.test($("#charname").val()))
+                    alert("Use el formato <b>N</b>ombre <b>A</b>apellidos.");
+
+                else if (!$("gender item").hasClass("active"))
+                    alert("Selecciona el género.");
+
+                else
+                {
+                  mp.trigger("finishCharacterCreation", $("#charname").val());
+                }
         });
 
         $('#volverBtn').click(() => {
@@ -653,6 +622,83 @@
             mp.trigger("resource.Sounds.PlaySelectSound");
             mp.trigger("GoBackToSelection");
         });
+
+
+        // Funciones CEF -> Cliente Rage
+
+        function SelComponenteRasgos(tipo,conf1,conf2,conf3){
+          conf1 = parseInt(conf1);
+          conf2 = parseInt(conf2);
+          conf3 = parseInt(conf3);
+          //console.log("SelComponenteRasgos cef->"+tipo+" "+conf1+" "+conf2+" "+conf3);                
+          mp.trigger("MoveCameraPosition", 0);
+          mp.trigger("resource.Sounds.PlaySelectSound");
+          //https://wiki.rage.mp/index.php?title=Player::setHeadBlendData          
+          mp.trigger("SelComponenteRasgos", JSON.stringify({ type: tipo, config1: conf1, config2: conf2,config3: conf3 }));
+        }
+
+        function selCara(index,valor){          
+          index = parseFloat(index);
+          valor = parseFloat(valor);
+          mp.trigger("MoveCameraPosition", 0);
+          mp.trigger("resource.Sounds.PlaySelectSound");
+          //console.log("selCara cef->"+JSON.stringify({ index: index, valor: valor }));
+          mp.trigger("SelComponenteCara", JSON.stringify({ index: index, valor: valor }));
+        }
+
+        function SelMaqui(tipo,color){          
+          index = parseInt(tipo);
+          valor = parseInt(color);
+          mp.trigger("MoveCameraPosition", 0);
+          mp.trigger("resource.Sounds.PlaySelectSound");
+          //console.log("selCara cef->"+JSON.stringify({ tipo: index, color: color }));
+          mp.trigger("SelMaquillaje", JSON.stringify({ tipo: index, color: color }));
+        }
+
+        function SelRopa(selected_item_type,current_item_variation){
+
+          selected_item_type = parseInt(selected_item_type);
+          current_item_variation = parseInt(current_item_variation);
+          //console.log("selRopa cef->"+JSON.stringify(character_components[genero][selected_item_type][current_item_variation]));
+          if (selected_item_type > 2 && selected_item_type < 5){
+            mp.trigger("MoveCameraPosition", 2);
+          } else if(selected_item_type > 4){
+            mp.trigger("MoveCameraPosition", 3);
+          } else if(selected_item_type < 3){
+            mp.trigger("MoveCameraPosition", 1);
+          }else{
+             mp.trigger("MoveCameraPosition");
+          }
+          mp.trigger("resource.Sounds.PlaySelectSound");          
+          mp.trigger("SelectCharacterClothes", JSON.stringify(character_components[genero][selected_item_type][current_item_variation]));
+
+          if (selected_item_type == 2)
+                    mp.trigger("SelectCharacterClothes", JSON.stringify(character_components[genero][12][ropaVari]));              
+        }
+
+        function SelRopa2(ropa2){
+          ropa = parseInt(ropa2);
+          mp.trigger("MoveCameraPosition", 1);
+          //console.log("selRopa2 cef->"+JSON.stringify(character_components[genero][12][ropa2]));
+          mp.trigger("SelectCharacterClothes", JSON.stringify(character_components[genero][12][ropa2]));              
+        }
+
+        function alejar_cam(xx,yy){
+          xx = parseFloat(xx);
+          yy = parseFloat(yy);
+          //console.log("AccionCamara cef->"+JSON.stringify({ xx: xx, yy: yy}));
+          mp.trigger("AccionCamara", JSON.stringify({ xx: xx, yy: yy}));              
+        }
+
+        function rot_cam(zz){
+          zz = parseFloat(zz);
+          //console.log("AccionCamaraRot cef->"+JSON.stringify({ zz: zz}));
+          mp.trigger("AccionCamaraRot", JSON.stringify({ zz: zz}));              
+        }
+       
+        function logeo(cosa){
+          console.log(cosa);
+        }
 
     </script>
     <!-- partial -->

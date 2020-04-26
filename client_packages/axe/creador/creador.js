@@ -1,4 +1,5 @@
 let browser;
+let camera;
 
 var character_data = {
   name: "",
@@ -9,6 +10,7 @@ var character_data = {
   skinFirst: 0,
   skinSecond: 0,
   skinMix: 0.0,
+  arrayCara: [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
   hairType: 0,
   hairColor: 0,
   hairHighlight: 0,
@@ -33,9 +35,16 @@ var character_data = {
 
 mp.events.add("ShowCharacterCreator", () => {
   if (!browser) {
-    browser = mp.browsers.new("package://statics/pj/creator.html");
+    browser = mp.browsers.new("package://statics/pj/creator.html");    
   }
+    var camPos = new mp.Vector3(403.6378, -998.5422, -99.00404);
+    var camRot = new mp.Vector3(0.0, 0.0, 176.891);
 
+    camera = mp.cameras.new('lookAtBody', camPos, camRot, 40);
+    camera.pointAtCoord(402.9198, -996.5348, -99.00024);
+    camera.setActive(true);
+
+    mp.game.cam.renderScriptCams(true, false, 2000, true, false);
   resetCharacterCreation();
 });
 
@@ -72,6 +81,7 @@ mp.events.add("ChangeCharacterGender", (id) => {
   character_data.skinFirst = 0;
   character_data.skinSecond = 0;
   character_data.skinMix = 0.0;
+  character_data.arrayCara = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
   character_data.hairType = 0;
   character_data.hairColor = 0;
   character_data.hairHighlight = 0;
@@ -92,11 +102,12 @@ mp.events.add("ChangeCharacterGender", (id) => {
   character_data.topshirt = 1;
   character_data.topshirtTexture = 0;
   character_data.accessory = 0;
-
   resetCharacterCreation();
 });
 
 mp.events.add('MoveCameraPosition', (pos) => {
+  browser.execute(`logeo('RAGEEEEEEEEEEE: Camara ------'+"${pos}")`);
+  if (camera)  {browser.execute(`logeo('destruyo')`);camera.destroy()}
   switch (pos) {
     case 0:
       {
@@ -104,7 +115,7 @@ mp.events.add('MoveCameraPosition', (pos) => {
         var camPos = new mp.Vector3(402.9378, -997.0, -98.35);
         var camRot = new mp.Vector3(0.0, 0.0, 176.891);
 
-        var camera = mp.cameras.new('lookAtHead', camPos, camRot, 40);
+        camera = mp.cameras.new('lookAtHead', camPos, camRot, 40);
         camera.pointAtCoord(402.9198, -996.5348, -98.35);
         camera.setActive(true);
 
@@ -117,7 +128,7 @@ mp.events.add('MoveCameraPosition', (pos) => {
         var camPos = new mp.Vector3(402.9378, -997.5, -98.60);
         var camRot = new mp.Vector3(0.0, 0.0, 176.891);
 
-        var camera = mp.cameras.new('lookAtTorso', camPos, camRot, 40);
+        camera = mp.cameras.new('lookAtTorso', camPos, camRot, 40);
         camera.pointAtCoord(402.9198, -996.5348, -98.60);
         camera.setActive(true);
 
@@ -130,7 +141,7 @@ mp.events.add('MoveCameraPosition', (pos) => {
         var camPos = new mp.Vector3(402.9378, -997.5, -99.40);
         var camRot = new mp.Vector3(0.0, 0.0, 176.891);
 
-        var camera = mp.cameras.new('lookAtLegs', camPos, camRot, 40);
+        camera = mp.cameras.new('lookAtLegs', camPos, camRot, 40);
         camera.pointAtCoord(402.9198, -996.5348, -99.40);
         camera.setActive(true);
 
@@ -143,7 +154,7 @@ mp.events.add('MoveCameraPosition', (pos) => {
         var camPos = new mp.Vector3(402.9378, -997.5, -99.85);
         var camRot = new mp.Vector3(0.0, 0.0, 176.891);
 
-        var camera = mp.cameras.new('lookAtFeet', camPos, camRot, 40);
+        camera = mp.cameras.new('lookAtFeet', camPos, camRot, 40);
         camera.pointAtCoord(402.9198, -996.5348, -99.85);
         camera.setActive(true);
 
@@ -156,7 +167,7 @@ mp.events.add('MoveCameraPosition', (pos) => {
         var camPos = new mp.Vector3(403.6378, -998.5422, -99.00404);
         var camRot = new mp.Vector3(0.0, 0.0, 176.891);
 
-        var camera = mp.cameras.new('lookAtBody', camPos, camRot, 40);
+        camera = mp.cameras.new('lookAtBody', camPos, camRot, 40);
         camera.pointAtCoord(402.9198, -996.5348, -99.00024);
         camera.setActive(true);
 
@@ -164,6 +175,19 @@ mp.events.add('MoveCameraPosition', (pos) => {
         break;
       }
   }
+});
+
+mp.events.add('AccionCamara', (data) => {
+  data = JSON.parse(data);
+  //browser.execute(`logeo('RAGEEEEEEEEEEE: AccionCamara ------'+"${data.xx}---${data.yy}")`);
+  if (camera)  {camera.setCoord(403.6378, data.xx, data.yy)}
+});
+
+mp.events.add('AccionCamaraRot', (data) => {
+  data = JSON.parse(data);
+  //browser.execute(`logeo('RAGEEEEEEEEEEE: AccionCamara ------'+"${data.zz}")`);
+  if (camera)  {camera.setRot(0.0, 0.0, data.zz, 2);}
+  mp.players.local.setRotation(0.0, 0.0, data.zz, 2, true);
 });
 
 mp.events.add('SelectCharacterClothes', (data) => {
@@ -201,7 +225,21 @@ mp.events.add("GoBackToSelection", () => {
   mp.events.callRemote("RetrieveCharactersList");
 });
 
-mp.events.add('SelectCharacterComponent', (data) => {
+mp.events.add('SelComponenteCara', (data) => {
+  data = JSON.parse(data);
+  character_data.arrayCara[data.index] = data.valor;
+  mp.players.local.setFaceFeature(data.index, data.valor);
+});
+
+mp.events.add('SelMaquillaje', (data) => {
+  data = JSON.parse(data);
+  character_data.makeup = data.tipo;
+  character_data.makeupColor = data.color;
+  mp.players.local.setHeadOverlay(4, data.tipo, 1.0, data.color, data.color);
+});
+
+
+mp.events.add('SelComponenteRasgos', (data) => {
   var mix_data = [
     0.0,
     0.1,
