@@ -4,7 +4,7 @@
 body {
     background-color: transparent !important;
     color: #fff;
-    font-family: "Segoe UI";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-weight: 100;
     font-size: 15px;
     width:100%;
@@ -164,8 +164,7 @@ button.red:hover {
 /******************************************************************************/
 block {
     display: block;
-    background-color: rgba(72, 5, 78, 0.773);
-    border: 1px solid rgba(70, 4, 76, 0.314);
+    background-color: rgba(26, 25, 25, 0.8);
     position: relative;
 }
 
@@ -179,7 +178,7 @@ block close {
     padding: 5px 10px;
     color: #fff;
     font-size: 15px;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     text-transform: uppercase;
 }
 
@@ -468,20 +467,20 @@ charlist ul li.addchar {
     text-transform: uppercase;
     color: #fff;
     font-size: 18px;
-    background-color: rgba(7, 149, 0, 0.7);
+    background-color: rgba(126, 126, 126, 0.7);
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
 
 charlist ul li.addchar.active {
-    background-color: rgba(0, 76, 67, 0.7);
+    background-color: rgba(198, 198, 198, 0.9);
 }
 
 charlist ul li.addchar:hover {
     cursor: pointer;
     color: #fff;
-    background-color: rgba(7, 149, 0, 0.9);
+    background-color: rgba(198, 198, 198, 0.9);
 }
 
 charlist ul li.addchar:hover i {
@@ -495,7 +494,7 @@ charlist ul li.addchar i {
 
 charlist ul li:not(.active):not(.addchar):hover {
     cursor: pointer;
-    background-color: rgba(69, 69, 69, 0.8);
+    background-color: rgba(198, 198, 198, 0.9);
     color: #ddd;
 }
 
@@ -510,7 +509,7 @@ charlist ul li:not(.active):not(.addchar):hover lastlogin {
 charlist ul li.active {
     opacity: 1;
     color: #fff;
-    background-color: rgba(34, 34, 34, 0.8);
+    background-color: rgba(198, 198, 198, 0.9);
 }
 
 charlist ul li.active deletechar {
@@ -553,19 +552,20 @@ selectchar {
     padding-top: 6px;
     background-color: rgba(0, 0, 0, 0.7);
     border: 1px solid #000;
+    border-radius: 15px;
 }
 
 charinfo item {
     display: block;
     color: #fff;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 12px;
 }
 
 charinfo item data.money::first-letter {
-    color: #059500;
+    color: #ffffff;;
 }
 
 charinfo item:last-child {
@@ -573,6 +573,7 @@ charinfo item:last-child {
 }
 
 charinfo item stat {
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     display: inline-block;
     text-align: left;
     padding-left: 6px;
@@ -604,7 +605,7 @@ selectchar button i {
 
 selectchar button:hover {
     cursor: pointer;
-    background-color: #059500!important;
+        background-color: #cfcfcf!important;
     color: #fff;
 }
 
@@ -860,7 +861,7 @@ config button.counter {
     background-color: #82038d!important;
     text-align: center;
     vertical-align: middle;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     color: #fff;
     width: 86px;
     font-size: 12px;
@@ -897,7 +898,7 @@ config desc {
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     padding: 5px;
 }
 
@@ -1176,7 +1177,7 @@ reward container item desc.money::first-letter {
     padding: 8px 15px 8px 15px;
     color: #fff;
     font-size: 15px;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -1264,7 +1265,7 @@ npc header button {
     justify-content: center;
     color: #fff;
     font-size: 15px;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     text-transform: uppercase;
 }
 
@@ -1325,7 +1326,7 @@ npc phrase {
     font-size: 2vh;
     color: #fff;
     text-shadow: 0px 0px 10px #000;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     text-overflow: ellipsis;
     max-width: 100%;
     white-space: nowrap;
@@ -1346,7 +1347,7 @@ npc answers button {
     padding: 10px 10px 10px 10px;
     color: #aaa;
     font-size: 15px;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     text-transform: uppercase;
     margin-top: 1%;;
 }
@@ -1495,7 +1496,7 @@ block.inventory footer {
 }
 
 block.inventory footer money {
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     margin-left: 3px;
     padding-top: 1px;
 }
@@ -1655,7 +1656,7 @@ inventory item container header {
 inventory item container header info {
     display: inline-block;
     vertical-align: top;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 
 inventory item container header badge {
@@ -1682,20 +1683,20 @@ inventory item container header subtit {
 inventory item container desc {
     display: block;
     font-size: 12px;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     padding: 10px 5px 10px 5px;
 }
 
 inventory item container stats {
     display: block;
     font-size: 12px;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     padding: 10px 5px 10px 5px;
 }
 
 inventory item container stats tit {
     color: #666;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
@@ -1806,7 +1807,7 @@ chat container messages.selected.active {
 
 chat msg {
     display: block;
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     color: #fff;
     word-break: break-all;
     font-size: 1.5vh;
@@ -1814,7 +1815,7 @@ chat msg {
 }
 
 chat input {
-    font-family: "Roboto";
+    font-family: Neucha,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     display: none;
     margin-top: 40px;
 }

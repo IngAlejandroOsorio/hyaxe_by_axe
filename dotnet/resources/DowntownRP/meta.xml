@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<meta>
+  <info name="Downtown" author="Muphy" type="gamemode"/>
+  
+  <!-- Gamemode library -->
+  <script src="bin/Debug/netcoreapp3.1/DowntownRP.dll" />
+
+  <!-- Database connection settings -->
+<settings>
+    <!-- Database host, 120.0.0.1 if localhost -->
+    <setting name="host" value="127.0.0.1"/>
+    <!-- Database username -->
+    <setting name="username" value="root"/>
+    <!-- Database password -->
+    <setting name="password" value="DXR7SUNOCJG7HSQQZNR7PMH0X"/>
+    <!-- Database name -->
+    <setting name="database" value="downtown"/>
+    <!-- Can take NONE or REQUIRED values -->
+    <setting name="ssl" value="none"/>
+  
+    <!-- Clave Tester para el registro de usuarios durante la pre-alpha cerrada o en el servidor de prueba-->
+    <setting name="claveTesters" value="HyaxeRageDePepito1234"/>
+  </settings>
+
+</meta>

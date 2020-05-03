@@ -7,12 +7,16 @@
     <link rel='stylesheet' href='assets/css/pcfw.css'>
     <link rel='stylesheet' href='assets/css/gui.css'>
     <link rel="stylesheet" href="assets/css/sweetalert.css">
+    <link rel='stylesheet' href='./axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='./axe/axe.css'>
+    <script src='../libs/jquery-3.3.1.min.js'></script>
 </head>
 
 <body id="main">
+
     <div class="container-fluid">
-        <block class="charselector">
-            <header>
+        <block class="charselector card">
+            <header class="alert alert-primary" role="alert">
                 Seleciona tu personaje
             </header>
             <nochar>¡No tienes ningún personaje creado!</nochar>
@@ -22,9 +26,9 @@
             </charlist>
         </block>
         <selectchar>
-            <charinfo>
+            <charinfo class="card-body text-white">
             </charinfo>
-            <button id="playButton">
+            <button class="btn btn-primary" id="playButton">
                 <i class="fa fa-play"></i> Jugar</button>
         </selectchar>
     </div>
@@ -37,6 +41,7 @@
         var selected_character = 0;
 
         function updateList(data) {
+            //console.log(JSON.stringify(data, null, 4));
             characters = data;
             if (characters != null) {
                 $("#list").html("");
@@ -56,11 +61,11 @@
                     $('#list li:first-child').addClass("active");
                 }
 
-                if (characters.length < 3) // number of max characters
-                    $("#list").append('<li data-id="-1" class="addchar"><i class="fa fa-plus"></i> Agregar nuevo personaje</li>');
+                if (characters.length < 3) // number of max charactersclass="btn btn-primary"
+                    $("#list").append('<li data-id="-1" class="btn btn-primary addchar"><i class="fa fa-plus"></i> Agregar nuevo personaje</li>');
             }
             else {
-                $("#list").append('<li data-id="-1" class="addchar"><i class="fa fa-plus"></i> Agregar nuevo personaje</li>');
+                $("#list").append('<li data-id="-1" class="btn btn-primary addchar"><i class="fa fa-plus"></i> Agregar nuevo personaje</li>');
             }
         }
 
@@ -176,6 +181,10 @@
             this.setHours(this.getHours() + h);
             return this;
         }
+
+        function logeo(cosa){
+          console.log(cosa);
+        }     
     </script>
 </body>
 

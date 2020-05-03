@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="documentos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="set">
+<div class="card">
+	
+<img src="../img/siluetaID.jpg" width="82" height="104" alt=""/>
+	
+	<h1> Licencias</h1> <br>
+  <div class="columna">
+	  <b>Nombre:</b> <div id="nombre">Nombre</div> <br></div>
+	<div class="columna" style="position: absolute; top: 50px; right: 0px; align-content: center; height: 156px;">
+  		<img src="Licencias/Camion.jpg" width="64" height="64" alt="" id="Camion"/> 
+		<img src="Licencias/Moto.jpg" width="64" height="64" alt="" id="Moto"/> 
+		<br>
+		<img src="Licencias/Coche.jpg" width="64" height="64" alt="" id="Coche"/> <br>
+		
+	</div>
+  <div id="numdiv"><h3 id="num" style="position: absolute; right: 0px; bottom: 20px;">X12345A</h3></div> </div>
+	
+	<button id="cerrar" onClick="mp.trigger('CerrarDocumentacion');">Cerrar</button></div>
+
+	
+	<script>
+		instanciar('{ "nombre":"James Bond", "Tipo":"Permanente", "Nac":"15/02/1990", "Num":"23000T", "licencias":{"coche":true, "moto":false, "camión": true} }')
+		
+		function instanciar (string){
+			info = JSON.parse(string)
+			document.querySelector('#num').innerHTML = info.Num.toString();
+			document.querySelector('#nombre').innerHTML = info.nombre;
+			
+			if(info.licencias.coche == false){
+				document.querySelector('#Coche').style.opacity = "25%"
+			}
+			if(info.licencias.moto == false){
+				document.querySelector('#Moto').style.opacity = "25%"
+			}
+			if(info.licencias.camión == false){
+				document.querySelector('#Camion').style.opacity = "25%"
+			}
+			
+			
+		}
+		
+	</script>
+</body>
+	
+</html>
+
+

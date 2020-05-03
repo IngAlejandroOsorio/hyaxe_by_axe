@@ -163,6 +163,28 @@
                       <br>
                       <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                             <div class="alert alert-primary" role="alert">
+                                    Cejas
+                                  </div>
+                            <div class="card-body text-white">
+                                    <label for="customRange3">Tipo</label>
+                                  <input type="range" class="custom-range" min="0" max="33" step="1" oninput="cejas_tipo(this.value)" onchange="cejas_tipo(this.value)" id="barbaTipo">
+                                  <label for="customRange3">Color</label>
+                                  <div id="colorCejasPaleta"></div>
+                            </div>
+                      </div>
+                      <br>
+                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
+                            <div class="alert alert-primary" role="alert">
+                                    Ojos
+                                  </div>
+                            <div class="card-body text-white">
+                                  <label for="customRange3">Color</label>
+                                  <div id="colorOjosPaleta"></div>
+                            </div>
+                      </div>
+                    <br>
+                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
+                            <div class="alert alert-primary" role="alert">
                                     Mandíbula
                                   </div>
                             <div class="card-body text-white">
@@ -312,6 +334,52 @@
           </div>
         </div>
       </div>
+
+<button id="modalerror" type="button" class="btn btn-primary" data-toggle="modal" style="display: none" data-target="#modalConfirmError">modal</button>
+<button id="modalok" type="button" class="btn btn-primary" data-toggle="modal" style="display: none" data-target="#modalConfirmOk">modal</button>
+      <!--Modal: modalConfirmDelete-->
+<div class="modal fade" id="modalConfirmError" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Tienes un error con el nombre de tu Pj.</p>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <a type="button" class="btn  btn-danger2 " data-dismiss="modal">Ok</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalConfirmDelete-->
+
+      <!--Modal: modalConfirmDelete-->
+<div class="modal fade" id="modalConfirmOk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">¿Deseas Crear el Personaje?</p>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <a href="" onclick="gogo()" class="btn btn-success btn-block">Si</a>
+        <a type="button" class="btn  btn-danger2 waves-effect" data-dismiss="modal">No</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalConfirmDelete-->
+
     <script src="assets/js/character-clothes.js"></script>
     <script src="assets/js/colores.js"></script>
     <script>
@@ -330,6 +398,9 @@
         var peloIlu = 0;
         var barbaTipo = 0;
         var barbaCol = 0;
+        var cejasTipo = 0;
+        var cejasCol = 0;
+        var ojosCol = 0;
         var maquiTipo = 0;
         var maquiCol = 0;
         var ropaTipo = 0;
@@ -458,29 +529,18 @@
       }
     });
 
-
-        $('#colorAbajoPaleta').colorPalettePicker({
+        $('#colorOjosPaleta').colorPalettePicker({
       lines:4,
+      buttonPreviewName:"ojox",
       onSelected: function(color){
-        console.log(color);
+        ojos_color(colores(color));
       }
     });
-        $('#colorArribaPaleta').colorPalettePicker({
+        $('#colorCejasPaleta').colorPalettePicker({
       lines:4,
+      buttonPreviewName:"cejax",
       onSelected: function(color){
-        console.log(color);
-      }
-    });
-        $('#colorPantalonesPaleta').colorPalettePicker({
-      lines:4,
-      onSelected: function(color){
-        console.log(color);
-      }
-    });
-        $('#colorShoesPaleta').colorPalettePicker({
-      lines:4,
-      onSelected: function(color){
-        console.log(color);
+        cejas_color(colores(color));
       }
         });
         
@@ -563,6 +623,16 @@
           barbaCol = valu;
           SelComponenteRasgos(16,barbaTipo,barbaCol);
         }
+        
+        function cejas_tipo(valu){
+          cejasTipo = valu;
+          SelComponenteRasgos(18,cejasTipo,cejasCol);
+        }
+
+        function cejas_color(valu){
+          cejasCol = valu;
+          SelComponenteRasgos(18,cejasTipo,cejasCol);
+        }
 
         function maqui_tipo(valu){
           maquiTipo = valu;
@@ -572,6 +642,11 @@
         function maqui_color(valu){
           maquiCol = valu;
           SelMaqui(maquiTipo,maquiCol);
+        }
+
+        function ojos_color(valu){
+          ojosCol = valu;
+          SelComponenteRasgos(14,ojosCol);
         }
 
         function ropa_tipo(index,valu){
@@ -603,19 +678,20 @@
         $('#crearBtn').click(() => {
             
             if($("#charname").val().length < 4)
-                    alert("Usar al menos <b>4</b> caracteres.");
-
+                    //alert("Usar al menos <b>4</b> caracteres.");
+                    $("#modalError").click();
                 else if(!regx.test($("#charname").val()))
-                    alert("Use el formato <b>N</b>ombre <b>A</b>apellidos.");
-
-                else if (!$("gender item").hasClass("active"))
-                    alert("Selecciona el género.");
-
+                    //alert("Use el formato <b>N</b>ombre <b>A</b>apellidos.");
+                    $("#modalError").click();
                 else
                 {
-                  mp.trigger("finishCharacterCreation", $("#charname").val());
+                 $("#modalok").click(); 
                 }
         });
+
+        function gogo(){
+          mp.trigger("finishCharacterCreation", $("#charname").val());              
+        }
 
         $('#volverBtn').click(() => {
             console.log("volver");

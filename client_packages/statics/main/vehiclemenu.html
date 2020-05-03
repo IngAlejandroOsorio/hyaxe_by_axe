@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Downtown RP | Login</title>
-    <link rel='stylesheet' href='../libs/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/axe.css'>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src='../libs/jquery-3.3.1.min.js'></script>
     <style>
@@ -74,8 +75,17 @@
                         </center>
                     </div>
                     </div>
+                  </div>                  
+                <div class="col-md-3">
+                    <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
+                      <div class="card-body text-white">
+                        <center>Coche Rentado<br>
+                        <button type="button" id="devolver" class="btn btn-success btn-sm">Devolver</button>
+                      </center>
                   </div>
-                  <div class="col-md-3">
+                  </div>
+                </div>
+                <div class="col-md-12">
                     <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                       <div class="card-body text-white">
                         <center>Seguro<br>
@@ -94,7 +104,7 @@
 
     <script>
     $('#btnExit').click(() => {
-            mp.trigger('OpenCharacterMenu');
+            mp.trigger('CloseVehicleMenu');
         });
     $('#keymode').click(() => {
             mp.trigger('SeatbellOn');
@@ -119,6 +129,9 @@
     });
     $('#huddisable').click(() => {
             mp.trigger('LockOff');
+    });
+    $('#devolver').click(() => {
+            mp.trigger('devolverRentado');
     });
         </script>
     <!-- partial -->

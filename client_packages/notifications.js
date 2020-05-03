@@ -53,7 +53,7 @@ mp.events.add('tipEngineVehicle', () => {
   mp.game.audio.playSoundFrontend(-1, 'Event_Message_Purple', 'GTAO_FM_Events_Soundset', true);
   const horizontalInstructionList = new instructions(-1);
 
-  horizontalInstructionList.addButton('Para encender el motor del vehículo pulsa la tecla ', 'N');
+  horizontalInstructionList.addButton('Para encender el motor del vehículo pulsa la tecla ', 'M');
 
   if(!horizontalInstructionList.isActive()) {
     horizontalInstructionList.toggleHud(true);
@@ -104,7 +104,24 @@ mp.events.add('tipOwnerCasa', () => {
   mp.game.audio.playSoundFrontend(-1, 'Event_Message_Purple', 'GTAO_FM_Events_Soundset', true);
   const horizontalInstructionList = new instructions(-1);
 
-  horizontalInstructionList.addButton('Para acceder el menú de propiedad pulsa', 'F6');
+  horizontalInstructionList.addButton('Para acceder el menú de propiedad usa /menu', '');
+
+  if(!horizontalInstructionList.isActive()) {
+    horizontalInstructionList.toggleHud(true);
+  }
+
+  setTimeout( () => {
+    if(horizontalInstructionList.isActive()) {
+      horizontalInstructionList.toggleHud(false);
+    }
+  }, 5000);
+});
+
+mp.events.add('tipSellMinerales', () => {
+  mp.game.audio.playSoundFrontend(-1, 'Event_Message_Purple', 'GTAO_FM_Events_Soundset', true);
+  const horizontalInstructionList = new instructions(-1);
+
+  horizontalInstructionList.addButton('Para vender los minerales recogidos pulsa', 'F5');
 
   if(!horizontalInstructionList.isActive()) {
     horizontalInstructionList.toggleHud(true);

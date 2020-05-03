@@ -13,29 +13,42 @@ namespace DowntownRP_cs.login
         private static HtmlWindow browserLogin;
         public Login()
         {
-            // Eventos servidor - cliente
+            // Eventos servidor - Playere
             Events.Add("ShowLoginWindow", ShowLoginWindow);
             Events.Add("ShowRegisterWindow", ShowRegisterWindow);
             Events.Add("DestroyWindow", DestroyWindow);
             Events.Add("ShowErrorAlert", ShowErrorAlert);
             Events.Add("GetPlayerReadyToPlay", GetPlayerReadyToPlay);
+            Events.Add("DestroyBrowserPjAlphaPj", DestroyBrowserPjAlphaPj);
 
-            // Eventos cliente - servidor
+            // Eventos Playere - servidor
             Events.Add("LoginUser", LoginUser);
             Events.Add("RegisterUser", RegisterUser);
             Events.Add("AuthLoginUser", AuthLoginUser);
 
-            // Eventos cliente
+            // Eventos Playere
             Events.Add("SwitchLoginRegister", SwitchLoginRegister);
 
-            // Callbacks clientside de RAGE
+            // Callbacks Playerside de RAGE
             Events.OnGuiReady += OnGuiReadyEvent; // Evento que se ejecuta cuando se inicia el servidor
+        }
+
+        private void DestroyBrowserPjAlphaPj(object[] args)
+        {
+            browserLogin.Destroy();
         }
 
         private void AuthLoginUser(object[] args)
         {
             browserLogin.Destroy();
             browserLogin = new HtmlWindow("package://statics/login/index.html");
+            RAGE.Ui.Cursor.Visible = true;
+        }
+
+        private void AuthRegisterUser(object [] args)
+        {
+            browserLogin.Destroy();
+            browserLogin = new HtmlWindow("package://statics/login/registerrrr.html");
             RAGE.Ui.Cursor.Visible = true;
         }
 
@@ -80,7 +93,7 @@ namespace DowntownRP_cs.login
 
         private void ShowRegisterWindow(object[] args)
         {
-            browserLogin = new HtmlWindow("package://statics/login/register.html");
+            browserLogin = new HtmlWindow("package://statics/login/registerrrr.html");
             RAGE.Ui.Cursor.Visible = true;
         }
 
@@ -88,6 +101,7 @@ namespace DowntownRP_cs.login
         {
             RAGE.Elements.Player.LocalPlayer.FreezePosition(false);
             Cam.RenderScriptCams(false, false, 0, true, false, 0);
+            RAGE.Ui.Cursor.Visible = false;
             browserLogin.Destroy();
         }
 
@@ -109,6 +123,9 @@ namespace DowntownRP_cs.login
 
                 case 4:
                     browserLogin.ExecuteJs("ShowError4()");
+                    break;
+                case 5:
+                    browserLogin.ExecuteJs("ShowError5()");
                     break;
             }
         }

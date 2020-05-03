@@ -5867,6 +5867,11 @@
             Colshape class
             </summary>
         </member>
+        <member name="T:RAGE.Elements.DummyEntity">
+            <summary>
+            Marker class
+            </summary>
+        </member>
         <member name="F:RAGE.Elements.Type.Player">
             <summary>
             Player type, see <see cref="T:RAGE.Elements.Player"/>
@@ -5910,6 +5915,16 @@
         <member name="F:RAGE.Elements.Type.TextLabel">
             <summary>
             TextLabel type, see <see cref="T:RAGE.Elements.TextLabel"/>
+            </summary>
+        </member>
+        <member name="F:RAGE.Elements.Type.DummyEntity">
+            <summary>
+            DummyEntity type, see <see cref="T:RAGE.Elements.DummyEntity"/>
+            </summary>
+        </member>
+        <member name="F:RAGE.Elements.Type.Dummy">
+            <summary>
+            TextLabel type, see <see cref="T:RAGE.Elements.DummyEntity"/>
             </summary>
         </member>
         <member name="F:RAGE.Elements.Type.Ped">
@@ -6104,6 +6119,13 @@
         <member name="M:RAGE.Events.CallRemote(System.String,System.Object[])">
             <summary>
             Triggers server-side remote event.
+            </summary>
+            <param name="eventName"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:RAGE.Events.CallRemoteUnreliable(System.String,System.Object[])">
+            <summary>
+            Triggers server-side remote event with disabled reliability.
             </summary>
             <param name="eventName"></param>
             <param name="args"></param>
@@ -23921,7 +23943,7 @@
             
              </summary>				
         </member>
-        <!-- Проигнорирован некорректный комментарий XML для члена "M:RAGE.Game.Network.Unknown._0x4BA92A18502BCA61(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32)" -->
+        <!-- Badly formed XML comment ignored for member "M:RAGE.Game.Network.Unknown._0x4BA92A18502BCA61(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32)" -->
         <member name="M:RAGE.Game.Network.Unknown._0x17E0198B3882C2CB">
              <summary>
             
@@ -43636,6 +43658,18 @@
             </summary>
             <param name="code"></param>
         </member>
+        <member name="M:RAGE.Ui.HtmlWindow.ExecuteCachedJs(System.String)">
+            <summary>
+            Executes JavaScript code in the browser's own context, with enabled cache.
+            </summary>
+            <param name="code"></param>
+        </member>
+        <member name="M:RAGE.Ui.HtmlWindow.Call(System.String,System.Object[])">
+            <summary>
+            Executes browser event
+            </summary>
+            <param name="code"></param>
+        </member>
         <member name="M:RAGE.Ui.HtmlWindow.Reload(System.Boolean)">
             <summary>
             Reloads the window.
@@ -44002,6 +44036,64 @@
             Draw item.
             </summary>
         </member>
+        <member name="E:RAGE.NUI.UIMenuSliderItem.OnSliderChanged">
+            <summary>
+            Triggered when the slider is changed.
+            </summary>
+        </member>
+        <member name="P:RAGE.NUI.UIMenuSliderItem.Maximum">
+            <summary>
+            The maximum value of the slider.
+            </summary>
+        </member>
+        <member name="P:RAGE.NUI.UIMenuSliderItem.Value">
+            <summary>
+            Curent value of the slider.
+            </summary>
+        </member>
+        <member name="P:RAGE.NUI.UIMenuSliderItem.Multiplier">
+            <summary>
+            The multiplier of the left and right navigation movements.
+            </summary>
+        </member>
+        <member name="M:RAGE.NUI.UIMenuSliderItem.#ctor(System.String)">
+            <summary>
+            List item, with slider.
+            </summary>
+            <param name="text">Item label.</param>
+            <param name="items">List that contains your items.</param>
+            <param name="index">Index in the list. If unsure user 0.</param>
+        </member>
+        <member name="M:RAGE.NUI.UIMenuSliderItem.#ctor(System.String,System.String)">
+            <summary>
+            List item, with slider.
+            </summary>
+            <param name="text">Item label.</param>
+            <param name="items">List that contains your items.</param>
+            <param name="index">Index in the list. If unsure user 0.</param>
+            <param name="description">Description for this item.</param>
+        </member>
+        <member name="M:RAGE.NUI.UIMenuSliderItem.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            List item, with slider.
+            </summary>
+            <param name="text">Item label.</param>
+            <param name="items">List that contains your items.</param>
+            <param name="index">Index in the list. If unsure user 0.</param>
+            <param name="description">Description for this item.</param>
+            /// <param name="divider">Put a divider in the center of the slider</param>
+        </member>
+        <member name="M:RAGE.NUI.UIMenuSliderItem.Position(System.Int32)">
+            <summary>
+            Change item's position.
+            </summary>
+            <param name="y">New Y position.</param>
+        </member>
+        <member name="M:RAGE.NUI.UIMenuSliderItem.Draw">
+            <summary>
+            Draw item.
+            </summary>
+        </member>
         <member name="T:RAGE.NUI.MenuPool">
             <summary>
             Helper class that handles all of your Menus. After instatiating it, you will have to add your menu by using the Add method.
@@ -44137,6 +44229,11 @@
         <member name="E:RAGE.NUI.UIMenu.OnItemSelect">
             <summary>
             Called when user selects a simple item.
+            </summary>
+        </member>
+        <member name="E:RAGE.NUI.UIMenu.OnSliderChange">
+            <summary>
+            Called when user presses left or right, changing a slider position.
             </summary>
         </member>
         <member name="E:RAGE.NUI.UIMenu.OnMenuClose">

@@ -19,6 +19,7 @@ namespace DowntownRP_cs.character
             Events.Add("PMChangeStatus", PMChangeStatus);
             Events.Add("RadarChangeStatus", RadarChangeStatus);
             Events.Add("HudChangeStatus", HudChangeStatus);
+            Events.Add("pjData", (object[] args) => { browserMenu.ExecuteJs("instanciar("+args[0]+ ");"); });
         }
 
         private void HudChangeStatus(object[] args)
@@ -77,6 +78,7 @@ namespace DowntownRP_cs.character
                 case 2:
                     browserMenu.Destroy();
                     browserMenu = new HtmlWindow("package://statics/settings/info.html");
+                    Events.CallRemote("ObtPjData");
                     break;
 
                 case 3:
@@ -89,6 +91,7 @@ namespace DowntownRP_cs.character
                     break;
             }
         }
+
 
         private void OpenCharacterMenu(object[] args)
         {

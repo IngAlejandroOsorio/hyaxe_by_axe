@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel='stylesheet' href='../../assets/css/pcfw.css'>
+        <link rel='stylesheet' href='../../assets/css/gui.css'>
+        <link rel='stylesheet' href='../../assets/css/icons-fa.css'>
+        <link rel='stylesheet' href='../../assets/css/icons-clothes.css'>
+        <link rel='stylesheet' href='../../assets/css/icons-bodyparts.css'>
+        <link rel="stylesheet" href="../../assets/css/sweetalert.css">
+    </head>
+    <body id="main">
+        <div class="container-fluid">
+            <pagetitle><img src="../../assets/logo.png" width="100px" height="auto">PonsoBoys</pagetitle>
+            <block class="charcreator">
+                <header style="text-align: center">
+                    ¡Compra ropa con clase!<br>
+                    <span id="issale"></span>
+                </header>
+                <content>
+                    
+                        <field>
+                            <label> La tienda más delicatesen de la ciudad ...</label>
+                        </field>
+
+                    
+                </content>
+                <customization>
+                    <category>
+                        <header data-id="1">Torso <i class="fa fa-caret-down"></i></header>
+                        <container>
+                            <item class="male" data-id="0">
+                                <i class="clothes-shirt"></i>
+                            </item>
+                            <item class="male" data-id="1">
+                                <i class="clothes-hoodie"></i>
+                            </item>
+                            <!--<item class="male" data-id="2">
+                                <i class="clothes-vest"></i>
+                            </item>-->
+                            <item class="female" data-id="0">
+                                <i class="clothes-shirt-2"></i>
+                            </item>
+                            <item class="female" data-id="1">
+                                <i class="clothes-dress-3"></i>
+                            </item>
+                            <!--<item class="female" data-id="2">
+                                <i class="clothes-trench-coat"></i>
+                            </item>-->
+                        </container>
+                    </category>
+                    <category>
+                        <header data-id="2">Piernas <i class="fa fa-caret-down"></i></header>
+                        <container>
+                            <item class="male" data-id="3">
+                                <i class="clothes-jeans"></i>
+                            </item>
+                            <item class="male" data-id="4">
+                                <i class="clothes-shorts"></i>
+                            </item>
+                            <item class="female" data-id="3">
+                                <i class="clothes-jeans"></i>
+                            </item>
+                            <item class="female" data-id="4">
+                                <i class="clothes-shorts-1"></i>
+                            </item>
+                        </container>
+                    </category>
+                    <category>
+                        <header data-id="3">Pies <i class="fa fa-caret-down"></i></header>
+                        <container>
+                            <item class="male" data-id="5">
+                                <i class="clothes-boot"></i>
+                            </item>
+                            <item class="male" data-id="6">
+                                <i class="clothes-sneaker"></i>
+                            </item>
+                            <item class="male" data-id="7">
+                                <i class="clothes-slipper"></i>
+                            </item>
+                            <item class="female" data-id="5">
+                                <i class="clothes-high-heels"></i>
+                            </item>
+                            <item class="female" data-id="6">
+                                <i class="clothes-sneaker"></i>
+                            </item>
+                            <item class="female" data-id="7">
+                                <i class="clothes-slipper"></i>
+                            </item>
+                        </container>
+                    </category>
+                    <category>
+                        <header data-id="-1">Accesorios <i class="fa fa-caret-down"></i></header>
+                        <container>
+                                <item class="male" data-id="8">
+                                    <i class="clothes-tie"></i>
+                                </item>
+                                <item class="male" data-id="9">
+                                    <i class="clothes-scarf"></i>
+                                </item>
+                                <item class="male" data-id="10">
+                                    <i class="clothes-necklace"></i>
+                                </item>
+                                <item class="male" data-id="11">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </item>
+                                <item class="female" data-id="8">
+                                    <i class="clothes-tie"></i>
+                                </item>
+                                <item class="female" data-id="9">
+                                    <i class="clothes-scarf"></i>
+                                </item>
+                                <item class="female" data-id="10">
+                                    <i class="clothes-necklace"></i>
+                                </item>
+                                <item class="female" data-id="11">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </item>
+                            </container>
+                    </category>
+                </customization>
+                <footer class="right">
+                    <error></error>
+                    <loading><i class="fa fa-spinner faa-spin animated"></i></loading>
+                    Total $<span id="costo">0</span>
+                    <br>
+                    <button class="red" id="backBtn"><i class="fa fa-arrow-left"></i></button>
+                    <button type="submit" id="submit">Comprar</button>
+                </footer>
+            </block>
+            <configurators>
+                <config id="config1">
+                    <desc>Superior</desc>
+                    <div class="btn-group">
+                        <button id="decreaseItem"><i class="fa fa-caret-left"></i></button>
+                        <button class="counter" id="counter1" disabled>0/0</button>
+                        <button id="increaseItem"><i class="fa fa-caret-right"></i></button>
+                    </div>
+                </config>
+                <config id="config2">
+                    <desc>Inferior</desc>
+                    <div class="btn-group">
+                        <button id="decreaseItem2"><i class="fa fa-caret-left"></i></button>
+                        <button class="counter" id="counter2" disabled>0/0</button>
+                        <button id="increaseItem2"><i class="fa fa-caret-right"></i></button>
+                    </div>
+                </config>
+            </configurators>
+            <configurators id="traits-configurator">
+                <config id="config-traits-1">
+                    <desc>Herencia paterna</desc>
+                    <div class="btn-group">
+                        <button id="decrease-config-traits-1"><i class="fa fa-caret-left"></i></button>
+                        <button class="counter" id="counter-config-traits-1" disabled>0/0</button>
+                        <button id="increase-config-traits-1"><i class="fa fa-caret-right"></i></button>
+                    </div>
+                </config>
+                <config id="config-traits-2">
+                    <desc>Herencia materna</desc>
+                    <div class="btn-group">
+                        <button id="decrease-config-traits-2"><i class="fa fa-caret-left"></i></button>
+                        <button class="counter" id="counter-config-traits-2" disabled>0/0</button>
+                        <button id="increase-config-traits-2"><i class="fa fa-caret-right"></i></button>
+                    </div>
+                </config>
+                <config id="config-traits-3">
+                    <desc>Mezcla</desc>
+                    <div class="btn-group">
+                        <button id="decrease-config-traits-3"><i class="fa fa-caret-left"></i></button>
+                        <button class="counter" id="counter-config-traits-3" disabled>0/0</button>
+                        <button id="increase-config-traits-3"><i class="fa fa-caret-right"></i></button>
+                    </div>
+                </config>
+            </configurators>
+        </div>
+        <script src="../../assets/js/slider.js"></script>
+        <script src="../../assets/js/jquery.js"></script>
+        <script src="../../assets/js/tether.js"></script>
+        <script src="../../assets/js/pcfw.js"></script>
+        <script src="../../assets/js/character-clothes.js"></script>
+        <script src="../../assets/js/sweetalert.js"></script>
+        <script>
+
+            // ------------- item selection -------------
+
+            var gender = 0;
+            var selected_item_type = null;
+
+            // Clothes
+            var current_item_variation = 0;
+            var current_item_last_index = 0;
+
+            var config2_item = 0;
+            var config2_last = 0;
+
+            // Traits
+            var config_traits_1_count = 0;
+            var config_traits_2_count = 0;
+            var config_traits_3_count = 0;
+
+            var config_traits_1_max = 0;
+            var config_traits_2_max = 0;
+            var config_traits_3_max = 0;
+
+            $("#config1").hide();
+            $("#config2").hide();
+            $('#config1 desc').hide();
+            $('#config2 desc').hide();
+
+            $('#traits-configurator').hide();
+
+            $("item").click(function ()
+            {
+                $(this).addClass('active').siblings().removeClass('active');
+
+                $(this).parent().parent().siblings()
+                    .find('container item')
+                    .removeClass('active');
+
+                if ($(this).data("id") == undefined)
+                    return;
+
+                selected_item_type = $(this).data("id");
+                if ($(this).data("id") < 13)
+                {
+                    // Seleção de Roupas
+                    current_item_variation = 0;
+                    current_item_last_index = character_components[gender][selected_item_type].length - 1;
+
+                    $("#counter1").html((current_item_variation + 1) + "/" + (current_item_last_index + 1));
+
+                    if (!$("#config1").is(":visible"))
+                        $("#config1").show();
+
+                    if (selected_item_type == 2 && !$("#config2").is(":visible"))
+                    {
+                        config2_item = 0;
+                        config2_last = character_components[gender][12].length - 1;
+
+                        $("#counter2").html((config2_item + 1) + "/" + (config2_last + 1));
+                        $("#config2").show();
+                        $('#config1 desc').show();
+                        $('#config2 desc').show();
+                    }
+                    else if (selected_item_type != 2 && $("#config2").is(":visible"))
+                    {
+                        $("#config2").hide();
+                        $('#config1 desc').hide();
+                        $('#config2 desc').hide();
+                    }
+
+                    mp.trigger("SeleccionarRopaPj", JSON.stringify(character_components[gender][selected_item_type][current_item_variation]));
+                    mp.trigger("MoverCamaraRopa", $(this).parent().parent().find("header").data("id"));
+                }
+            });
+
+            // Clothes
+            $("#decreaseItem").click(function ()
+            {
+                current_item_variation--;
+                if (current_item_variation < 0)
+                    current_item_variation = current_item_last_index;
+
+                $("#counter1").html((current_item_variation + 1) + "/" + (current_item_last_index + 1));
+
+                mp.trigger("resource.Sounds.PlaySelectSound");
+                mp.trigger("SeleccionarRopaPj", JSON.stringify(character_components[gender][selected_item_type][current_item_variation]));
+
+                if (selected_item_type == 2)
+                    mp.trigger("SeleccionarRopaPj", JSON.stringify(character_components[gender][12][config2_item]));
+            });
+
+            $("#increaseItem").click(function ()
+            {
+                current_item_variation++;
+                if (current_item_variation > current_item_last_index)
+                    current_item_variation = 0;
+
+                $("#counter1").html((current_item_variation + 1) + "/" + (current_item_last_index + 1));
+
+                mp.trigger("resource.Sounds.PlaySelectSound");
+                mp.trigger("SeleccionarRopaPj", JSON.stringify(character_components[gender][selected_item_type][current_item_variation]));
+
+                if (selected_item_type == 2)
+                    mp.trigger("SeleccionarRopaPj", JSON.stringify(character_components[gender][12][config2_item]));
+            });
+
+            $("#decreaseItem2").click(function ()
+            {
+                config2_item--;
+                if (config2_item < 0)
+                    config2_item = config2_last;
+
+                $("#counter2").html((config2_item + 1) + "/" + (config2_last + 1));
+
+                mp.trigger("resource.Sounds.PlaySelectSound");
+                mp.trigger("SeleccionarRopaPj", JSON.stringify(character_components[gender][12][config2_item]));
+            });
+
+            $("#increaseItem2").click(function ()
+            {
+                config2_item++;
+                if (config2_item > config2_last)
+                    config2_item = 0;
+
+                $("#counter2").html((config2_item + 1) + "/" + (config2_last + 1));
+
+                mp.trigger("resource.Sounds.PlaySelectSound");
+                mp.trigger("SeleccionarRopaPj", JSON.stringify(character_components[gender][12][config2_item]));
+            });
+
+            
+
+            // ------------- item selection -------------
+
+            $("category container").hide();
+            $("error").hide();
+            $("customization").hide();
+
+            $('input').keyup(function ()
+            {
+                if ($(this).hasClass('error'))
+                {
+                    $("error").hide();
+                    $(this).removeClass('error');
+                }
+            });
+
+            $('category header').click(function ()
+            {
+                $(this).parent().siblings().find('container').slideUp();
+                $(this).parent().toggleClass('active');
+                $("i", this).toggleClass('fa-caret-down fa-caret-up');
+                $(this).siblings('container').slideToggle();
+                $(this).parent().siblings().removeClass('active');
+                $(this).parent().siblings().find('header i').addClass('fa-caret-down').removeClass('fa-caret-up');
+
+                if ($("#config1").is(":visible"))
+                    $("#config1").hide();
+
+                if ($("#config2").is(":visible"))
+                    $("#config2").hide();
+
+                if ($("#traits-configurator").is(":visible"))
+                    $("#traits-configurator").hide();
+
+                $('#config1 desc').hide();
+                $('#config2 desc').hide();
+
+                
+                    mp.trigger("MoverCamaraRopa", $(this).data("id"));
+                
+            });
+
+            // var regx = /^[A-Z][a-z]+\s[A-Z][a-z]+$/; // Nome Sobrenome
+            $('#submit').click(function ()
+            {
+                let precioFinal = $("#costo").html();
+                    mp.trigger("resource.Sounds.PlaySelectSound");
+                    swal(
+                    {
+                        title: "¿Desea Realizar la Compra?",
+                        text: "Estás a punto realizar una compra por $"+precioFinal,
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#BCEE68",
+                        confirmButtonText: "Comprar",
+                        cancelButtonText: "Regresar",
+                        closeOnConfirm: false
+                    },
+                    function ()
+                    {
+                        mp.trigger("ComprarRopaCliente", parseInt(precioFinal));
+                    });
+            });
+
+
+            function actPrecio(precio)
+            {
+                $("#costo").html(precio);
+            }
+
+
+            function iniciar(genero,issale)
+            {
+			//console.log("me llega genero ->"+genero);
+            $("#issale").html(issale);
+                $(this).addClass('active').siblings().removeClass('active');
+                $("customization").slideDown();
+
+                if ($("#config1").is(":visible"))
+                    $("#config1").hide();
+
+                if ($("#config2").is(":visible"))
+                    $("#config2").hide();
+
+                if ($("#traits-configurator").is(":visible"))
+                    $('#traits-configurator').hide();
+
+                $('category').removeClass('active');
+                $('category header i').addClass('fa-caret-down').removeClass('fa-caret-up');
+                $('category container').slideDown();
+                $('category container item').removeClass('active');
+
+                if (genero == "0" || genero == 0)
+                {
+                    $('category container item.female').hide();
+                    $('category container item.male').show();
+
+                    gender = 0;
+                    
+                }
+                else
+                {
+                    $('category container item.male').hide();
+                    $('category container item.female').show();
+
+                    gender = 1;
+                    
+                }
+
+                mp.trigger("resource.Sounds.PlaySelectSound");
+            };
+
+            $('#backBtn').click(function ()
+            {
+                mp.trigger("resource.Sounds.PlaySelectSound");
+                mp.trigger("CerrarTiendaRopa");
+            });
+
+            function ShowError(message, input)
+            {
+                $('loading').hide();
+                isSubmitting = false;
+
+                $("error").html(message);
+                $("error").show();
+                $(input).addClass('error');
+            }
+        </script>
+    </body>
+</html>

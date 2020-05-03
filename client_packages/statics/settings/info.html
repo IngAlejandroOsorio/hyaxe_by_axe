@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Downtown RP | Login</title>
-    <link rel='stylesheet' href='../libs/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/axe.css'>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src='../libs/jquery-3.3.1.min.js'></script>
     <style>
@@ -49,7 +50,7 @@
                           <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                             <div class="card-body text-white">
                               <center>Nivel<br>
-                                <h5><span class="badge badge-success">Nivel 12 (120h jugadas)</span></h5>
+                                <h5><span class="badge badge-success">NO DISPONIBLE</span></h5>
                             </center>
                         </div>
                         </div>
@@ -59,7 +60,7 @@
                         <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                           <div class="card-body text-white">
                             <center>Trabajo<br>
-                              <h4><span class="badge badge-secondary">Sin empleo</span></h4>
+                              <h4><span class="badge badge-secondary">NO DISPONIBLE</span></h4>
                           </center>
                       </div>
                       </div>
@@ -69,7 +70,7 @@
                       <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                         <div class="card-body text-white">
                           <center>Empresa<br>
-                          <h4><span class="badge badge-secondary">Sin empresa</span></h4>
+                          <h4><span class="badge badge-secondary">NO DISPONIBLE</span></h4>
                         </center>
                     </div>
                     </div>
@@ -79,7 +80,7 @@
                     <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                       <div class="card-body text-white">
                         <center>Edad<br>
-                        <h4><span class="badge badge-primary">24 años</span></h4>
+                        <h4><span class="badge badge-primary">NO DISPONIBLE</span></h4>
                       </center>
                   </div>
                   </div>
@@ -89,7 +90,7 @@
                   <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                     <div class="card-body text-white">
                       <center>Número de teléfono<br>
-                      <h4><span class="badge badge-secondary">Sin teléfono</span></h4>
+                      <h4><span class="badge badge-secondary">NO DISPONIBLE</span></h4>
                     </center>
                 </div>
                 </div>
@@ -98,8 +99,8 @@
               <div class="col-md-3">
                 <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                   <div class="card-body text-white">
-                    <center>DNI<br>
-                    <h4><span class="badge badge-secondary">Sin DNI</span></h4>
+                    <center>ID CARD:<br>
+                    <h4><span class="badge badge-secondary" id="idCard">NO DISPONIBLE</span></h4>
                   </center>
               </div>
               </div>
@@ -109,7 +110,7 @@
               <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                 <div class="card-body text-white">
                   <center>Fecha de registro<br>
-                  <h4><span class="badge badge-primary">29/10/2019 17:35</span></h4>
+                  <h4><span class="badge badge-primary">NO DISPONIBLE</span></h4>
                 </center>
             </div>
             </div>
@@ -119,7 +120,7 @@
             <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
               <div class="card-body text-white">
                 <center>Última conexión<br>
-                <h4><span class="badge badge-primary">29/10/2019 17:35</span></h4>
+                <h4><span class="badge badge-primary">NO DISPONIBLE</span></h4>
               </center>
           </div>
           </div>
@@ -128,16 +129,23 @@
                 </div>
 
                 <br>
-                <button id="exitBtn" class="btn btn-danger btn-block">Salir</button>
+                <button id="btnExit" class="btn btn-danger btn-block">Salir</button>
             </div>
 
         </div>
     </div>
 
     <script>
-    $('#exitBtn').click(() => {
+    $('#btnExit').click(() => {
             mp.trigger('OpenCharacterMenu');
-        });
+    });
+	
+	/*function instanciar (string){
+			info = JSON.parse(string)
+			document.querySelector('#idCard').innerHTML = info.dni.toString();
+			
+			
+	}*/
         </script>
     <!-- partial -->
     <script src='../libs/bootstrap.min.js'></script>

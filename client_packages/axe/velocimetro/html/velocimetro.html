@@ -1,0 +1,275 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+    
+
+</head>
+<body>
+<div id="example" class="scaleable-wrapper">
+    <div id="gauge-container" class="very-specific-design zoomed">
+        <div id="rpm"></div>
+        <div id="kmh"></div>
+        <div id="fuel"></div>
+        <div id="vida"></div>
+    </div>
+
+    
+    <script>
+        function createDashboard() {
+            $("#rpm").kendoRadialGauge({
+                theme: "black",
+
+                pointer: {
+                    value: 0,
+                    color: "#ea7001"
+                },
+
+                scale: {
+                    startAngle: -45,
+                    endAngle: 120,
+
+                    min: 0,
+                    max: 6,
+
+                    majorUnit: 1,
+                    majorTicks: {
+                        width: 1,
+                        size: 7
+                    },
+
+                    minorUnit: 0.2,
+                    minorTicks: {
+                        size: 5
+                    },
+
+                    ranges: [{
+                        from: 4,
+                        to: 5,
+                        color: "#ff7a00"
+                    }, {
+                        from: 5,
+                        to: 6,
+                        color: "#c20000"
+                    }],
+
+                    labels: {
+                        font: "11px Arial,Helvetica,sans-serif"
+                    }
+                }
+            });
+
+            $("#kmh").kendoRadialGauge({
+                theme: "black",
+
+                pointer: {
+                    value: 0,
+                    color: "#ea7001"
+                },
+
+                scale: {
+                    startAngle: -60,
+                    endAngle: 240,
+
+                    min: 0,
+                    max: 280,
+
+                    majorTicks: {
+                        width: 1,
+                        size: 14
+                    },
+                    majorUnit: 20,
+
+                    minorTicks: {
+                        size: 4
+                    },
+
+                    minorUnit: 2
+                }
+            });
+
+            $("#fuel").kendoRadialGauge({
+                theme: "black",
+
+                pointer: {
+                    value: 0,
+                    color: "#ea7001"
+                },
+
+                scale: {
+                    startAngle: 90,
+                    endAngle: 180,
+
+                    min: 0,
+                    max: 1,
+
+                    majorUnit: 0.5,
+                    majorTicks: {
+                        width: 2,
+                        size: 6
+                    },
+
+                    minorUnit: 0.25,
+                    minorTicks: {
+                        size: 3
+                    },
+
+                    ranges: [{
+                        from: 0,
+                        to: 0.1,
+                        color: "#c20000"
+                    }],
+
+                    labels: {
+                        font: "9px Arial,Helvetica,sans-serif"
+                    }
+                }
+            });
+
+            $("#vida").kendoRadialGauge({
+                theme: "black",
+
+                pointer: {
+                    value: 100,
+                    color: "#ea7001"
+                },
+
+                scale: {
+                    startAngle: 180,
+                    endAngle: 270,
+
+                    min: 0,
+                    max: 100,
+
+                    majorUnit: 50,
+                    majorTicks: {
+                        width: 2,
+                        size: 6
+                    },
+
+                    minorUnit: 25,
+                    minorTicks: {
+                        size: 3
+                    },
+
+					ranges: [{
+                        from: 25,
+                        to: 50,
+                        color: "#ff7a00"
+                    }, {
+                        from: 0,
+                        to: 25,
+                        color: "#c20000"
+                    }],
+
+                    labels: {
+                        font: "9px Arial,Helvetica,sans-serif"
+                    }
+                }
+            });
+        }
+
+
+		    function actualizar(velocidad, rpm, gasolina, vida) {
+                //console.log("tacometro -> Vel: "+velocidad+" Rpm: "+rpm+" Gas: "+gasolina+" Vida:"+vida);
+                $("#rpm").data("kendoRadialGauge").value(rpm);
+                $("#kmh").data("kendoRadialGauge").value(velocidad);
+				$("#fuel").data("kendoRadialGauge").value(gasolina);
+				$("#vida").data("kendoRadialGauge").value(vida);
+            }
+
+			function showSpeedo()
+			{
+				document.body.className = "";
+			}
+			
+			function hideSpeedo()
+			{
+				document.body.className = "fade";
+			}
+		
+        $(document).ready(function() {
+
+            createDashboard();
+			//update();
+					
+		
+		//actualizar(23, 2, 0.5, 24);
+		
+        });
+    </script>
+
+    <style>
+        #gauge-container {
+		    position: fixed;
+			bottom: 0;
+            margin: 0 auto;
+            overflow: hidden;
+            width: 614px;
+            height: 324px;
+
+            background: transparent url("tablero.png") no-repeat 50% 50%;
+        }
+
+        .k-gauge {
+            float: left;
+        }
+
+        #rpm {
+            width: 142px;
+            height: 147px;
+            margin: 85px 0 0 38px;
+        }
+
+        #kmh {
+            width: 216px;
+            height: 216px;
+            margin: 57px 0 0 20px;
+        }
+
+        #fuel {
+            width: 77px;
+            height: 84px;
+
+            margin: 90px 0 0 68px;
+        }
+
+        #vida {
+            width: 84px;
+            height: 80px;
+
+            margin: -7px 0 0 62px;
+        }
+
+        .very-specific-design {
+        text-align: center;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, 0%);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        }
+
+        .scaleable-wrapper {
+        padding: 20px;
+        resize: both;
+        position: relative;
+        height: 400px;
+        }
+
+        .zoomed { 
+        zoom: 0.6; 
+        -moz-transform: scale(0.6); 
+        -moz-transform-origin: 0 0;
+        } 
+    </style>
+</div>
+
+
+
+</body>
+</html>

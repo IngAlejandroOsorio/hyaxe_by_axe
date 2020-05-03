@@ -63,6 +63,7 @@ namespace DowntownRP_cs.game.business
             submenu.AddItem(new UIMenuItem("Agua", "Una botella de agua. ~g~($20)"));
             submenu.AddItem(new UIMenuItem("Manzana", "¡Aliméntate siempre sano! ~g~($20)"));
             submenu.AddItem(new UIMenuItem("Botiquin", "Kit de primeros auxilios ~g~($20)"));
+            submenu.AddItem(new UIMenuItem("Megafono", "Perfecto para comunicar, y enfadar ~g~($40)"));
 
             submenu.OnItemSelect += Submenu_OnItemSelect;
         }

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='../axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/axe.css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src='../libs/jquery-3.3.1.min.js'></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../libs/colorpalettepicker.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0);
+        }
+        
+        .butt {
+            background-color: rgba(26, 25, 25, 0.8);
+            border: none;
+            /* Remove borders */
+            color: white;
+            /* White text */
+            padding: 12px 16px;
+            /* Some padding */
+            font-size: 16px;
+            /* Set a font size */
+            cursor: pointer;
+            /* Mouse pointer on hover */
+        }
+        /* Darker background on mouse-over */
+        
+        .butt:hover {
+            background-color: RoyalBlue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="alert alert-dark" role="alert">
+                    <b><i class="fa fa-archive" aria-hidden="true"></i> Inventario</b>
+                </div>
+                <div class="card" style="background-color: rgba(26, 25, 25, 0.8);">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot1" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso1"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot2" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso2"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot3" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso3"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot4" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso4"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot5" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso5"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot6" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso6"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot7" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso7"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot8" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso8"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot9" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso9"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot10" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso10"></center>
+                                    <small><br></small>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot11" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso11"></center>
+                                    <small><br></small>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slot12" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotaso12"></center>
+                                    <small><br></small>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-3">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="alert alert-dark" role="alert">
+                    <b><i class="fa fa-car" aria-hidden="true"></i> Maletero</b>
+                </div>
+                <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
+                    <div class="card-body text-white">
+                        <div class="row">
+
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet1" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito1"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet2" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito2"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet3" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito3"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet4" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito4"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet5" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito5"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet6" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito6"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet7" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito7"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet8" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito8"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet9" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito9"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet10" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito10"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet11" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito11"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="card" id="slet12" style="background-color: rgba(26, 25, 25, 0.8)">
+                                    <small><br></small>
+                                    <center id="slotito12"></center>
+                                    <small><br></small>
+                                </div>
+                                <br>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <button id="exitBtn" class="btn btn-success btn-block">Salir</button>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade text-white" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content" style="background-color: rgba(26, 25, 25, 0.8)">
+          
+            <!-- Modal Header -->
+            <div class="modal-header" style="background-color: rgba(26, 25, 25, 0.8)">
+              <h4 class="modal-title"></h4>
+              <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body" style="background-color: rgba(26, 25, 25, 0.8)">
+              <center>
+                  <h4><b id="emojimodal"></b><br>
+                    <b id="namemodal"></b> <span class="badge badge-primary" id="quantitymodal"></span></h4><br>
+                  <center id="typemodal"></center>
+                    <br>
+              </center>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    <script>
+        function getItemIcon(name){
+            var emoji;
+            switch(name){
+                case "Cigarro":
+                    //emoji = "🚬";
+                    emoji = "<img src='items/cigarro.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "NO":
+                    //emoji = "❌";
+                    emoji = "<img src='items/no.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Gorra":
+                    emoji = "<img src='items/gorra.png' class='img-fluid img-responsive'>";
+                    break;
+
+                case "Agua":
+                    emoji = "🍼";
+                    break;
+
+                case "Manzana":
+                    emoji = "<img src='items/manzana.png' class='img-fluid img-responsive'>";
+                    break;
+
+                case "Botiquin":
+                    emoji = "<img src='items/botiquin.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Bronce":
+                    emoji = "<img src='items/bronce.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Plata":
+                    emoji = "<img src='items/plata.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Oro":
+                    emoji = "<img src='items/oro.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Diamante":
+                    emoji = "<img src='items/diamante.png' class='img-fluid img-responsive'>";
+                    break;
+
+				    case "Megafono":
+					emoji = "<img src='items/megafono.png' class='img-fluid img-responsive'>";
+					break;
+
+                    case "Pistola":
+                    emoji = "🔫";
+                    break;
+
+                    case "Pistola9mm":
+                    emoji = "<img src='items/pistolacombate.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "PistoladeCombate":
+                    emoji = "<img src='items/pistolacombate.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Taser":
+                    emoji = "<img src='items/tazar.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Pistola.50":
+                    emoji = "<img src='items/pistolapesada.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "PistolaCompacta":
+                    emoji = "<img src='items/pistolapesada.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "PistolaPesada":
+                    emoji = "<img src='items/pistolapesada.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "PistolaVintage":
+                    emoji = "<img src='items/pistolavintage.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "PistoladeBengalas":
+                    emoji = "<img src='items/pistolabengala.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "PistoladeTirador":
+                    emoji = "<img src='items/pistolatirador.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "RevolverPesado":
+                    emoji = "<img src='items/pistolapesada.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "RevolverDobleAccion":
+                    emoji = "<img src='items/pistolapesada.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "PistoladeRayos":
+                    emoji = "<img src='items/pistoladerayos.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "PistolaCeramica":
+                    emoji = "<img src='items/pistolaceramica.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "RevolverLargo":
+                    emoji = "<img src='items/revolverlargo.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Uzi":
+                    emoji = "<img src='items/uzi.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "MP5":
+                    emoji = "<img src='items/mp5.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "SubfusildeAsalto":
+                    emoji = "<img src='items/subfu.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "ADPdeCombate":
+                    emoji = "<img src='items/adcombate.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "TEC9":
+                    emoji = "<img src='items/tec9.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Skorpion":
+                    emoji = "<img src='items/skorpion.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Hellbringer":
+                    emoji = "<img src='items/Hellbringer.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Daga":
+                    emoji = "<img src='items/daga.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Bate":
+                    emoji = "<img src='items/bate.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "BotellaRota":
+                    emoji = "<img src='items/botellarota.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Palanca":
+                    emoji = "<img src='items/palanca.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Desarmado":
+                    emoji = "🦯";
+                    break;
+
+                    case "Linterna":
+                    emoji = "<img src='items/linterna.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "PalodeGolf":
+                    emoji = "<img src='items/palogolf.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Martillo":
+                    emoji = "<img src='items/martillo.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "PuñoAmericano":
+                    emoji = "<img src='items/puñoamericano.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Cuchillo":
+                    emoji = "<img src='items/cuchillo.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Machete":
+                    emoji = "<img src='items/machete.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Navaja":
+                    emoji = "<img src='items/navaja.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "Porra":
+                    emoji = "<img src='items/porra.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "LlaveInglesa":
+                    emoji = "<img src='items/llaveingle.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "HachadeBatalla":
+                    emoji = "<img src='items/hachacombate.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "TacodeBillar":
+                    emoji = "<img src='items/tacobillar.png' class='img-fluid img-responsive'>";
+                    break;
+
+                    case "HachadePiedra":
+                    emoji = "<img src='items/hachapiedra.png' class='img-fluid img-responsive'>";
+                    break;
+            }
+            return emoji;
+        }
+        var nameslot1;
+        var emoji1;
+        
+        var nameslot2;
+        var emoji2;
+        
+        var nameslot3;
+        var emoji3;
+
+        var nameslot4;
+        var emoji4;
+
+        var nameslot5;
+        var emoji5;
+
+        var nameslot6;
+        var emoji6;
+
+        var nameslot7;
+        var emoji7;
+
+        var nameslot8;
+        var emoji8;
+
+        var nameslot9;
+        var emoji9;
+
+        var nameslot10;
+        var emoji10;
+
+        var nameslot11;
+        var emoji11;
+
+        var nameslot12;
+        var emoji12;
+
+        var nameslet1;
+        var emojo1;
+        
+        var nameslet2;
+        var emojo2;
+        
+        var nameslet3;
+        var emojo3;
+
+        var nameslet4;
+        var emojo4;
+
+        var nameslet5;
+        var emojo5;
+
+        var nameslet6;
+        var emojo6;
+
+        var nameslet7;
+        var emojo7;
+
+        var nameslet8;
+        var emojo8;
+
+        var nameslet9;
+        var emojo9;
+
+        var nameslet10;
+        var emojo10;
+
+        var nameslet11;
+        var emojo11;
+
+        var nameslet12;
+        var emojo12;
+
+        function setInventoryItems(n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12){
+            nameslot1 = n1;
+            emoji1 = getItemIcon(n1);
+            document.getElementById("slotaso1").innerHTML = emoji1;
+
+            nameslot2 = n2;
+            emoji2 = getItemIcon(n2);
+            document.getElementById("slotaso2").innerHTML = emoji2;
+
+            nameslot3 = n3;
+            emoji3 = getItemIcon(n3);
+            document.getElementById("slotaso3").innerHTML = emoji3;
+
+            nameslot4 = n4;
+            emoji4 = getItemIcon(n4);
+            document.getElementById("slotaso4").innerHTML = emoji4;
+
+            nameslot5 = n5;
+            emoji5 = getItemIcon(n5);
+            document.getElementById("slotaso5").innerHTML = emoji5;
+
+            nameslot6 = n6;
+            emoji6 = getItemIcon(n6);
+            document.getElementById("slotaso6").innerHTML = emoji6;
+
+            nameslot7 = n7;
+            emoji7 = getItemIcon(n7);
+            document.getElementById("slotaso7").innerHTML = emoji7;
+
+            nameslot8 = n8;
+            emoji8 = getItemIcon(n8);
+            document.getElementById("slotaso8").innerHTML = emoji8;
+
+            nameslot9 = n9;
+            emoji9 = getItemIcon(n9);
+            document.getElementById("slotaso9").innerHTML = emoji9;
+
+            nameslot10 = n10;
+            emoji10 = getItemIcon(n10);
+            document.getElementById("slotaso10").innerHTML = emoji10;
+
+            nameslot11 = n11;
+            emoji11 = getItemIcon(n11);
+            document.getElementById("slotaso11").innerHTML = emoji11;
+
+            nameslot12 = n12;
+            emoji12 = getItemIcon(n12);
+            document.getElementById("slotaso12").innerHTML = emoji12;
+            
+        }
+
+        function setOtherItems(n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12){
+            nameslet1 = n1;
+            emojo1 = getItemIcon(n1);
+            document.getElementById("slotito1").innerHTML = emojo1;
+
+            nameslet2 = n2;
+            emojo2 = getItemIcon(n2);
+            document.getElementById("slotito2").innerHTML = emojo2;
+
+            nameslet3 = n3;
+            emojo3 = getItemIcon(n3);
+            document.getElementById("slotito3").innerHTML = emojo3;
+
+            nameslet4 = n4;
+            emojo4 = getItemIcon(n4);
+            document.getElementById("slotito4").innerHTML = emojo4;
+
+            nameslet5 = n5;
+            emojo5 = getItemIcon(n5);
+            document.getElementById("slotito5").innerHTML = emojo5;
+
+            nameslet6 = n6;
+            emojo6 = getItemIcon(n6);
+            document.getElementById("slotito6").innerHTML = emojo6;
+
+            nameslet7 = n7;
+            emojo7 = getItemIcon(n7);
+            document.getElementById("slotito7").innerHTML = emojo7;
+
+            nameslet8 = n8;
+            emojo8 = getItemIcon(n8);
+            document.getElementById("slotito8").innerHTML = emojo8;
+
+            nameslet9 = n9;
+            emojo9 = getItemIcon(n9);
+            document.getElementById("slotito9").innerHTML = emojo9;
+
+            nameslet10 = n10;
+            emojo10 = getItemIcon(n10);
+            document.getElementById("slotito10").innerHTML = emojo10;
+
+            nameslet11 = n11;
+            emojo11 = getItemIcon(n11);
+            document.getElementById("slotito11").innerHTML = emojo11;
+
+            nameslet12 = n12;
+            emojo12 = getItemIcon(n12);
+            document.getElementById("slotito12").innerHTML = emojo12;
+            
+        }
+
+        $('#slot1').click(() => {
+            if(nameslot1 == null)
+            return;
+
+            if(nameslot1 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji1;
+                document.getElementById("namemodal").innerHTML = nameslot1;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 1);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot2').click(() => {
+            if(nameslot2 == null)
+            return;
+
+            if(nameslot2 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji2;
+                document.getElementById("namemodal").innerHTML = nameslot2;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 2);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot3').click(() => {
+            if(nameslot3 == null)
+            return;
+
+            if(nameslot3 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji3;
+                document.getElementById("namemodal").innerHTML = nameslot3;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 3);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot4').click(() => {
+            if(nameslot4 == null)
+            return;
+
+            if(nameslot4 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji4;
+                document.getElementById("namemodal").innerHTML = nameslot4;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 4);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot5').click(() => {
+            if(nameslot5 == null)
+            return;
+
+            if(nameslot5 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji5;
+                document.getElementById("namemodal").innerHTML = nameslot5;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 5);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot6').click(() => {
+            if(nameslot6 == null)
+            return;
+
+            if(nameslot6 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji6;
+                document.getElementById("namemodal").innerHTML = nameslot6;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 6);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot7').click(() => {
+            if(nameslot7 == null)
+            return;
+
+            if(nameslot7 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji7;
+                document.getElementById("namemodal").innerHTML = nameslot7;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 7);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot8').click(() => {
+            if(nameslot8 == null)
+            return;
+
+            if(nameslot1 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji8;
+                document.getElementById("namemodal").innerHTML = nameslot8;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 8);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot9').click(() => {
+            if(nameslot9 == null)
+            return;
+
+            if(nameslot9 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji9;
+                document.getElementById("namemodal").innerHTML = nameslot9;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 9);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot10').click(() => {
+            if(nameslot10 == null)
+            return;
+
+            if(nameslot10 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji10;
+                document.getElementById("namemodal").innerHTML = nameslot10;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 10);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot11').click(() => {
+            if(nameslot11 == null)
+            return;
+
+            if(nameslot11 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji11;
+                document.getElementById("namemodal").innerHTML = nameslot11;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 11);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slot12').click(() => {
+            if(nameslot12 == null)
+            return;
+
+            if(nameslot12 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emoji12;
+                document.getElementById("namemodal").innerHTML = nameslot12;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemFromInv\', 12);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet1').click(() => {
+            if(nameslet1 == null)
+            return;
+
+            if(nameslet1 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo1;
+                document.getElementById("namemodal").innerHTML = nameslet1;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 1);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet2').click(() => {
+            if(nameslet2 == null)
+            return;
+
+            if(nameslet2 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo2;
+                document.getElementById("namemodal").innerHTML = nameslet2;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 2);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet3').click(() => {
+            if(nameslet3 == null)
+            return;
+
+            if(nameslet3 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo3;
+                document.getElementById("namemodal").innerHTML = nameslet3;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 3);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet4').click(() => {
+            if(nameslet4 == null)
+            return;
+
+            if(nameslet4 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo4;
+                document.getElementById("namemodal").innerHTML = nameslet4;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 4);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet5').click(() => {
+            if(nameslet5 == null)
+            return;
+
+            if(nameslet5 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo5;
+                document.getElementById("namemodal").innerHTML = nameslet5;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 5);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet6').click(() => {
+            if(nameslet6 == null)
+            return;
+
+            if(nameslet1 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo6;
+                document.getElementById("namemodal").innerHTML = nameslet6;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 6);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet7').click(() => {
+            if(nameslet7 == null)
+            return;
+
+            if(nameslet7 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo7;
+                document.getElementById("namemodal").innerHTML = nameslet7;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 7);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet8').click(() => {
+            if(nameslet8 == null)
+            return;
+
+            if(nameslet8 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo8;
+                document.getElementById("namemodal").innerHTML = nameslet8;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 8);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet9').click(() => {
+            if(nameslet9 == null)
+            return;
+
+            if(nameslet9 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo9;
+                document.getElementById("namemodal").innerHTML = nameslet9;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 9);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet10').click(() => {
+            if(nameslet10 == null)
+            return;
+
+            if(nameslet10 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo10;
+                document.getElementById("namemodal").innerHTML = nameslet10;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 10);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet11').click(() => {
+            if(nameslet11 == null)
+            return;
+
+            if(nameslet1 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo11;
+                document.getElementById("namemodal").innerHTML = nameslet11;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 11);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#slet12').click(() => {
+            if(nameslet12 == null)
+            return;
+
+            if(nameslet12 != "NO"){
+                document.getElementById("emojimodal").innerHTML = emojo12;
+                document.getElementById("namemodal").innerHTML = nameslet12;
+                document.getElementById("typemodal").innerHTML = '<button type="button" onclick="mp.trigger(\'MoveItemToInv\', 12);" class="btn btn-success">Traspasar</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>';
+                $("#myModal").modal();
+            }
+        });
+
+        $('#exitBtn').click(() => {
+            mp.trigger("CloseVehicleInventoryButton")
+        });
+    </script>
+    <!-- partial -->
+    <script src='../libs/bootstrap.min.js'></script>
+</body>
+
+</html>

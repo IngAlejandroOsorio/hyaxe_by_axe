@@ -26,6 +26,7 @@ namespace DowntownRP_cs.game
                     {
                         if (!isOpen)
                         {
+                            RAGE.Ui.Cursor.Visible = true;
                             window = new RAGE.Ui.HtmlWindow("package://statics/main/playerlist.html");
 
                             foreach (var player in RAGE.Elements.Entities.Players.All)
@@ -37,6 +38,7 @@ namespace DowntownRP_cs.game
                         }
                         else
                         {
+                            RAGE.Ui.Cursor.Visible = false;
                             isOpen = false;
                             window.Destroy();
                         }

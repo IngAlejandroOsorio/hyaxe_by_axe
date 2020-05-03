@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Downtown RP | Login</title>
-    <link rel='stylesheet' href='../libs/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/axe.css'>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src='../libs/jquery-3.3.1.min.js'></script>
     <style>
@@ -62,6 +63,12 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+				<div class="alert alert-danger alert-dismissible fade show" id="errorMessage5" role="alert">
+                    <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR </strong> La clave Admin no es correcta
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                     <div class="card-body">
                         <center>
@@ -99,6 +106,7 @@
         $("#errorMessage2").hide();
         $("#errorMessage3").hide();
         $("#errorMessage4").hide();
+		$("#errorMessage5").hide();
         $("#CargandoLogin").hide();
 
         $('#entrarRegister').click(() => {
@@ -125,6 +133,11 @@
 
         function ShowError4() {
             $("#errorMessage4").show();
+            $("#entrarRegister").show();
+            $("#CargandoLogin").hide();
+        }
+		function ShowError5() {
+            $("#errorMessage5").show();
             $("#entrarRegister").show();
             $("#CargandoLogin").hide();
         }

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Downtown RP | Login</title>
-    <link rel='stylesheet' href='../libs/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/axe.css'>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src='../libs/jquery-3.3.1.min.js'></script>
     <style>
@@ -30,6 +31,12 @@
             left: 10px;
             top: -31px;
             width: 0;
+        }
+        
+        a {
+            color: #9f0606;
+            text-decoration: underline;
+            background-color: transparent;
         }
     </style>
 
@@ -67,7 +74,7 @@
                 <div class="card mt-1" style="background-color: rgba(26, 25, 25, 0.8)">
                     <div class="card-body">
                         <!--<small><font color="white"><i class="fa fa-child" aria-hidden="true"></i> ¿Eres nuevo? ¡Puedes registrarte haciendo <a href="#" id="clickRegister">click aquí</a>!</font></small>-->
-                        <small><font color="white"><i class="fa fa-child" aria-hidden="true"></i> Registro deshabilitado en la fase de desarrollo.</font></small>
+                        <small><font color="white"><i class="fa fa-child" aria-hidden="true"></i> Registro deshabilitado en la fase de desarrollo, excepto para <a href="#" id="clickRegister">staff</a></font></small>
                     </div>
                 </div>
 
@@ -88,6 +95,8 @@
         $('#clickRegister').click(() => {
             mp.trigger('SwitchLoginRegister', 0);
         });
+		
+
 
         function ShowError() {
             $("#errorMessage").show();

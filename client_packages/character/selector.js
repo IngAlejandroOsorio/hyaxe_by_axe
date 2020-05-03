@@ -3,7 +3,7 @@ let characters;
 
 mp.events.add("UpdateCharactersList", (data) => {
   if (!browser) {
-    browser = mp.browsers.new("package://statics/character/selector.html");
+    browser = mp.browsers.new("package://statics/pj/selector.html");
   }
 
   characters = data;

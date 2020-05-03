@@ -19,8 +19,9 @@ namespace DowntownRP_cs.game.vehicles
             Events.Add("MaleteroOn", MaleteroOn);
             Events.Add("MaleteroOff", MaleteroOff);
             Events.Add("LockOn", LockOn);
-            Events.Add("LockOff", LockOff);
+            Events.Add("LockOff", LockOff);            
         }
+
 
         private void SeatbellOn(object[] args)
         {

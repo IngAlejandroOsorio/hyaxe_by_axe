@@ -1,6 +1,7 @@
 let browser;
 let camera;
 
+var arrayCara = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
 var character_data = {
   name: "",
   gender: 0,
@@ -9,8 +10,7 @@ var character_data = {
   faceMix: 0.0,
   skinFirst: 0,
   skinSecond: 0,
-  skinMix: 0.0,
-  arrayCara: [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  skinMix: 0.0,  
   hairType: 0,
   hairColor: 0,
   hairHighlight: 0,
@@ -81,7 +81,6 @@ mp.events.add("ChangeCharacterGender", (id) => {
   character_data.skinFirst = 0;
   character_data.skinSecond = 0;
   character_data.skinMix = 0.0;
-  character_data.arrayCara = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
   character_data.hairType = 0;
   character_data.hairColor = 0;
   character_data.hairHighlight = 0;
@@ -102,12 +101,16 @@ mp.events.add("ChangeCharacterGender", (id) => {
   character_data.topshirt = 1;
   character_data.topshirtTexture = 0;
   character_data.accessory = 0;
+  
+  mp.events.callRemote("SetPlayerSkin", id);
+  arrayCara = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
   resetCharacterCreation();
+
 });
 
 mp.events.add('MoveCameraPosition', (pos) => {
-  browser.execute(`logeo('RAGEEEEEEEEEEE: Camara ------'+"${pos}")`);
-  if (camera)  {browser.execute(`logeo('destruyo')`);camera.destroy()}
+  //browser.execute(`logeo('RAGEEEEEEEEEEE: Camara ------'+"${pos}")`);
+  if (camera)  {camera.destroy()}
   switch (pos) {
     case 0:
       {
@@ -227,7 +230,7 @@ mp.events.add("GoBackToSelection", () => {
 
 mp.events.add('SelComponenteCara', (data) => {
   data = JSON.parse(data);
-  character_data.arrayCara[data.index] = data.valor;
+  arrayCara[data.index] = data.valor;
   mp.players.local.setFaceFeature(data.index, data.valor);
 });
 
@@ -327,6 +330,7 @@ mp.events.add('SelComponenteRasgos', (data) => {
 });
 
 mp.events.add('finishCharacterCreation', (character_name) => {
+  //browser.execute(`logeo(${JSON.stringify(character_data)})`);
   if (browser) {
     browser.destroy();
     browser = undefined;
@@ -334,8 +338,7 @@ mp.events.add('finishCharacterCreation', (character_name) => {
 
   mp.gui.cursor.visible = false;
   mp.game.cam.renderScriptCams(false, false, 0, true, false);
-
-  character_data.name = character_name;
-  mp.events.callRemote('FinishCharacterCreation', JSON.stringify(character_data));
+  character_data.name = character_name;  
+  mp.events.callRemote('FinishCharacterCreation', JSON.stringify(character_data),JSON.stringify(arrayCara));
 });
 

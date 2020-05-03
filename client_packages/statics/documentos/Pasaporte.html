@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>pasaporte</title>
+<link href="../libs/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../libs/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+<link href="../libs/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
+<link href="documentos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div style="right: 50px; top:20px">
+	<div class="card">
+    	<img src="Pasaporte_template.jpg"  alt="" width="430" height="272"/> 
+		<img src="../img/siluetaID.jpg" width="107" height="135" alt="" style="position: absolute; top: 65px; left: 15px; width: 129px; height: 163px;" />
+	<div style="position: absolute; top: 70px; left: 144px; width: 132px;"><b>Nombre:</b> <div id="nombre">Nombre</div></div>
+	<div style="position: absolute; top: 156px; left: 153px; width: 132px; height: 79px;"><b>Edad:</b> <div id="age">25</div></div>
+	<div style="position: absolute; top: 50px; left: 280px; width: 141px; height: 47px;">
+    <h1 id="num">&nbsp;</h1></div>
+	</div>
+	<button id="cerrar" onClick="mp.trigger('CerrarDocumentacion');">Cerrar</button> </div>
+	
+	<script>	
+		
+		function instanciar (string){
+			info = JSON.parse(string)
+			document.querySelector('#num').innerHTML = info.Num.toString();
+			document.querySelector('#nombre').innerHTML = info.nombre;
+			document.querySelector('#age').innerHTML = info.Nac;
+			
+			
+		}
+		
+	</script>
+</body>
+</html>
