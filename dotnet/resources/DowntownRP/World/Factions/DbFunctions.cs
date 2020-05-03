@@ -161,7 +161,7 @@ namespace DowntownRP.World.Factions
                         int ammo = reader.GetInt32(reader.GetOrdinal("ammo"));
 
                         Data.Entities.Item item = new Data.Entities.Item(id, name, type, quantity);
-                        item.bullets = ammo,
+                        item.bullets = ammo;
 
                         switch (slot)
                         {

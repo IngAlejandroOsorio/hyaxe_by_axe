@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>DowntownRP_cs</RootNamespace>
   </PropertyGroup>
 
@@ -10,8 +10,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\dotnet\resources\DowntownRP\DowntownRP.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="rage-sharp">
-      <HintPath>..\..\..\..\..\RAGEMP11\dotnet\rage-sharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\RAGEMP\dotnet\rage-sharp.dll</HintPath>
     </Reference>
   </ItemGroup>
 

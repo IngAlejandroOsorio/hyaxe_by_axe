@@ -528,7 +528,7 @@ mp.events.add("toggleCreator", (active, charData) => {
     if (active) {
         if (creatorCamera === undefined) {
             creatorCamera = mp.cameras.new("creatorCamera", creatorCoords.camera, new mp.Vector3(0, 0, 0), 45);
-            creatorCamera.pointAtCoord(creatorCoords.cameraLookAt);
+            creatorCamera.pointAtCoord(402.8664, -996.4108, -98.5);
             creatorCamera.setActive(true);
         }
 
