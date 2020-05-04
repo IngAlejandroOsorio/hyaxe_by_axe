@@ -2,7 +2,7 @@ let browser;
 let camera;
 
 var arrayCara = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
-var character_data = {
+var character_data2 = {
   name: "",
   gender: 0,
   faceFirst: 0,
@@ -50,57 +50,57 @@ mp.events.add("ShowCharacterCreator", () => {
 
 function resetCharacterCreation() {
 
-character_data.torso = character_data.gender ? 5 : 0;
-  character_data.undershirt = character_data.gender ? 95 : 57;
-  character_data.hairType = character_data.gender ? 4 : 0;
+character_data2.torso = character_data2.gender ? 5 : 0;
+  character_data2.undershirt = character_data2.gender ? 95 : 57;
+  character_data2.hairType = character_data2.gender ? 4 : 0;
 
-  mp.events.callRemote('SetPlayerClothes', 2, character_data.hairType, 0);
-  mp.events.callRemote('SetPlayerClothes', 3, character_data.torso, 0);
-  mp.events.callRemote('SetPlayerClothes', 4, character_data.legs, 0);
-  mp.events.callRemote('SetPlayerClothes', 6, character_data.feet, 0);
-  mp.events.callRemote('SetPlayerClothes', 7, character_data.accessory, 0);
-  mp.events.callRemote('SetPlayerClothes', 8, character_data.undershirt, 0);
-  mp.events.callRemote('SetPlayerClothes', 11, character_data.topshirt, 0);
-  mp.events.callRemote("SetPlayerSkin", character_data.gender ? 'FreemodeFemale01' : 'FreeModeMale01');
+  mp.events.callRemote('SetPlayerClothes', 2, character_data2.hairType, 0);
+  mp.events.callRemote('SetPlayerClothes', 3, character_data2.torso, 0);
+  mp.events.callRemote('SetPlayerClothes', 4, character_data2.legs, 0);
+  mp.events.callRemote('SetPlayerClothes', 6, character_data2.feet, 0);
+  mp.events.callRemote('SetPlayerClothes', 7, character_data2.accessory, 0);
+  mp.events.callRemote('SetPlayerClothes', 8, character_data2.undershirt, 0);
+  mp.events.callRemote('SetPlayerClothes', 11, character_data2.topshirt, 0);
+  mp.events.callRemote("SetPlayerSkin", character_data2.gender ? 'FreemodeFemale01' : 'FreeModeMale01');
 
-  mp.players.local.setHeadBlendData(character_data.faceFirst, character_data.faceSecond, 0, character_data.skinFirst, character_data.skinSecond, 0, character_data.faceMix, character_data.skinMix, 0, false);
-  mp.players.local.setHairColor(character_data.hairColor, character_data.hairHighlight);
+  mp.players.local.setHeadBlendData(character_data2.faceFirst, character_data2.faceSecond, 0, character_data2.skinFirst, character_data2.skinSecond, 0, character_data2.faceMix, character_data2.skinMix, 0, false);
+  mp.players.local.setHairColor(character_data2.hairColor, character_data2.hairHighlight);
   mp.players.local.setEyeColor(0);
 
-  mp.players.local.setHeadOverlayColor(2, 1, character_data.eyebrowsColor1, character_data.eyebrowsColor2);
-  mp.players.local.setHeadOverlayColor(4, 0, character_data.makeupColor, character_data.makeupColor);
-  mp.players.local.setHeadOverlayColor(8, 2, character_data.lipstickColor, character_data.lipstickColor);
+  mp.players.local.setHeadOverlayColor(2, 1, character_data2.eyebrowsColor1, character_data2.eyebrowsColor2);
+  mp.players.local.setHeadOverlayColor(4, 0, character_data2.makeupColor, character_data2.makeupColor);
+  mp.players.local.setHeadOverlayColor(8, 2, character_data2.lipstickColor, character_data2.lipstickColor);
 
 }
 
 mp.events.add("ChangeCharacterGender", (id) => {
-  character_data.gender = id;
-  character_data.faceFirst = 0;
-  character_data.faceSecond = 0;
-  character_data.faceMix = 0.0;
-  character_data.skinFirst = 0;
-  character_data.skinSecond = 0;
-  character_data.skinMix = 0.0;
-  character_data.hairType = 0;
-  character_data.hairColor = 0;
-  character_data.hairHighlight = 0;
-  character_data.eyeColor = 0;
-  character_data.eyebrows = 0;
-  character_data.eyebrowsColor1 = 0;
-  character_data.eyebrowsColor2 = 0;
-  character_data.beard = null;
-  character_data.beardColor = 0;
-  character_data.makeup = null;
-  character_data.makeupColor = 0;
-  character_data.lipstick = null;
-  character_data.lipstickColor = 0;
-  character_data.torso = 0;
-  character_data.legs = 1;
-  character_data.feet = 1;
-  character_data.undershirt = 57;
-  character_data.topshirt = 1;
-  character_data.topshirtTexture = 0;
-  character_data.accessory = 0;
+  character_data2.gender = id;
+  character_data2.faceFirst = 0;
+  character_data2.faceSecond = 0;
+  character_data2.faceMix = 0.0;
+  character_data2.skinFirst = 0;
+  character_data2.skinSecond = 0;
+  character_data2.skinMix = 0.0;
+  character_data2.hairType = 0;
+  character_data2.hairColor = 0;
+  character_data2.hairHighlight = 0;
+  character_data2.eyeColor = 0;
+  character_data2.eyebrows = 0;
+  character_data2.eyebrowsColor1 = 0;
+  character_data2.eyebrowsColor2 = 0;
+  character_data2.beard = null;
+  character_data2.beardColor = 0;
+  character_data2.makeup = null;
+  character_data2.makeupColor = 0;
+  character_data2.lipstick = null;
+  character_data2.lipstickColor = 0;
+  character_data2.torso = 0;
+  character_data2.legs = 1;
+  character_data2.feet = 1;
+  character_data2.undershirt = 57;
+  character_data2.topshirt = 1;
+  character_data2.topshirtTexture = 0;
+  character_data2.accessory = 0;
   
   mp.events.callRemote("SetPlayerSkin", id);
   arrayCara = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
@@ -196,24 +196,24 @@ mp.events.add('AccionCamaraRot', (data) => {
 mp.events.add('SelectCharacterClothes', (data) => {
   data = JSON.parse(data);
   if (data.torso != undefined) {
-    character_data.torso = data.torso;
+    character_data2.torso = data.torso;
     mp.events.callRemote('SetPlayerClothes', 3, data.torso, 0);
   }
   if (data.undershirt != undefined) {
-    character_data.undershirt = data.undershirt;
+    character_data2.undershirt = data.undershirt;
     mp.events.callRemote('SetPlayerClothes', 8, data.undershirt, 0);
   }
   if (data.slot == 4)
-    character_data.legs = data.variation;
+    character_data2.legs = data.variation;
   else if (data.slot == 6)
-    character_data.feet = data.variation;
+    character_data2.feet = data.variation;
   else if (data.slot == 7)
-    character_data.accessory = data.variation;
+    character_data2.accessory = data.variation;
   else if (data.slot == 8)
-    character_data.undershirt = data.variation;
+    character_data2.undershirt = data.variation;
   else if (data.slot == 11) {
-    character_data.topshirt = data.variation;
-    character_data.topshirtTexture = data.texture;
+    character_data2.topshirt = data.variation;
+    character_data2.topshirtTexture = data.texture;
   }
   mp.events.callRemote('SetPlayerClothes', data.slot, data.variation, data.texture);
 });
@@ -236,8 +236,8 @@ mp.events.add('SelComponenteCara', (data) => {
 
 mp.events.add('SelMaquillaje', (data) => {
   data = JSON.parse(data);
-  character_data.makeup = data.tipo;
-  character_data.makeupColor = data.color;
+  character_data2.makeup = data.tipo;
+  character_data2.makeupColor = data.color;
   mp.players.local.setHeadOverlay(4, data.tipo, 1.0, data.color, data.color);
 });
 
@@ -261,76 +261,76 @@ mp.events.add('SelComponenteRasgos', (data) => {
     // Face
     case 13:
       {
-        character_data.faceFirst = data.config1;
-        character_data.faceSecond = data.config2;
-        character_data.faceMix = mix_data[data.config3];
-        mp.players.local.setHeadBlendData(character_data.faceFirst, character_data.faceSecond, 0, character_data.skinFirst, character_data.skinSecond, 0, character_data.faceMix, character_data.skinMix, 0, false);
+        character_data2.faceFirst = data.config1;
+        character_data2.faceSecond = data.config2;
+        character_data2.faceMix = mix_data[data.config3];
+        mp.players.local.setHeadBlendData(character_data2.faceFirst, character_data2.faceSecond, 0, character_data2.skinFirst, character_data2.skinSecond, 0, character_data2.faceMix, character_data2.skinMix, 0, false);
         break;
       }
     // Eyes
     case 14:
       {
-        character_data.eyeColor = data.config1;
-        mp.players.local.setEyeColor(character_data.eyeColor);
+        character_data2.eyeColor = data.config1;
+        mp.players.local.setEyeColor(character_data2.eyeColor);
         break;
       }
     // Hair
     case 15:
       {
-        character_data.hairType = data.config1;
-        character_data.hairColor = data.config2;
-        character_data.hairHighlight = data.config3;
-        mp.players.local.setHairColor(character_data.hairColor, character_data.hairHighlight);
-        mp.events.callRemote('SetPlayerClothes', 2, character_data.hairType, 0);
+        character_data2.hairType = data.config1;
+        character_data2.hairColor = data.config2;
+        character_data2.hairHighlight = data.config3;
+        mp.players.local.setHairColor(character_data2.hairColor, character_data2.hairHighlight);
+        mp.events.callRemote('SetPlayerClothes', 2, character_data2.hairType, 0);
         break;
       }
     case 16:
       {
-        if (!character_data.gender) {
+        if (!character_data2.gender) {
           if (data.config1 < 1) {
-            character_data.beard = null;
+            character_data2.beard = null;
           }
           else {
-            character_data.beard = data.config1 - 1;
+            character_data2.beard = data.config1 - 1;
           }
-          character_data.beardColor = data.config2;
-          mp.players.local.setHeadOverlay(1, character_data.beard == null ? 255 : character_data.beard, 1, character_data.beardColor, character_data.beardColor);
+          character_data2.beardColor = data.config2;
+          mp.players.local.setHeadOverlay(1, character_data2.beard == null ? 255 : character_data2.beard, 1, character_data2.beardColor, character_data2.beardColor);
         }
         else {
           if (data.config1 < 1) {
-            character_data.lipstick = null;
+            character_data2.lipstick = null;
           }
           else {
-            character_data.lipstick = data.config1 - 1;
+            character_data2.lipstick = data.config1 - 1;
           }
-          character_data.lipstickColor = data.config2;
-          mp.players.local.setHeadOverlay(8, character_data.lipstick == null ? 255 : character_data.lipstick, 1, character_data.lipstickColor, character_data.lipstickColor);
+          character_data2.lipstickColor = data.config2;
+          mp.players.local.setHeadOverlay(8, character_data2.lipstick == null ? 255 : character_data2.lipstick, 1, character_data2.lipstickColor, character_data2.lipstickColor);
         }
         break;
       }
     // Skin color
     case 17:
       {
-        character_data.skinFirst = data.config1;
-        character_data.skinSecond = data.config2;
-        character_data.skinMix = mix_data[data.config3];
-        mp.players.local.setHeadBlendData(character_data.faceFirst, character_data.faceSecond, 0, character_data.skinFirst, character_data.skinSecond, 0, character_data.faceMix, character_data.skinMix, 0, false);
+        character_data2.skinFirst = data.config1;
+        character_data2.skinSecond = data.config2;
+        character_data2.skinMix = mix_data[data.config3];
+        mp.players.local.setHeadBlendData(character_data2.faceFirst, character_data2.faceSecond, 0, character_data2.skinFirst, character_data2.skinSecond, 0, character_data2.faceMix, character_data2.skinMix, 0, false);
         break;
       }
     // Eyebrow
     case 18:
       {
-        character_data.eyebrows = data.config1;
-            character_data.eyebrowsColor1 = data.config2;
-            character_data.eyebrowsColor2 = data.config2;
-            mp.players.local.setHeadOverlay(2, character_data.eyebrows == null ? 255 : character_data.eyebrows, 1, character_data.eyebrowsColor1, character_data.eyebrowsColor2);
+        character_data2.eyebrows = data.config1;
+            character_data2.eyebrowsColor1 = data.config2;
+            character_data2.eyebrowsColor2 = data.config2;
+            mp.players.local.setHeadOverlay(2, character_data2.eyebrows == null ? 255 : character_data2.eyebrows, 1, character_data2.eyebrowsColor1, character_data2.eyebrowsColor2);
             break;
       }
   }
 });
 
 mp.events.add('finishCharacterCreation', (character_name) => {
-  //browser.execute(`logeo(${JSON.stringify(character_data)})`);
+  //browser.execute(`logeo(${JSON.stringify(character_data2)})`);
   if (browser) {
     browser.destroy();
     browser = undefined;
@@ -338,7 +338,7 @@ mp.events.add('finishCharacterCreation', (character_name) => {
 
   mp.gui.cursor.visible = false;
   mp.game.cam.renderScriptCams(false, false, 0, true, false);
-  character_data.name = character_name;  
-  mp.events.callRemote('FinishCharacterCreation', JSON.stringify(character_data),JSON.stringify(arrayCara));
+  character_data2.name = character_name;  
+  mp.events.callRemote('FinishCharacterCreation', JSON.stringify(character_data2),JSON.stringify(arrayCara));
 });
 

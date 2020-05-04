@@ -7670,4 +7670,2059 @@ DowntownRP: loading remote events.. found 3 remote event(s)
 DowntownRP: loading remote events.. found 5 remote event(s)
 DowntownRP: loading remote events.. found 1 remote event(s)
 DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 5:33:48 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 5:40:14 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 5:49:11 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 5:59:28 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 6:18:52 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 6:31:08 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 6:40:33 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 6:41:36 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 6:42:05 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 6:42:25 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 6:43:05 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 6:44:19 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 6:51:26 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 7:03:42 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 04/05/2020 7:05:14 a. m.
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting DowntownRP resource..
+DowntownRP: setting as Gamemode resource
+DowntownRP: loading scripts.. found 1 script(s)
+DowntownRP: instantiating DowntownRP.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Armario..
+DowntownRP: instantiating DowntownRP.World.Houses.Interiors..
+DowntownRP: instantiating DowntownRP.World.Houses.Main..
+DowntownRP: instantiating DowntownRP.World.Houses.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Factions.Vehicles.VehHandler..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Doors..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.Main..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.PoliceStation..
+DowntownRP: instantiating DowntownRP.World.Factions.PD.TaquillaPD..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Dealth..
+DowntownRP: instantiating DowntownRP.World.Factions.MD.Hospital..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.HQ..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Safebox..
+DowntownRP: instantiating DowntownRP.World.Factions.Ilegal.Trafico..
+DowntownRP: instantiating DowntownRP.World.Companies.CompanyVehicles..
+DowntownRP: instantiating DowntownRP.World.Companies.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Companies.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Menu..
+DowntownRP: instantiating DowntownRP.World.Companies.Trucker.Main..
+DowntownRP: instantiating DowntownRP.World.Companies.Miner.Main..
+DowntownRP: instantiating DowntownRP.World.Business.DbFunctions..
+DowntownRP: instantiating DowntownRP.World.Business.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Supermarket.Main..
+DowntownRP: instantiating DowntownRP.World.Business.FuelStation.Main..
+DowntownRP: instantiating DowntownRP.World.Business.CompCarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Business.Clothes.Ropa..
+DowntownRP: instantiating DowntownRP.World.Business.CarShop.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.World.Banks.Main..
+DowntownRP: instantiating DowntownRP.World.Banks.MoneyFunctions..
+DowntownRP: instantiating DowntownRP.Utilities.AdminLVL..
+DowntownRP: instantiating DowntownRP.Utilities.Chat..
+DowntownRP: instantiating DowntownRP.Utilities.Notifications..
+DowntownRP: instantiating DowntownRP.Utilities.PlayerId..
+DowntownRP: instantiating DowntownRP.Utilities.Weapon..
+DowntownRP: instantiating DowntownRP.Utilities.Outfits.Main..
+DowntownRP: instantiating DowntownRP.Game.PrivateMessages..
+DowntownRP: instantiating DowntownRP.Game.Voice.Voice..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.DbHandler..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Engine..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Fuel..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Menu..
+DowntownRP: instantiating DowntownRP.Game.Vehicles.Truck..
+DowntownRP: instantiating DowntownRP.Game.Payday.Payday..
+DowntownRP: instantiating DowntownRP.Game.Money.MoneyModel..
+DowntownRP: instantiating DowntownRP.Game.Inventory.DatabaseFunctions..
+DowntownRP: instantiating DowntownRP.Game.Inventory.Inventory..
+DowntownRP: instantiating DowntownRP.Game.Commands.Admin..
+DowntownRP: instantiating DowntownRP.Game.Commands.AyudaADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.HelpChannel..
+DowntownRP: instantiating DowntownRP.Game.Commands.Main..
+DowntownRP: instantiating DowntownRP.Game.Commands.SancionesADM..
+DowntownRP: instantiating DowntownRP.Game.Commands.Entornos..
+DowntownRP: instantiating DowntownRP.Game.Character.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.Character.DbFunctions..
+DowntownRP: instantiating DowntownRP.Game.CharacterSelector.CharacterSelector..
+DowntownRP: instantiating DowntownRP.Game.CharacterAlpha.CharacterAlpha..
+DowntownRP: instantiating DowntownRP.Game.Authentication.Login..
+DowntownRP: instantiating DowntownRP.Game.Animations.Animations..
+DowntownRP: instantiating DowntownRP.Events.Disconnect..
+DowntownRP: instantiating DowntownRP.Data.DatabaseHandler..
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 3 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 2 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loading server events.. found 1 server event(s)
+DowntownRP: loaded 40 server events(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 8 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loading commands.. found 38 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 4 command(s)
+DowntownRP: loading commands.. found 15 command(s)
+DowntownRP: loading commands.. found 2 command(s)
+DowntownRP: loading commands.. found 3 command(s)
+DowntownRP: loading commands.. found 1 command(s)
+DowntownRP: loaded 99 commands(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 8 remote event(s)
+DowntownRP: loading remote events.. found 9 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 3 remote event(s)
+DowntownRP: loading remote events.. found 5 remote event(s)
+DowntownRP: loading remote events.. found 1 remote event(s)
+DowntownRP: loading remote events.. found 2 remote event(s)
 Downt

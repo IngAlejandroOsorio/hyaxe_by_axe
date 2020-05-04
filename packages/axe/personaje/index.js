@@ -69,6 +69,15 @@ mp.events.add("playerJoin", (player) => {
                 HighlightColor: 0
             },
 
+            character_data : {
+                torso: 0,
+                legs: 1,
+                feet: 1,
+                undershirt: 57,
+                topshirt: 1,
+                topshirtTexture: 0,
+            },
+
             EyebrowColor: 0,
             BeardColor: 0,
             EyeColor: 0,
@@ -105,6 +114,11 @@ mp.events.add("playerJoin", (player) => {
             this.customCharacter.Features
         );
 
+        this.setClothes(3, this.customCharacter.character_data.torso, 0, 2);
+        this.setClothes(4, this.customCharacter.character_data.legs, 0, 2);
+        this.setClothes(6, this.customCharacter.character_data.feet, 0, 2);
+        this.setClothes(8, this.customCharacter.character_data.undershirt, 0, 2);
+        this.setClothes(11, this.customCharacter.character_data.topshirt, 0, 2);
         this.setClothes(2, this.customCharacter.Hair.Hair, 0, 2);
         for (let i = 0; i < 10; i++) this.setHeadOverlay(i, [this.customCharacter.Appearance[i].Value, this.customCharacter.Appearance[i].Opacity, this.colorForOverlayIdx(i), 0]);
     };
@@ -144,22 +158,6 @@ mp.events.add("playerJoin", (player) => {
 
         creatorDimension++;
     };
-
-    player.goCreador = function() {
-        player.preCreatorPos = player.position;
-        player.preCreatorHeading = player.heading;
-        player.preCreatorDimension = player.dimension;
-
-        player.position = creatorPlayerPos;
-        player.heading = creatorPlayerHeading;
-        player.dimension = creatorDimension;
-        player.usingCreator = true;
-        player.changedGender = false;
-        player.call("toggleCreator2", [true, JSON.stringify(player.customCharacter)]);
-
-        creatorDimension++;
-    };
-
 
 
     player.sendToWorld = function() {
@@ -222,11 +220,11 @@ mp.events.add("creator_GenderChange", (player, gender) => {
     player.changedGender = true;
 });
 
-mp.events.add("creator_Save", (player, gender, parentData, featureData, appearanceData, hairAndColorData) => {
+mp.events.add("creator_Save", (player, gender, parentData, featureData, appearanceData, hairAndColorData, character_data) => {
     player.customCharacter.Gender = gender;
     player.customCharacter.Parents = JSON.parse(parentData);
     player.customCharacter.Features = JSON.parse(featureData);
-    player.customCharacter.Appearance = JSON.parse(appearanceData);
+    player.customCharacter.Appearance = JSON.parse(appearanceData);    
 
     let hairAndColors = JSON.parse(hairAndColorData);
     player.customCharacter.Hair = {Hair: hairAndColors[0], Color: hairAndColors[1], HighlightColor: hairAndColors[2]};
@@ -236,6 +234,7 @@ mp.events.add("creator_Save", (player, gender, parentData, featureData, appearan
     player.customCharacter.BlushColor = hairAndColors[6];
     player.customCharacter.LipstickColor = hairAndColors[7];
     player.customCharacter.ChestHairColor = hairAndColors[8];
+    player.customCharacter.character_data = JSON.parse(character_data);
 
     player.saveCharacter();
     player.applyCharacter();
@@ -275,21 +274,6 @@ mp.events.addCommand("creador", (player) => {
             player.sendToWorld();
         } else {
             player.sendToCreator();
-        }
-    }
-});
-
-mp.events.addCommand("crea", (player) => {
-    player.setVariable("CREATOR_MODE", true);
-    if (freemodeCharacters.indexOf(player.model) == -1) {
-        player.outputChatBox("Ha ocurrido un error, contáctate con administración (0x33dd33)");
-    } else if (player.vehicle) {
-        player.outputChatBox("Ha ocurrido un error, contáctate con administración (0x34dd44)");
-    } else {
-        if (player.usingCreator) {
-            player.sendToWorld();
-        } else {
-            player.goCreador();
         }
     }
 });

@@ -107,7 +107,7 @@ function updateHairAndColors() {
 }
 
 function applyCreatorOutfit() {
-    if (currentGender == 0) {
+    /*if (currentGender == 0) {
         localPlayer.setDefaultComponentVariation();
         localPlayer.setComponentVariation(3, 15, 0, 2);
         localPlayer.setComponentVariation(4, 21, 0, 2);
@@ -121,7 +121,7 @@ function applyCreatorOutfit() {
         localPlayer.setComponentVariation(6, 35, 0, 2);
         localPlayer.setComponentVariation(8, 15, 0, 2);
         localPlayer.setComponentVariation(11, 15, 0, 2);
-    }
+    }*/
 }
 
 function fillHairMenu() {
@@ -537,82 +537,6 @@ creatorHairMenu.Visible = false;
 creatorMenus.push(creatorHairMenu);
 // CREATOR HAIR & COLORS END
 
-// EVENTS
-mp.events.add("toggleCreator", (active, charData) => {
-    if (active) {
-        if (creatorCamera === undefined) {
-            creatorCamera = mp.cameras.new("creatorCamera", creatorCoords.camera, new mp.Vector3(0, 0, 0), 45);
-            creatorCamera.pointAtCoord(402.8664, -996.4108, -98.5);
-            creatorCamera.setActive(true);
-        }
-
-        // update menus with current character data
-        if (charData) {
-            charData = JSON.parse(charData);
-
-            // gender
-            currentGender = charData.Gender;
-            genderItem.Index = charData.Gender;
-
-            creatorHairMenu.Clear();
-            fillHairMenu();
-            applyCreatorOutfit();
-
-            // parents
-            fatherItem.Index = Data.fathers.indexOf(charData.Parents.Father);
-            motherItem.Index = Data.mothers.indexOf(charData.Parents.Mother);
-            similarityItem.Index = parseInt(charData.Parents.Similarity * 100);
-            skinSimilarityItem.Index = parseInt(charData.Parents.SkinSimilarity * 100);
-            updateParents();
-
-            // features
-            for (let i = 0; i < charData.Features.length; i++) {
-                featureItems[i].Index = (charData.Features[i] * 100) + 100;
-                updateFaceFeature(i);
-            }
-
-            // hair and colors
-            let hair = Data.hairList[currentGender].find(h => h.ID == charData.Hair.Hair);
-            hairItem.Index = Data.hairList[currentGender].indexOf(hair);
-
-            hairColorItem.Index = charData.Hair.Color;
-            hairHighlightItem.Index = charData.Hair.HighlightColor;
-            eyebrowColorItem.Index = charData.EyebrowColor;
-            beardColorItem.Index = charData.BeardColor;
-            eyeColorItem.Index = charData.EyeColor;
-            blushColorItem.Index = charData.BlushColor;
-            lipstickColorItem.Index = charData.LipstickColor;
-            chestHairColorItem.Index = charData.ChestHairColor;
-            updateHairAndColors();
-
-            // appearance
-            for (let i = 0; i < charData.Appearance.length; i++) {
-                appearanceItems[i].Index = (charData.Appearance[i].Value == 255) ? 0 : charData.Appearance[i].Value + 1;
-                appearanceOpacityItems[i].Index = charData.Appearance[i].Opacity * 100;
-                updateAppearance(i);
-            }
-        }
-
-        creatorMainMenu.Visible = true;
-        mp.gui.chat.show(false);
-        mp.game.ui.displayRadar(false);
-        mp.game.ui.displayHud(false);
-        localPlayer.clearTasksImmediately();
-        localPlayer.freezePosition(true);
-
-        mp.game.cam.renderScriptCams(true, false, 0, true, false);
-    } else {
-        for (let i = 0; i < creatorMenus.length; i++) creatorMenus[i].Visible = false;
-        mp.gui.chat.show(true);
-        mp.game.ui.displayRadar(true);
-        mp.game.ui.displayHud(true);
-        localPlayer.freezePosition(false);
-        localPlayer.setDefaultComponentVariation();
-        localPlayer.setComponentVariation(2, Data.hairList[currentGender][hairItem.Index].ID, 0, 2);
-
-        mp.game.cam.renderScriptCams(false, false, 0, true, false);
-    }
-});
 
 
 //-------------------------------------> empezamos <-----------------------------------------
@@ -806,7 +730,7 @@ mp.events.add("guardarCreador", () => { // <------------------------------------
   mp.gui.cursor.visible = false;
   mp.game.cam.renderScriptCams(false, false, 0, true, false);
 
-  mp.events.callRemote("creator_Save", currentGender, JSON.stringify(parentData), JSON.stringify(featureData), JSON.stringify(appearanceData), JSON.stringify(hairAndColors));
+  mp.events.callRemote("creator_Save", currentGender, JSON.stringify(parentData), JSON.stringify(featureData), JSON.stringify(appearanceData), JSON.stringify(hairAndColors),JSON.stringify(character_data));
 
 });
   
@@ -822,18 +746,16 @@ mp.events.add("salirCreador", () => { // <--------------------------------------
 });
 
 
-mp.events.add("toggleCreator2", (active, charData) => {
-    mp.gui.cursor.visible = true;
+mp.events.add("toggleCreator", (active, charData) => {    
     if (active) {
         if (creatorCamera === undefined) {
             creatorCamera = mp.cameras.new("creatorCamera", creatorCoords.camera, new mp.Vector3(0, 0, 0), 45);
             creatorCamera.pointAtCoord(402.8664, -996.4108, -98.5);
-            creatorCamera.setActive(true);
-            if (!creadorCef) {
-              creadorCef = mp.browsers.new("package://statics/pj/creator.html");    
-            }
+            creatorCamera.setActive(true);            
         }
-
+        if (!creadorCef) {
+            creadorCef = mp.browsers.new("package://statics/pj/creator.html");                
+            }        
         // update menus with current character data
         if (charData) {
             charData = JSON.parse(charData);
@@ -887,20 +809,23 @@ mp.events.add("toggleCreator2", (active, charData) => {
         mp.game.ui.displayHud(false);
         localPlayer.clearTasksImmediately();
         localPlayer.freezePosition(true);
-
+        mp.gui.cursor.show(true, true);
         mp.game.cam.renderScriptCams(true, false, 0, true, false);
+        setTimeout(() => {mp.gui.cursor.visible = true},1000);
     } else {
         for (let i = 0; i < creatorMenus.length; i++) creatorMenus[i].Visible = false;
         mp.gui.chat.show(true);
+        mp.gui.cursor.visible = false;
         mp.game.ui.displayRadar(true);
         mp.game.ui.displayHud(true);
+        mp.gui.cursor.show(false, false);
         localPlayer.freezePosition(false);
-        localPlayer.setDefaultComponentVariation();
-        localPlayer.setComponentVariation(2, Data.hairList[currentGender][hairItem.Index].ID, 0, 2);
+        //localPlayer.setDefaultComponentVariation();
+        //localPlayer.setComponentVariation(2, Data.hairList[currentGender][hairItem.Index].ID, 0, 2);
+
 
         mp.game.cam.renderScriptCams(false, false, 0, true, false);
     }
-    mp.gui.cursor.visible = true;
 });
 
 

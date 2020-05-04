@@ -802,17 +802,19 @@
         }
 
         function selCara(index,valor){          
-          console.log("selCara cef->"+ index +" - "+ valor);
+          //console.log("selCara cef->"+ index +" - "+ valor);
+          mp.trigger("MoveCameraPosition", 0);
           mp.trigger("SetCaraC",index,valor);
         }
 
         function selApariencia(index,valor){          
-          console.log("selApa cef->"+ index +" - "+ valor);
+          //console.log("selApa cef->"+ index +" - "+ valor);
           mp.trigger("SetApariencia",index,valor);
         }
 
         function selColores(peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol){          
           //console.log("selApa cef->"+ index +" - "+ valor);
+          mp.trigger("MoveCameraPosition", 0);
           mp.trigger("SetColores",peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol);
         }
 
