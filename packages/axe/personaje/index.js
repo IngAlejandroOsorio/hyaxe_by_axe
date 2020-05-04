@@ -4,6 +4,13 @@ const saveDirectory = "CustomCharacters";
 const freemodeCharacters = [mp.joaat("mp_m_freemode_01"), mp.joaat("mp_f_freemode_01")];
 const creatorPlayerPos = new mp.Vector3(402.8664, -996.4108, -99.00027);
 const creatorPlayerHeading = -185.0;
+
+const creaTiendaPos = new mp.Vector3(-705.3339,-152.55324,-99.00027);
+const creaTiendaHea = 148.534;
+
+const creaPeluPos = new mp.Vector3(-813.9624,-182.41513,37.568905);
+const creaPeluHea = 26.85495;
+
 var genero = 0;
 const torsoDataMale = require("./besttorso_male.json");
 const torsoDataFemale = require("./besttorso_female.json");
@@ -144,17 +151,30 @@ mp.events.add("playerJoin", (player) => {
         });
     };
 
-    player.sendToCreator = function() {
+
+    player.sendToCreator = function(modo) {
         player.preCreatorPos = player.position;
         player.preCreatorHeading = player.heading;
-        player.preCreatorDimension = player.dimension;
+        player.preCreatorDimension = player.dimension;                
 
-        player.position = creatorPlayerPos;
-        player.heading = creatorPlayerHeading;
-        player.dimension = creatorDimension;
+        switch (modo) {
+            case "creador":
+                player.position = creatorPlayerPos;
+                player.heading = creatorPlayerHeading;                
+            break;
+            case "tienda":
+                player.position = creaTiendaPos;
+                player.heading = creaTiendaHea;           
+            break;
+            case "peluqueria":
+                player.position = creaPeluPos;
+                player.heading = creaPeluHea;                
+            break;
+        }
+        player.dimension = creatorDimension;        
         player.usingCreator = true;
         player.changedGender = false;
-        player.call("toggleCreator", [true, JSON.stringify(player.customCharacter)]);
+        player.call("toggleCreator", [true, JSON.stringify(player.customCharacter),modo]);
 
         creatorDimension++;
     };
@@ -257,7 +277,7 @@ mp.events.add("creatorStart", (player) => {
         if (player.usingCreator) {
             player.sendToWorld();
         } else {
-            player.sendToCreator();
+            player.sendToCreator("creador");
         }
     }
 });
@@ -273,7 +293,50 @@ mp.events.addCommand("creador", (player) => {
         if (player.usingCreator) {
             player.sendToWorld();
         } else {
-            player.sendToCreator();
+            player.sendToCreator("creador");
         }
     }
+});
+
+mp.events.add("creadorTienda", (player) => {
+        player.setVariable("CREATOR_MODE", true);
+    if (freemodeCharacters.indexOf(player.model) == -1) {
+        player.outputChatBox("Ha ocurrido un error, contáctate con administración (0x33dd33)");
+    } else if (player.vehicle) {
+        player.outputChatBox("Ha ocurrido un error, contáctate con administración (0x34dd44)");
+    } else {
+        if (player.usingCreator) {
+            player.sendToWorld();
+        } else {
+            player.sendToCreator("tienda");
+        }
+    }
+});
+
+mp.events.add("creadorPeluqueria", (player) => {
+        player.setVariable("CREATOR_MODE", true);
+    if (freemodeCharacters.indexOf(player.model) == -1) {
+        player.outputChatBox("Ha ocurrido un error, contáctate con administración (0x33dd33)");
+    } else if (player.vehicle) {
+        player.outputChatBox("Ha ocurrido un error, contáctate con administración (0x34dd44)");
+    } else {
+        if (player.usingCreator) {
+            player.sendToWorld();
+        } else {
+            player.sendToCreator("peluqueria");
+        }
+    }
+});
+
+
+mp.events.addCommand("pos", (player,mod,ctd) => {
+var playerPos = player.position;
+var neo;
+if (mod == 1) {
+    neo = ctd;
+}else{
+    neo = playerPos.z + ctd;
+}
+
+player.position = new mp.Vector3(playerPos.x, playerPos.y, neo);
 });

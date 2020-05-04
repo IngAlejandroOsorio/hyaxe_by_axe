@@ -112,4 +112,3 @@ C:\Users\Alejo\Documents\hyaxe_by_axe\dotnet\resources\DowntownRP\bin\Debug\netc
 C:\Users\Alejo\Documents\hyaxe_by_axe\dotnet\resources\DowntownRP\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.resources.dll
 C:\Users\Alejo\Documents\hyaxe_by_axe\dotnet\resources\DowntownRP\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.resources.dll
 C:\Users\Alejo\Documents\hyaxe_by_axe\dotnet\resources\DowntownRP\obj\Debug\netcoreapp3.1\DowntownRP.csproj.CopyComplete
-C:\Users\Alejo\Documents\hyaxe_by_axe\dotnet\resources\DowntownRP\obj\Debug\netcoreapp3.1\DowntownRP.csprojAssemblyReference.cache

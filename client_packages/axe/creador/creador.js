@@ -1,6 +1,6 @@
 // shitcode will be better in the future
 const NativeUI = require("nativeui");
-const Data = require("charcreator/data");
+const Data = require("axe/creador/data");
 
 const Menu = NativeUI.Menu;
 const UIMenuItem = NativeUI.UIMenuItem;
@@ -746,15 +746,24 @@ mp.events.add("salirCreador", () => { // <--------------------------------------
 });
 
 
-mp.events.add("toggleCreator", (active, charData) => {    
+mp.events.add("toggleCreator", (active, charData, modo) => {    
     if (active) {
+        localPlayer.clearTasksImmediately();
+        localPlayer.freezePosition(true);
         if (creatorCamera === undefined) {
             creatorCamera = mp.cameras.new("creatorCamera", creatorCoords.camera, new mp.Vector3(0, 0, 0), 45);
             creatorCamera.pointAtCoord(402.8664, -996.4108, -98.5);
             creatorCamera.setActive(true);            
         }
         if (!creadorCef) {
-            creadorCef = mp.browsers.new("package://statics/pj/creator.html");                
+            if(modo == "creador"){
+                creadorCef = mp.browsers.new("package://statics/pj/creator.html");                    
+            }else if (modo == "tienda"){
+                creadorCef = mp.browsers.new("package://statics/pj/tiendaRopa.html");                       
+            }else{
+                creadorCef = mp.browsers.new("package://statics/pj/peluqueria.html");                    
+            }
+            
             }        
         // update menus with current character data
         if (charData) {
@@ -916,8 +925,10 @@ mp.events.add('AccionCamaraRot', (data) => {
   mp.players.local.setRotation(0.0, 0.0, data.zz, 2, true);
 });
 
+mp.events.add('AbrirTiendaRopaAxE', () => {
+  mp.events.callRemote("creadorTienda","tienda");
+});
 
-
-mp.keys.bind(0x78, true, function() {   // F9 temporal
-    mp.gui.cursor.visible = true;
+mp.events.add('AbrirPeluqueriaAxE', () => {
+  mp.events.callRemote("creadorTienda","peluqueria");
 });

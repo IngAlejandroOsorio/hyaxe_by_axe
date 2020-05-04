@@ -152,8 +152,8 @@ namespace DowntownRP.World.Business
             if (user.isInBusiness)
             {
                 if (user.business.type == 1) player.TriggerEvent("OpenSupermarketMenu");
-                if (user.business.type == 2) World.Business.Clothes.Ropa.S_abrirTienda(player, "ponsoboys", "100", 0, "HOLA");
-                if (user.business.type == 5) World.Business.Clothes.Ropa.S_abrirTienda(player, "peluqueria", "100", 0, "HOLA");
+                if (user.business.type == 2) player.TriggerEvent("AbrirTiendaRopaAxE");
+                if (user.business.type == 5) player.TriggerEvent("AbrirPeluqueriaAxE");
             }
         }
 
