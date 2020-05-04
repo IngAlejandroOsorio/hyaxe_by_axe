@@ -846,3 +846,2403 @@ MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' fo
 ==================[03/05/2020 4:51:12 p. m.]==================
 MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
  ---> MySql.D
+==================[03/05/2020 6:01:50 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:01:50 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:01:50 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:01:50 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:01:50 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:08:59 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:08:59 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:08:59 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:08:59 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:08:59 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:15:05 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:15:05 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:15:05 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:15:05 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:15:05 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:16:42 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:16:42 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:16:42 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:16:42 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:16:42 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:19:59 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:19:59 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:19:59 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:19:59 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:19:59 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:21:41 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:21:41 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:21:41 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:21:41 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:21:41 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:24:40 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:24:40 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:24:41 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:24:41 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:24:41 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:31:21 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:31:21 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:31:21 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:31:21 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:31:21 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:38:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:38:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:38:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:38:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:38:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:42:14 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:42:14 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:42:14 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:42:14 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:42:14 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:49:28 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:49:28 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:49:28 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:49:28 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:49:28 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 6:59:49 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 6:59:49 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 6:59:49 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 6:59:49 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 6:59:49 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 7:41:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 7:41:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 7:41:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 7:41:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 7:41:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 7:42:25 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 7:42:25 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 7:42:25 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 7:42:25 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 7:42:25 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 7:48:46 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 7:48:46 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 7:48:46 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 7:48:46 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 7:48:46 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 7:54:51 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 7:54:51 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 7:54:51 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 7:54:51 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 7:54:51 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 8:11:07 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 8:11:07 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 8:11:07 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 8:11:07 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 8:11:07 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 8:12:28 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 8:12:28 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 8:12:28 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 8:12:28 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 8:12:28 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 8:15:19 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 8:15:19 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 8:15:19 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 8:15:19 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 8:15:19 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 8:24:06 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 8:24:06 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 8:24:06 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 8:24:06 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 8:24:06 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 8:41:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 8:41:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 8:41:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 8:41:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 8:41:54 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[03/05/2020 10:39:03 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 10:39:03 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 10:39:03 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 10:39:03 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 10:39:03 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> My
+==================[03/05/2020 10:45:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 10:45:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 10:45:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 10:45:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 10:45:34 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> My
+==================[03/05/2020 10:47:55 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 10:47:55 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 10:47:55 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 10:47:55 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 10:47:55 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> My
+==================[03/05/2020 11:06:50 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[03/05/2020 11:06:50 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[03/05/2020 11:06:50 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[03/05/2020 11:06:50 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[03/05/2020 11:06:50 p. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> My
+==================[04/05/2020 12:28:53 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 12:28:53 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 12:28:53 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 12:28:53 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 12:28:53 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> My
+==================[04/05/2020 12:35:30 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 12:35:30 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 12:35:30 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 12:35:30 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 12:35:30 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> My
+==================[04/05/2020 12:49:31 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 12:49:31 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 12:49:31 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 12:49:31 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 12:49:31 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> My
+==================[04/05/2020 12:53:06 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 12:53:06 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 12:53:06 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 12:53:06 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 12:53:06 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> My
+==================[04/05/2020 12:54:54 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 12:54:54 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 12:54:54 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 12:54:54 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 12:54:54 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> My
+==================[04/05/2020 1:00:17 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 1:00:17 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 1:00:17 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 1:00:17 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 1:00:17 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 1:08:48 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 1:08:48 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 1:08:48 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 1:08:48 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 1:08:48 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 2:42:58 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 2:42:58 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 2:42:58 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 2:42:58 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 2:42:58 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 2:51:59 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 2:51:59 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 2:51:59 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 2:51:59 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 2:51:59 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 3:29:14 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 3:29:14 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 3:29:14 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 3:29:14 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 3:29:14 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 3:41:04 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 3:41:04 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 3:41:04 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 3:41:04 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 3:41:04 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 3:54:22 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 3:54:22 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 3:54:22 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 3:54:22 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 3:54:22 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 4:00:33 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 4:00:33 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 4:00:33 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 4:00:33 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 4:00:33 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 4:09:51 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 4:09:51 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 4:09:51 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 4:09:51 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 4:09:51 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 4:19:11 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 4:19:11 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 4:19:11 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 4:19:11 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 4:19:11 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 4:23:29 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 4:23:29 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 4:23:29 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 4:23:29 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 4:23:29 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 4:25:27 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 4:25:27 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 4:25:27 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 4:25:27 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 4:25:27 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 4:34:02 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 4:34:02 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 4:34:02 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 4:34:02 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 4:34:02 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 5:03:25 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 5:03:25 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 5:03:25 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 5:03:25 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 5:03:25 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 5:05:39 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 5:05:39 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 5:05:39 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 5:05:39 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 5:05:39 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 5:07:18 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 5:07:18 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 5:07:18 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 5:07:18 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 5:07:18 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 5:08:52 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 5:08:52 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 5:08:52 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 5:08:52 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 5:08:52 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D
+==================[04/05/2020 5:10:10 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+=========================================================
+
+==================[04/05/2020 5:10:10 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+=========================================================
+
+==================[04/05/2020 5:10:10 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+=========================================================
+
+==================[04/05/2020 5:10:10 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user ''@'AxE' (using password: NO)
+   at MySqlPacket MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.NativeDriver.ReadPacket()
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySqlPacket MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at void MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Authenticate(string authMethod, bool reset)
+   at void MySql.Data.MySqlClient.NativeDriver.Open()
+   at void MySql.Data.MySqlClient.Driver.Open()
+   at Driver MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at Driver MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at Driver MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+=========================================================
+
+==================[04/05/2020 5:10:10 a. m.]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host '' for user '' using method 'mysql_native_password' failed with message: Access denied for user ''@'AxE' (using password: NO)
+ ---> MySql.D

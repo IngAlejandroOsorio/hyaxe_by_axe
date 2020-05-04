@@ -206,17 +206,3 @@ mp.events.add("creatorStart", (player) => {
     }
 });
 
-mp.events.addCommand("creador", (player) => {
-    player.setVariable("CREATOR_MODE", true);
-    if (freemodeCharacters.indexOf(player.model) == -1) {
-        player.outputChatBox("Ha ocurrido un error, contáctate con administración (0x33dd33)");
-    } else if (player.vehicle) {
-        player.outputChatBox("Ha ocurrido un error, contáctate con administración (0x34dd44)");
-    } else {
-        if (player.usingCreator) {
-            player.sendToWorld();
-        } else {
-            player.sendToCreator();
-        }
-    }
-});

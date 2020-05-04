@@ -5,5 +5,7 @@
 	"stream-distance" : 500.0,
 	"announce" : false,
 	"csharp" : "enabled",
-	"port": 22005
+	"port": 22005,
+	"node-commandline-flags": "--inspect",
+	"allow-cef-debugging": true
 }

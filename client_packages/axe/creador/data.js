@@ -1,5 +1,5 @@
 const fathers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 42, 43, 44];
-const mothers = [21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 45]; //21
+const mothers = [21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 45];
 const fatherNames = ["Benjamin", "Daniel", "Joshua", "Noah", "Andrew", "Juan", "Alex", "Isaac", "Evan", "Ethan", "Vincent", "Angel", "Diego", "Adrian", "Gabriel", "Michael", "Santiago", "Kevin", "Louis", "Samuel", "Anthony", "Claude", "Niko", "John"];
 const motherNames = ["Hannah", "Aubrey", "Jasmine", "Gisele", "Amelia", "Isabella", "Zoe", "Ava", "Camila", "Violet", "Sophia", "Evelyn", "Nicole", "Ashley", "Gracie", "Brianna", "Natalie", "Olivia", "Elizabeth", "Charlotte", "Emma", "Misty"];
 const featureNames = ["Ancho", "Altura del fondo", "Longitud de la punta", "Profundidad", "Altura de la punta", "Nariz Rota", "Altura de Cejas", "Profundidad de Cejas", "Altura del Pómulo", "Ancho del Pómulo", "Cheek Depth", "Profundidad de la Mejilla", "Grosor del Labio", "Ancho de la Mandíbula", "Forma de la Mandíbula", "Altura de la Barbilla", "Profundidad de la Barbilla", "Ancho de la Barbilla", "Grosor de Mentón", "Anchura del Cuello"];

@@ -5,7 +5,8 @@ require('hud/info.js');
 require('hud/indexon.js');
 require('scaleform_messages/index.js');
 require('./scaleformHud');
-require('charcreator');
+//require('charcreator');
+require('./axe/creador/creador.js');
 
 require('crouch/index.js');
 //require('weapondisplay/index.js');
@@ -22,7 +23,6 @@ require('doorsPD.js');
 require('death.js');
 require('attachs.js');
 require('./axe/velocimetro/index.js');
-//require('./axe/creador/creador.js');
 
 //mp.gui.chat.show(false);
 //let chatbox = mp.browsers.new('package://chat_old/index.html');
