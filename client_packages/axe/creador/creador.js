@@ -696,7 +696,7 @@ mp.events.add('SelRopaPj', (data) => {
   mp.events.callRemote('SetRopaPj', data.slot, data.variation, data.texture);
 });
 
-mp.events.add("guardarCreador", () => { // <------------------------------------------------------------------
+mp.events.add("guardarCreador", (modo) => { // <------------------------------------------------------------------
     
   let parentData = {
       Father: Data.fathers[fatherItem.Index],
@@ -730,9 +730,17 @@ mp.events.add("guardarCreador", () => { // <------------------------------------
   mp.gui.cursor.visible = false;
   mp.game.cam.renderScriptCams(false, false, 0, true, false);
 
+  if(modo == "tienda"){
+    mp.events.callRemote("cobroTienda");
+  }else if (modo == "peluqueria"){
+    mp.events.callRemote("cobroPeluqueria");
+  }
+
   mp.events.callRemote("creator_Save", currentGender, JSON.stringify(parentData), JSON.stringify(featureData), JSON.stringify(appearanceData), JSON.stringify(hairAndColors),JSON.stringify(character_data));
 
 });
+
+
   
 mp.events.add("salirCreador", () => { // <------------------------------------------------------------------
   if (creadorCef) {
@@ -750,7 +758,7 @@ mp.events.add("toggleCreator", (active, charData, modo) => {
     if (active) {
         localPlayer.clearTasksImmediately();
         localPlayer.freezePosition(true);
-        if (creatorCamera === undefined) {
+        if (creatorCamera === undefined && modo != "tienda") {
             creatorCamera = mp.cameras.new("creatorCamera", creatorCoords.camera, new mp.Vector3(0, 0, 0), 45);
             creatorCamera.pointAtCoord(402.8664, -996.4108, -98.5);
             creatorCamera.setActive(true);            
@@ -760,6 +768,21 @@ mp.events.add("toggleCreator", (active, charData, modo) => {
                 creadorCef = mp.browsers.new("package://statics/pj/creator.html");                    
             }else if (modo == "tienda"){
                 creadorCef = mp.browsers.new("package://statics/pj/tiendaRopa.html");                       
+
+                let xx = 2.5//5.0;
+                let yy = 7.5//15.0;
+                let zz = 1.2;
+
+                mp.game.cam.destroyAllCams(true);
+                let plaPos = mp.players.local.position;
+                let vecPos = mp.players.local.getForwardVector();
+                let plaRot = mp.players.local.getRotation(2);
+                creatorCamera = mp.cameras.new('default', new mp.Vector3(plaPos.x + parseFloat(xx), plaPos.y + parseFloat(yy), plaPos.z + parseFloat(zz)), new mp.Vector3(0,0,0), 40);
+                creatorCamera.pointAtCoord(plaPos.x - parseFloat(xx), plaPos.y - parseFloat(yy), plaPos.z - parseFloat(zz));
+                creatorCamera.setActive(true);      
+                mp.game.cam.renderScriptCams(true, false, 20000, true, false);
+
+
             }else{
                 creadorCef = mp.browsers.new("package://statics/pj/peluqueria.html");                    
             }

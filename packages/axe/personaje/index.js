@@ -163,12 +163,12 @@ mp.events.add("playerJoin", (player) => {
                 player.heading = creatorPlayerHeading;                
             break;
             case "tienda":
-                player.position = creaTiendaPos;
-                player.heading = creaTiendaHea;           
+                //player.position = creaTiendaPos;
+                //player.heading = creaTiendaHea;           
             break;
             case "peluqueria":
-                player.position = creaPeluPos;
-                player.heading = creaPeluHea;                
+                player.position = creatorPlayerPos;
+                player.heading = creatorPlayerHeading;               
             break;
         }
         player.dimension = creatorDimension;        

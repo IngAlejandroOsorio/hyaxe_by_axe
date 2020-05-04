@@ -78,6 +78,25 @@ namespace DowntownRP.World.Business.Clothes
 
         }
 
+
+        [RemoteEvent("cobroTienda")]
+        public static async System.Threading.Tasks.Task cobroTiendaAsync(Player player)
+        {
+            if (await Game.Money.MoneyModel.SubMoney(player, 500))
+            {
+                Utilities.Notifications.SendNotificationINFO(player, "Gracias por tu compra vuelve pronto.");
+            }
+        }
+
+        [RemoteEvent("cobroPeluqueria")]
+        public static async System.Threading.Tasks.Task cobroPeluqueria(Player player)
+        {
+            if (await Game.Money.MoneyModel.SubMoney(player, 300))
+            {
+                Utilities.Notifications.SendNotificationINFO(player, "Gracias por tu compra vuelve pronto.");
+            }
+        }
+
         [Command("camx")]
         public void CMD_camx(Player player, string x, string y, string z, string rx, string ry, string rz)
         {
