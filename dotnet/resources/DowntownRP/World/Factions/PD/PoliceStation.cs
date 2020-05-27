@@ -22,6 +22,7 @@ namespace DowntownRP.World.Factions.PD
             shape.SetData("LSPD_CHOOSE_PRISON", true); // Configurado en Door para no meter mucho code innecesario
             NAPI.TextLabel.CreateTextLabel("Usa ~r~/arrestar ~w~para encarcelar", new Vector3(459.8182, -989.6442, 24.91484), 7, 3, 0, new Color(255, 255, 255));
 
+            // Mission row
             Vector3 poss = new Vector3(460.1864, -990.8899, 30.6896);
             ColShape shape2 = NAPI.ColShape.CreateCylinderColShape(new Vector3(460.1864, -990.8899, 30.6896), 3, 3);
             shape2.SetData("LSPD_DUTY_POINT", true); // Configurado en Door para no meter mucho code innecesario
@@ -46,150 +47,126 @@ namespace DowntownRP.World.Factions.PD
             NAPI.TextLabel.CreateTextLabel("~b~Multas~n~~w~Usa /pagarmulta para interactuar", positionn, 3, 1, 0, new Color(255, 255, 255));
             coll.SetData("LSPD_MULTAS", true);
 
-            Vector3 garaje = new Vector3(1253.35, 223.0046, -48.48957);
-            Vector3 gEntrada1 = new Vector3(434.0029, -1014.139, 28.75713);
-            Vector3 gEntrada2 = new Vector3(450.1055, -1013.28, 28.48885);
+            // Vespucci
+            Vector3 vposs = new Vector3(-1098.793, -831.0986, 14.282785);
+            ColShape vshape2 = NAPI.ColShape.CreateCylinderColShape(new Vector3(-1098.793, -831.0986, 14.282785), 3, 3);
+            vshape2.SetData("LSPD_DUTY_POINT", true); // Configurado en Door para no meter mucho code innecesario
+            NAPI.TextLabel.CreateTextLabel("Presiona ~r~F6 ~w~para ponerte en servicio", new Vector3(-1098.793, -831.0986, 14.282785), 4, 2, 0, new Color(255, 255, 255));
+            NAPI.Marker.CreateMarker(1, vposs.Subtract(new Vector3(0, 0, 0.9)), new Vector3(), new Vector3(), 1, new Color(202, 24, 24));
 
-            ColShape entrada1 = NAPI.ColShape.CreateCylinderColShape(gEntrada1, 2, 2);
-            ColShape entrada2 = NAPI.ColShape.CreateCylinderColShape(gEntrada2, 2, 2);
-            ColShape salida = NAPI.ColShape.CreateCylinderColShape(garaje, 2, 2);
-            salida.Dimension = 0;
-            ColShape salida2 = NAPI.ColShape.CreateCylinderColShape(garaje, 2, 2);
-            salida2.Dimension = 2;
+            Blip vblip = NAPI.Blip.CreateBlip(new Vector3(-1099.2672, -841.4212, 19.0015));
+            vblip.Sprite = 60;
+            vblip.Color = 3;
+            vblip.Name = "Los Santos Police Department";
+            vblip.ShortRange = true;
 
-            TextLabel lEntrada = NAPI.TextLabel.CreateTextLabel("Pulsa ~b~L ~w~para entrar", gEntrada1, 3, 1, 0, new Color(255, 255, 255));
-            //TextLabel lEntrada2 = NAPI.TextLabel.CreateTextLabel("Pulsa ~b~L ~w~para entrar", gEntrada2, 3, 1, 0, new Color(255, 255, 255));
-            TextLabel lSalida = NAPI.TextLabel.CreateTextLabel("Pulsa ~b~L ~w~para salir", garaje, 3, 1, 0, new Color(255, 255, 255));
-            //TextLabel lSalida2 = NAPI.TextLabel.CreateTextLabel("Pulsa ~b~L ~w~para salir", garaje, 3, 1, 0, new Color(255, 255, 255));
-            //lSalida2.Dimension = 2;
+            Vector3 vposition = new Vector3(-1106.4178, -825.91266, 14.282788);
+            ColShape vcol = NAPI.ColShape.CreateCylinderColShape(vposition, 2, 2);
+            NAPI.Marker.CreateMarker(1, vposition.Subtract(new Vector3(0, 0, 0.9)), new Vector3(), new Vector3(), 1, new Color(0, 162, 255));
+            NAPI.TextLabel.CreateTextLabel("~b~Armero~n~~w~Usa /armero para interactuar", vposition, 3, 1, 0, new Color(255, 255, 255));
+            vcol.SetData("LSPD_ARMERO", true);
 
-            entrada1.SetData("GARAGE_LSPD_ENTRANCE_1", true);
-            entrada2.SetData("GARAGE_LSPD_ENTRANCE_2", true);
-            salida.SetData("GARAGE_LSPD_EXIT_1", true);
-            salida2.SetData("GARAGE_LSPD_EXIT_1", true);
+            Vector3 vpositionn = new Vector3(-1099.2672, -841.4212, 19.0015);
+            ColShape vcoll = NAPI.ColShape.CreateCylinderColShape(vpositionn, 2, 2);
+            NAPI.Marker.CreateMarker(1, vpositionn.Subtract(new Vector3(0, 0, 0.9)), new Vector3(), new Vector3(), 1, new Color(0, 162, 255));
+            NAPI.TextLabel.CreateTextLabel("~b~Multas~n~~w~Usa /pagarmulta para interactuar", vpositionn, 3, 1, 0, new Color(255, 255, 255));
+            vcoll.SetData("LSPD_MULTAS", true);
+
+            // Carcel
+            Vector3 cposs = new Vector3(1827.2056, 2582.7292, 45.890995);
+            ColShape cshape2 = NAPI.ColShape.CreateCylinderColShape(new Vector3(1827.2056, 2582.7292, 45.890995), 3, 3);
+            cshape2.SetData("LSPD_DUTY_POINT", true); // Configurado en Door para no meter mucho code innecesario
+            NAPI.TextLabel.CreateTextLabel("Presiona ~r~F6 ~w~para ponerte en servicio", new Vector3(-1098.793, -831.0986, 14.282785), 4, 2, 0, new Color(255, 255, 255));
+            NAPI.Marker.CreateMarker(1, cposs.Subtract(new Vector3(0, 0, 0.9)), new Vector3(), new Vector3(), 1, new Color(202, 24, 24));
+
+            Blip cblip = NAPI.Blip.CreateBlip(new Vector3(1842.2253, 2583.2366, 45.890953));
+            cblip.Sprite = 60;
+            cblip.Color = 3;
+            cblip.Name = "Los Santos Police Department";
+            cblip.ShortRange = true;
+
+            Vector3 cposition = new Vector3(1834.1167, 2577.4856, 45.891);
+            ColShape ccol = NAPI.ColShape.CreateCylinderColShape(cposition, 2, 2);
+            NAPI.Marker.CreateMarker(1, cposition.Subtract(new Vector3(0, 0, 0.9)), new Vector3(), new Vector3(), 1, new Color(0, 162, 255));
+            NAPI.TextLabel.CreateTextLabel("~b~Armero~n~~w~Usa /armero para interactuar", cposition, 3, 1, 0, new Color(255, 255, 255));
+            ccol.SetData("LSPD_ARMERO", true);
+
+            Vector3 cpositionn = new Vector3(1842.2253, 2583.2366, 45.890953);
+            ColShape ccoll = NAPI.ColShape.CreateCylinderColShape(cpositionn, 2, 2);
+            NAPI.Marker.CreateMarker(1, cpositionn.Subtract(new Vector3(0, 0, 0.9)), new Vector3(), new Vector3(), 1, new Color(0, 162, 255));
+            NAPI.TextLabel.CreateTextLabel("~b~Multas~n~~w~Usa /pagarmulta para interactuar", cpositionn, 3, 1, 0, new Color(255, 255, 255));
+            ccoll.SetData("LSPD_MULTAS", true);
+
+            // Paleto
+            Vector3 pposs = new Vector3(-457.16885, 6014.338, 31.716496);
+            ColShape pshape2 = NAPI.ColShape.CreateCylinderColShape(new Vector3(-457.16885, 6014.338, 31.716496), 3, 3);
+            pshape2.SetData("LSPD_DUTY_POINT", true); // Configurado en Door para no meter mucho code innecesario
+            NAPI.TextLabel.CreateTextLabel("Presiona ~r~F6 ~w~para ponerte en servicio", new Vector3(-457.16885, 6014.338, 31.716496), 4, 2, 0, new Color(255, 255, 255));
+            NAPI.Marker.CreateMarker(1, pposs.Subtract(new Vector3(0, 0, 0.9)), new Vector3(), new Vector3(), 1, new Color(202, 24, 24));
+
+            Blip pblip = NAPI.Blip.CreateBlip(new Vector3(-445.99356, 6016.276, 31.716476));
+            pblip.Sprite = 60;
+            pblip.Color = 3;
+            pblip.Name = "Los Santos Police Department";
+            pblip.ShortRange = true;
+
+            Vector3 pposition = new Vector3(-431.39264, 6001.1094, 31.716488);
+            ColShape pcol = NAPI.ColShape.CreateCylinderColShape(pposition, 2, 2);
+            NAPI.Marker.CreateMarker(1, pposition.Subtract(new Vector3(0, 0, 0.9)), new Vector3(), new Vector3(), 1, new Color(0, 162, 255));
+            NAPI.TextLabel.CreateTextLabel("~b~Armero~n~~w~Usa /armero para interactuar", pposition, 3, 1, 0, new Color(255, 255, 255));
+            pcol.SetData("LSPD_ARMERO", true);
+
+            Vector3 ppositionn = new Vector3(-445.99356, 6016.276, 31.716476);
+            ColShape pcoll = NAPI.ColShape.CreateCylinderColShape(ppositionn, 2, 2);
+            NAPI.Marker.CreateMarker(1, ppositionn.Subtract(new Vector3(0, 0, 0.9)), new Vector3(), new Vector3(), 1, new Color(0, 162, 255));
+            NAPI.TextLabel.CreateTextLabel("~b~Multas~n~~w~Usa /pagarmulta para interactuar", ppositionn, 3, 1, 0, new Color(255, 255, 255));
+            pcoll.SetData("LSPD_MULTAS", true);
+
+            //DETECTOR METALES
+                    //CARCEL
+                    /*
+                        ColShape jailScanner = NAPI.ColShape.CreateCylinderColShape(new Vector3(1827.2056, 2582.7292, 45.890995), 3, 3);
+                        jailScanner.SetData("LSPD_SCANNER_POINT", true); // Configurado en Door para no meter mucho code innecesario*/
+
+
         }
-
-        [ServerEvent(Event.PlayerEnterColshape)]
-        public void OnPlayerEnterColshape_PD(ColShape shape, Player player)
-        {
-            if (shape.HasData("GARAGE_LSPD_ENTRANCE_1"))
-            {
-                player.SetData("GARAGE_LSPD_ENTRANCE_1", true);
-            }
-
-            if (shape.HasData("GARAGE_LSPD_ENTRANCE_2"))
-            {
-                player.SetData("GARAGE_LSPD_ENTRANCE_2", true);
-            }
-
-            if (shape.HasData("GARAGE_LSPD_EXIT_1"))
-            {
-                player.SetData("GARAGE_LSPD_EXIT_1", true);
-            }
-
-            if (shape.HasData("GARAGE_LSPD_EXIT_1"))
-            {
-                player.SetData("GARAGE_LSPD_EXIT_1", true);
-            }
-        }
-
-        [ServerEvent(Event.PlayerExitColshape)]
-        public void OnPlayerExitColShape_PD(ColShape shape, Player player)
-        {
-            if (shape.HasData("GARAGE_LSPD_ENTRANCE_1"))
-            {
-                player.ResetData("GARAGE_LSPD_ENTRANCE_1");
-            }
-
-            if (shape.HasData("GARAGE_LSPD_ENTRANCE_2"))
-            {
-                player.ResetData("GARAGE_LSPD_ENTRANCE_2");
-            }
-
-            if (shape.HasData("GARAGE_LSPD_EXIT_1"))
-            {
-                player.ResetData("GARAGE_LSPD_EXIT_1");
-            }
-
-            if (shape.HasData("GARAGE_LSPD_EXIT_1"))
-            {
-                player.ResetData("GARAGE_LSPD_EXIT_1");
-            }
-        }
-
-        [RemoteEvent("ActionGaragePD")]
-        public void RE_ActionGaragePD(Player player)
-        {
-            if (!player.HasData("USER_CLASS")) return;
-            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
-
-            if (player.HasData("GARAGE_LSPD_ENTRANCE_1"))
-            {
-                player.TriggerEvent("LoadAllIps");
-                if (player.IsInVehicle) player.Vehicle.Position = new Vector3(1253.35, 223.0046, -48.48957);
-                else player.Position = new Vector3(1253.35, 223.0046, -48.48957);
-            }
-
-            if (player.HasData("GARAGE_LSPD_ENTRANCE_2"))
-            {
-                player.TriggerEvent("LoadAllIps");
-                if (player.IsInVehicle)
-                {
-                    player.Vehicle.Position = new Vector3(1253.35, 223.0046, -48.48957);
-                    player.Vehicle.Dimension = 2;
-                }
-                else
-                {
-                    player.Position = new Vector3(1253.35, 223.0046, -48.48957); 
-                    player.Dimension = 2;
-                }
-            }
-
-            if (player.HasData("GARAGE_LSPD_EXIT_1"))
-            {
-                if (player.IsInVehicle) player.Vehicle.Position = new Vector3(434.0029, -1014.139, 28.75713);
-                else player.Position = new Vector3(434.0029, -1014.139, 28.75713);
-            }
-
-            if (player.HasData("GARAGE_LSPD_EXIT_2"))
-            {
-                if (player.IsInVehicle)
-                {
-                    player.Vehicle.Position = new Vector3(450.1055, -1013.28, 28.48885);
-                    player.Vehicle.Dimension = 0;
-                }
-                else
-                {
-                    player.Position = new Vector3(450.1055, -1013.28, 28.48885); 
-                    player.Dimension = 0;
-                }
-            }
-        }
-
+        
         [Command("pagarmulta")]
         public async Task CMD_pagarmulta(Player player)
         {
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
 
-            Data.Entities.FineLSPD multa = Data.Lists.finesPD.Find(x => x.userid == user.idpj);
-
-            if(multa != null)
+            if (user.multas.Count != 0)
             {
-                if (!multa.isPaid)
+                bool pagadas = false;
+                foreach (Data.Entities.FineLSPD multa in user.multas)
                 {
-                    if(await Game.Money.MoneyModel.SubMoney(player, (double)multa.price))
+                    if (!multa.isPaid)
                     {
-                        player.SendChatMessage($"<font color='green'>[MULTA PAGADA]</font> {multa.reason} | ${multa.price}");
-                        multa.isPaid = true;
-                        Utilities.Notifications.SendNotificationOK(player, "Has pagado tu multa correctamente");
+                        if (await Game.Money.MoneyModel.SubMoney(player, (double)multa.price))
+                        {
+                            if (player.HasData("LSPD_MULTAS"))
+                            {
+                                player.SendChatMessage($"~g~[MULTA PAGADA {multa.IdDatabase}]~w~ {multa.reason} | ${multa.price}");
+                                multa.isPaid = true;
+                                await Main.RegistrarPagoMulta(multa.IdDatabase);
+                                Utilities.Notifications.SendNotificationOK(player, "Has pagado tu multa correctamente");
+                                pagadas = true;
+                            }
+                            else Utilities.Notifications.SendNotificationERROR(player, "Tienes que estar en comisaría para pagar tus multas.");
+
+                        }
+                        else Utilities.Notifications.SendNotificationERROR(player, "No tienes dinero para pagar tu(s) multa(s)");
                     }
-                    else Utilities.Notifications.SendNotificationERROR(player, "No tienes dinero para pagar tu(s) multa(s)");
+                    
                 }
-                else Utilities.Notifications.SendNotificationERROR(player, "Tus multas ya están pagadas");
+                if(!pagadas) Utilities.Notifications.SendNotificationERROR(player, "Tus multas ya están pagadas");
             }
             else Utilities.Notifications.SendNotificationERROR(player, "No tienes multas registradas");
+            
         }
+
 
         [Command("armero")]
         public void CMD_armero(Player player)
@@ -201,7 +178,7 @@ namespace DowntownRP.World.Factions.PD
             {
                 if (player.HasData("LSPD_ARMERO"))
                 {
-                    if (user.rank >= 7)
+                    if (user.rank >= 2)
                     {
                         if (!user.factionDuty) Utilities.Notifications.SendNotificationERROR(player, "No estás en servicio");
                         else player.TriggerEvent("armeriapd");
@@ -232,9 +209,10 @@ namespace DowntownRP.World.Factions.PD
                         {
                             user.factionDuty = true;
                             Utilities.Notifications.SendNotificationOK(player, "Estás en servicio");
-                            if(user.hombre == true) { 
-                                player.SetOutfit(66);
-                                player.SetAccessories(1, 0 ,0);
+                            if(user.hombre == true) {
+                                player.SetClothes(6, 10, 0);
+                                player.SetClothes(4, 35, 0);
+                                player.SetClothes(8, 58, 0);
                                 player.SetClothes(11, 16, 0);
                                 player.SetClothes(10, 0, 0);
                                 player.SetClothes(3, 0, 0);
@@ -399,7 +377,7 @@ namespace DowntownRP.World.Factions.PD
                         {
                             user.factionDuty = false;
                             Utilities.Notifications.SendNotificationOK(player, "No estás en servicio");
-                            player.TriggerEvent("playerLoadPj");
+                            Utilities.Clothes.ReturnUserClothes(user);
                             return;
                         }
                     }

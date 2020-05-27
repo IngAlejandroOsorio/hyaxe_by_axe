@@ -30,6 +30,23 @@
         .butt:hover {
           background-color: #68040e;
         }
+
+        input.active[type=range]::-webkit-slider-thumb {
+
+        border: 3px solid #000000;
+        border-radius: 4px;
+        background: #ffffff;
+        margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+        box-shadow: 3px 3px 3px #000000, 0px 0px 3px #0d0d0d; /* Add cool effects to your sliders! */
+        }
+    
+    .alert {
+      padding: .25rem 0.9rem !important;
+    }
+    .card-body {
+      padding: 0.55rem !important;
+    }
+
     </style>
 
 </head>
@@ -38,243 +55,26 @@
     <!-- partial:index.partial.html -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <br>
                 <center><img src="../img/logoaxe.png" class="img-fluid img-responsive"></center>
-                <br>
-                <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                    <div class="card-body text-white">
-                            <div class="form-group">
-                                  </div>
-                                  <div class="form-group">
-                                    <center class="font-size: 16px">Tienda de Ropa</center>                                    
-                                  </div>
-                    </div>
-
-                </div>
-                <br>
-                <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                        <div class="card-body text-white">
-                                <button class="butt" id="shirt-settings">👕</button>
-                                <button class="butt" id="jeans-settings">👖</button>
-                                <button class="butt" id="shoes-settings">👟</button>
-                        </div>
-    
-                    </div>
-                    <br>
-                    <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="card-body text-white">
-                                            <label for="customRange3">Rotar personaje</label>
-                                            <input type="range" class="custom-range" min="0" max="360" step="10" oninput="set_rot(this.value)" onchange="set_rot(this.value)" id="rotarPersonaje">
-                                          </div>
-        
-                        </div><br>
-                        <button id="crearBtn" class="btn btn-success btn-block">Comprar Prendas</button>
-                        <button id="volverBtn" class="btn btn-danger btn-block">Cerrar</button>
-            </div>
-            <div class="col-md-6"></div>
-            <div class="col-md-3">
-                <br>
-               <div id="creator-pj">
-                    <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Género
-                                  </div>
-                            <div class="card-body text-white">
-                                    <center><button class="btn btn-primary" id="btnHombre">♂️ Hombre</button>
-                                        <button class="btn btn-primary" id="btnMujer">♀️ Mujer</button></center>
-                            </div>
-                            
-                      </div><br>
-                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Genética
-                                  </div>
-                            <div class="card-body text-white">
-                                    <label for="customRange3">Genes paternos</label>
-                                    <input type="range" class="custom-range" min="0" max="23" step="1" id="genesPaternos" oninput="gen_pat(this.value)" onchange="gen_pat(this.value)">
-                                    <label for="customRange3">Genes maternos</label>
-                                    <input type="range" class="custom-range" min="0" max="21" step="1" id="genesMaternos" oninput="gen_mat(this.value)" onchange="gen_mat(this.value)">
-                                    <label for="customRange3">Semejanza</label>
-                                    <input type="range" class="custom-range" min="0" max="100" step="1" id="genesMix" oninput="gen_mix(this.value)" onchange="gen_mix(this.value)">
-                                    <label for="customRange3">Tono de Piel</label>
-                                    <input type="range" class="custom-range" min="0" max="100" step="1" id="xgenesMix" oninput="skin_mix(this.value)" onchange="skin_mix(this.value)">
-                                    <center>
-                                      <button type="button" class="btn btn-success btn-sm" onClick="mp.trigger('RdmPadres','Aleatorio')">Aleatorio</button>
-                                      <button type="button" class="btn btn-danger btn-sm" onClick="mp.trigger('RdmPadres','Reinicia')">Reiniciar</button>
-                                    </center>
-                            </div>
-                      </div>                     
-               </div>
-
-               <div id="creator-face">
-                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                        <div class="card-body text-white">
-                                    <center>
-                                      <button type="button" class="btn btn-success btn-sm" onClick="mp.trigger('RdmCara','Aleatorio')">Cara Aleatoria</button>
-                                      <button type="button" class="btn btn-danger btn-sm" onClick="mp.trigger('RdmCara','Reinicia')">Reiniciar Cara</button>
-                                    </center>
-                        </div>
-                      </div>
-                      <br>
-                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                                   
-                            <div class="alert alert-primary" role="alert">
-                                    Nariz
-                                  </div>
-                            <div class="card-body text-white">
-                                    <label for="customRange3">Ancho</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" id="selCaraAncho" oninput="selCara(0,this.value)" onchange="selCara(0,this.value)">
-                                    <label for="customRange3">Alto</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" id="selCaraAlto" oninput="selCara(1,this.value)" onchange="selCara(1,this.value)">
-                                    <label for="customRange3">Largo</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" id="selCaraLargo" oninput="selCara(2,this.value)" onchange="selCara(2,this.value)">
-                                    <label for="customRange3">Punta</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" id="selCaraLargo" oninput="selCara(4,this.value)" onchange="selCara(4,this.value)">
-                                    <label for="customRange3">Dorso</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" id="selCaraLargo" oninput="selCara(3,this.value)" onchange="selCara(3,this.value)">
-                            </div>
-                      </div>
-                      <br>
-                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Pómulos
-                                  </div>
-                            <div class="card-body text-white">
-                                    <label for="customRange3">Tamaño</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" oninput="selCara(10,this.value)" onchange="selCara(10,this.value)" id="pomulosTamaño">
-                                    <label for="customRange3">Ancho</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" oninput="selCara(9,this.value)" onchange="selCara(9,this.value)"id="pomulosAncho">
-                                    <label for="customRange3">Alto</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" oninput="selCara(8,this.value)" onchange="selCara(8,this.value)" id="pomulosAlto">
-                            </div>
-                      </div>
-                      <br>
-                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Cejas
-                                  </div>
-                            <div class="card-body text-white">
-                                    <label for="customRange3">Tipo</label>
-                                  <input type="range" class="custom-range" min="0" max="33" step="1" oninput="cejas_tipo(this.value)" onchange="cejas_tipo(this.value)" id="barbaTipo">
-                                  <label for="customRange3">Color</label>
-                                  <div id="colorCejasPaleta"></div>
-                            </div>
-                      </div>
-                      <br>
-                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Ojos
-                                  </div>
-                            <div class="card-body text-white">
-                                  <label for="customRange3">Color</label>
-                                  <div id="colorOjosPaleta"></div>
-                            </div>
-                      </div>
-                    <br>
-                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Mandíbula
-                                  </div>
-                            <div class="card-body text-white">
-                                    <label for="customRange3">Tamaño</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" oninput="selCara(14,this.value)" onchange="selCara(14,this.value)" id="mandibulaTamaño">
-                                    <label for="customRange3">Ancho</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" oninput="selCara(13,this.value)" onchange="selCara(13,this.value)"id="mandibulaAncho">
-                            </div>
-                      </div>
-                      <br>
-                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Barbilla
-                                  </div>
-                            <div class="card-body text-white">
-                                    <label for="customRange3">Tamaño</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" oninput="selCara(15,this.value)" onchange="selCara(15,this.value)" id="barbillaTamaño">
-                                    <label for="customRange3">Ancho</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" oninput="selCara(17,this.value)" onchange="selCara(17,this.value)" id="barbillaAncho">
-                                    <label for="customRange3">Alto</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" oninput="selCara(16,this.value)" onchange="selCara(16,this.value)" id="barbillaAlto">
-                                    <label for="customRange3">Curva</label>
-                                    <input type="range" class="custom-range" min="0" max="200" step="1" oninput="selCara(18,this.value)" onchange="selCara(18,this.value)" id="barbillaCurva">
-                            </div>
-                      </div>
-                      <br>
-               </div>
-
-               <div id="creator-hair">
-                    <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                        <div class="card-body text-white">
-                                    <center>
-                                      <button type="button" class="btn btn-success btn-sm" onClick="mp.trigger('RdmApariencia','Aleatorio')">Apariencia Aleatoria</button>
-                                      <button type="button" class="btn btn-danger btn-sm" onClick="mp.trigger('RdmApariencia','Reinicia')">Reiniciar Apariencia</button>
-                                    </center>
-                        </div>
-                      </div>
-                    <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                          <div class="alert alert-primary" role="alert">
-                                  Pelo
-                                </div>
-                          <div class="card-body text-white">
-                                  <label for="customRange3">Tipo</label>
-                                  <input type="range" class="custom-range" min="0" max="36" step="1" oninput="pelo_tipo(this.value)" onchange="pelo_tipo(this.value)" id="peloTipo">
-                                  <label for="customRange3">Brillo</label>
-                                  <input type="range" class="custom-range" min="0" max="63" step="1" oninput="pelo_ilu(this.value)" onchange="pelo_ilu(this.value)" id="peloBrillo">
-                                  <label for="customRange3">Color</label>
-                                  <div id="colorPeloPaleta"></div>
-                          </div>
-                    </div>
-                    <br>
-                    <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Barba 
-                                  </div>
-                            <div class="card-body text-white">
-                                    <label for="customRange3">Tipo</label>
-                                  <input type="range" class="custom-range" min="0" max="29" step="1" oninput="barba_tipo(this.value)" onchange="barba_tipo(this.value)" id="barbaTipo">
-                                  <label for="customRange3">Color</label>
-                                  <div id="colorBarbaPaleta"></div>
-                            </div>
-                      </div>
-                    <br>
-                    <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Labios 
-                                  </div>
-                            <div class="card-body text-white">
-                                    <label for="customRange3">Tipo</label>
-                                  <input type="range" class="custom-range" min="0" max="9" step="1" oninput="labios_tipo(this.value)" onchange="labios_tipo(this.value)" id="labiosTipo">
-                                  <label for="customRange3">Color</label>
-                                  <div id="colorLabiosPaleta"></div>
-                            </div>
-                      </div>
-                    <br>
-                    <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                            <div class="alert alert-primary" role="alert">
-                                    Maquillaje
-                                  </div>
-                            <div class="card-body text-white">
-                                    <label for="customRange3">Tipo</label>
-                                    <input type="range" class="custom-range" min="0" max="74" step="1" oninput="maqui_tipo(this.value)" onchange="maqui_tipo(this.value)" id="maquillajeTipo">
-                                    <label for="customRange3">Tipo de Rubor</label>
-                                    <input type="range" class="custom-range" min="0" max="6" step="1" oninput="rubor_tipo(this.value)" onchange="rubor_tipo(this.value)" id="majeTipo">
-                                    <label for="customRange3">Color de Rubor</label>
-                                  <div id="colorRuborPaleta"></div>
-                            </div>
-                      </div>
-             </div>
-
-
-             <div id="creator-shirt">
+              <div id="navigate">
                 <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                         <div class="alert alert-primary" role="alert">
                                 Parte de arriba
                               </div>
                         <div class="card-body text-white">
-                                <label for="customRange3">Tipo</label>
-                                <input type="range" class="custom-range" min="0" max="93" step="1" oninput="ropa_tipo(0,this.value)" onchange="ropa_tipo(0,this.value)" id="camisaTipo"><br>
-                                <label for="customRange3">Hoodies / Vestidos</label>
-                                <input type="range" class="custom-range" min="0" max="50" step="1" oninput="ropa_tipo(1,this.value)" onchange="ropa_tipo(1,this.value)" id="camisaTipo2">                                
+                                <label for="camisaTipo">Tipo <code></code></label>
+                                <input type="range" class="custom-range move" min="0" max="44" step="1" oninput="topy(this.value)" onchange="topy(this.value)" id="camisaTipo"><br>
+                                <div class="card-body text-white">
+                                <label for="conjuntoAbajo">Solo Parte superior <code></code></label>
+                                <input type="range" class="custom-range move" min="0" max="29" step="1" oninput="ropa_tipo(2,this.value)" onchange="ropa_tipo(2,this.value)" id="conjuntoAbajo"><br>
+                                <label for="conjuntoArriba">Solo Parte inferior <code></code></label>
+                                <input type="range" class="custom-range move" min="0" max="29" step="1" oninput="ropa_vari(this.value)" onchange="ropa_vari(this.value)" id="conjuntoArriba">
+                                </div>
+                                <br>
+                                <label for="camisaTipo2">Hoodies / Vestidos <code></code></label>
+                                <input type="range" class="custom-range move" min="0" max="28" step="1" oninput="ropa_tipo(1,this.value)" onchange="ropa_tipo(1,this.value)" id="camisaTipo2">                                
                         </div>
                   </div>
                   <br>
@@ -283,56 +83,65 @@
                                 Pecho
                               </div>
                         <div class="card-body text-white">
-                                <label for="customRange3">Tipo</label>
-                                <input type="range" class="custom-range" min="0" max="16" step="1" oninput="pecho_tipo(this.value)" onchange="pecho_tipo(this.value)" id="camisaTipo"><br>
-                                <label for="customRange3">Color Cabello Torso</label>
-                                    <div id="colorPeloPechoPaleta"></div>                                
-                        </div>
-                  </div>
-                  <br>                                
-                  <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                        <div class="alert alert-primary" role="alert">
-                                Conjunto
-                              </div>
-                        <div class="card-body text-white">
-                                <label for="customRange3">Parte inferior</label>
-                                <input type="range" class="custom-range" min="0" max="30" step="1" oninput="ropa_tipo(2,this.value)" onchange="ropa_tipo(2,this.value)" id="conjuntoAbajo"><br>
-                                <label for="customRange3">Parte superior</label>
-                                <input type="range" class="custom-range" min="0" max="30" step="1" oninput="ropa_vari(this.value)" onchange="ropa_vari(this.value)" id="conjuntoArriba">
+                                <label for="camisaTipo3">Tipo <code></code></label>
+                                <input type="range" class="custom-range move" min="0" max="15" step="1" oninput="pecho_tipo(this.value)" onchange="pecho_tipo(this.value)" id="camisaTipo3"><br>                              
                         </div>
                   </div>
                   <br>
-         </div>
-         <div id="creator-jeans">
-            <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                    <div class="alert alert-primary" role="alert">
-                            Pantalones
+                  <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
+                          <div class="alert alert-primary" role="alert">
+                                  Pantalones
+                                </div>
+                          <div class="card-body text-white">
+                                  <label for="pantalonesTipo">Largos <code></code></label>
+                                  <input type="range" class="custom-range move" min="0" max="54" step="1" oninput="ropa_tipo(3,this.value)" onchange="ropa_tipo(3,this.value)" id="pantalonesTipo"><br>
+                                  <label for="pantalonesTipo2">Cortos <code></code></label>
+                                  <input type="range" class="custom-range move" min="0" max="11" step="1" oninput="ropa_tipo(4,this.value)" onchange="ropa_tipo(4,this.value)" id="pantalonesTipo2">
                           </div>
-                    <div class="card-body text-white">
-                            <label for="customRange3">Largos</label>
-                            <input type="range" class="custom-range" min="0" max="56" step="1" oninput="ropa_tipo(3,this.value)" onchange="ropa_tipo(3,this.value)" id="pantalonesTipo"><br>
-                            <label for="customRange3">Cortos</label>
-                            <input type="range" class="custom-range" min="0" max="12" step="1" oninput="ropa_tipo(4,this.value)" onchange="ropa_tipo(4,this.value)" id="pantalonesTipo2">
                     </div>
-              </div>
-              <br>
-     </div>
-     <div id="creator-shoes">
-        <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                <div class="alert alert-primary" role="alert">
-                        Zapatos
+                    <br>
+                    <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
+                            <div class="alert alert-primary" role="alert">
+                                    Zapatos
+                                  </div>
+                            <div class="card-body text-white">
+                                    <label for="zapatosTipo">Zapatos <code></code></label>
+                                    <input type="range" class="custom-range move" min="0" max="19" step="1" oninput="ropa_tipo(5,this.value)" onchange="ropa_tipo(5,this.value)" id="zapatosTipo"><br>
+                                    <label for="zapatosTipo2">Deportivos <code></code></label>
+                                    <input type="range" class="custom-range move" min="0" max="30" step="1" oninput="ropa_tipo(6,this.value)" onchange="ropa_tipo(6,this.value)" id="zapatosTipo2"><br>
+                                    <label for="zapatosTipo3">Playa <code></code></label>
+                                    <input type="range" class="custom-range move" min="0" max="3" step="1" oninput="ropa_tipo(7,this.value)" onchange="ropa_tipo(7,this.value)" id="zapatosTipo3">
+                            </div>
                       </div>
-                <div class="card-body text-white">
-                        <label for="customRange3">Zapatos</label>
-                        <input type="range" class="custom-range" min="0" max="20" step="1" oninput="ropa_tipo(5,this.value)" onchange="ropa_tipo(5,this.value)" id="zapatosTipo"><br>
-                        <label for="customRange3">Deportivos</label>
-                        <input type="range" class="custom-range" min="0" max="31" step="1" oninput="ropa_tipo(6,this.value)" onchange="ropa_tipo(6,this.value)" id="zapatosTipo2"><br>
-                        <label for="customRange3">Playa</label>
-                        <input type="range" class="custom-range" min="0" max="4" step="1" oninput="ropa_tipo(7,this.value)" onchange="ropa_tipo(7,this.value)" id="zapatosTipo3">
-                </div>
-          </div>
-          <br>
- </div>
+                        <br>
+                      <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
+                              <div class="alert alert-primary" role="alert">
+                                      Accesorios
+                                    </div>
+                              <div class="card-body text-white">
+                                      <label for="zapasdtosTipo">Sombreros <code></code></label>
+                                      <input type="range" class="custom-range move" min="0" max="34" step="1" oninput="sombrero(this.value)" onchange="sombrero(this.value)" id="zapasdtosTipo"><br>
+                                      <label for="zapaatosTipo2">Mascaras <code></code></label>
+                                      <input type="range" class="custom-range move" min="0" max="28" step="1" oninput="mascara(this.value)" onchange="mascara(this.value)" id="zapaatosTipo2"><br>
+                                      <label for="zapatosTsipo3">Lentes <code></code></label>
+                                      <input type="range" class="custom-range move" min="0" max="16" step="1" oninput="gafas(this.value)" onchange="gafas(this.value)" id="zapatosTsipo3">
+                              </div>
+                        </div>
+                        <br>                        
+                        <button id="crearBtn" class="btn btn-success btn-block move">Comprar Prendas</button>
+                        <button id="volverBtn" class="btn btn-danger btn-block move">Cerrar</button>
+              </div>
+        
+                        </div>
+            
+
+              <div class="col-md-8"></div>
+              
+              <div class="col-md-2">
+                
+
+              </div>
+            </div>
             </div>
         </div>
     </div>
@@ -405,33 +214,14 @@
 <!--Modal: modalConfirmDelete-->
 
     <script src="assets/js/character-clothes.js"></script>
+    <script src="axe/data.js"></script>
     <script src="assets/js/colores.js"></script>
     <script>
         var current;
         var genero = 0;
 
         //Rasgos
-        var genMat = 0;
-        var genPat = 0;        
-        var faceMix = 0;
-        var skinMix = 0;
-        var etnPat = 0;
-        var etnMat = 0;
-        var etnMix = 0;
-        var peloCol = 0;
-        var peloTipo = 0;
-        var peloIlu = 0;
-        var barbaTipo = 0;
-        var barbaCol = 0;
-        var labiosTipo = 0;
-        var labiosCol = 0;
-        var cejasTipo = 0;
-        var cejasCol = 0;
-        var ojosCol = 0;
-        var ruborTipo = 0;
-        var ruborCol = 0;
-        var maquiTipo = 0;
-        var maquiCol = 0;
+        
         var ropaTipo = 0;
         var pechoTipo = 0;
         var pechoCol = 0;
@@ -439,6 +229,14 @@
         var alejar = -998.5422; 
         var alejar2 = -99.00404;
         var rot = 176.891;
+
+        var costo = 0;
+        var camisa = false;
+        var pantalon = false;
+        var zapatos = false;
+        var costoPan = 0;
+        var costoCam = 0;
+        var costoZap = 0;
 
         function showError(error){
             document.getElementById("mensajeError").innerHTML = error;
@@ -453,283 +251,13 @@
         $("#creator-jeans").hide();
         $("#creator-shoes").hide();
 
-        $('#pj-settings').click(() => {
-            if(current == null){
-                $("#creator-pj").show();
-                current = "#creator-pj";
-            }else{
-                $(current).hide();
-                $("#creator-pj").show();
-                current = "#creator-pj";
-            }
-        });
-
-        $('#face-settings').click(() => {
-            if(current == null){
-                $("#creator-face").show();
-                current = "#creator-face";
-            }else{
-                $(current).hide();
-                $("#creator-face").show();
-                current = "#creator-face";
-            }
-        });
-
-        $('#hair-settings').click(() => {
-            if(current == null){
-                $("#creator-hair").show();
-                current = "#creator-hair";
-            }else{
-                $(current).hide();
-                $("#creator-hair").show();
-                current = "#creator-hair";
-            }
-        });
-
-        $('#lips-settings').click(() => {
-            if(current == null){
-                $("#creator-lips").show();
-                current = "#creator-lips";
-            }else{
-                $(current).hide();
-                $("#creator-lips").show();
-                current = "#creator-lips";
-            }
-        });
-
-        $('#shirt-settings').click(() => {
-            if(current == null){
-                $("#creator-shirt").show();
-                current = "#creator-shirt";
-            }else{
-                $(current).hide();
-                $("#creator-shirt").show();
-                current = "#creator-shirt";
-            }
-        });
-
-        $('#jeans-settings').click(() => {
-            if(current == null){
-                $("#creator-jeans").show();
-                current = "#creator-jeans";
-            }else{
-                $(current).hide();
-                $("#creator-jeans").show();
-                current = "#creator-jeans";
-            }
-        });
-
-        $('#shoes-settings').click(() => {
-            if(current == null){
-                $("#creator-shoes").show();
-                current = "#creator-shoes";
-            }else{
-                $(current).hide();
-                $("#creator-shoes").show();
-                current = "#creator-shoes";
-            }
-        });
-
-
-        $('#colorPeloPaleta').colorPalettePicker({
-      lines:4,
-      buttonPreviewName:"pelox",
-      onSelected: function(color){
-        pelo_color(colores(color));
-      }
-        });
-        $('#colorBarbaPaleta').colorPalettePicker({
-      lines:4,
-      buttonPreviewName:"barbax",
-      onSelected: function(color){
-        barba_color(colores(color));
-      }
-        });
-        $('#colorMaquillajePaleta').colorPalettePicker({
-      lines:4,
-      buttonPreviewName:"maquix",
-      onSelected: function(color){
-        maqui_color(colores(color));
-      }
-    });
-
-        $('#colorOjosPaleta').colorPalettePicker({
-      lines:4,
-      buttonPreviewName:"ojox",
-      onSelected: function(color){
-        ojos_color(colores(color));
-      }
-    });
-        $('#colorRuborPaleta').colorPalettePicker({
-      lines:4,
-      buttonPreviewName:"ruborx",
-      onSelected: function(color){
-        rubor_color(colores(color));
-      }
-    });
-        $('#colorPeloPechoPaleta').colorPalettePicker({
-      lines:4,
-      buttonPreviewName:"pelopex",
-      onSelected: function(color){
-        pecho_color(colores(color));
-      }
-    });
-        $('#colorCejasPaleta').colorPalettePicker({
-      lines:4,
-      buttonPreviewName:"cejax",
-      onSelected: function(color){
-        cejas_color(colores(color));
-      }
-        });
-        $('#colorLabiosPaleta').colorPalettePicker({
-      lines:4,
-      buttonPreviewName:"labx",
-      onSelected: function(color){
-        labios_color(colores(color));
-      }
-        });
-        
-
-        $('#subirPersonaje').click(() => {
-            console.log($('#subirPersonaje').val());
-        });
-        
-        $('#btnHombre').click(() => {
-            console.log("hombre");
-            genero = 0;
-            $('#barbaTipo').attr('max', 29);
-            mp.trigger("CambiarGenero", 0);
-        });
-
-        $('#btnMujer').click(() => {
-            console.log("mujer");
-            genero = 1;
-            $('#barbaTipo').attr('max', 12);
-            mp.trigger("CambiarGenero", 1);
-        });
-
-        
-        function gen_pat(valu){
-          genPat = valu; 
-          console.log("gen_pat cef*"+genPat);
-          mp.trigger("GenesPadres",genPat,genMat,faceMix,skinMix);
-        }
-        //$('#genesPaternos').click(() => {});
-
-        function gen_mat(valu){
-          console.log("gen_mat cef*");
-          genMat = valu;
-          mp.trigger("GenesPadres",genPat,genMat,faceMix,skinMix);
-        }
-        //$('#genesMaternos').click(() => {});
-
-        function gen_mix(valu){
-          console.log("gen_mat cef*");
-          faceMix = valu;
-          mp.trigger("GenesPadres",genPat,genMat,faceMix,skinMix);
-        }
-
-        function skin_mix(valu){
-          console.log("gen_mat cef*");
-          skinMix = valu;
-          mp.trigger("GenesPadres",genPat,genMat,faceMix,skinMix);
-        }
-
-        function etn_pat(valu){
-          etnPat = valu;
-          SelComponenteRasgos(17,etnPat,etnMat,etnMix);                            
-        }
-
-        function etn_mat(valu){
-          etnMat = valu;
-          SelComponenteRasgos(17,etnPat,etnMat,etnMix);               
-        }
-
-        function etn_mix(valu){
-          etnMix = valu;
-          SelComponenteRasgos(17,etnPat,etnMat,etnMix);                 
-        }
-
-        function pelo_tipo(valu){
-          peloTipo = valu;
-          selColores(peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol);
-        }
-
-        function pelo_color(valu){
-          peloCol = valu;
-          selColores(peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol);
-        }
-
-        function pelo_ilu(valu){
-          peloIlu = valu;
-          selColores(peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol); 
-        }
-
-        function barba_tipo(valu){
-          barbaTipo = valu;       
-          selApariencia(1,barbaTipo);
-        }
-
-        function barba_color(valu){
-            barbaCol = valu;
-          selColores(peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol);
-        }
-
-        function labios_tipo(valu){
-          labiosTipo = valu;       
-          selApariencia(8,labiosTipo);
-        }
-
-        function labios_color(valu){
-            labiosCol = valu;
-          selColores(peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol);
-        }
 
         function pecho_tipo(valu){
-          pechoTipo = valu;       
+          pechoTipo = valu;
           selApariencia(10,pechoTipo);
         }
-
-        function pecho_color(valu){
-          pechoCol = valu;
-          selColores(peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol);
-        }
         
-        function cejas_tipo(valu){
-          cejasTipo = valu;
-          //mp.trigger("SetApariencia",2,cejasTipo);
-          selApariencia(2,cejasTipo);
-        }
-
-        function cejas_color(valu){
-          cejasCol = valu;
-          selColores(peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol);
-        }
-
-        function maqui_tipo(valu){
-          maquiTipo = valu;
-          selApariencia(4,maquiTipo);
-        }
-
-        function maqui_color(valu){
-          maquiCol = valu;
-          SelMaqui(maquiTipo,maquiCol);
-        }
-
-        function rubor_tipo(valu){
-          ruborTipo = valu;
-          selApariencia(5,ruborTipo);
-        }
-
-        function ojos_color(valu){
-          ojosCol = valu;
-          selColores(peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol);
-        }
-
-        function rubor_color(valu){
-          ruborCol = valu;
-          selColores(peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,ruborCol,labiosCol,pechoCol);
-        }
+       
         function ropa_tipo(index,valu){
           ropaTipo = valu;
           SelRopa(index,ropaTipo);
@@ -755,24 +283,9 @@
           rot_cam(rot);
         }
 
-        var regx = /^[A-Z][-'a-zA-Z]+,?\s[A-Z][-'a-zA-Z]{0,19}$/;
         $('#crearBtn').click(() => {
-            
-            /*if($("#charname").val().length < 4)
-                    //alert("Usar al menos <b>4</b> caracteres.");
-                    $("#modalError").click();
-                else if(!regx.test($("#charname").val()))
-                    //alert("Use el formato <b>N</b>ombre <b>A</b>apellidos.");
-                    $("#modalError").click();
-                else
-                {*/
-                 $("#modalok").click(); 
-                //}
+          mp.trigger("guardarCreador","tienda",costo);   
         });
-
-        function gogo(){
-          mp.trigger("guardarCreador","tienda");              
-        }
 
         $('#volverBtn').click(() => {
             //console.log("volver");            
@@ -781,17 +294,32 @@
 
 
         // Funciones CEF -> Cliente Rage
-
-        function SelComponenteRasgos(tipo,conf1,conf2,conf3){
-          conf1 = parseInt(conf1);
-          conf2 = parseInt(conf2);
-          conf3 = parseInt(conf3);
-          //console.log("SelComponenteRasgos cef->"+tipo+" "+conf1+" "+conf2+" "+conf3);                
-          mp.trigger("MoveCameraPosition", 0);
-          mp.trigger("resource.Sounds.PlaySelectSound");
-          //https://wiki.rage.mp/index.php?title=Player::setHeadBlendData          
-          mp.trigger("SelComponenteRasgos", JSON.stringify({ type: tipo, config1: conf1, config2: conf2,config3: conf3 }));
+        function topy(valor){
+          valor = parseInt(valor);
+         //mp.trigger("resource.Sounds.PlaySelectSound");
+         //console.log("/ropa "+8+" "+data.tops[genero][valor].Undershirt+" "+0);
+          //console.log("/ropa "+3+" "+data.tops[genero][valor].Torso+" "+0);
+          //console.log("/ropa "+11+" "+data.tops[genero][valor].Top+" "+0);
+          mp.trigger("SelRopaTop", JSON.stringify({   slot: 8, variation: data.tops[genero][valor].Undershirt, texture: 0}));
+          mp.trigger("SelRopaTop", JSON.stringify({   slot: 3, variation: data.tops[genero][valor].Torso, texture: 0}));
+          mp.trigger("SelRopaTop", JSON.stringify({   slot: 11, variation: data.tops[genero][valor].Top, texture: 0}));
         }
+
+        function mascara(valor){
+          valor = parseInt(valor);
+          mp.trigger("SelRopaTop", JSON.stringify({   slot: 1, variation: data.masks[valor], texture: 0}));
+        }
+
+        function sombrero(valor){
+          valor = parseInt(valor);
+          mp.trigger("SelProp", 0,data.hats[genero][valor],0);
+        }
+
+        function gafas(valor){
+          valor = parseInt(valor);
+          mp.trigger("SelProp", 1,data.glasses[genero][valor],0);
+        }
+
 
         function selCara(index,valor){          
           //console.log("selCara cef->"+ index +" - "+ valor);
@@ -824,8 +352,19 @@
           selected_item_type = parseInt(selected_item_type);
           current_item_variation = parseInt(current_item_variation);
 
+          if (selected_item_type > 2 && selected_item_type < 5){
+            pantalon = true;            
+          } else if(selected_item_type > 4){
+            zapatos = true;
+          } else if(selected_item_type < 3){
+            camisa = true;
+          }else{
+          }
+          updatePrecio();
+
           mp.trigger("resource.Sounds.PlaySelectSound");          
           mp.trigger("SelRopaPj", JSON.stringify(character_components[genero][selected_item_type][current_item_variation]));
+          //console.log(genero+" itemType: "+selected_item_type+" itemVaria: "+current_item_variation+JSON.stringify(character_components[genero][selected_item_type][current_item_variation]));
 
           if (selected_item_type == 2)
                     mp.trigger("SelRopaPj", JSON.stringify(character_components[genero][12][ropaVari]));              
@@ -838,22 +377,104 @@
           mp.trigger("SelRopaPj", JSON.stringify(character_components[genero][12][ropa2]));              
         }
 
-        function alejar_cam(xx,yy){
-          xx = parseFloat(xx);
-          yy = parseFloat(yy);
-          //console.log("AccionCamara cef->"+JSON.stringify({ xx: xx, yy: yy}));
-          mp.trigger("AccionCamara", JSON.stringify({ xx: xx, yy: yy}));              
+        function setGenero(gen){
+          genero = parseInt(gen);
+          if (genero == 0){
+            $("#camisaTipo").attr('max', 52);
+            console.log("top - hombre");
+          }else{
+            $("#camisaTipo").attr('max', 45);
+            console.log("top - mujer");
+          }
         }
 
-        function rot_cam(zz){
-          zz = parseFloat(zz);
-          //console.log("AccionCamaraRot cef->"+JSON.stringify({ zz: zz}));
-          mp.trigger("AccionCamaraRot", JSON.stringify({ zz: zz}));              
-        }
-       
         function logeo(cosa){
           console.log(cosa);
         }
+
+        
+        $('input[type=range]').on("change mousemove", function() {
+            var label = $('label[for="' + $(this).attr('id') + '"]');
+            label.find('code').text($(this).val());
+        });        
+
+var active = 0;
+rePosition();
+
+$(document).keydown(function(e){
+    reCalculate(e);
+    rePosition();
+    return false;
+});
+
+
+function reCalculate(e){
+    var rows = $('#navigate .move').length;
+    var columns = $('#navigate .move:eq(0)').length;
+    //alert(columns + 'x' + rows);
+    
+    if (e.keyCode == 37) { //move left or wrap
+          $('input.active[type=range]').focus();
+          $('input.active[type=range]').slider("value",$('input.active[type=range]').val() + 1)
+          var val1 = parseInt($('input.active[type=range]').val());
+          var val2 = val1 - 1;
+          $('input.active[type=range]').val(val2);
+          $('input.active[type=range]').change();
+    }
+    if (e.keyCode == 38) { // move up
+        active = (active-columns>=0)?active-columns:active;
+    }
+    if (e.keyCode == 39) { // move right or wrap
+          $('input.active[type=range]').focus();
+          $('input.active[type=range]').slider("value",$('input.active[type=range]').val() + 1)
+          var val1 = parseInt($('input.active[type=range]').val());
+          var val2 = val1 + 1;
+          $('input.active[type=range]').val(val2);
+          $('input.active[type=range]').change();
+    }
+    if (e.keyCode == 40) { // move down
+        active = (active+columns<=(rows*columns)-1)?active+columns:active;
+    }
+    if (e.keyCode == 13) {
+        $('.active').click();
+    }
+    if (e.keyCode == 8) {
+        mp.trigger("salirCreador");
+    }
+}
+
+function rePosition(){
+    $('.active').removeClass('active');
+    $('#navigate .move').eq(active).addClass('active');
+    scrollInView();
+}
+
+function scrollInView(){
+    var target = $('#navigate .move:eq('+active+')');
+    if (target.length)
+    {
+        var top = target.offset().top;
+        
+        $('html,body').stop().animate({scrollTop: top-300}, 400);
+        return false;
+    }
+}
+
+function updatePrecio(){
+  if (pantalon){
+    costoPan = 400;
+  }else if (camisa){
+    costoCam = 600;
+  }else if (zapatos){
+    costoZap = 500;
+  }else{
+    costoPan = 0;
+    costoCam = 0;
+    costoZap = 0;
+  }
+  costo = costoPan+costoCam+costoZap;
+  $('#crearBtn').text("Comprar por $"+costo);
+}
 
     </script>
     <!-- partial -->

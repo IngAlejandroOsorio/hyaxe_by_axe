@@ -1,10 +1,14 @@
-﻿using System;
+﻿using DowntownRP.Data.Entities;
+using GTANetworkAPI;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
-using GTANetworkAPI;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace DowntownRP.World.Business
 {
@@ -26,7 +30,7 @@ namespace DowntownRP.World.Business
                         int id = reader.GetInt32(reader.GetOrdinal("id"));
                         int userid = reader.GetInt32(reader.GetOrdinal("owner"));
                         int type = reader.GetInt32(reader.GetOrdinal("type"));
-                        if (type == 4 || type == 5 || type == 9) continue;
+                        if (type == 4 || type == 9) continue;
                         string name = reader.GetString(reader.GetOrdinal("name"));
                         int price = reader.GetInt32(reader.GetOrdinal("price"));
                         double safeBox = reader.GetDouble(reader.GetOrdinal("safeBox"));
@@ -49,7 +53,7 @@ namespace DowntownRP.World.Business
                             TextLabel label = NAPI.TextLabel.CreateTextLabel($"{nombre}~n~Pulsa ~y~F5 ~w~para interactuar~n~~p~{area}, {number}", position, 3, 1, 0, new Color(255, 255, 255));
                             Marker marker = NAPI.Marker.CreateMarker(0, position.Subtract(new Vector3(0, 0, 0.1)), new Vector3(), new Vector3(), 1, new Color(251, 244, 1));
                             Blip blip = NAPI.Blip.CreateBlip(position);
-                            blip.Color = 3;
+                            blip.Color = 2;
                             blip.Name = nombre;
                             blip.ShortRange = true;
 
@@ -93,6 +97,24 @@ namespace DowntownRP.World.Business
                                 case 9:
                                     blip.Sprite = 93;
                                     break;
+
+                                case 10:
+                                    blip.Sprite = 614;
+                                    break;
+
+                                case 11:
+                                    blip.Sprite = 590;
+                                    break;
+                                
+                                case 12:
+                                    blip.Sprite = 72;
+                                    label.Text = $"Taller Mecánico ~n~~p~{area}, {number}";
+                                    break;
+
+                                case 13:
+                                    blip.Name = "Grow Shop";
+                                    blip.Sprite = 496;
+                                    break;
                             }
 
                             Data.Entities.Business business = new Data.Entities.Business
@@ -119,7 +141,7 @@ namespace DowntownRP.World.Business
 
                             await SpawnVehicleBusiness(business);
                             await GetBusinessVehicleSpawn(business);
-                            await SpawnFuelPoints(business);
+                            await SpawnFuelPoints(business);                            
                         });
                     }
                 }
@@ -250,6 +272,7 @@ namespace DowntownRP.World.Business
                         {
                             uint hash = NAPI.Util.GetHashKey(type);
                             Vehicle vehicle = NAPI.Vehicle.CreateVehicle(hash, position.Subtract(new Vector3(0, 0, 1)), (float)rot, color1, color2, numberplate, 255, false, false);
+                            vehicle.EngineStatus = false;
                             TextLabel label;
                             if (isRentSelling)
                             {
@@ -309,6 +332,34 @@ namespace DowntownRP.World.Business
 
                 await command.ExecuteNonQueryAsync().ConfigureAwait(false);
                 return (int)command.LastInsertedId;
+            }
+        }
+
+        public async static Task UpdateFVehPriColor(int id, int color)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE vehicles_business SET color1 = @c1 WHERE id = @id";
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@c1", color);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+        public async static Task UpdateFVehSecColor(int id, int color)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE vehicles_business SET color2 = @c1 WHERE id = @id";
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@c1", color);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
             }
         }
 
@@ -443,6 +494,8 @@ namespace DowntownRP.World.Business
                 Console.WriteLine(ex);
             }
         }
+
+        
     }
 
 }

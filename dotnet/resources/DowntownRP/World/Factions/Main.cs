@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using DowntownRP.Utilities;
 
 namespace DowntownRP.World.Factions
 {
@@ -23,6 +24,8 @@ namespace DowntownRP.World.Factions
             {
                 player.SetData("SALIDA_FACTION", shape.GetData<Vector3>("SALIDA_FACTION"));
             }
+
+
         }
 
         [ServerEvent(Event.PlayerExitColshape)]
@@ -42,8 +45,8 @@ namespace DowntownRP.World.Factions
             }
         }
 
-        [Command("faccionOOC", GreedyArg = true, Alias ="f")]
-        public void CMD_f(Player player, string mensaje ="")
+        [Command("faccionOOC", GreedyArg = true, Alias = "f")]
+        public void CMD_f(Player player, string mensaje = "")
         {
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
@@ -57,25 +60,25 @@ namespace DowntownRP.World.Factions
                     user.CanalChatF = !(user.CanalChatF);
                     if (user.CanalChatF == true)
                     {
-                        user.entity.SendChatMessage($"<font color='#4169e1'>[{faction}]</font> Se ha habilitado la lectura del canal de chat de la facción.");
-                        
+                        user.entity.SendChatMessage($"~b~[{faction}]~w~ Se ha habilitado la lectura del canal de chat de la facción.");
+
                     }
                     else
                     {
-                        user.entity.SendChatMessage($"<font color='#4169e1'>[{faction}]</font> Se ha deshabilitado la lectura del canal de chat de la facción.");
+                        user.entity.SendChatMessage($"~b~[{faction}]~w~ Se ha deshabilitado la lectura del canal de chat de la facción.");
                     }
 
-                   
+
                 }
                 else
                 {
-                    if(user.faction < 10)
+                    if (user.faction < 10)
                     {
                         foreach (var Player in Data.Lists.playersConnected)
                         {
                             if (Player.faction == user.faction & Player.CanalChatF == true)
                             {
-                                Player.entity.SendChatMessage($"<font color='#4169e1'>[{faction}]</font> {player.Name} ({rank}): {mensaje}");
+                                Player.entity.SendChatMessage($"~b~[{faction}]~w~ ({player.Value}) {player.Name} ({rank}): {mensaje}");
                             }
                         }
                         Utilities.Webhooks.sendFacWebHook(user.faction, mensaje, player.Name + " (" + GetFactionRankName(user.faction, user.rank) + ")");
@@ -86,27 +89,27 @@ namespace DowntownRP.World.Factions
                         switch (user.rank)
                         {
                             case 1:
-                                message = $"<font color='#4169e1'>[{user.ilegalFaction.name}]</font> {player.Name} ({user.ilegalFaction.rank1}): {mensaje}";
+                                message = $"~b~[{user.ilegalFaction.name}]~w~ {player.Name} ({user.ilegalFaction.rank1}): {mensaje}";
                                 break;
 
                             case 2:
-                                message = $"<font color='#4169e1'>[{user.ilegalFaction.name}]</font> {player.Name} ({user.ilegalFaction.rank2}): {mensaje}";
+                                message = $"~b~[{user.ilegalFaction.name}]~w~ {player.Name} ({user.ilegalFaction.rank2}): {mensaje}";
                                 break;
 
                             case 3:
-                                message = $"<font color='#4169e1'>[{user.ilegalFaction.name}]</font> {player.Name} ({user.ilegalFaction.rank3}): {mensaje}";
+                                message = $"~b~[{user.ilegalFaction.name}]~w~ {player.Name} ({user.ilegalFaction.rank3}): {mensaje}";
                                 break;
 
                             case 4:
-                                message = $"<font color='#4169e1'>[{user.ilegalFaction.name}]</font> {player.Name} ({user.ilegalFaction.rank4}): {mensaje}";
+                                message = $"~b~[{user.ilegalFaction.name}]~w~ {player.Name} ({user.ilegalFaction.rank4}): {mensaje}";
                                 break;
 
                             case 5:
-                                message = $"<font color='#4169e1'>[{user.ilegalFaction.name}]</font> {player.Name} ({user.ilegalFaction.rank5}): {mensaje}";
+                                message = $"~b~[{user.ilegalFaction.name}]~w~ {player.Name} ({user.ilegalFaction.rank5}): {mensaje}";
                                 break;
 
                             case 6:
-                                message = $"<font color='#4169e1'>[{user.ilegalFaction.name}]</font> {player.Name} ({user.ilegalFaction.rank6}): {mensaje}";
+                                message = $"~b~[{user.ilegalFaction.name}]~w~ {player.Name} ({user.ilegalFaction.rank6}): {mensaje}";
                                 break;
                         }
 
@@ -123,7 +126,7 @@ namespace DowntownRP.World.Factions
             else Utilities.Notifications.SendNotificationERROR(player, "No perteneces a ninguna facción");
         }
 
-        [Command("radiofaccion", GreedyArg = true, Alias ="r")]
+        [Command("radiofaccion", GreedyArg = true, Alias = "r")]
         public void CMD_radiofaccion(Player player, string mensaje = "")
         {
             if (!player.HasData("USER_CLASS")) return;
@@ -131,39 +134,67 @@ namespace DowntownRP.World.Factions
 
             if (user.faction != 0)
             {
-                string faction = GetFactionName(user.faction);
-                string rank = GetFactionRankName(user.faction, user.rank);
-                if (mensaje == "")
+                if (user.factionDuty)
                 {
-                    user.CanalChatR = !(user.CanalChatR);
-                    if (user.CanalChatR == true)
+                    string faction = GetFactionName(user.faction);
+                    string rank = GetFactionRankName(user.faction, user.rank);
+                    if (mensaje == "")
                     {
-                        user.entity.SendChatMessage($"<font color='#4169e1'>[{faction}]</font> Se ha habilitado la lectura del canal de radio de la facción.");
+                        user.CanalChatR = !(user.CanalChatR);
+                        if (user.CanalChatR == true)
+                        {
+                            user.entity.SendChatMessage($"~b~[{faction}]~w~ Se ha habilitado la lectura del canal de radio de la facción.");
+
+                        }
+                        else
+                        {
+                            user.entity.SendChatMessage($"~b~[{faction}]~w~ Se ha deshabilitado la lectura del canal de radio de la facción.");
+                        }
+
 
                     }
                     else
                     {
-                        user.entity.SendChatMessage($"<font color='#4169e1'>[{faction}]</font> Se ha deshabilitado la lectura del canal de radio de la facción.");
-                    }
-
-
-                }
-                else
-                {
-                    if (user.faction < 10)
-                    {
-                        foreach (var Player in Data.Lists.playersConnected)
+                        if (user.faction < 10)
                         {
-                            if (Player.faction == user.faction & Player.CanalChatF == true)
+                            foreach (var Player in Data.Lists.playersConnected)
                             {
-                                Player.entity.SendChatMessage($"<font color='#8A3898'>[{faction}] {player.Name} : {mensaje}</font>");
+                                if (Player.faction == user.faction & Player.CanalChatF == true)
+                                {
+                                    if (Player.factionDuty)
+                                    {
+                                        Player.entity.SendChatMessage($"~y~[RADIO] ({player.Value}): {mensaje}");
+                                        Player.entity.TriggerEvent("WalkiePdSound");
+                                    }
+                                }
                             }
                         }
+
                     }
-                   
                 }
             }
             else Utilities.Notifications.SendNotificationERROR(player, "No perteneces a ninguna facción");
+        }
+
+        [Command("miembros")]
+        public void CMD_miembros(Player player)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+
+            if (user.faction != 0)
+            {
+                player.SendChatMessage($"~b~ Miembros en linea [{GetFactionName(user.faction)}]");
+                foreach(var u in Data.Lists.playersConnected)
+                {
+                    if(user.faction == u.faction)
+                    {
+                        if (u.factionDuty) player.SendChatMessage($"({u.entity.Value}) {u.entity.Name} | {GetFactionRankName(u.faction, u.rank)} | ~g~EN SERVICIO");
+                        player.SendChatMessage($"({u.entity.Value}) {u.entity.Name} | {GetFactionRankName(u.faction, u.rank)} | ~r~FUERA DE SERVICIO");
+                    }
+                }
+            }
+            else Utilities.Notifications.SendNotificationERROR(player, "No eres miembro de una facción");
         }
 
         [Command("contratar")]
@@ -174,7 +205,7 @@ namespace DowntownRP.World.Factions
 
             if (user.faction != 0)
             {
-                if ((user.faction == 1 & user.rank >= 9)|| user.faction == 2 && user.rank == 15)
+                if ((user.faction == 1 & user.rank >= 9)|| (user.faction == 2 && user.rank >= 15))
                 {
                     Player target = Utilities.PlayerId.FindPlayerById(id);
                     if(target != null)
@@ -186,7 +217,7 @@ namespace DowntownRP.World.Factions
 
                         target.SetData("FACTION_PETICION", user.faction);
 
-                        target.SendChatMessage($"<font color='purple'>[!]</font> Has recibido una invitación para unirte a {fName}. Usa /aceptarfaccion");
+                        target.SendChatMessage($"~p~[!]~w~ Has recibido una invitación para unirte a {fName}. Usa /aceptarfaccion");
                         Utilities.Notifications.SendNotificationINFO(target, $"Has recibido una invitación para unirte a {fName}. Usa /aceptarfaccion");
 
                         Utilities.Notifications.SendNotificationOK(player, "Has enviado la invitación a tu facción correctamente");
@@ -205,7 +236,7 @@ namespace DowntownRP.World.Factions
 
                         target.SetData("FACTION_PETICION", user.faction);
 
-                        target.SendChatMessage($"<font color='purple'>[!]</font> Has recibido una invitación para unirte a {fName}. Usa /aceptarfaccion");
+                        target.SendChatMessage($"~p~[!]~w~ Has recibido una invitación para unirte a {fName}. Usa /aceptarfaccion");
                         Utilities.Notifications.SendNotificationINFO(target, $"Has recibido una invitación para unirte a {fName}. Usa /aceptarfaccion");
 
                         Utilities.Notifications.SendNotificationOK(player, "Has enviado la invitación a tu facción correctamente");
@@ -227,13 +258,23 @@ namespace DowntownRP.World.Factions
             {
                 int faction = player.GetData<int>("FACTION_PETICION");
                 string fName = GetFactionName(faction);
-                await Game.CharacterSelector.CharacterSelector.UpdateUserFaction(user.idpj, faction);
-                await Game.CharacterSelector.CharacterSelector.UpdateUserFactionRank(user.idpj, 1);
 
-                user.faction = faction;
-                user.rank = 1;
+                if (faction == 2)
+                {
+                    player.TriggerEvent("selectorLSFD", 0);
+                } else
+                {
+                    await Game.CharacterSelector.CharacterSelector.UpdateUserFaction(user.idpj, faction);
+                    await Game.CharacterSelector.CharacterSelector.UpdateUserFactionRank(user.idpj, 1);
 
-                Utilities.Notifications.SendNotificationOK(player, $"Has aceptado la invitación para unirte a {fName}. ¡Bienvenido!");
+                    user.faction = faction;
+                    user.rank = 1;
+                    Utilities.Notifications.SendNotificationOK(player, $"Has aceptado la invitación para unirte a {fName}. ¡Bienvenido!");
+                    player.ResetData("FACTION_PETICION");
+                }
+                
+
+                
             }
             else Utilities.Notifications.SendNotificationERROR(player, "No tienes ninguna invitación a facción activa");
         }
@@ -288,6 +329,51 @@ namespace DowntownRP.World.Factions
 
                 i++;
             }
+        }
+
+
+        [Command("miembros")]
+        public async Task CMD_miembros(Player player, int id = -1)
+        {
+
+            if (id == -1)
+            {
+                Data.Entities.User cl = player.GetData<Data.Entities.User>("USER_CLASS");
+                id = cl.faction;
+            }
+
+            player.SendChatMessage($"Los usuarios conectados de la facción {GetFactionName(id)} son");
+
+            if(id == 1 | id == 2)
+            {
+                foreach (Data.Entities.User u in Data.Lists.playersConnected)
+                {
+                    if(u.faction == id)
+                    {
+                        if (u.factionDuty)
+                        {
+                            player.SendChatMessage($"~g~{GetFactionRankName(id, u.rank)} => {u.entity.Name}");
+                        }
+                        else
+                        {
+                            player.SendChatMessage($"~b~{GetFactionRankName(id, u.rank)} => {u.entity.Name}");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (Data.Entities.User u in Data.Lists.playersConnected)
+                {
+                    if (u.faction == id)
+                    {
+
+                       player.SendChatMessage($"~b~{GetFactionRankName(id, u.rank)} => {u.entity.Name}");
+
+                    }
+                }
+            }
+
         }
 
         [Command("despedir")]
@@ -345,6 +431,9 @@ namespace DowntownRP.World.Factions
         {
             switch (faction)
             {
+                case 0:
+                    return "Sin faccion";
+
                 case 1:
                     return "LSPD";
 
@@ -424,49 +513,55 @@ namespace DowntownRP.World.Factions
                 switch (rank)
                 {
                     case 1:
-                        return "NOOB";
+                        return "Aspirante Bombero";
 
                     case 2:
-                        return "NOOB";
+                        return "Aspirante Médico";
 
                     case 3:
-                        return "NOOB";
+                        return "Bombero I";
 
                     case 4:
-                        return "NOOB";
+                        return "Bombero II";
 
                     case 5:
-                        return "NOOB";
+                        return "Bombero III";
 
                     case 6:
-                        return "NOOB";
+                        return "Ingeniero I";
 
                     case 7:
-                        return "NOOB";
+                        return "Ingeniero II";
 
                     case 8:
-                        return "NOOB";
+                        return "Médico I";
 
                     case 9:
-                        return "NOOB";
+                        return "Médico II";
 
                     case 10:
-                        return "NOOB";
+                        return "Médico III";
 
                     case 11:
-                        return "NOOB";
+                        return "Especialista I";
 
                     case 12:
-                        return "NOOB";
+                        return "Especialista II";
 
                     case 13:
-                        return "NOOB";
+                        return "Supervisor";
 
                     case 14:
-                        return "NOOB";
+                        return "Sargento";
 
                     case 15:
-                        return "NOOB";
+                        return "Teniente";
+
+                    case 16:
+                        return "Capitán";
+
+                    case 17:
+                        return "Jefe de Departamento";
 
                     default:
                         return "N/A";
@@ -491,8 +586,8 @@ namespace DowntownRP.World.Factions
             }
         }
 
-        [Command ("ascender")]
-        public async Task CMD_ascender (Player player, int target)
+        [Command("ascender")]
+        public async Task CMD_ascender(Player player, int target)
         {
             Data.Entities.User t = Utilities.PlayerId.FindUserById(target);
             Data.Entities.User p = player.GetData<Data.Entities.User>("USER_CLASS");
@@ -508,19 +603,102 @@ namespace DowntownRP.World.Factions
                 return;
             }
 
-            if(p.faction == 1)
+            if (p.faction == 1)
             {
-                if(p.rank >= 8 && p.rank > t.rank + 1)
+                if (p.rank >= 8 && p.rank > t.rank + 1)
                 {
-                    await Game.CharacterSelector.CharacterSelector.UpdateUserFactionRank(t.idpj, t.rank +1);
+                    await Game.CharacterSelector.CharacterSelector.UpdateUserFactionRank(t.idpj, t.rank + 1);
                     t.rank++;
                     Utilities.Notifications.SendNotificationOK(player, $"Has ascendido a {t.entity.Name} a {GetFactionRankName(1, t.rank)}");
                     Utilities.Notifications.SendNotificationOK(t.entity, $"El {GetFactionRankName(1, p.rank)} {player.Name} te ha ascendido a {GetFactionRankName(1, t.rank)}. ¡Felicidades! ");
                 }
-                else{
+                else
+                {
                     Utilities.Notifications.SendNotificationERROR(player, "No tienes permisos para ascender a esta persona");
                 }
             }
+            else if (p.faction == 2)
+            {
+                if ((p.rank >= 13 && p.rank > t.rank + 1)| Utilities.AdminLVL.PuedeUsarComando(player, 1))
+                {
+                    int newRank;
+                    if (t.rank == 0)
+                    {
+                        newRank = 3;
+                    }
+                    else if (t.rank == 1)
+                    {
+                        newRank = 8;
+                    }
+                    else if (t.rank == 7 | t.rank == 12)
+                    {
+                        newRank = 13;
+                    }
+                    else
+                    {
+                        newRank = t.rank + 1;
+                    }
+
+                    await Game.CharacterSelector.CharacterSelector.UpdateUserFactionRank(t.idpj, newRank);
+                    t.rank = newRank;
+                    Utilities.Notifications.SendNotificationOK(player, $"Has ascendido a {t.entity.Name} a {GetFactionRankName(2, t.rank)}");
+                    Utilities.Notifications.SendNotificationOK(t.entity, $"El {GetFactionRankName(2, p.rank)} {player.Name} te ha ascendido a {GetFactionRankName(1, t.rank)}. ¡Felicidades! ");
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        [Command("straficosfaccion")]
+        public async Task CMD_straficosfaccion(Player player, int id, int aC, int aL)
+        {
+            if (Utilities.AdminLVL.PuedeUsarComando(player, 4))
+            {
+                DbFunctions.UpdateFactionTrafico(id, aC, aL);
+                Data.Entities.Faction fac = Data.Lists.factions.Find(x => x.id == id);
+                if (aC == 1)
+                {
+                    fac.armasCortas = true;
+                }
+                else
+                {
+                    fac.armasCortas = false;
+                }
+                if (aL == 1)
+                {
+                    fac.armasLargas = true;
+                }
+                else
+                {
+                    fac.armasLargas = false;
+                }
+
+            }
+        }
+
+        [Command ("callsign")]
+        public void CMD_callsign (Player player, string callsign)
+        {
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+            if(user.faction == 1 |user.faction == 2)
+            {
+                user.Callsign = callsign;
+            }
+        }
+
+        [Command ("dejarfaccion")]
+        public async Task CMD_dejarFaccion (Player player)
+        {
+            Data.Entities.User usr = player.getClass();
+
+            await Game.CharacterSelector.CharacterSelector.UpdateUserFaction(usr.idpj, 0);
+            await Game.CharacterSelector.CharacterSelector.UpdateUserFactionRank(usr.idpj, 1);
+
+            usr.faction = 0;
+            usr.rank = 1;
+
         }
     }
 }

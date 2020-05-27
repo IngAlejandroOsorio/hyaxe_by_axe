@@ -18,7 +18,7 @@ mp.events.add('update_hud_microphone', (microphone) => {
 });
 
 mp.events.add("render", () => {
-    if(isloged){
+    if(isloged && !mp.players.local.enTaller){
         mp.game.graphics.drawText("~r~" + playersonline + " ~w~jugadores en linea", [0.2108345478773117, 0.80859375], {
             font: 4,
             color: [255,255,255,255],

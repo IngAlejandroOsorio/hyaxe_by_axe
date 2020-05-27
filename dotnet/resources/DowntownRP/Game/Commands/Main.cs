@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using DowntownRP.Utilities;
 
 namespace DowntownRP.Game.Commands
 {
@@ -23,7 +24,7 @@ namespace DowntownRP.Game.Commands
         [Command("ayuda")]
         public void CMD_ayuda(Player player)
         {
-            player.SendChatMessage("Comandos básicos: /me - /do - /g - /s - /mp - /n - /guardar - /menu - /reportar - /canaln - /id - /localizar - /b");
+            player.SendChatMessage("Comandos básicos: /me - /do - /g - /s - /mp - /n - /guardar - /menu - /reportar - /canaln - /id - /localizar - /b - /stats - /ale - /fix - /taxi");
             player.SendChatMessage("Para comandos faccionarios usa /ayudafaccion");
         }
 
@@ -39,12 +40,30 @@ namespace DowntownRP.Game.Commands
             }
             else
             {
+                bool adm = false;
+                var m = new Data.Entities.Reporte();
+                m.userid = player.Value;
+                m.id = Data.Lists.aStaff.Count;
+                m.Pj = player.Name;
+                m.posicion = player.Position;
+                m.mensaje = razon;
+                Data.Lists.aStaff.Add(m);
+
                 foreach (var user in Data.Lists.playersConnected)
                 {
-                    if(user.adminLv >= 1) user.entity.SendChatMessage($"<font color='purple'>[ADMIN]</font> REPORTE | El id {idplayer} ha reportado al id {idOrName} | {razon}");
+                    if (user.adminLv >= 1 & user.CanalChatA)
+                    {
+                        user.entity.SendChatMessage($"~p~[ADMIN]~w~ REPORTE {m.id} | El id {idplayer} ha reportado al id {idOrName} | {razon}");
+                        adm = true;
+                    }
                 }
 
-                player.SendChatMessage("<font color='red'>[!]</font> Se ha enviado el reporte a los administradores. Te contestarán en breve");
+                player.SendChatMessage("~r~[!]~w~ Se ha enviado el reporte a los administradores. Te contestarán en breve");
+
+                if (!adm)
+                {
+                    Utilities.Discord.Webhooks.Webhooks.SendReporte($"{player.Name}({player.GetData<Data.Entities.User>("USER_CLASS").idpj})", $"{target.name} ({target.idpj})", razon);
+                }
             }
         }
 
@@ -58,8 +77,8 @@ namespace DowntownRP.Game.Commands
             if (user.faction == 1)
             {
                 player.SendChatMessage("Abrir puertas de la comisaría: Tecla Y");
-                player.SendChatMessage("/f - /r - /controlpd - /borrarcontrol - /borrarcontroltodo - /ref - /multar - /esposar - /cachear - /placa");
-                if (user.rank == 15) player.SendChatMessage("/contratar - /despedir");
+                player.SendChatMessage("/f - /r - /controlpd - /borrarcontrol - /borrarcontroltodo - /ref - /multar - /esposar - /cachear - /placa - /taquillapd");
+                if (user.rank >= 7) player.SendChatMessage("/contratar - /despedir - /ascender - /armero");
             }
             else if (user.rank == 6) player.SendChatMessage("/contratar - /despedir");
             else Utilities.Notifications.SendNotificationERROR(player, "No estás en una facción o tu facción no tiene comandos disponibles");
@@ -68,7 +87,7 @@ namespace DowntownRP.Game.Commands
         [Command("me", GreedyArg = true)]
         public void CMD_me(Player player, string message)
         {
-            var msg = "<font color='B950C3'>" + player.Name + " " + message + "</font>";
+            var msg = "~p~" + player.Name + " " + message;
             var playersInRadius = NAPI.Player.GetPlayersInRadiusOfPlayer(20, player);
 
             foreach (var players in playersInRadius)
@@ -80,7 +99,7 @@ namespace DowntownRP.Game.Commands
         [Command("b", GreedyArg = true)]
         public void b(Player player, string message)
         {
-            var msg = "(OOC) " + player.Name + $" ({player.Value}) : " + message + "";
+            var msg = "~r~ [OOC]" + player.Name + $" ({player.Value}) : " + message + "";
             var playersInRadius = NAPI.Player.GetPlayersInRadiusOfPlayer(20, player);
 
             foreach (var players in playersInRadius)
@@ -92,7 +111,7 @@ namespace DowntownRP.Game.Commands
         [Command("do", GreedyArg = true)]
         public void CMD_do(Player player, string message)
         {
-            var msg = $"<font color ='#65C350'> [{player.Name}] - {message}</font>";
+            var msg = $"~g~ [{player.Name}] - {message}";
             var playersInRadius = NAPI.Player.GetPlayersInRadiusOfPlayer(20, player);
 
             foreach (var players in playersInRadius)
@@ -138,8 +157,8 @@ namespace DowntownRP.Game.Commands
                 Data.Entities.User utarget = target.GetData<Data.Entities.User>("USER_CLASS");
                 if (utarget.mpStatus == 0)
                 {
-                    target.SendChatMessage($"<font color='purple'>[MP]</font> ({player.Value}){player.Name} a {target.Name}: {message}");
-                    player.SendChatMessage($"<font color='purple'>[MP]</font> {player.Name} a ({target.Value}) {target.Name}: {message}");
+                    target.SendChatMessage($"~p~[MP]~w~ ({player.Value}){player.Name} a {target.Name}: {message}");
+                    player.SendChatMessage($"~p~[MP]~w~ {player.Name} a ({target.Value}) {target.Name}: {message}");
                 }
                 else Utilities.Notifications.SendNotificationERROR(player, "Este jugador tiene los mensajes privados desactivados");
             }
@@ -189,7 +208,7 @@ namespace DowntownRP.Game.Commands
                         if (veh.company == user.companyProperty)
                         {
                             veh.spawn = player.Position;
-                            veh.spawnRot = player.Heading;
+                            veh.spawnRot = player.Rotation.Z;
 
                             await World.Companies.DbFunctions.UpdateCompanyVehicleSpawn(veh.id, player.Position.X, player.Position.Y, player.Position.Z, player.Heading);
 
@@ -205,14 +224,39 @@ namespace DowntownRP.Game.Commands
         }
 
 
-        /*[Command("documentacion")]
+        [Command("documentacion")]
         public void CMD_documentacion(Player player, int targetid)
         {
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
-            var playersInRadius = NAPI.Player.GetPlayersInRadiusOfPlayer(30, player);
-            var target = Utilities.PlayerId.FindPlayerById(targetid);
-            target.TriggerEvent("CrearTrato", 1, $"Documentacion de:  {player.Name}", "{ \"nombre\":\""+player.Name+"\", \"Nac\":\""+user.edad.ToString()+"\", \"Num\":\""+user.dni+"\", \"tipo\": Tarjeta de Identidad} ");
-        }*/
+            var playersInRadius = NAPI.Player.GetPlayersInRadiusOfPlayer(5, player);
+            var target = Utilities.PlayerId.FindUserById(targetid);
+            if (target.ViendoDocumentacion)
+            {
+
+                player.SendChatMessage($"~r~ {target.entity.Name} Está viendo otra documentación");
+
+            }
+            else
+            {
+                target.entity.TriggerEvent("documentacion", user.entity.Name, user.dni, user.edad.ToString());
+                target.ViendoDocumentacion = true;
+            }
+
+        }
+
+
+        [RemoteEvent("debugTest")]
+        public void Ev_debug(Player player, string msg)
+        {
+            player.SendChatMessage(msg);
+        }
+
+
+        [RemoteEvent("cerrarDoc")]
+        public void Ev_cerrarDOC(Player player)
+        {
+            player.getClass().ViendoDocumentacion = false;
+        }
 
         /*[Command("ame", GreedyArg = true)]
         public void CMD_ame(Player player, string msg)
@@ -280,28 +324,72 @@ namespace DowntownRP.Game.Commands
             Utilities.Notifications.SendNotificationERROR(player, "No te encuentras en ninguna propiedad que permita este comando");
         }
 
-        [Command ("stats")]
-        public void CMD_stats (Player player, int target = -1)
+        [Command ("sanciones")]
+        public void CMD_sanciones (Player player, int target = -1)
         {
-            Data.Entities.User obj;
-            if(target == -1)
-            {
-                obj = player.GetData<Data.Entities.User>("USER_CLASS");
-            }
-            else
-            {
-                if(Utilities.AdminLVL.PuedeUsarComando(player, 1)){
-                    obj = Utilities.PlayerId.FindUserById(target);
-                }
-                else{
+            Data.Entities.User obj = player.GetData<Data.Entities.User>("USER_CLASS");
 
-                    if (player.Value == target)
+            if(target != -1)
+            {
+                if (target != player.Value) 
+                { 
+                    if(obj.adminLv >= 0)
                     {
-                        obj = player.GetData<Data.Entities.User>("USER_CLASS");
+                        obj = Utilities.PlayerId.FindUserById(target);
                     }
                     else
                     {
-                        Utilities.Notifications.SendNotificationERROR(player, "No tienes permiso para usar este comando sobre otras personas");
+                        Utilities.Notifications.SendNotificationERROR(player, "No tienes permisos para ejecutar este comando sobre otras personas.");
+                        return;
+                    }
+                }
+            }
+
+            player.SendChatMessage("-----SANCIONES:-------");
+
+            foreach(Data.Entities.Minisancion ms in obj.minisanciones)
+            {
+                string tipo = "";
+                switch (ms.paraElBalance)
+                {
+                    case -2:
+                        tipo = "Kick";
+                        break;
+                    case -1:
+                        tipo = "Punto Rol -";
+                        break;
+                    case 0:
+                        tipo = "Warn";
+                        break;
+                    case 1:
+                        tipo = "Punto Rol +";
+                        break;
+                }
+                string minutos = ms.FechaHora.Minute.ToString();
+                if(ms.FechaHora.Minute < 10) minutos = "0"+ ms.FechaHora.Minute.ToString();
+
+                player.SendChatMessage($"~g~{tipo} ~p~{ms.Staff} ~b~ {ms.FechaHora.Day}/{ms.FechaHora.Month }/{ms.FechaHora.Year} {ms.FechaHora.Hour}:{minutos} ~r~ {ms.razon}");
+            }
+
+            player.SendChatMessage("------------------------");
+        }
+
+        [Command("stats")]
+        public void CMD_stats(Player player, int target = -1)
+        {
+            Data.Entities.User obj = player.GetData<Data.Entities.User>("USER_CLASS");
+
+            if (target != -1)
+            {
+                if (target != player.Value)
+                {
+                    if (obj.adminLv >= 0)
+                    {
+                        obj = Utilities.PlayerId.FindUserById(target);
+                    }
+                    else
+                    {
+                        Utilities.Notifications.SendNotificationERROR(player, "No tienes permisos para ejecutar este comando sobre otras personas.");
                         return;
                     }
                 }
@@ -310,8 +398,12 @@ namespace DowntownRP.Game.Commands
             player.SendChatMessage("-----INFORMACIÓN:-------");
             player.SendChatMessage($"Nombre: {obj.entity.Name}");
             player.SendChatMessage($"Dimensión: {obj.entity.Dimension}");
+            player.SendChatMessage($"ID Card: {obj.dni}");
             player.SendChatMessage($"SocialClubName: {obj.entity.SocialClubName}");
-            player.SendChatMessage($"ID CARD: {obj.dni}");
+            if (obj.faction != 0) player.SendChatMessage($"Facción: {World.Factions.Main.GetFactionName(obj.faction)} ({obj.faction})   RANGO: {World.Factions.Main.GetFactionRankName(obj.faction, obj.rank)} ({obj.rank})");
+            if (obj.faction == 1 | obj.faction == 2) player.SendChatMessage($"De Servicio: {obj.factionDuty}");
+            if (obj.phone != 0) player.SendChatMessage($"Teléfono: {obj.phone}");
+            if (obj.adminLv != 0) player.SendChatMessage($"~r~ {Utilities.AdminLVL.getAdmLevelName(obj.adminLv)}");
             player.SendChatMessage("------------------------");
         }
 
@@ -328,6 +420,114 @@ namespace DowntownRP.Game.Commands
             }
             else Utilities.Notifications.SendNotificationERROR(player, "No tienes vehículos");
         }
+
+        [Command("localizarfac")]
+        public void CMD_localizarFac(Player player)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+
+            if(user.faction == 0)
+            {
+                Utilities.Notifications.SendNotificationERROR(player, "No estás en una facción");
+            }
+
+            Data.Entities.Faction fac = Data.Lists.factions.Find(x => x.id == user.faction);
+
+            if (fac.vehicles.Count != 0)
+            {
+                foreach (var veh in fac.vehicles) player.TriggerEvent("LocalizarVehBlip", veh.entity.Position);
+                Utilities.Notifications.SendNotificationOK(player, "Se ha marcado la posición de los vehículos de tu facción en el GPS");
+            }
+            else Utilities.Notifications.SendNotificationERROR(player, "Tu facción no tiene vehículos");
+        }
+
+        [Command("ale", Description = "/ale [maxNum] Saca un número aleatorio y lo muestra a los mismos usuarios que el /do, por defecto es menor de 6.")]
+        public void CMD_ale(Player player, int numero = 6)
+        {
+            var msg = $"~g~ [{player.Name}] - saca aleatoriamente el número  {new Random().Next(numero)} de {numero}";
+            var playersInRadius = NAPI.Player.GetPlayersInRadiusOfPlayer(20, player);
+
+            foreach (var players in playersInRadius)
+            {
+                NAPI.Chat.SendChatMessageToPlayer(players, msg);
+            }
+        }
+
+        [Command("fix")]
+        public void CMD_fix(Player player)
+        {
+            player.TriggerEvent("unfreeze_player");
+            player.Dimension = 0;
+            player.SendChatMessage("Fix aplicado.");
+        }
+
+        [Command("taxi", GreedyArg = true)]
+        public void CMD_taxi(Player player, string mensaje)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+
+            if (Data.Lists.taxistas.Count != 0)
+            {
+                foreach(var taxi in Data.Lists.taxistas)
+                {
+                    Data.Lists.taxiRaces.Add(new Data.Entities.TaxiRace() { id = Data.Info.AiTaxiRaces, position = player.Position, mensaje = mensaje, solicitador = player });
+                    taxi.entity.SendChatMessage($"~y~[TAXI] ~w~Nuevo cliente a {player.Position.DistanceTo(taxi.entity.Position)} metros | {mensaje}");
+                    taxi.entity.SendChatMessage($"~y~[TAXI] ~w~Usa /aceptartaxi {Data.Info.AiTaxiRaces} para responder la llamada");
+                    Data.Info.AiTaxiRaces++;
+                }
+            }
+            else Utilities.Notifications.SendNotificationERROR(player, "No hay taxistas en linea");
+        }
+
+        [Command("aceptartaxi", GreedyArg = true)]
+        public void CMD_aceptartaxi(Player player, string raceid)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+
+            if(user.companyMember != null)
+            {
+                if(user.companyMember.type == 1)
+                {
+                    if (user.isCompanyDuty)
+                    {
+                        if (player.IsInVehicle)
+                        {
+                            Data.Entities.TaxiRace race = Data.Lists.taxiRaces.Find(x => x.id == int.Parse(raceid));
+                            if (race != null)
+                            {
+                                if (!race.isAccepted)
+                                {
+                                    player.TriggerEvent("CrearBlipCliente", race.position);
+                                    Utilities.Notifications.SendNotificationOK(player, "Has aceptado la carrera, se han marcado las coordenadas en el GPS");
+                                    Utilities.Notifications.SendNotificationOK(race.solicitador, "Un taxista ha respondido tu llamada, irá al punto donde lo llamaste");
+                                    race.isAccepted = true;
+                                    race.driver = player;
+                                    player.Vehicle.SetData<Data.Entities.TaxiRace>("ON_RACE", race);
+                                    return;
+                                }
+
+                                Utilities.Notifications.SendNotificationERROR(player, "Esta solicitud ya fue aceptada");
+                            }
+                            else Utilities.Notifications.SendNotificationERROR(player, "No existe ninguna solicitud con esta ID");
+                        }
+                        else Utilities.Notifications.SendNotificationERROR(player, "Debes de estar en un taxi para poder aceptar solicitudes");
+                    }
+                    else Utilities.Notifications.SendNotificationERROR(player, "No estás en servicio");
+                }
+                else Utilities.Notifications.SendNotificationERROR(player, "No eres taxista");
+            }
+            else Utilities.Notifications.SendNotificationERROR(player, "No eres taxista");
+        }
+
+        [Command ("pcu")]
+        public void pcu(Player pl)
+        {
+            //pl.TriggerEvent("abrirpcu", "http://v.hyaxe.com");
+        }
+
     }
 }
 

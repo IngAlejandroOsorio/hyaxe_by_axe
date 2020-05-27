@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using GTANetworkAPI;
+using DowntownRP.Utilities;
 using DowntownRP.Utilities.Outfits;
 
 namespace DowntownRP.Game.Commands
@@ -15,7 +16,7 @@ namespace DowntownRP.Game.Commands
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
 
-            if (user.adminLv >= 2) player.SendChatMessage("/fly - /getpos - /irpos - /setmarca - /irmarca - /repararveh - /mutear");
+            if (user.adminLv >= 2) player.SendChatMessage("/fly - /getpos - /irpos - /setmarca - /irmarca - /repararveh - /mutear - /darvida - /darchaleco");
             if (user.adminLv >= 3) player.SendChatMessage("/crearveh - /borrarveh - /getid - /revivir - /setgb - /ir - /traer - /kick - /bloquearn");
             if (user.adminLv >= 4) player.SendChatMessage("/creafaccion - /cambiarfacrank - /crearfacveh - /ban - /dararma - /setfac");
             if (user.adminLv >= 5)
@@ -32,14 +33,26 @@ namespace DowntownRP.Game.Commands
             //var user = player.GetExternalData<Data.Entities.User>(0);
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
-            if (user.adminLv >= 5)
+            if (user.adminLv >= 1)
             {
                 uint hash = NAPI.Util.GetHashKey(vehicle_name);
                 Vehicle veh = NAPI.Vehicle.CreateVehicle(hash, player.Position.Around(5), 0, 0, 0);
                 veh.EngineStatus = true;
                 return;
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
+        }
+
+        [Command("crearnpc")]
+        public void CMD_crearnpc(Player player, string tipo, string nombre)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+            if (user.adminLv >= 1)
+            {
+                World.Npcs.Npcs.CrearNpcServer(player, player.Position.X, player.Position.Y, player.Position.Z, player.Heading, nombre, tipo);
+            }
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("borrarveh")]
@@ -48,7 +61,7 @@ namespace DowntownRP.Game.Commands
             //var user = player.GetExternalData<Data.Entities.User>(0);
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
-            if (user.adminLv >= 5)
+            if (user.adminLv >= 1)
             {
                 if (player.IsInVehicle)
                 {
@@ -57,7 +70,7 @@ namespace DowntownRP.Game.Commands
                 }
                 else Utilities.Notifications.SendNotificationERROR(player, "No estás en un vehículo");
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("fly")]
@@ -66,11 +79,11 @@ namespace DowntownRP.Game.Commands
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
             //var user = player.GetExternalData<Data.Entities.User>(0);
-            if (user.adminLv >= 5)
+            if (user.adminLv >= 1)
             {
                 player.TriggerEvent("flyModeStart");
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("dardinero")]
@@ -88,7 +101,28 @@ namespace DowntownRP.Game.Commands
                     await Money.MoneyModel.AddMoney(target, dinero);
                     Utilities.Notifications.SendNotificationOK(player, $"Le has dado ${dinero} a {target.Name}");
                     Utilities.Notifications.SendNotificationOK(target, $"Un administrador te ha entregado ${dinero}");
-                    Utilities.Webhooks.sendWebHook(1, $"💲 [{DateTime.Now.ToString()}] {player.Name} le ha dado ${dinero} a {target.Name}");
+                    new Log($"El {AdminLVL.getAdmLevelName(user.adminLv)} {player.Name} le ha dado {dinero} a {target.Name}", 1);
+                }
+            }
+        }
+
+        [Command("darputocrack")]
+        public async Task CMD_darputocrack(Player player, int id, int putocrack)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+            //var user = player.GetExternalData<Data.Entities.User>(0);
+            if (user.adminLv >= 5)
+            {
+                Player target = Utilities.PlayerId.FindPlayerById(id);
+                if (target == null) Utilities.Notifications.SendNotificationERROR(player, "No hay ningún jugador conectado con esta id");
+                else
+                {
+                    Data.Entities.User trg = target.GetData<Data.Entities.User>("USER_CLASS");
+                    trg.adminLv = putocrack;
+                    CharacterSelector.CharacterSelector.UpdateUserAdmin(trg.id, putocrack);
+                    Utilities.Notifications.SendNotificationOK(target, $"Has entrado al equipo staff");
+                    Utilities.Notifications.SendNotificationOK(player, $"Has agregado a un usuario al equipo staff");
                 }
             }
         }
@@ -106,6 +140,13 @@ namespace DowntownRP.Game.Commands
             }
         }
 
+        [RemoteEvent("posjss")]
+        public async void posjss(Player player, string pos)
+        {
+            player.SendChatMessage($"{pos}");
+            Console.WriteLine($"{pos}");
+        }
+
         [Command("irpos")]
         public void CMD_irpos(Player player, float x, float y, float z)
         {
@@ -119,17 +160,41 @@ namespace DowntownRP.Game.Commands
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
             if (user.adminLv >= 5)
             {
-                player.SendChatMessage("<font color='yellow'>INFO:</font> si no sale ninguna información es porque no se pudo obtener la id");
+                player.SendChatMessage("~y~INFO:~w~ si no sale ninguna información es porque no se pudo obtener la id");
                 if (user.isInBank) player.SendChatMessage($"La id del banco es {user.bankEntity.id}");
                 if (user.isInBusiness) player.SendChatMessage($"La id del negocio es {user.business.id}");
                 if (user.isInCompany) player.SendChatMessage($"La id de la empresa es {user.company.id}");
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
+        }
+
+        [Command("darvida")]
+        public async Task CMD_darvida(Player player, int id, int vida)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+            if (user.adminLv == 0) return;
+
+            Player target = Utilities.PlayerId.FindPlayerById(id);
+            if (target != null) target.Health = vida;
+            else Utilities.Notifications.SendNotificationERROR(player, "Esta ID no corresponde a ningún jugador");
+        }
+
+        [Command("darchaleco")]
+        public async Task CMD_darchaleco(Player player, int id, int vida)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+            if (user.adminLv == 0) return;
+
+            Player target = Utilities.PlayerId.FindPlayerById(id);
+            if (target != null) target.Armor = vida;
+            else Utilities.Notifications.SendNotificationERROR(player, "Esta ID no corresponde a ningún jugador");
         }
 
         // Bank commands
         [Command("crearbanco")]
-        public async Task CMD_crearnegocio(Player player, int type)
+        public async Task CMD_crearbanco(Player player, int type)
         {
             //var user = player.GetExternalData<Data.Entities.User>(0);
             if (!player.HasData("USER_CLASS")) return;
@@ -178,10 +243,10 @@ namespace DowntownRP.Game.Commands
                 }
                 else
                 {
-                    player.SendChatMessage("<font color='red'>ERROR</font> No existe ese tipo de banco");
+                    player.SendChatMessage("~r~ERROR~w~: No existe ese tipo de banco");
                 }
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("borrarbanco")]
@@ -203,7 +268,7 @@ namespace DowntownRP.Game.Commands
                 }
                 else Utilities.Notifications.SendNotificationERROR(player, "No estás en un banco");
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         // Company commands
@@ -216,7 +281,7 @@ namespace DowntownRP.Game.Commands
 
             if (user.adminLv >= 5)
             {
-                if (type == 1 || type == 2 || type == 3 || type == 4 || type == 5)
+                if (type == 1 || type == 2 || type == 3 || type == 4 || type == 5 || type == 6)
                 {
                     //player.SetData<int>("CreateCompanyType", type);
                     //player.SetData<int>("CreateCompanyPrice", price);
@@ -252,7 +317,7 @@ namespace DowntownRP.Game.Commands
                 }
                 else Utilities.Notifications.SendNotificationERROR(player, "No estás en una empresa");
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         // Business commands
@@ -265,7 +330,7 @@ namespace DowntownRP.Game.Commands
 
             if (user.adminLv >= 5)
             {
-                if (type == 1 || type == 2 || type == 3 || type == 4 || type == 5 || type == 6 || type == 7 || type == 8 || type == 9)
+                if (type == 1 || type == 2 || type == 3 || type == 4 || type == 5 || type == 6 || type == 7 || type == 8 || type == 9 || type == 10 || type == 11 || type == 12 || type == 13) 
                 {
                     //player.SetData<int>("CreateCompanyType", type);
                     //player.SetData<int>("CreateCompanyPrice", price);
@@ -300,7 +365,7 @@ namespace DowntownRP.Game.Commands
                 }
                 else Utilities.Notifications.SendNotificationERROR(player, "No estás en un negocio");
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("crearvehiculosnegocio")]
@@ -317,7 +382,7 @@ namespace DowntownRP.Game.Commands
                 }
                 else Utilities.Notifications.SendNotificationERROR(player, "No estás en un negocio");
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("crearnegocioveh")]
@@ -387,7 +452,7 @@ namespace DowntownRP.Game.Commands
                 veh.SetSharedData("BUSINESS_VEHICLE_SHARED", veh);
                 veh.SetSharedData("IS_BUSINESS_VEHICLE", true);
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("borrarnegocioveh")]
@@ -409,7 +474,7 @@ namespace DowntownRP.Game.Commands
                     }
                 }
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("crearnegociospawn")]
@@ -439,18 +504,24 @@ namespace DowntownRP.Game.Commands
 
                 Utilities.Notifications.SendNotificationOK(player, "Has creado el punto de spawn correctamente");
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("crearfacveh")]
-        public async Task CMD_crearfacveh(Player player, int faction, string model, int color1, int color2, string numberplate)
+        public async Task CMD_crearfacveh(Player player, int faction, string model, int color1, int color2, string numberplate = "")
         {
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
 
+            if(numberplate == "")
+            {
+                Utilities.Generate.GenerateMatricula();
+            }
+
+
             if (user.adminLv >= 4)
             {
-                int idveh = await World.Factions.Vehicles.DbFunctions.CreateFactionVehicle(faction, model, color1, color2, numberplate, player.Position.X, player.Position.Y, player.Position.Z, player.Heading);
+                int idveh = await World.Factions.Vehicles.DbFunctions.CreateFactionVehicle(faction, model, color1, color2, numberplate, player.Position.X, player.Position.Y, player.Position.Z, player.Heading, player.Dimension);
                 uint hash = NAPI.Util.GetHashKey(model);
 
                 NAPI.Task.Run(async () =>
@@ -489,7 +560,7 @@ namespace DowntownRP.Game.Commands
 
                 Utilities.Notifications.SendNotificationOK(player, $"Has creado un {model} para la facción {faction}");
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("revivir")]
@@ -498,7 +569,7 @@ namespace DowntownRP.Game.Commands
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
 
-            if (user.adminLv >= 4 || (user.faction==2&user.factionDuty == true&user.rank >= 1))
+            if (user.adminLv >= 1)
             {
                 Player target = Utilities.PlayerId.FindPlayerById(id);
                 if (target == null)
@@ -510,7 +581,7 @@ namespace DowntownRP.Game.Commands
                 {
                     if (!target.HasData("USER_CLASS")) return;
                     Data.Entities.User Player = target.GetData<Data.Entities.User>("USER_CLASS");
-                    if (!Player.isDeath)
+                    if (Player.isDeath)
                     {
                         Player.isDeath = false;
                         Player.adviceLSMD = false;
@@ -519,16 +590,14 @@ namespace DowntownRP.Game.Commands
                         target.StopAnimation();
                         target.Health = 100;
                         //target.TriggerEvent("CloseDeathUI");
-                        string tipo;
-                        if (user.faction == 2 & user.factionDuty == true & user.rank >= 1) { tipo = "paramedico"; } else { tipo = "administrador"; }
 
-                        Utilities.Notifications.SendNotificationINFO(target, "Has sido revivido por un "+tipo);
+                        Utilities.Notifications.SendNotificationINFO(target, "Has sido revivido por un administrador");
                         Utilities.Notifications.SendNotificationOK(player, "Has revivido a un jugador correctamente");
                     }
                     else Utilities.Notifications.SendNotificationERROR(player, "Este usuario no está en estado de coma");
                 }
             }
-            else player.SendChatMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else player.SendChatMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
         }
 
         [Command("setgb")]
@@ -614,6 +683,40 @@ namespace DowntownRP.Game.Commands
             }
         }
 
+        [Command("ponerskin")]
+        public void CMD_ponerskin(Player player, int id, string skin ="")
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+            //var user = player.GetExternalData<Data.Entities.User>(0);
+            if (user.adminLv >= 1)
+            {
+                Player target = Utilities.PlayerId.FindPlayerById(id);
+                if (target == null) Utilities.Notifications.SendNotificationERROR(player, "No hay ningún jugador conectado con esta id");
+                else
+                {
+                    if (skin != "")
+                    {
+                        target.SetSkin(NAPI.Util.PedNameToModel(skin));
+                    }
+                    else
+                    {
+                        Utilities.Clothes.ReturnUserClothes(player.GetData<Data.Entities.User>("USER_CLASS"));
+                        if (target.GetData<Data.Entities.User>("USER_CLASS").hombre)
+                        {
+                            target.SetSkin(PedHash.FreemodeMale01);
+                        }
+                        else
+                        {
+                            target.SetSkin(PedHash.FreemodeFemale01);
+                        }
+                        
+
+                    }
+                }
+            }
+        }
+
         [Command("ponerprop")]
         public void CMD_ponerprop(Player player, int id, int slot, int drawable, int texture)
         {
@@ -662,11 +765,11 @@ namespace DowntownRP.Game.Commands
                     user.CanalChatA = !(user.CanalChatA);
                     if (user.CanalChatA == true) 
                     {
-                        user.entity.SendChatMessage($"<font color='#FF0000'>[ADMIN]</font> Se ha habilitado la lectura del canal de chat del staff.");
+                        user.entity.SendChatMessage($"~r~[ADMIN]~w~ Se ha habilitado la lectura del canal de chat del staff.");
                     }
                     else
                     {
-                        user.entity.SendChatMessage($"<font color='#FF0000'>[ADMIN]</font> Se ha deshabilitado la lectura del canal de chat del staff.");
+                        user.entity.SendChatMessage($"~r~[ADMIN]~w~ Se ha deshabilitado la lectura del canal de chat del staff.");
                     }
                 }
                 else
@@ -677,7 +780,7 @@ namespace DowntownRP.Game.Commands
                     {
                         if (Player.adminLv != 0 & Player.CanalChatA == true)
                         {
-                            Player.entity.SendChatMessage($"<font color='#FF0000'>[ADMIN]</font> {player.Name} ({rank}): {mensaje}");
+                            Player.entity.SendChatMessage($"~r~[ADMIN]~w~ {player.Name} ({rank}): {mensaje}");
                         }
                     }
                     Utilities.Webhooks.sendWebHook(2, mensaje, player.Name + "(" + rank + ")");
@@ -699,7 +802,7 @@ namespace DowntownRP.Game.Commands
 
                 foreach (var Player in Data.Lists.playersConnected)
                 {
-                     Player.entity.SendChatMessage($"<font color='#802828'>[ANUNCIO - ADMIN]</font> {player.Name} ({rank}): {mensaje}");
+                     Player.entity.SendChatMessage($"~p~[ANUNCIO - ADMIN]~w~ {player.Name} ({rank}): {mensaje}");
 
                 }
             }
@@ -766,7 +869,7 @@ namespace DowntownRP.Game.Commands
             if (user.adminLv == 0) return;
 
             Player target = Utilities.PlayerId.FindPlayerById(id);
-            if (target != null) player.Position = target.Position;
+            if (target != null) player.Position = target.Position.Around(3);
             else Utilities.Notifications.SendNotificationERROR(player, "Esta ID no corresponde a ningún jugador");
         }
 
@@ -782,7 +885,7 @@ namespace DowntownRP.Game.Commands
             else Utilities.Notifications.SendNotificationERROR(player, "Esta ID no corresponde a ningún jugador");
         }
 
-       /* [Command ("dararma")]
+       [Command ("dararma")]
         public void CMD_darArma (Player player, string NombreArma, int municion, int target = -1)
         {
             if (Utilities.AdminLVL.PuedeUsarComando(player,3)) 
@@ -805,21 +908,17 @@ namespace DowntownRP.Game.Commands
                 WeaponHash wh = new WeaponHash();
                     wh = NAPI.Util.WeaponNameToModel(NombreArma);
 
-                Data.Entities.Item itemm = new Data.Entities.Item(0, Utilities.Weapon.GetWeaponNameByHash(wh), 1, 1);
-                itemm.bullets = municion;
-                itemm.isAWeapon = true;
-                itemm.weaponHash = wh;
-                Game.Inventory.DatabaseFunctions.SetNewItemInventory(player, itemm);
-                Utilities.Notifications.SendNotificationOK(player, $"Has cogido armamento de la armeria");
-                //player.GiveWeapon(WeaponHash.Pistol, 36);
+                World.Factions.PD.Main.DarArma(obj, wh, municion);
 
-                player.SendChatMessage($"<font color='#FF0000'>[ADMIN]</font> Has dado una {NombreArma} con {municion} balas a {obj.Name}");
+                player.SendChatMessage($"~r~[ADMIN] ~w~ Has dado una {NombreArma} con {municion} balas a {obj.Name}");
+
+                new Log($"El {AdminLVL.getAdmLevelName(player)} {player.Name} le ha dado un/una {NombreArma} con {municion} a {obj.Name}", 1);
             }
             else
             {
                 Utilities.Notifications.SendNotificationERROR(player, "No tienes permisos para ejecutar este comando");
             }
-        }*/
+        }
 
         [Command("setmarca")]
         public void CMD_setMarca(Player player)
@@ -847,7 +946,7 @@ namespace DowntownRP.Game.Commands
 
                 player.Position = user.Marca;
 
-                player.SendChatMessage($"Marca Configurada");
+                player.SendChatMessage($"Te has teletransportado a la Marca");
             }
             else
             {
@@ -858,21 +957,22 @@ namespace DowntownRP.Game.Commands
         [Command ("repararveh")]
         public void CMD_repararveh (Player player)
         {
-            if (Utilities.AdminLVL.PuedeUsarComando(player, 1))
+            if (AdminLVL.PuedeUsarComando(player, 1))
             {
                 var veh = player.Vehicle;
                 if (veh == null)
                 {
-                    Utilities.Notifications.SendNotificationERROR(player, "No estás en un vehículo");
+                    Notifications.SendNotificationERROR(player, "No estás en un vehículo");
                 }
                 else
                 {
                     veh.Repair();
+                    Notifications.SendNotificationINFO(player, "Este comando está a punto de ser obsoleto usa /aveh reparar");
                 }
             }
             else
             {
-                Utilities.Notifications.SendNotificationERROR(player, "No tienes permisos para ejecutar este comando");
+                Notifications.SendNotificationERROR(player, "No tienes permisos para ejecutar este comando");
             }
         }
 
@@ -906,13 +1006,22 @@ namespace DowntownRP.Game.Commands
                 return;
             }
 
+            bool aL = false;
+
+            if (type == 2)
+            {
+                aL = true;
+            }
+
+
+
             if (!target.HasData("USER_CLASS")) return;
             Data.Entities.User targ = target.GetData<Data.Entities.User>("USER_CLASS");
 
-            if (user.adminLv == 5)
+            if (user.adminLv >= 5)
             {
                 int idfaction = await World.Factions.DbFunctions.CreateFaction(name, type, targ.idpj, player.Position.X, player.Position.Y, player.Position.Z);
-                Data.Entities.Faction faction = new Data.Entities.Faction() { id = idfaction, name = name, type = type, owner = targ.idpj };
+                Data.Entities.Faction faction = new Data.Entities.Faction() { id = idfaction, name = name, type = type, owner = targ.idpj, armasCortas = true, armasLargas = aL };
                 await Game.CharacterSelector.CharacterSelector.UpdateUserFaction(targ.idpj, idfaction);
                 await Game.CharacterSelector.CharacterSelector.UpdateUserFactionRank(targ.idpj, 6);
 
@@ -968,6 +1077,96 @@ namespace DowntownRP.Game.Commands
                 else Utilities.Notifications.SendNotificationERROR(player, "Este comando solo se puede utilizar con facciones ilegales");
             }
         }
-       
+
+        [Command("chalecostaff")]
+        public async Task CMD_ChalecoStaff(Player pl)
+        {
+            var user = pl.GetData<Data.Entities.User>("USER_CLASS");
+            if (Utilities.AdminLVL.PuedeUsarComando(pl, 1) )
+            {
+                if (!user.LlevaChaleco)
+                {
+                    if (user.hombre) { pl.SetClothes(9, 11, 1); }
+                    else { pl.SetClothes(9, 9, 1); }
+                    
+                    user.LlevaChaleco = true;
+                }
+                else
+                {
+                    pl.SetClothes(9, 0, 0);
+                    user.LlevaChaleco = false;
+                }
+            }
+            else
+            {
+                Utilities.Notifications.SendNotificationERROR(pl, "No tienes permisos para ejecutar este comando");
+            }
+        }
+
+        [Command("admins")]
+        public async Task CMD_miembros(Player player, int id = -1)
+        {
+
+            if (id == -1)
+            {
+                Data.Entities.User cl = player.GetData<Data.Entities.User>("USER_CLASS");
+            }
+
+            player.SendChatMessage($"El staff conectado es:");
+
+            foreach (Data.Entities.User u in Data.Lists.playersConnected)
+            {
+                if (u.adminLv != 0){
+                    if (u.CanalChatA) //SE USA PARA VER SI TIENE EL CANAL ADMIN ABIERTO.
+                    {
+                        player.SendChatMessage($"~g~{AdminLVL.getAdmLevelName(u.adminLv)} => {u.entity.Name}");
+                    }
+                    else
+                    {
+                        player.SendChatMessage($"~b~{AdminLVL.getAdmLevelName(u.adminLv)} => {u.entity.Name}");
+                    }
+                }
+            }
+
+        }
+
+        [Command ("cambiarsexo")]
+        public void CMD_cambiarsexo (Player player)
+        {
+            if(AdminLVL.PuedeUsarComando(player, 1))
+            {
+                Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+                user.hombre = !user.hombre;
+                switch (user.hombre)
+                {
+                    case true:
+                        player.SetSkin(PedHash.FreemodeMale01);
+                        break;
+                    case false:
+                        player.SetSkin(PedHash.FreemodeFemale01);
+                        break;
+                }
+            }
+            else
+            {
+                Notifications.SendNotificationERROR(player, "No tienes permiso para usar este comando");
+            }
+        }
+
+
+        [Command("crearobj")]
+        public void CMD_CrearOBJ(Player player, uint id, string valor = "")
+        {
+            if (AdminLVL.PuedeUsarComando(player, 4))
+            {
+                GTANetworkAPI.Object objeto = NAPI.Object.CreateObject(id, player.Position.Subtract(new Vector3(0, 0, 1)), player.Rotation);
+
+                if (valor != "") objeto.SetData<bool>(valor, true);
+            }
+            else
+            {
+                Notifications.SendNotificationERROR(player, "No puedes usar este comando.");
+            }
+        }
     }
 }

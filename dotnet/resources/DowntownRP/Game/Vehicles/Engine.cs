@@ -29,12 +29,13 @@ namespace DowntownRP.Game.Vehicles
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
 
-            if (player.VehicleSeat != -1) return;
+            if (player.VehicleSeat != 0) return;
 
             if (!user.chatStatus)
             {
                 if (player.IsInVehicle)
                 {
+                    if (player.Vehicle.HasData("VEHICLE_BUSINESS_DATA")) return;
                     if (player.Vehicle.EngineStatus)
                     {
                         player.Vehicle.EngineStatus = false;
@@ -50,7 +51,7 @@ namespace DowntownRP.Game.Vehicles
                         Utilities.Chat.EntornoDo(player, "Motor encendido");
                         player.Vehicle.SetSharedData("ENGINE_STATUS", true);
 
-                        if (!player.Vehicle.HasSharedData("FUEL")) player.Vehicle.SetSharedData("FUEL", 100);
+                        /*if (!player.Vehicle.HasSharedData("FUEL")) player.Vehicle.SetSharedData("FUEL", 100);
                         if (player.Vehicle.HasData("VEHICLE_COMPANY_DATA")) return;
                         while (player.IsInVehicle)
                         {
@@ -67,7 +68,7 @@ namespace DowntownRP.Game.Vehicles
                                 player.Vehicle.SetSharedData("FUEL", actualFuel - 1);
                             }
                             break;
-                        }
+                        }*/
                     }
                 }
             }

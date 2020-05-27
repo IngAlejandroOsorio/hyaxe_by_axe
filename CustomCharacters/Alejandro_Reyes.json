@@ -1,0 +1,99 @@
+{
+    "Gender": 0,
+    "Parents": {
+        "Father": 44,
+        "Mother": 31,
+        "Similarity": 1,
+        "SkinSimilarity": 0.81
+    },
+    "Features": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "Appearance": [
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 27,
+            "Opacity": 1
+        },
+        {
+            "Value": 26,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        }
+    ],
+    "Hair": {
+        "Hair": 0,
+        "Color": 0,
+        "HighlightColor": 32
+    },
+    "character_data": {
+        "torso": 112,
+        "legs": 1,
+        "feet": 38,
+        "undershirt": 1,
+        "topshirt": 160,
+        "topshirtTexture": 0,
+        "gafas": 0,
+        "sombrero": 0,
+        "mascara": 0
+    },
+    "EyebrowColor": 0,
+    "BeardColor": 0,
+    "EyeColor": 0,
+    "BlushColor": 0,
+    "LipstickColor": 0,
+    "ChestHairColor": 0
+}

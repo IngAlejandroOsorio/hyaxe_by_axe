@@ -52,6 +52,11 @@ namespace DowntownRP.World.Business.Supermarket
                         typeitem = 3;
                         quantity = 1;
                         break;
+                    case "Caña":
+                        price = 500;
+                        typeitem = 2;
+                        quantity = 1;
+                        break;
                 }
 
                 if(await Game.Inventory.Inventory.CheckIfPlayerHasSlot(user))

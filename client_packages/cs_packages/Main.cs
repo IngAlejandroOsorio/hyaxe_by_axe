@@ -15,11 +15,19 @@ namespace DowntownRP_cs
             Events.OnGuiReady += OnGuiReadyEvent;
             Events.OnEntityStreamIn += OnEntityStreamIn;
             Events.Add("freeze_player", FreezePlayer);
+            Events.Add("unfreeze_player", UnFreezePlayer);
             Events.Add("AdjuntarAME", AdjuntarAme);
             Events.Add("SetFaceSettingsSpawn", SetFaceSettingsSpawn);
             Events.Add("LoadAllIps", LoadAllIps);
             Events.Add("LocalizarVehBlip", LocalizarVehBlip);
+            Events.Add("LocalizarTrafBlip", LocalizarTrafBlip);
             Events.Add("playerLoadPj", playerLoadPj);
+            RAGE.Discord.Update("rage.hyaxe.com", "Jugando en Hyaxe V");
+        }
+
+        private void UnFreezePlayer(object[] args)
+        {
+            RAGE.Elements.Player.LocalPlayer.FreezePosition(false);
         }
 
         private void playerLoadPj(object[] args)
@@ -30,6 +38,12 @@ namespace DowntownRP_cs
         private void LocalizarVehBlip(object[] args)
         {
             RAGE.Elements.Blip blip = new RAGE.Elements.Blip(225, (Vector3)args[0], "LOCALIZADOR COCHE");
+            blip.SetAsShortRange(true);
+        }
+
+        private void LocalizarTrafBlip(object[] args)
+        {
+            RAGE.Elements.Blip blip = new RAGE.Elements.Blip(225, (Vector3)args[0], "TRAFICO DE "+args[1],color: 18);
             blip.SetAsShortRange(true);
         }
 
@@ -49,15 +63,7 @@ namespace DowntownRP_cs
 
         private void FreezePlayer(object[] args)
         {
-            if (!isFreezed)
-            {
-                RAGE.Elements.Player.LocalPlayer.FreezePosition(true);
-                isFreezed = true;
-                return;
-            }
-            RAGE.Elements.Player.LocalPlayer.FreezePosition(false);
-            isFreezed = false;
-            
+            RAGE.Elements.Player.LocalPlayer.FreezePosition(true);
         }
 
         private void OnEntityStreamIn(Entity entity)
@@ -90,6 +96,7 @@ namespace DowntownRP_cs
             TextLabel tl = (TextLabel)args[1];
             RAGE.Game.Entity.AttachEntityToEntity(pl.Id, tl.Id, 12844, 0, 0, 1, 0, 0, 0, false, true, false, false, 1, false);
         }
+        
 
     }
 }

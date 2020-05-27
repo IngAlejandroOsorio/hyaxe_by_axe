@@ -78,7 +78,7 @@
         
                         </div><br>
                         <button id="crearBtn" class="btn btn-success btn-block">Crear personaje</button>
-                        <button id="volverBtn" class="btn btn-danger btn-block">Volver al selector de personajes</button>
+                        
             </div>
             <div class="col-md-6"></div>
             <div class="col-md-3">
@@ -280,9 +280,12 @@
                               </div>
                         <div class="card-body text-white">
                                 <label for="customRange3">Tipo</label>
-                                <input type="range" class="custom-range" min="0" max="93" step="1" oninput="ropa_tipo(0,this.value)" onchange="ropa_tipo(0,this.value)" id="camisaTipo"><br>
-                                <label for="customRange3">Hoodies / Vestidos</label>
-                                <input type="range" class="custom-range" min="0" max="50" step="1" oninput="ropa_tipo(1,this.value)" onchange="ropa_tipo(1,this.value)" id="camisaTipo2">                                
+                                <input type="range" class="custom-range move" min="0" max="44" step="1" oninput="topy(this.value)" onchange="topy(this.value)" id="camisaTipo"><br>
+   
+                                <label for="customRange3">Solo Parte inferior</label>
+                                <input type="range" class="custom-range" min="0" max="30" step="1" oninput="ropa_tipo(2,this.value)" onchange="ropa_tipo(2,this.value)" id="conjuntoAbajo"><br>
+                                <label for="customRange3">Solo Parte superior</label>
+                                <input type="range" class="custom-range" min="0" max="30" step="1" oninput="ropa_vari(this.value)" onchange="ropa_vari(this.value)" id="conjuntoArriba">                             
                         </div>
                   </div>
                   <br>
@@ -295,18 +298,6 @@
                                 <input type="range" class="custom-range" min="0" max="16" step="1" oninput="pecho_tipo(this.value)" onchange="pecho_tipo(this.value)" id="camisaTipo"><br>
                                 <label for="customRange3">Color Cabello Torso</label>
                                     <div id="colorPeloPechoPaleta"></div>                                
-                        </div>
-                  </div>
-                  <br>                                
-                  <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                        <div class="alert alert-primary" role="alert">
-                                Conjunto
-                              </div>
-                        <div class="card-body text-white">
-                                <label for="customRange3">Parte inferior</label>
-                                <input type="range" class="custom-range" min="0" max="30" step="1" oninput="ropa_tipo(2,this.value)" onchange="ropa_tipo(2,this.value)" id="conjuntoAbajo"><br>
-                                <label for="customRange3">Parte superior</label>
-                                <input type="range" class="custom-range" min="0" max="30" step="1" oninput="ropa_vari(this.value)" onchange="ropa_vari(this.value)" id="conjuntoArriba">
                         </div>
                   </div>
                   <br>
@@ -414,6 +405,8 @@
 
     <script src="assets/js/character-clothes.js"></script>
     <script src="assets/js/colores.js"></script>
+    <script src="axe/data.js"></script>    
+
     <script>
         var current;
         var genero = 0;
@@ -789,6 +782,16 @@
 
 
         // Funciones CEF -> Cliente Rage
+        function topy(valor){
+          valor = parseInt(valor);
+         //mp.trigger("resource.Sounds.PlaySelectSound");
+         //console.log("/ropa "+8+" "+data.tops[genero][valor].Undershirt+" "+0);
+          //console.log("/ropa "+3+" "+data.tops[genero][valor].Torso+" "+0);
+          //console.log("/ropa "+11+" "+data.tops[genero][valor].Top+" "+0);
+          mp.trigger("SelRopaTop", JSON.stringify({   slot: 8, variation: data.tops[genero][valor].Undershirt, texture: 0}));
+          mp.trigger("SelRopaTop", JSON.stringify({   slot: 3, variation: data.tops[genero][valor].Torso, texture: 0}));
+          mp.trigger("SelRopaTop", JSON.stringify({   slot: 11, variation: data.tops[genero][valor].Top, texture: 0}));
+        }
 
         function SelComponenteRasgos(tipo,conf1,conf2,conf3){
           conf1 = parseInt(conf1);

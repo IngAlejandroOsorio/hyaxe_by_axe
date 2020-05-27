@@ -87,6 +87,21 @@ namespace DowntownRP_cs.login
 
         private void ShowLoginWindow(object[] args)
         {
+            // Initialize the player's position
+            RAGE.Elements.Player.LocalPlayer.FreezePosition(true);
+            Events.CallLocal("transicion",1000);
+
+            // Create the camera
+            var cam = Cam.CreateCameraWithParams(RAGE.Game.Misc.GetHashKey("DEFAULT_SCRIPTED_CAMERA"), 3400.0f, 5075.0f, 20.0f, 0.0f, 0.0f, 8.0f, 75.0f, true, 2);
+            Cam.SetCamActive(cam, true);
+            Cam.RenderScriptCams(true, false, 0, false, false, 0);
+
+            // Hide the chat, HUD and radar
+            Chat.Show(false);
+            Chat.Activate(false);
+            Ui.DisplayHud(false);
+            Ui.DisplayRadar(false);
+
             browserLogin = new HtmlWindow("package://statics/login/dev.html");
             RAGE.Ui.Cursor.Visible = true;
         }
@@ -99,10 +114,11 @@ namespace DowntownRP_cs.login
 
         private void DestroyWindow(object[] args)
         {
+            Events.CallLocal("transicion",2000);
+            browserLogin.Destroy();
             RAGE.Elements.Player.LocalPlayer.FreezePosition(false);
             Cam.RenderScriptCams(false, false, 0, true, false, 0);
-            RAGE.Ui.Cursor.Visible = false;
-            browserLogin.Destroy();
+            RAGE.Ui.Cursor.Visible = false;            
         }
 
         private void ShowErrorAlert(object[] args)
@@ -132,19 +148,7 @@ namespace DowntownRP_cs.login
 
         private void OnGuiReadyEvent()
         {
-            // Initialize the player's position
-            RAGE.Elements.Player.LocalPlayer.FreezePosition(true);
-
-            // Create the camera
-            var cam = Cam.CreateCameraWithParams(RAGE.Game.Misc.GetHashKey("DEFAULT_SCRIPTED_CAMERA"), 3400.0f, 5075.0f, 20.0f, 0.0f, 0.0f, 8.0f, 75.0f, true, 2);
-            Cam.SetCamActive(cam, true);
-            Cam.RenderScriptCams(true, false, 0, false, false, 0);
-
-            // Hide the chat, HUD and radar
-            Chat.Show(false);
-            Chat.Activate(false);
-            Ui.DisplayHud(false);
-            Ui.DisplayRadar(false);
+            
         }
     }
 }

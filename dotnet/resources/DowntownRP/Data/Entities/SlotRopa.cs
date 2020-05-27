@@ -19,6 +19,14 @@ namespace DowntownRP.Data.Entities
             this.slot = slot;
             this.player = player;
         }
+        public SlotRopa()
+        {
+            this.texture = -1;
+            this.drawable = -1;
+            this.slot = -1;
+            this.player = null;
+        }
+
         public SlotRopa(int slot, int drawable, int texture)
         {
             this.slot = slot;
@@ -29,6 +37,17 @@ namespace DowntownRP.Data.Entities
         public void setRopa(bool reset)
         {
             player.SetClothes(this.slot, this.drawable, this.texture);
+            if (reset)
+            {
+                this.drawable = -1;
+                this.slot = -1;
+                this.texture = -1;
+            }
+        }
+
+        public void setRopa(bool reset, Player pl)
+        {
+            pl.SetClothes(this.slot, this.drawable, this.texture);
             if (reset)
             {
                 this.drawable = -1;

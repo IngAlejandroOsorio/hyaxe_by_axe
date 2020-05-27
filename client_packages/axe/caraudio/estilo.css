@@ -1,0 +1,97 @@
+html,
+body {
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0);
+}
+.butt {
+background-color: rgba(26, 25, 25, 0.8);
+border: none; /* Remove borders */
+color: white; /* White text */
+padding: 12px 16px; /* Some padding */
+font-size: 16px; /* Set a font size */
+cursor: pointer; /* Mouse pointer on hover */
+width: 100%;
+}
+
+/* Darker background on mouse-over */
+.butt:hover {
+background-color: #68040e;
+}
+
+input.active[type=range]::-webkit-slider-thumb {
+
+border: 3px solid #000000;
+border-radius: 4px;
+background: #ffffff;
+margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+box-shadow: 3px 3px 3px #000000, 0px 0px 3px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+.spany{
+color: #5c010a;
+background-color: #d6d6d6;
+border-color: #c6c6c6;
+position: relative;
+padding: .15rem .25rem;
+margin-bottom: 1rem;
+border: 2px solid transparent;
+border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;        
+}
+
+.topy{
+padding-top: 15px;
+}
+
+.icono{
+width:40px;        
+}
+
+.card-body {
+padding: 0.65rem;
+}
+
+@keyframes drawStrokes {
+  0% {
+    stroke-dashoffset: 6000;
+    stroke-opacity: 0.8;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 0.1;
+  }
+}
+
+@keyframes fadeInSvg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#color_picker_bg {
+  opacity: 1;
+  animation: drawStrokes 1.2s;
+}
+
+svg {
+  animation: fadeInSvg 1.2s;
+  display: block;
+  margin: auto;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

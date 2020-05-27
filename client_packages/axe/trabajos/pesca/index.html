@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Fishing Game</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="game">
+
+  <!-- /////////// -->
+  <!-- Fishing rod -->
+  <!-- /////////// -->
+
+  <div class="fishing-rod">
+    <img class="fill-container" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/game-fishing-rod.svg" alt="">
+    <canvas class="reel-line-tension" data-element="reel-line-tension"></canvas>
+    <div class="reel-handle">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/game-reel-handle.svg" alt="">
+    </div>
+    <div class="reel-line"></div>
+  </div>
+
+  <!-- ///////// -->
+  <!-- Game body -->
+  <!-- ///////// -->
+
+  <div class="game-body">
+    <img class="fill-container" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/game-game-body-bg.svg" alt="">
+    <canvas class="bubbles" data-element="bubbles"></canvas>
+    <canvas class="seaweed" data-element="seaweed"></canvas>
+    <img class="seafloor fill-container" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/game-sea-floor.svg" alt="">
+    <div class="fish">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/game-fish.svg" alt="">
+    </div>
+    <div class="indicator">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/game-indicator.svg" alt="">
+    </div>
+    <img class="glass fill-container" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/game-glass.svg" alt="">
+  </div>
+
+  <!-- //////////// -->
+  <!-- Progress bar -->
+  <!-- //////////// -->
+
+  <div class="progress-bar">
+    <img class="fill-container" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/game-progress-bar-bg.svg" alt="">
+    <div class="progress-gradient-wrapper">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/game-progress-gradient.svg" class="progress-gradient" alt="">
+    </div>
+  </div>
+
+</div>
+<!-- .game -->
+
+<!-- /////// -->
+<!-- Success -->
+<!-- /////// -->
+
+<div class="success">
+  <img src="pescaste.png" alt="" class="nice-catch">
+  <img id="pez" src="salmon.png" alt="" class="perfect">
+</div>
+<audio id="sonido">
+    <source id="audioSource">
+</audio>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script><script  src="./script.js"></script>
+<script>
+   function audio() {
+
+        var audio = document.getElementById('sonido');
+        var source = document.getElementById('audioSource');
+        var url;
+
+        var d = Math.random();
+        if (d < 0.3){
+          url = "https://retired.sounddogs.com/previews/2226/mp3/518045_SOUNDDOGS__fi.mp3";
+        }        
+        else if (d < 0.4){
+          url = "https://retired.sounddogs.com/previews/2226/mp3/518046_SOUNDDOGS__fi.mp3";
+        }        
+        else{
+        url = "https://retired.sounddogs.com/previews/2226/mp3/518047_SOUNDDOGS__fi.mp3";
+        }
+
+        source.src = url;
+        audio.load();
+        audio.play();
+    
+  }
+
+  function finish(pescado){
+    mp.trigger("finalizarPesca",pescado);
+  }
+
+</script>
+</body>
+</html>

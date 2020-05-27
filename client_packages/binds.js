@@ -1,8 +1,9 @@
 var playerList = false;
 var returnDebug = false;
+var avisoroboCef;
 
 mp.keys.bind(0x71, false, () => { // F2
-    mp.events.callLocal('OpenCharacterMenu');
+    //mp.events.callLocal('OpenCharacterMenu');    
 });
 
 mp.keys.bind(0x1B, false, () => { // Escape
@@ -14,7 +15,7 @@ mp.keys.bind(0x0D, false, () => { // Enter
 });
 
 mp.keys.bind(0x54, false, () => { // T
-    mp.events.callRemote('ActionPressT');
+    mp.events.callRemote('ActionPressT');    
 });
 
 mp.keys.bind(0x75, false, () => { // F6
@@ -38,11 +39,11 @@ mp.keys.bind(0x74, false, () => { // F5
 });
 
 mp.keys.bind(0x73, false, () => { // F4
-    mp.events.callRemote('ActionInventory');
+    mp.events.callRemote('ActionInventory');    
 });
 
 mp.keys.bind(0x72, false, () => { // F3
-    mp.events.callRemote('ActionMenuVehicle');
+mp.events.callRemote('ActionMenuVehicle');        
 });
 
 mp.keys.bind(0x4E, false, () => { // N
@@ -54,18 +55,16 @@ mp.keys.bind(0x4D, false, () => { // M
     mp.events.callRemote('OpenTruckInventory');
 });
 
-mp.keys.bind(0x4C, false, () =>{
+mp.keys.bind(0x4C, false, () =>{ //L
     mp.events.callRemote("ActionGaragePD");
 });
 
 mp.keys.bind(0x59, false, () => { // Y
     mp.events.callRemote('ActionPickItem');
     mp.events.callRemote('ActionCargueroInteract');
+	mp.events.callRemote('PoliceDoorManager');
 });
 
-mp.keys.bind(0x59, false, () => { // Y
-    mp.events.callRemote('PoliceDoorManager');
-});
 
 mp.keys.bind(0x55, false, () => { // U
     mp.events.callLocal('OpenPlayerList');
@@ -81,9 +80,13 @@ mp.keys.bind(0x45, false, () => { // E
 });
 
 mp.keys.bind(0x08, false, () => { // Backspace
-    if(returnDebug) mp.events.callLocal('CerrarArmeria');
+    //mp.events.callLocal('CerrarArmeria');
     mp.events.callLocal('OcultarVelocimetro');
 });
+
+/*mp.keys.bind(0x26, false, () => {
+    mp.events.callRemote("ActionOpenPhone");
+});*/
 
 mp.events.add("returnDebugActive", () => {
     returnDebug = true;

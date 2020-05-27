@@ -25,8 +25,9 @@ namespace DowntownRP.World.Business
                 else
                 {
                     if (business.type == 6 || business.type == 7 || business.type == 8) player.TriggerEvent("adviceBuyVehicle");
+                    if (business.type == 12 && NAPI.Player.IsPlayerInAnyVehicle(player)) player.TriggerEvent("abrirTaller");
                 }
-
+                
                 user.isInBusiness = true;
                 user.business = business;
             }
@@ -98,7 +99,8 @@ namespace DowntownRP.World.Business
                                 break;
 
                             case 5:
-                                blip.Sprite = 135;
+                                blip.Sprite = 71;
+                                label.Text = $"Peluquero ~n~~p~{name}, {streetid}";
                                 break;
 
                             case 6:
@@ -119,6 +121,25 @@ namespace DowntownRP.World.Business
                             case 9:
                                 blip.Sprite = 135;
                                 break;
+
+                            case 10:
+                                blip.Sprite = 614;
+                                break;
+
+                            case 11:
+                                blip.Sprite = 590;
+                                break;
+
+                            case 12:
+                                blip.Name = "Taller Mecánico";
+                                blip.Sprite = 72;
+                                break;
+
+                            case 13:
+                                blip.Name = "Grow Shop";
+                                blip.Sprite = 496;
+                                break;
+
                         }
 
                         business.id = idempresa;
@@ -154,6 +175,10 @@ namespace DowntownRP.World.Business
                 if (user.business.type == 1) player.TriggerEvent("OpenSupermarketMenu");
                 if (user.business.type == 2) player.TriggerEvent("AbrirTiendaRopaAxE");
                 if (user.business.type == 5) player.TriggerEvent("AbrirPeluqueriaAxE");
+                if (user.business.type == 10) player.TriggerEvent("OpenElectronicShopMenu");
+                if (user.business.type == 11) player.TriggerEvent("OpenAdsBrowser");
+                if (user.business.type == 12 && NAPI.Player.IsPlayerInAnyVehicle(player)) player.TriggerEvent("abrirTaller");
+                if (user.business.type == 13) player.TriggerEvent("OpenGrowShopMenu");
             }
         }
 
@@ -248,6 +273,9 @@ namespace DowntownRP.World.Business
 
                 case 9:
                     return "Bar";
+
+                case 12:
+                    return "Taller Mecánico";
 
                 default:
                     return "N/A";

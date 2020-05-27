@@ -42,6 +42,16 @@ namespace DowntownRP.World.Factions
                             double y = reader.GetDouble(reader.GetOrdinal("y"));
                             double z = reader.GetDouble(reader.GetOrdinal("z"));
 
+                            int armasCortas = reader.GetInt32(reader.GetOrdinal("traficaArmasCortas"));
+                            bool Ac = false;
+                            if (armasCortas == 1) Ac = true;
+
+                            int armasLargas = reader.GetInt32(reader.GetOrdinal("traficaArmasLargas"));
+                            bool Al = false;
+                            if (armasLargas == 1) Al = true;
+
+                            DateTime cooldown = reader.GetDateTime(reader.GetOrdinal("cooldown"));
+
                             Vector3 position = new Vector3(x, y, z);
                             Vector3 exit = new Vector3(266.1425, -1006.98, -100.8834);
 
@@ -66,13 +76,16 @@ namespace DowntownRP.World.Factions
                                     rank4 = rank4,
                                     rank5 = rank5,
                                     rank6 = rank6,
-                                    position = new Vector3(x, y, z)
+                                    position = new Vector3(x, y, z),
+                                    armasCortas = Ac,
+                                    armasLargas = Al,
+                                    coolDown = cooldown
                                 };
 
                                 entrada.SetData("FACTION_CLASS", faction);
                                 salida.SetData("SALIDA_FACTION", position);
 
-                                faction.inventory = await SpawnFactionInventory(faction.id);
+                                //faction.inventory = await SpawnFactionInventory(faction.id);
 
                                 Data.Lists.factions.Add(faction);
                             });
@@ -84,18 +97,24 @@ namespace DowntownRP.World.Factions
 
         public async static Task<int> CreateFaction(string name, int type, int owner, double x, double y, double z)
         {
+            int aL = 0;
+            if (type == 2)
+            {
+                aL = 1;
+            }
             using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
             {
                 await connection.OpenAsync().ConfigureAwait(false);
                 MySqlCommand command = connection.CreateCommand();
 
-                command.CommandText = "INSERT INTO factions (name, type, owner, x, y, z) VALUES (@name, @type, @owner, @x, @y, @z)";
+                command.CommandText = "INSERT INTO factions (name, type, owner, x, y, z, traficaArmasCortas, traficaArmasLargas) VALUES (@name, @type, @owner, @x, @y, @z, 1, @aL)";
                 command.Parameters.AddWithValue("@name", name);
                 command.Parameters.AddWithValue("@type", type);
                 command.Parameters.AddWithValue("@owner", owner);
                 command.Parameters.AddWithValue("@x", x);
                 command.Parameters.AddWithValue("@y", y);
                 command.Parameters.AddWithValue("@z", z);
+                command.Parameters.AddWithValue("@aL", aL);
 
                 await command.ExecuteNonQueryAsync().ConfigureAwait(false);
                 return (int)command.LastInsertedId;
@@ -130,6 +149,34 @@ namespace DowntownRP.World.Factions
                 command.CommandText = "UPDATE factions SET safeBox = @bank WHERE id = @id";
                 command.Parameters.AddWithValue("@id", idhouse);
                 command.Parameters.AddWithValue("@bank", bank);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+        public async static Task UpdateFactionTrafico(int faccion, int aC, int aL)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE factions SET traficaArmasCortas = @aC, traficaArmasLargas = @aL WHERE id = @id";
+                command.Parameters.AddWithValue("@aC", aC);
+                command.Parameters.AddWithValue("@aL", aL);
+                command.Parameters.AddWithValue("@id", faccion);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+        public async static Task UpdateFactionCooldown(int faccion, DateTime hasta)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE factions SET cooldown = @cooldown WHERE id = @id";
+                command.Parameters.AddWithValue("@cooldown", hasta);
 
                 await command.ExecuteNonQueryAsync().ConfigureAwait(false);
             }

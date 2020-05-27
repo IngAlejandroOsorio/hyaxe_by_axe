@@ -8,16 +8,15 @@ namespace DowntownRP_cs.game.factions.pd
     {
         private bool isOpen = false;
         private MenuPool mp;
-        UIMenu esc;
-        UIMenu cortas;
-        UIMenu misc;
-        UIMenu subf;
+        private UIMenu esc;
+        private UIMenu cortas;
+        private UIMenu misc;
+        private UIMenu subf;
 
         public armeria()
         {
             Events.Add("armeriapd", armeriapd);
             RAGE.Events.Tick += DrawMenu;
-            Events.Add("CerrarArmeria", Backspace);
         }
 
         public void armeriapd (object [] args)
@@ -61,6 +60,37 @@ namespace DowntownRP_cs.game.factions.pd
                  Escopetas();
              };
             AyudaMenu.AddItem(esco);
+            
+
+            UIMenuItem rif = new UIMenuItem("Rifles");
+            rif.Activated += (sender, item) =>
+            {
+                AyudaMenu.Visible = false;
+                RAGE.Ui.Cursor.Visible = false;
+                RAGE.Chat.Show(true);
+                Rifles();
+            };
+            AyudaMenu.AddItem(rif);
+
+            UIMenuItem fus = new UIMenuItem("Fusiles");
+            fus.Activated += (sender, item) =>
+            {
+                AyudaMenu.Visible = false;
+                RAGE.Ui.Cursor.Visible = false;
+                RAGE.Chat.Show(true);
+                Fusiles();
+            };
+            AyudaMenu.AddItem(fus);
+
+            UIMenuItem expl = new UIMenuItem("Explosivos");
+            expl.Activated += (sender, item) =>
+            {
+                AyudaMenu.Visible = false;
+                RAGE.Ui.Cursor.Visible = false;
+                RAGE.Chat.Show(true);
+                Expl();
+            };
+            AyudaMenu.AddItem(expl);
 
             UIMenuItem otr = new UIMenuItem("Otros Objectos");
             otr.Description = "Defensas, linternas ...";
@@ -188,7 +218,7 @@ namespace DowntownRP_cs.game.factions.pd
         public void Escopetas()
         {
             Chat.Show(false);
-            var esc = new UIMenu("Escopetas", "Armas largas para patrullaje semiordinario.");
+            esc = new UIMenu("Escopetas", "Armas largas para patrullaje semiordinario.");
             mp.Add(esc);
             esc.OnItemSelect += SelectEsc;
 
@@ -218,7 +248,7 @@ namespace DowntownRP_cs.game.factions.pd
         {
             isOpen = false;
             Chat.Show(true);
-           // misc.Visible = false;
+            misc.Visible = false;
             cortas.Visible = false;
             esc.Visible = false;
             subf.Visible = false;
@@ -226,6 +256,97 @@ namespace DowntownRP_cs.game.factions.pd
 
         public void Backspace(object [] args)
         {
+            Cerrar();
+        }
+
+        public void Fusiles()
+        {
+            Chat.Show(false);
+            subf = null;
+            subf = new UIMenu("Fusiles", "Armas automaticas");
+            mp.Add(subf);
+            subf.OnItemSelect += SelectFus;
+
+            subf.AddItem(new UIMenuItem("Carbine", "Un fusil con 120 balas (4 cargadores)"));
+            subf.AddItem(new UIMenuItem("G36C", "Un fusil con 120 balas (4 cargadores)"));
+
+
+            subf.AddItem(new UIMenuItem("Cerrar", "Cerrar el menú"));
+            // Refrescamos los índices
+            mp.RefreshIndex();
+            subf.MouseControlsEnabled = false;
+            subf.Visible = true;
+
+        }
+
+        public void SelectFus(UIMenu ui, UIMenuItem item, int index)
+        {
+            if (index < 2)
+            {
+                RAGE.Events.CallRemote("RecArmeriaPD", 4, index);
+            }
+            ui.Visible = false;
+            Cerrar();
+        }
+
+        public void Rifles()
+        {
+            Chat.Show(false);
+            subf = null;
+            subf = new UIMenu("Rifles", "Armas automaticas");
+            mp.Add(subf);
+            subf.OnItemSelect += SelectRif;
+
+            subf.AddItem(new UIMenuItem("Rifle de tirador", "Un rile con 24 balas (3 cargadores)"));
+           
+
+
+            subf.AddItem(new UIMenuItem("Cerrar", "Cerrar el menú"));
+            // Refrescamos los índices
+            mp.RefreshIndex();
+            subf.MouseControlsEnabled = false;
+            subf.Visible = true;
+
+        }
+
+        public void SelectRif(UIMenu ui, UIMenuItem item, int index)
+        {
+            if (index < 1)
+            {
+                RAGE.Events.CallRemote("RecArmeriaPD", 5, index);
+            }
+            ui.Visible = false;
+            Cerrar();
+        }
+
+        public void Expl()
+        {
+            Chat.Show(false);
+            subf = null;
+            subf = new UIMenu("Explosivos", "¡Boom!");
+            mp.Add(subf);
+            subf.OnItemSelect += SelectExpl;
+
+            subf.AddItem(new UIMenuItem("Granada humo", "5 unidades"));
+            subf.AddItem(new UIMenuItem("Lanza Granadas", "10 Proyectiles"));
+            subf.AddItem(new UIMenuItem("Granadas", "5 unidades"));
+
+
+            subf.AddItem(new UIMenuItem("Cerrar", "Cerrar el menú"));
+            // Refrescamos los índices
+            mp.RefreshIndex();
+            subf.MouseControlsEnabled = false;
+            subf.Visible = true;
+
+        }
+
+        public void SelectExpl(UIMenu ui, UIMenuItem item, int index)
+        {
+            if (index < 3)
+            {
+                RAGE.Events.CallRemote("RecArmeriaPD", 6, index);
+            }
+            ui.Visible = false;
             Cerrar();
         }
     }

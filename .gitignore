@@ -1,0 +1,13 @@
+
+*.v2
+*.cache
+*.v2
+client_packages/game_resources/
+dotnet/resources/DowntownRP/obj/
+dotnet/resources/DowntownRP/bin/
+dotnet/runtime/
+*.v2
+*.txt
+*.txt
+client_packages/.listcache
+dotnet/resources/.vs/DowntownRP/v16/.suo

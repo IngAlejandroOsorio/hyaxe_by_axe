@@ -24,5 +24,7 @@ namespace DowntownRP.Utilities
             if (user != null) player.SendChatMessage($"La ID de {nombre} es {user.entity.Value}");
             else Utilities.Notifications.SendNotificationERROR(player, "No existe ningún jugador con este nombre");
         }
+
+        
     }
 }

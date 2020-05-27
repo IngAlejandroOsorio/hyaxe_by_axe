@@ -79,7 +79,7 @@ namespace DowntownRP.Utilities.Outfits
             NAPI.Util.ConsoleOutput("Loaded {0} outfits for FreemodeFemale01.", FemaleOutfits.Count);
         }
 
-        [Command("outfit")]
+        /*[Command("outfit")]
         public void CMD_Outfit(Player player, int idOrName, int ID)
         {
             Player target = Utilities.PlayerId.FindPlayerById(idOrName);
@@ -103,6 +103,6 @@ namespace DowntownRP.Utilities.Outfits
                         break;
                 }
             }
-        }
+        }*/
     }
 }

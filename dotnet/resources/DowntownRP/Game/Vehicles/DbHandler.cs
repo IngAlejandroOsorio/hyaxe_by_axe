@@ -1,5 +1,6 @@
 ﻿using GTANetworkAPI;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -29,6 +30,8 @@ namespace DowntownRP.Game.Vehicles
                         int color1 = reader.GetInt32(reader.GetOrdinal("color1"));
                         int color2 = reader.GetInt32(reader.GetOrdinal("color2"));
                         string numberplate = reader.GetString(reader.GetOrdinal("numberplate"));
+                        int moded = reader.GetInt32(reader.GetOrdinal("moded"));
+                        string custom = reader.GetString(reader.GetOrdinal("custom"));
 
                         double x = reader.GetDouble(reader.GetOrdinal("x"));
                         double y = reader.GetDouble(reader.GetOrdinal("y"));
@@ -54,11 +57,53 @@ namespace DowntownRP.Game.Vehicles
 
                             user.vehicles.Add(veh);
                             vehicle.SetData("VEHICLE_CHARACTER_DATA", veh);
+                            vehicle.SetData("VEHICLE_CHARACTER_MODS", JsonConvert.SerializeObject(custom));
+                            if (moded > 0)
+                            {
+                                user.entity.TriggerEvent("cargarCarMod", vehicle,custom);
+                            }
+
+                            vehicle.Dimension = 100;
+                            vehicle.Dimension = 0;
                         });
                     }
                 }
 
             }
+        }
+
+        [RemoteEvent("guardarModsServ")]
+        public static async void guardarModsServ(Player player, string mods, Vehicle vehicle)
+        {
+            //Console.WriteLine("Recibo en server mods: " + mods);
+            if (!player.HasData("USER_CLASS")) return;
+            if (vehicle == null) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+
+            //Vehicle vehicle = player.Vehicle;
+            
+
+            if (vehicle.HasData("VEHICLE_CHARACTER_DATA"))
+            {
+                Data.Entities.VehicleCharacter veh = vehicle.GetData<Data.Entities.VehicleCharacter>("VEHICLE_CHARACTER_DATA");
+            
+
+                int id = veh.id;
+                string mod = JsonConvert.SerializeObject(mods);
+                player.TriggerEvent("cargarCarMod", vehicle, mod);
+
+                using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+                {
+                    await connection.OpenAsync().ConfigureAwait(false);
+                    MySqlCommand command = connection.CreateCommand();
+                    command.CommandText = "UPDATE vehicles_characters SET vehicles_characters.moded = 1, vehicles_characters.custom=@mods WHERE id = @id";
+                    command.Parameters.AddWithValue("@mods", mod);
+                    command.Parameters.AddWithValue("@id", id);
+
+                    await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+                }
+            }else Utilities.Notifications.SendNotificationERROR(player, "Error al guardar en DB, este no es un vehiculo de Personaje.");
+
         }
 
         public async static Task<int> CreateVehicleCharacter(int owner, string model, int price, int color1, int color2, string numberplate, double x, double y, double z, double rot)
@@ -210,6 +255,34 @@ namespace DowntownRP.Game.Vehicles
                 command.Parameters.AddWithValue("@iditem", iditem);
                 command.Parameters.AddWithValue("@ownerid", ownerid);
                 command.Parameters.AddWithValue("@vehicleid", vehicleid);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+        public async static Task UpdateFVehPriColor(int id, int color)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE vehicles_characters SET color1 = @c1 WHERE id = @id";
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@c1", color);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+        public async static Task UpdateFVehSecColor(int id, int color)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE vehicles_characters SET color2 = @c2 WHERE id = @id";
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@c2", color);
 
                 await command.ExecuteNonQueryAsync().ConfigureAwait(false);
             }

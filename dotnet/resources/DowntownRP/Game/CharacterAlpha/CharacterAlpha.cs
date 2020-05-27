@@ -1,5 +1,6 @@
 ﻿using GTANetworkAPI;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -14,6 +15,8 @@ namespace DowntownRP.Game.CharacterAlpha
         public async void RE_PjAlphaCreationFinish(Player player, string name)
         {
             player.Name = name;
+
+            string dni = Utilities.Generate.CreateDNI();
 
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
@@ -69,7 +72,7 @@ namespace DowntownRP.Game.CharacterAlpha
                 command.Parameters.AddWithValue("@feet", 0);
                 command.Parameters.AddWithValue("@accessory", 0);
                 command.Parameters.AddWithValue("@ArrayCara", "0");
-                command.Parameters.AddWithValue("@dni", "0");
+                command.Parameters.AddWithValue("@dni", dni);
 
                 await command.ExecuteNonQueryAsync().ConfigureAwait(false);
                 user.idpj = (int)command.LastInsertedId;
@@ -85,7 +88,7 @@ namespace DowntownRP.Game.CharacterAlpha
             user.money = 8000;
             user.bank = 0;
             user.hycoin = 0;
-            user.dni = "0";
+            user.dni = dni;
             user.level = 1;
             user.exp = 0;
             user.adminLv = 0;
@@ -100,13 +103,14 @@ namespace DowntownRP.Game.CharacterAlpha
             player.SetSharedData("isLogged", true);
         }
 
+        [RemoteEvent("SelectCharacter")]
         public async static Task<bool> SelectCharacterAlpha(Player player, int uId) 
         {
             using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
             {
                 await connection.OpenAsync().ConfigureAwait(false);
                 MySqlCommand command = connection.CreateCommand();
-                command.CommandText = "SELECT * FROM characters WHERE user_id = @id LIMIT 1";
+                command.CommandText = "SELECT * FROM characters WHERE id = @id LIMIT 1";
                 command.Parameters.AddWithValue("@id", uId);
 
                 DbDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false);
@@ -142,34 +146,12 @@ namespace DowntownRP.Game.CharacterAlpha
                     string IBAN = reader.GetString(reader.GetOrdinal("IBAN"));
                     int seguroMedico = reader.GetInt32(reader.GetOrdinal("seguroMedico"));
                     int dimension = reader.GetInt32(reader.GetOrdinal("dimension"));
-
-                    // Character
-                    int faceFirst = reader.GetInt32(reader.GetOrdinal("faceFirst"));
-                    int faceSecond = reader.GetInt32(reader.GetOrdinal("faceSecond"));
-                    int faceMix = reader.GetInt32(reader.GetOrdinal("faceMix"));
-                    int skinFirst = reader.GetInt32(reader.GetOrdinal("skinFirst"));
-                    int skinSecond = reader.GetInt32(reader.GetOrdinal("skinSecond"));
-                    int skinMix = reader.GetInt32(reader.GetOrdinal("skinSecond"));
-                    int eyeColor = reader.GetInt32(reader.GetOrdinal("eyeColor"));
-                    int hairColor = reader.GetInt32(reader.GetOrdinal("hairColor"));
-                    int hairHighlight = reader.GetInt32(reader.GetOrdinal("hairHighLight"));
+                    int phone = reader.GetInt32(reader.GetOrdinal("phone"));
 
                     /*int[] faceSettings = { faceFirst, faceSecond, faceMix, skinFirst, skinSecond, skinMix };
                     player.SetSharedData("FACE_SETTINGS", faceSettings);
                     NAPI.ClientEvent.TriggerClientEventForAll("SetFaceSettings", player.Value, player.GetSharedData("FACE_SETTINGS"));
-                    player.TriggerEvent("SetFaceSettingsSpawn");*/
-
-                    // Clothes
-                    int torso = reader.GetInt32(reader.GetOrdinal("torso"));
-                    int topshirt = reader.GetInt32(reader.GetOrdinal("topshirt"));
-                    int topshirtTexture = reader.GetInt32(reader.GetOrdinal("topshirtTexture"));
-                    int undershirt = reader.GetInt32(reader.GetOrdinal("undershirt"));
-                    int accesory = reader.GetInt32(reader.GetOrdinal("accessory"));
-                    int legs = reader.GetInt32(reader.GetOrdinal("legs"));
-                    int feet = reader.GetInt32(reader.GetOrdinal("feet"));
-
-
-                    player.TriggerEvent("LoadCharacterFace");
+                    player.TriggerEvent("SetFaceSettingsSpawn");*/                    
 
                     // Character slots
                     int slot1 = reader.GetInt32(reader.GetOrdinal("slot1"));
@@ -184,8 +166,9 @@ namespace DowntownRP.Game.CharacterAlpha
                     int CarnetMoto = reader.GetInt32(reader.GetOrdinal("CarnetMoto"));
                     int CarnetCamion = reader.GetInt32(reader.GetOrdinal("CarnetCamion"));
 
+                    string bindeos = reader.GetString(reader.GetOrdinal("bindeos"));
 
-                    player.Dimension = (uint)dimension;
+                    player.Dimension = 0;
                     player.TriggerEvent("DestroyWindow");
                     NAPI.Entity.SetEntityPosition(player, new Vector3(x, y, z));
                     NAPI.Entity.SetEntityRotation(player, new Vector3(0, 0, rotation));
@@ -213,6 +196,7 @@ namespace DowntownRP.Game.CharacterAlpha
                     user.job = job;
                     user.faction = faction;
                     user.rank = rank;
+                    user.phone = phone;
                     user.inventory = await Inventory.DatabaseFunctions.SpawnInventoryItems(characterId);
                     player.SetSharedData("isLogged", true);
 
@@ -233,6 +217,10 @@ namespace DowntownRP.Game.CharacterAlpha
                     user.slot6 = await Inventory.DatabaseFunctions.SpawnCharacterItem(slot6);
 
                     await Game.Vehicles.DbHandler.SpawnCharacterVehicles(user);
+                    if(phone != 0)
+                    {
+                        user.phoneBook = await Game.Phone.DbFunctions.SpawnPhoneBooks(characterId);
+                    }
 
                     user.CarLicense = CarnetCoche;
                     user.MotorbikeLicense = CarnetMoto;
@@ -243,7 +231,15 @@ namespace DowntownRP.Game.CharacterAlpha
                         World.Factions.PD.CargarPolicia.CrearMadero(player);
                     }
 
+                    user.minisanciones = await CargarMinisanciones((ulong)user.id);
+                    user.multas = await CargarMultas(user.idpj);
+
+                    if (user.dni == "0") user.dni = await Game.CharacterSelector.CharacterSelector.UpdateDni(user.idpj);
+
                     player.Name = name;
+                    player.TriggerEvent("PonerNombre",name);
+                    player.TriggerEvent("LoadCharacterFace");
+                    player.TriggerEvent("CargoBindeosClie", JsonConvert.SerializeObject(bindeos));
                     player.TriggerEvent("GetPlayerReadyToPlay");
                     player.TriggerEvent("showHUD");
                     player.TriggerEvent("UpdateMoneyHUD", money.ToString(), "set");
@@ -252,24 +248,12 @@ namespace DowntownRP.Game.CharacterAlpha
                     player.TriggerEvent("update_hud_players", Data.Info.playersConnected);
                     player.TriggerEvent("update_hud_microphone", 0);
                     player.TriggerEvent("update_hud_bank", bank.ToString());
-                    player.TriggerEvent("returnDebugActive");
+                    player.TriggerEvent("returnDebugActive");                    
 
                     player.SendChatMessage($"¡Bienvenido de vuelta a {Data.Info.serverName} Roleplay! || Versión {Data.Info.serverVersion}");
                     if (gender == 0)
                     {
                         user.hombre = true;
-                    }
-
-                    await Task.Delay(1200);
-
-                    if (torso != 0 || topshirt != 0 || topshirtTexture != 0 || undershirt != 0 || accesory != 0 || legs != 0 || feet != 0)
-                    {
-                        player.SetClothes(3, torso, 0);
-                        player.SetClothes(11, topshirt, topshirtTexture);
-                        player.SetClothes(8, undershirt, 1);
-                        player.SetAccessories(7, accesory, 0);
-                        player.SetAccessories(4, legs, 0);
-                        player.SetAccessories(6, feet, 0);
                     }
 
                     return true;
@@ -286,9 +270,9 @@ namespace DowntownRP.Game.CharacterAlpha
         {
             if (!player.HasData("USER_CLASS")) return;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+            player.TriggerEvent("animFinCreador");
             player.Dimension = 0;
-            player.Position = new Vector3(-1015.162, -2752.169, 0.8003625);
-
+            player.Position = new Vector3(-1015.162, -2752.169, 0.8003625);            
             player.TriggerEvent("GetPlayerReadyToPlay");
             player.TriggerEvent("showHUD");
             player.TriggerEvent("UpdateMoneyHUD", 8000, "set");
@@ -303,5 +287,103 @@ namespace DowntownRP.Game.CharacterAlpha
             player.SendChatMessage("El servidor se encuentra en fase Alpha, ¡deja tu feedback en el foro y ayúdanos a mejorar!");
             player.SendChatMessage("Usa /ayuda para ver los comandos básicos y pulsa F2 para acceder al menú del jugador");
         }
+
+
+        [RemoteEvent("updateBindeos")]
+        public static async void updateBindeos(Player player, string bindeo)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+
+            int id = user.idpj;
+            string bindeos = JsonConvert.SerializeObject(bindeo);
+            Utilities.Notifications.SendNotificationINFO(player, $"Debes relogear para aplicar los cambios en tus bindeos.");
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+                {
+                    await connection.OpenAsync().ConfigureAwait(false);
+                    MySqlCommand command = connection.CreateCommand();
+                    command.CommandText = "UPDATE characters SET characters.bindeos=@bindeo WHERE id = @id";
+                    command.Parameters.AddWithValue("@bindeo", bindeos);
+                    command.Parameters.AddWithValue("@id", id);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+                }
+
+        }
+
+
+        static async Task<List<Data.Entities.Minisancion>> CargarMinisanciones(ulong socialclubid)
+        {
+            List<Data.Entities.Minisancion> minisanciones = new List<Data.Entities.Minisancion>();
+
+
+
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "SELECT * FROM minisanciones WHERE SocialClubID = @SCid";
+                command.Parameters.AddWithValue("@SCid", socialclubid);
+
+                DbDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false);
+
+                if (reader.HasRows)
+                {
+                    while (await reader.ReadAsync().ConfigureAwait(false))
+                    {
+
+                        int tipo = reader.GetInt32(reader.GetOrdinal("tipo"));
+                        string razon = reader.GetString(reader.GetOrdinal("Razon"));
+                        DateTime dt = reader.GetDateTime(reader.GetOrdinal("DateTime"));
+                        string staff = reader.GetString(reader.GetOrdinal("staff"));
+
+                        Data.Entities.Minisancion minisancion = new Data.Entities.Minisancion(dt, staff, razon, tipo); ;
+
+                        minisanciones.Add(minisancion);
+                    }
+                }
+            }
+            return minisanciones;
+
+        }
+
+        public static async Task<List<Data.Entities.FineLSPD>> CargarMultas(int id)
+        {
+            List<Data.Entities.FineLSPD> Multas = new List<Data.Entities.FineLSPD>();
+
+
+
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "SELECT * FROM multas WHERE PjID = @PjID";
+                command.Parameters.AddWithValue("@PjID", id);
+
+                DbDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false);
+
+                if (reader.HasRows)
+                {
+                    while (await reader.ReadAsync().ConfigureAwait(false))
+                    {
+                        bool p = false;
+
+                        int idDB = reader.GetInt32(reader.GetOrdinal("id"));
+                        int pagada = reader.GetInt32(reader.GetOrdinal("pagada"));
+                        int precio = reader.GetInt32(reader.GetOrdinal("precio"));
+                        string razon = reader.GetString(reader.GetOrdinal("razon"));
+
+                        if (pagada == 1) p = true;
+
+                        Multas.Add(new Data.Entities.FineLSPD() { IdDatabase = idDB, isPaid = p, reason = razon, price = precio, userid = id });
+                    }
+                }
+            }
+            return Multas;
+
+        }
     }
 }
+

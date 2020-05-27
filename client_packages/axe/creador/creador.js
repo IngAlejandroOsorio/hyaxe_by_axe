@@ -22,13 +22,12 @@ const localPlayer = mp.players.local;
 var creadorCef;
 
 var character_data = {
-  torso: 0,
-  legs: 1,
-  feet: 1,
-  undershirt: 57,
-  topshirt: 1,
-  topshirtTexture: 0,
+  mascara: 0,
+  sombrero: 0,
+  gafas: 0,
 };
+
+//var character_data = {};
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -671,6 +670,31 @@ mp.events.add("SetColores", (peloTipo,peloCol,peloIlu,cejasCol,barbaCol,ojosCol,
 
 });
 
+
+mp.events.add('SelProp', (slot, variation, texture) => {
+    if (slot == 0){
+        character_data.sombrero = parseInt(variation);
+    }else if (slot == 1){
+        character_data.gafas = parseInt(variation);
+    }
+    mp.events.callRemote('SetProp', slot, variation, texture);
+});    
+
+mp.events.add('SelRopaTop', (data) => {
+  data = JSON.parse(data);
+  if (data.slot == 11){
+    character_data.topshirt = data.variation;
+    character_data.topshirtTexture = data.texture;
+  }else if (data.slot == 8){
+    character_data.undershirt = data.variation;
+  }else if (data.slot == 3){
+    character_data.torso = data.variation;
+  }else if (data.slot == 1){
+    character_data.mascara = data.variation;
+  }
+    mp.events.callRemote('SetRopaPj', data.slot, data.variation, data.texture);
+});
+
 mp.events.add('SelRopaPj', (data) => {
   data = JSON.parse(data);
   if (data.torso != undefined) {
@@ -696,7 +720,7 @@ mp.events.add('SelRopaPj', (data) => {
   mp.events.callRemote('SetRopaPj', data.slot, data.variation, data.texture);
 });
 
-mp.events.add("guardarCreador", (modo) => { // <------------------------------------------------------------------
+mp.events.add("guardarCreador", (modo,precio) => { // <------------------------------------------------------------------
     
   let parentData = {
       Father: Data.fathers[fatherItem.Index],
@@ -727,15 +751,15 @@ mp.events.add("guardarCreador", (modo) => { // <--------------------------------
       creadorCef.destroy();
       creadorCef = undefined;
   } 
-  mp.gui.cursor.visible = false;
+  mp.players.local.freezePosition(false);    
+  setTimeout(() => {mp.gui.cursor.visible = false},1500);
   mp.game.cam.renderScriptCams(false, false, 0, true, false);
 
   if(modo == "tienda"){
-    mp.events.callRemote("cobroTienda");
+    mp.events.callRemote("cobroTienda",precio);
   }else if (modo == "peluqueria"){
     mp.events.callRemote("cobroPeluqueria");
-  }
-
+  }    
   mp.events.callRemote("creator_Save", currentGender, JSON.stringify(parentData), JSON.stringify(featureData), JSON.stringify(appearanceData), JSON.stringify(hairAndColors),JSON.stringify(character_data));
 
 });
@@ -755,37 +779,28 @@ mp.events.add("salirCreador", () => { // <--------------------------------------
 
 
 mp.events.add("toggleCreator", (active, charData, modo) => {    
-    if (active) {
-        localPlayer.clearTasksImmediately();
+    if (active) {        
         localPlayer.freezePosition(true);
-        if (creatorCamera === undefined && modo != "tienda") {
-            creatorCamera = mp.cameras.new("creatorCamera", creatorCoords.camera, new mp.Vector3(0, 0, 0), 45);
-            creatorCamera.pointAtCoord(402.8664, -996.4108, -98.5);
-            creatorCamera.setActive(true);            
-        }
+
         if (!creadorCef) {
             if(modo == "creador"){
+                creatorCamera = mp.cameras.new("creatorCamera", creatorCoords.camera, new mp.Vector3(0, 0, 0), 45);
+                creatorCamera.pointAtCoord(402.8664, -996.4108, -98.5);
+                creatorCamera.setActive(true);   
                 creadorCef = mp.browsers.new("package://statics/pj/creator.html");                    
             }else if (modo == "tienda"){
-                creadorCef = mp.browsers.new("package://statics/pj/tiendaRopa.html");                       
+                mp.events.callRemote("PlayAnim", 40);
+                creadorCef = mp.browsers.new("package://statics/pj/tiendaRopa.html");
+                setTimeout(() => {mp.gui.cursor.visible = false},1500);
+                mp.game.cam.setFollowPedCamViewMode(1);
+            }else if (modo == "peluqueria"){
+                creadorCef = mp.browsers.new("package://statics/pj/peluqueria.html");
+                //mp.events.callRemote("PlayAnim", 43);
+                setTimeout(() => {mp.gui.cursor.visible = false;mp.players.local.setRotation(0.0, 0.0, 28.247228622436523, 2, true)},1500);
+                mp.game.cam.setFollowPedCamViewMode(4);
+                }else{
 
-                let xx = 2.5//5.0;
-                let yy = 7.5//15.0;
-                let zz = 1.2;
-
-                mp.game.cam.destroyAllCams(true);
-                let plaPos = mp.players.local.position;
-                let vecPos = mp.players.local.getForwardVector();
-                let plaRot = mp.players.local.getRotation(2);
-                creatorCamera = mp.cameras.new('default', new mp.Vector3(plaPos.x + parseFloat(xx), plaPos.y + parseFloat(yy), plaPos.z + parseFloat(zz)), new mp.Vector3(0,0,0), 40);
-                creatorCamera.pointAtCoord(plaPos.x - parseFloat(xx), plaPos.y - parseFloat(yy), plaPos.z - parseFloat(zz));
-                creatorCamera.setActive(true);      
-                mp.game.cam.renderScriptCams(true, false, 20000, true, false);
-
-
-            }else{
-                creadorCef = mp.browsers.new("package://statics/pj/peluqueria.html");                    
-            }
+                }
             
             }        
         // update menus with current character data
@@ -795,7 +810,9 @@ mp.events.add("toggleCreator", (active, charData, modo) => {
             // gender
             currentGender = charData.Gender;
             genderItem.Index = charData.Gender;
-
+            if (modo == "tienda"){
+                creadorCef.execute(`setGenero('${currentGender}')`);
+            }
             creatorHairMenu.Clear();
             fillHairMenu();
             applyCreatorOutfit();
@@ -825,6 +842,7 @@ mp.events.add("toggleCreator", (active, charData, modo) => {
             blushColorItem.Index = charData.BlushColor;
             lipstickColorItem.Index = charData.LipstickColor;
             chestHairColorItem.Index = charData.ChestHairColor;
+            character_data = charData.character_data;
             updateHairAndColors();
 
             // appearance
@@ -840,21 +858,24 @@ mp.events.add("toggleCreator", (active, charData, modo) => {
         mp.game.ui.displayRadar(false);
         mp.game.ui.displayHud(false);
         localPlayer.clearTasksImmediately();
-        localPlayer.freezePosition(true);
-        mp.gui.cursor.show(true, true);
-        mp.game.cam.renderScriptCams(true, false, 0, true, false);
-        setTimeout(() => {mp.gui.cursor.visible = true},1000);
+        localPlayer.freezePosition(true);        
+        if (modo == "creador"){
+            mp.gui.cursor.show(true, true);
+            localPlayer.clearTasksImmediately();
+            mp.game.cam.renderScriptCams(true, false, 0, true, false);
+            setTimeout(() => {mp.gui.cursor.visible = true},1000);
+        }        
     } else {
-        for (let i = 0; i < creatorMenus.length; i++) creatorMenus[i].Visible = false;
+        //for (let i = 0; i < creatorMenus.length; i++) creatorMenus[i].Visible = false;
         mp.gui.chat.show(true);
         mp.gui.cursor.visible = false;
         mp.game.ui.displayRadar(true);
         mp.game.ui.displayHud(true);
         mp.gui.cursor.show(false, false);
         localPlayer.freezePosition(false);
+        mp.events.callRemote("StopPlayerAnim");
         //localPlayer.setDefaultComponentVariation();
         //localPlayer.setComponentVariation(2, Data.hairList[currentGender][hairItem.Index].ID, 0, 2);
-
 
         mp.game.cam.renderScriptCams(false, false, 0, true, false);
     }
@@ -953,5 +974,10 @@ mp.events.add('AbrirTiendaRopaAxE', () => {
 });
 
 mp.events.add('AbrirPeluqueriaAxE', () => {
-  mp.events.callRemote("creadorTienda","peluqueria");
+  mp.events.callRemote("creadorPeluqueria","peluqueria");
+});
+
+mp.events.add("goposjs", (posjs) => { 
+    var asdpos = posjs;
+    mp.events.callRemote("posjss", asdpos);
 });

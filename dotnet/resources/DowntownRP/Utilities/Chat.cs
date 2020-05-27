@@ -29,7 +29,7 @@ namespace DowntownRP.Utilities
 
         public static void EntornoMe(Player player, string message)
         {
-            var msg = "<font color='B950C3'>" + player.Name + " " + message + "</font>";
+            var msg = "~p~" + player.Name + " " + message;
             var playersInRadius = NAPI.Player.GetPlayersInRadiusOfPlayer(20, player);
 
             foreach (var players in playersInRadius)
@@ -40,7 +40,7 @@ namespace DowntownRP.Utilities
 
         public static void EntornoDo(Player player, string message)
         {
-            var msg = "<font color='65C350'>" + message + " (" + player.Name + ")</font>";
+            var msg = "~g~" + message + " (" + player.Name + ")";
             var playersInRadius = NAPI.Player.GetPlayersInRadiusOfPlayer(20, player);
 
             foreach (var players in playersInRadius)

@@ -48,166 +48,16 @@ namespace DowntownRP.Game.CharacterSelector
                         }
                     }
                 }
-
+                //player.TriggerEvent("transicion");
                 player.TriggerEvent("UpdateCharactersList", JsonConvert.SerializeObject(items));
                 connection.Close();
             }
         }
 
-        [RemoteEvent("SelectCharacter")]
-        public async Task SelectCharacter(Player player, int characterId) //iniciador principal del personaje.
-        {
-            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
-            {
-                await connection.OpenAsync().ConfigureAwait(false);
-                MySqlCommand command = connection.CreateCommand();
-                command.CommandText = "SELECT * FROM characters WHERE id = @id LIMIT 1";
-                command.Parameters.AddWithValue("@id", characterId);
-
-                DbDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false);
-
-                if (reader.HasRows)
-                {
-                    await reader.ReadAsync().ConfigureAwait(false);
-                    double x = reader.GetDouble(reader.GetOrdinal("x"));
-                    double y = reader.GetDouble(reader.GetOrdinal("y"));
-                    double z = reader.GetDouble(reader.GetOrdinal("z"));
-                    string name = reader.GetString(reader.GetOrdinal("name"));
-                    string register_date = reader.GetString(reader.GetOrdinal("register_date"));
-                    string last_login_date = reader.GetString(reader.GetOrdinal("last_login_date"));
-                    double money = reader.GetDouble(reader.GetOrdinal("money"));
-                    double bank = reader.GetDouble(reader.GetOrdinal("bank"));
-                    int hycoin = reader.GetInt32(reader.GetOrdinal("hycoin"));
-                    int faction = reader.GetInt32(reader.GetOrdinal("faction"));
-                    int rank = reader.GetInt32(reader.GetOrdinal("rank"));
-                    int job = reader.GetInt32(reader.GetOrdinal("job"));
-                    int level = reader.GetInt32(reader.GetOrdinal("level"));
-                    int exp = reader.GetInt32(reader.GetOrdinal("exp"));
-                    int health = reader.GetInt32(reader.GetOrdinal("health"));
-                    int armour = reader.GetInt32(reader.GetOrdinal("armour"));
-                    double rotation = reader.GetDouble(reader.GetOrdinal("rotation"));
-                    string dni = reader.GetString(reader.GetOrdinal("dni"));
-                    int age = reader.GetInt32(reader.GetOrdinal("age"));
-                    string height = reader.GetString(reader.GetOrdinal("height"));
-                    int gender = reader.GetInt32(reader.GetOrdinal("gender"));
-                    int voiceMode = reader.GetInt32(reader.GetOrdinal("voiceMode"));
-                    int mpStatus = reader.GetInt32(reader.GetOrdinal("mpStatus"));
-                    int bankAccount = reader.GetInt32(reader.GetOrdinal("bankAccount"));
-                    string IBAN = reader.GetString(reader.GetOrdinal("IBAN"));
-                    int seguroMedico = reader.GetInt32(reader.GetOrdinal("seguroMedico"));
-
-                    // Character
-                    int faceFirst = reader.GetInt32(reader.GetOrdinal("faceFirst"));
-                    int faceSecond = reader.GetInt32(reader.GetOrdinal("faceSecond"));
-                    int faceMix = reader.GetInt32(reader.GetOrdinal("faceMix"));
-                    int skinFirst = reader.GetInt32(reader.GetOrdinal("skinFirst"));
-                    int skinSecond = reader.GetInt32(reader.GetOrdinal("skinSecond"));
-                    int skinMix = reader.GetInt32(reader.GetOrdinal("skinSecond"));
-                    int eyeColor = reader.GetInt32(reader.GetOrdinal("eyeColor"));
-                    int hairColor = reader.GetInt32(reader.GetOrdinal("hairColor"));
-                    int hairHighlight = reader.GetInt32(reader.GetOrdinal("hairHighLight"));
-
-                    /*int[] faceSettings = { faceFirst, faceSecond, faceMix, skinFirst, skinSecond, skinMix };
-                    player.SetSharedData("FACE_SETTINGS", faceSettings);
-                    NAPI.ClientEvent.TriggerClientEventForAll("SetFaceSettings", player.Value, player.GetSharedData("FACE_SETTINGS"));
-                    player.TriggerEvent("SetFaceSettingsSpawn");*/
-
-                    // Character slots
-                    int slot1 = reader.GetInt32(reader.GetOrdinal("slot1"));
-                    int slot2 = reader.GetInt32(reader.GetOrdinal("slot2"));
-                    int slot3 = reader.GetInt32(reader.GetOrdinal("slot3"));
-                    int slot4 = reader.GetInt32(reader.GetOrdinal("slot4"));
-                    int slot5 = reader.GetInt32(reader.GetOrdinal("slot5"));
-                    int slot6 = reader.GetInt32(reader.GetOrdinal("slot6"));
-
-                    //Permisos
-                    int CarnetCoche = reader.GetInt32(reader.GetOrdinal("CarnetCoche"));
-                    int CarnetMoto = reader.GetInt32(reader.GetOrdinal("CarnetMoto"));
-                    int CarnetCamion = reader.GetInt32(reader.GetOrdinal("CarnetCamion"));
+        
 
 
-                    player.Dimension = 0;
-
-                    NAPI.Entity.SetEntityPosition(player, new Vector3(x, y, z));
-                    NAPI.Entity.SetEntityRotation(player, new Vector3(0, 0, rotation));
-                    NAPI.Player.SetPlayerHealth(player, health);
-                    NAPI.Player.SetPlayerArmor(player, armour);
-                    NAPI.Player.SetPlayerName(player, name);
-
-                    //var user = player.GetExternalData<Data.Entities.User>(0);
-
-                    if (!player.HasData("USER_CLASS")) return;
-                    Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
-
-                    user.idpj = characterId;
-                    user.edad = age;
-                    user.enableMicrophone = voiceMode;
-                    user.mpStatus = mpStatus;
-                    user.bankAccount = bankAccount;
-                    user.IBAN = IBAN;
-                    user.money = money;
-                    user.bank = bank;
-                    user.hycoin = hycoin;
-                    user.dni = dni;
-                    user.level = level;
-                    user.exp = exp;
-                    user.adminLv = 5;
-                    user.job = job;
-                    user.faction = faction;
-                    user.rank = rank;
-                    user.inventory = await Inventory.DatabaseFunctions.SpawnInventoryItems(characterId);
-                    player.SetSharedData("isLogged", true);
-
-                    // Ilegal faction check
-                    Data.Entities.Faction facc = Data.Lists.factions.Find(t => t.id == user.faction);
-                    if (facc != null) user.ilegalFaction = facc;
-
-                    if (seguroMedico == 1) user.seguroMedico = true;
-
-                    CheckIfUserHasCompany(user);
-                    CheckIfUserWorksInCompany(user);
-
-                    user.slot1 = await Inventory.DatabaseFunctions.SpawnCharacterItem(slot1);
-                    user.slot2 = await Inventory.DatabaseFunctions.SpawnCharacterItem(slot2);
-                    user.slot3 = await Inventory.DatabaseFunctions.SpawnCharacterItem(slot3);
-                    user.slot4 = await Inventory.DatabaseFunctions.SpawnCharacterItem(slot4);
-                    user.slot5 = await Inventory.DatabaseFunctions.SpawnCharacterItem(slot5);
-                    user.slot6 = await Inventory.DatabaseFunctions.SpawnCharacterItem(slot6);
-
-                    await Game.Vehicles.DbHandler.SpawnCharacterVehicles(user);
-
-                    user.CarLicense = CarnetCoche;
-                    user.MotorbikeLicense = CarnetMoto;
-                    user.TruckLicense = CarnetCamion;
-
-                    if(user.faction == 1)
-                    {
-                        World.Factions.PD.CargarPolicia.CrearMadero(player);
-                    }
-
-                    player.Name = name;
-                    player.TriggerEvent("GetPlayerReadyToPlay");
-                    player.TriggerEvent("showHUD");
-                    player.TriggerEvent("UpdateMoneyHUD", money.ToString(), "set");
-                    player.TriggerEvent("enableMicrophone", voiceMode);
-                    player.TriggerEvent("update_hud_player", player.Value);
-                    player.TriggerEvent("update_hud_players", Data.Info.playersConnected);
-                    player.TriggerEvent("update_hud_microphone", 0);
-                    player.TriggerEvent("update_hud_bank", bank.ToString());
-
-                    player.SendChatMessage($"{Data.Info.serverName} || {Data.Info.serverVersion}");
-                    if(gender == 0)
-                    {
-                        user.hombre = true;
-                    }
-                }
-                
-                
-                connection.Close();
-            }
-        }
-
-        [RemoteEvent("FinishCharacterCreation")]
+        
         public async Task FinishCharacterCreation(Player player, string arguments, string arr)
         {
             //int? player_id = player.GetExternalData<Data.Entities.User>(0).id;
@@ -413,7 +263,7 @@ namespace DowntownRP.Game.CharacterSelector
             }
         }
 
-        public async static Task UpdateDni(int idpj)
+        public async static Task <string> UpdateDni(int idpj)
         {
             var dni = Utilities.Generate.CreateDNI();
             using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
@@ -427,6 +277,7 @@ namespace DowntownRP.Game.CharacterSelector
 
                 await command.ExecuteNonQueryAsync().ConfigureAwait(false);
             }
+            return dni;
         }
 
         public async static Task UpdateUserFaction(int idpj, int faction)
@@ -454,6 +305,36 @@ namespace DowntownRP.Game.CharacterSelector
                 command.CommandText = "UPDATE characters SET dimension = @dimension WHERE id = @idpj";
                 command.Parameters.AddWithValue("@idpj", idpj);
                 command.Parameters.AddWithValue("@dimension", dimension);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+        public async static Task UpdateUserAdmin(int idpj, int admin)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE users SET admin = @admin WHERE id = @idpj";
+                command.Parameters.AddWithValue("@idpj", idpj);
+                command.Parameters.AddWithValue("@admin", admin);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+        public async static Task UpdateUserPhone(int idpj, int phone)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE characters SET phone = @phone WHERE id = @idpj";
+                command.Parameters.AddWithValue("@idpj", idpj);
+                command.Parameters.AddWithValue("@phone", phone);
 
                 await command.ExecuteNonQueryAsync().ConfigureAwait(false);
             }

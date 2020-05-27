@@ -2,7 +2,7 @@
     "Gender": 0,
     "Parents": {
         "Father": 0,
-        "Mother": 45,
+        "Mother": 21,
         "Similarity": 1,
         "SkinSimilarity": 1
     },
@@ -34,11 +34,11 @@
             "Opacity": 1
         },
         {
-            "Value": 255,
+            "Value": 3,
             "Opacity": 1
         },
         {
-            "Value": 255,
+            "Value": 12,
             "Opacity": 1
         },
         {
@@ -75,9 +75,20 @@
         }
     ],
     "Hair": {
-        "Hair": 0,
+        "Hair": 14,
         "Color": 0,
-        "HighlightColor": 0
+        "HighlightColor": 19
+    },
+    "character_data": {
+        "torso": 14,
+        "legs": 82,
+        "feet": 1,
+        "undershirt": 0,
+        "topshirt": 127,
+        "topshirtTexture": 0,
+        "gafas": 0,
+        "sombrero": 0,
+        "mascara": 4
     },
     "EyebrowColor": 0,
     "BeardColor": 0,

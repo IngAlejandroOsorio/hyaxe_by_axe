@@ -1,149 +1,254 @@
-<!DOCTYPE html>
-<html lang="en">
+                <!DOCTYPE html>
+                <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Downtown RP | Login</title>
-    <link rel='stylesheet' href='../axe/bootstrap.min.css'>
-    <link rel='stylesheet' href='../axe/axe.css'>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src='../libs/jquery-3.3.1.min.js'></script>
-    <style>
-        html,
-        body {
-            height: 100%;
-            background-color: rgba(128, 128, 128, 0);
-        }
-        
-        .as-full {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .form-control {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-        
-        .iconinput {
-            position: relative;
-            z-index: 1;
-            left: 10px;
-            top: -31px;
-            width: 0;
-        }
-    </style>
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Downtown RP | Login</title>
+                    <link rel='stylesheet' href='../axe/bootstrap.min.css'>
+                    <link rel='stylesheet' href='../axe/axe.css'>
+                    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                        rel="stylesheet"
+                        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                        crossorigin="anonymous">
+                    <script src='../libs/jquery-3.3.1.min.js'></script>
+                    <style>
+                        body {
+                            height: 100%;
+                            background-color: rgba(128, 128, 128, 0);
+                            width: 100%;                            
+                        }
 
-</head>
+                        .main {
+                            height: 600px;
+                            width: 800px;
+                            margin: 7% auto;
+                        }
 
-<body>
-    <!-- partial:index.partial.html -->
-    <div class="container-fluid as-full">
-        <div class="row as-full d-flex justify-content-center">
-            <div class="col-5 align-self-center">
-                <center><img src="../img/logo.png" class="img-fluid img-responsive" style="height: 200px;"></img>
-                </center>
-                <br>
-                <br>
-                <div class="alert alert-danger alert-dismissible fade show" id="errorMessage2" role="alert">
-                    <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR </strong> El nombre de usuario ya existe
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="alert alert-danger alert-dismissible fade show" id="errorMessage3" role="alert">
-                    <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR </strong> Ya hay una cuenta registrada con este e-mail
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="alert alert-danger alert-dismissible fade show" id="errorMessage4" role="alert">
-                    <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR </strong> Las contraseñas no coinciden
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-				<div class="alert alert-danger alert-dismissible fade show" id="errorMessage5" role="alert">
-                    <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR </strong> La clave Admin no es correcta
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                    <div class="card-body">
-                        <center>
-                            <h5 class="card-title text-white">¡Crea tu cuenta!</h5></center>
+                        .main div {
+                            display: inline-block;
+                            border: none;
+                        }
 
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="usernameInput" aria-describedby="emailHelp" placeholder="Ingresa tu usuario"><i class="iconinput fa fa-user"></i>
+                        .logo {
+                            margin-top: 10%;
+                        }
+
+                        .main .right {
+                            -webkit-box-shadow: -16px 0px 5px 0px rgba(24, 24, 24, 0.2);
+                            -moz-box-shadow: -16px 0px 5px 0px rgba(24, 24, 24, 0.2);
+                            box-shadow: -16px 0px 5px 0px rgba(24, 24, 24, 0.2);
+                            width: 50%;
+                            float: right;
+                            height: 100%;
+                            background-color: #fff;
+                            position: relative;
+                            padding-left: 5%;
+                        }
+
+                        .right h3 {
+                            text-align: center;
+                            margin-bottom: 50px;
+                        }
+
+                        .right p {
+                            margin-top: 0;
+                            text-align: center;
+                            color: grey;
+                        }
+
+                        .right form {
+                            text-align: center;
+                        }
+
+                        .right form input {
+                            width: 70%;
+                            height: 35px;
+                            margin-bottom: 10px;
+                            border: none;
+                            border: 1px solid #F8F8F8;
+                            background-color: #F8F8F8;
+                            border-radius: 25px;
+                            text-align: center;
+                            transition: all 0.30s ease-in-out;
+                        }
+
+                        .right form input:focus {
+                            outline: none;
+                            border: 1px solid #38a9f0;
+                            -webkit-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+                            -moz-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+                            box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+                        }
+
+                        ::-webkit-input-placeholder {
+                            color: grey;
+                            letter-spacing: 1px;
+                        }
+
+                        .right form input[type="submit"] {
+                            background: rgb(141, 2, 31);
+                            background: linear-gradient(140deg, rgba(141, 2, 31, 1) 0%, rgba(48, 48, 48, 1) 100%);
+                            color: #fff;
+                            font-weight: bold;
+                        }
+
+                        .right .center {
+                            position: absolute;
+                            top: 50%;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+                        }
+
+                        .forgot a {
+                            color: grey;
+                            font-size: 12px;
+                            text-decoration: none;
+                        }
+
+                        .register a {
+                            color: grey;
+                            font-size: 12px;
+                            text-decoration: none;
+                        }
+
+                        .main .left {
+                            width: 50%;
+                            float: left;
+                            height: 100%;
+                            background-image: url('../img/login.png');
+                            background-color: #fff;
+                            background-size: cover;
+                            text-align: center;
+                        }
+
+                        .left h1 {
+                            padding-top: 100px;
+                            margin-bottom: 10px;
+                        }
+
+                        .left {
+                            color: #fff;
+                        }
+
+                        .left p {
+                            margin: 0;
+                        }
+
+                        #entrarRegister,
+                        #CargandoLogin {
+                            background: rgb(141, 2, 31) !important;
+                            background: linear-gradient(140deg, rgba(141, 2, 31, 1) 0%, rgba(48, 48, 48, 1) 100%) !important;
+                            color: #fff !important;
+                            font-weight: bold !important;
+                        }
+                    </style>
+
+                </head>
+
+                <body>
+                    <div class="main">
+                        <div class="left">
                         </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Ingresa tu correo electrónico"><i class="iconinput fa fa-at"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="passwordInput" placeholder="Ingresa tu contraseña"><i class="iconinput fa fa-lock" aria-hidden="true"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="password2Input" placeholder="Confirma tu contraseña"><i class="iconinput fa fa-lock" aria-hidden="true"></i>
-                        </div>
-                        <button type="submit" id="entrarRegister" class="col-md-12 btn btn-primary">Crear cuenta</button>
-                        <button type="submit" id="CargandoLogin" class="col-md-12 btn btn-primary" disabled>Cargando</button>
+                        <div class="right">
+                            <img class="mx-auto d-block logo" src="../img/hyaxe.png" style="width: 60%;"></img>
+                            <br>
+                            <div class="center">
+                                <div class="alert alert-danger alert-dismissible fade show" id="errorMessage2"
+                                    role="alert">
+                                    <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR
+                                    </strong> El nombre de usuario ya existe
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="alert alert-danger alert-dismissible fade show" id="errorMessage3"
+                                    role="alert">
+                                    <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR
+                                    </strong> Ya hay una cuenta registrada con este e-mail
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="alert alert-danger alert-dismissible fade show" id="errorMessage4"
+                                    role="alert">
+                                    <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR
+                                    </strong> Las contraseñas no coinciden
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="alert alert-danger alert-dismissible fade show" id="errorMessage5"
+                                    role="alert">
+                                    <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR
+                                    </strong> La clave Admin no es correcta
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <h3>Crear Cuenta</h3>
+                                <form>
+                                    <input type="text" id="usernameInput" placeholder="Nombre de Usuario">
+                                    <input type="text" id="emailInput" placeholder="EMail">
+                                    <input type="password" id="passwordInput" placeholder="Contraseña">
+                                    <input type="password" id="passwordInput2" placeholder="Confirmar Contraseña">
+                                    <button type="submit" id="entrarRegister" class="col-md-4 btn btn-primary">Crear
+                                        cuenta</button>
+                                    <button type="submit" id="CargandoLogin" class="col-md-4 btn btn-primary"
+                                        disabled>Cargando</button>
+                                </form>
+                                <div class="d-flex flex-row justify-content-center">
+                                    <p class="register pl-2"><a href="" id="clickLogin">¿Ya tienes una cuenta?</a>
+                                    </p>
+                                </div>
 
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-                <div class="card mt-1" style="background-color: rgba(26, 25, 25, 0.8)">
-                    <div class="card-body">
-                        <small><font color="white"><i class="fa fa-child" aria-hidden="true"></i> ¿Ya tienes cuenta? ¡Puedes iniciar sesión haciendo <a id="clickLogin" href="#">click aquí</a>!</font></small>
-                    </div>
-                </div>
+                    <!-- script  -->
+                    <script>
+                        $("#errorMessage2").hide();
+                        $("#errorMessage3").hide();
+                        $("#errorMessage4").hide();
+                        $("#errorMessage5").hide();
+                        $("#CargandoLogin").hide();
 
-            </div>
+                        $('#entrarRegister').click(() => {
+                            $("#entrarRegister").hide();
+                            $("#CargandoLogin").show();
+                            mp.trigger('RegisterUser', $('#usernameInput').val(), $('#emailInput').val(), $('#passwordInput').val(), $('#passwordInput2').val());
+                        });
 
-        </div>
-    </div>
-    <!-- script  -->
-    <script>
-        $("#errorMessage2").hide();
-        $("#errorMessage3").hide();
-        $("#errorMessage4").hide();
-		$("#errorMessage5").hide();
-        $("#CargandoLogin").hide();
+                        $('#clickLogin').click(() => {
+                            mp.trigger('SwitchLoginRegister', 1);
+                        });
 
-        $('#entrarRegister').click(() => {
-            $("#entrarRegister").hide();
-            $("#CargandoLogin").show();
-            mp.trigger('RegisterUser', $('#usernameInput').val(), $('#emailInput').val(), $('#passwordInput').val(), $('#password2Input').val());
-        });
+                        function ShowError2() {
+                            $("#errorMessage2").show();
+                            $("#entrarRegister").show();
+                            $("#CargandoLogin").hide();
+                        }
 
-        $('#clickLogin').click(() => {
-            mp.trigger('SwitchLoginRegister', 1);
-        });
+                        function ShowError3() {
+                            $("#errorMessage3").show();
+                            $("#entrarRegister").show();
+                            $("#CargandoLogin").hide();
+                        }
 
-        function ShowError2() {
-            $("#errorMessage2").show();
-            $("#entrarRegister").show();
-            $("#CargandoLogin").hide();
-        }
+                        function ShowError4() {
+                            $("#errorMessage4").show();
+                            $("#entrarRegister").show();
+                            $("#CargandoLogin").hide();
+                        }
 
-        function ShowError3() {
-            $("#errorMessage3").show();
-            $("#entrarRegister").show();
-            $("#CargandoLogin").hide();
-        }
+                        function ShowError5() {
+                            $("#errorMessage5").show();
+                            $("#entrarRegister").show();
+                            $("#CargandoLogin").hide();
+                        }
+                    </script>
+                    <!-- partial -->
+                    <script src='../libs/bootstrap.min.js'></script>
+                </body>
 
-        function ShowError4() {
-            $("#errorMessage4").show();
-            $("#entrarRegister").show();
-            $("#CargandoLogin").hide();
-        }
-		function ShowError5() {
-            $("#errorMessage5").show();
-            $("#entrarRegister").show();
-            $("#CargandoLogin").hide();
-        }
-    </script>
-    <!-- partial -->
-    <script src='../libs/bootstrap.min.js'></script>
-</body>
-
-</html>
+                </html>

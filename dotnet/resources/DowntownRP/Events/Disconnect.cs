@@ -12,11 +12,21 @@ namespace DowntownRP.Events
         public async Task Event_PlayerDisconnected(Player player, DisconnectionType type, string reason)
         {
             Data.Info.playersConnected = Data.Info.playersConnected - 1;
-            NAPI.ClientEvent.TriggerClientEventForAll("update_hud_players", Data.Info.playersConnected);
+
+            int players = 0;
+            foreach (var u in NAPI.Pools.GetAllPlayers())
+                players++;
+
+            NAPI.ClientEvent.TriggerClientEventForAll("update_hud_players", players);
 
             Data.Entities.User user = Data.Lists.playersConnected.Find(x => x.idIg == player.Value);
             await Game.CharacterSelector.CharacterSelector.UpdateUserPosition(user.idpj, player.Position.X, player.Position.Y, player.Position.Z);
             await Game.CharacterSelector.CharacterSelector.UpdateUserDimension(user.idpj, (int)player.Dimension);
+
+            if (user.isCompanyDuty)
+            {
+                if (user.companyMember.type == 1) Data.Lists.taxistas.Remove(user);
+            }
 
             foreach (var veh in user.vehicles)
             {

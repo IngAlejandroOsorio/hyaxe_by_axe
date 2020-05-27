@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RAGE;
+﻿using RAGE;
 using RAGE.NUI;
+using System.Collections.Generic;
+    
 
 namespace DowntownRP_cs.game.factions.pd
 {
@@ -32,8 +31,21 @@ namespace DowntownRP_cs.game.factions.pd
 
             };
 
+            UIMenuItem ar = new UIMenuItem("Armamento");
+            ar.Description = "Armas de Uso diario";
+            ar.Activated += (sender, item) =>
+            {
+                AyudaMenu.Visible = false;
+                RAGE.Ui.Cursor.Visible = false;
+                RAGE.Chat.Show(true);
+                Armas();
+
+            };
+
 
             AyudaMenu.AddItem(un);
+            AyudaMenu.AddItem(ar);
+            AyudaMenu.OnMenuClose += (sender) => { Cerrar(); };
         }
 
         public void taquilla(object[] args)
@@ -44,7 +56,7 @@ namespace DowntownRP_cs.game.factions.pd
 
             mp.RefreshIndex();
             AyudaMenu.Visible = true;
-            AyudaMenu.OnMenuClose += (sender) => { Cerrar(); };
+           
         }
 
 
@@ -66,17 +78,21 @@ namespace DowntownRP_cs.game.factions.pd
             Uniformidades.AddItem(new UIMenuItem("B-M", "Uniformidad manga larga para personal motorista"));
             Uniformidades.AddItem(new UIMenuItem("C", "Uniformidad manga corta "));
             Uniformidades.AddItem(new UIMenuItem("C-M", "Uniformidad manga corta para personal motorista"));
+            Uniformidades.AddItem(new UIMenuItem("Paisano", "Para detectives, principalmente, puedes ponerte la placa con /placa"));
+            Uniformidades.AddItem(new UIMenuItem("Metropolitana SWAT", "Uniformidad táctica (de momento con el chaleco, pero es temporal)"));
+            Uniformidades.AddItem(new UIMenuItem("Metropolitana TEDAX", "Uniformidad para Tecnicos en Desactivación de artefactos explosivos"));
 
             Uniformidades.AddItem(new UIMenuItem("Cerrar", "Cerrar el menú"));
             // Refrescamos los índices
             mp.RefreshIndex();
             Uniformidades.MouseControlsEnabled = false;
             Uniformidades.Visible = true;
+            Uniformidades.OnMenuClose += (sender) => { Cerrar(); };
         }
 
         public void SelectUn(UIMenu ui, UIMenuItem item, int index)
         {
-            if (index < 5)
+            if (index < 8)
             {
                 RAGE.Events.CallRemote("RecTaquillaPD", 0, index);
             }
@@ -84,7 +100,40 @@ namespace DowntownRP_cs.game.factions.pd
             Cerrar();
         }
 
-       
+        public void Armas()
+        {
+            Chat.Show(false);
+            var armas = new UIMenu("Armas", "Armamento básico");
+            mp.Add(armas);
+            armas.OnItemSelect += SelectAr;
+
+            armas.AddItem(new UIMenuItem("Pistola", "Pistola con 3 cargadores (36 balas)"));
+            armas.AddItem(new UIMenuItem("Pistola de Combate", "Pistola con 3 cargadores (36 balas) Para oficial III en adelante"));
+            armas.AddItem(new UIMenuItem("Pistola Compacta", "Pistola con 3 cargadores (16 balas) Para Detectives en adelante"));
+            armas.AddItem(new UIMenuItem("Taser", "Arma electrica"));
+            armas.AddItem(new UIMenuItem("Porra", "Para pulir manifestantes"));
+            armas.AddItem(new UIMenuItem("Linterna", "¿Es de noche?"));
+
+            armas.AddItem(new UIMenuItem("Cerrar", "Cerrar el menú"));
+
+            armas.OnMenuClose += (sender) => { Cerrar(); };
+            // Refrescamos los índices
+            mp.RefreshIndex();
+            armas.MouseControlsEnabled = false;
+            armas.Visible = true;
+        }
+
+        public void SelectAr(UIMenu ui, UIMenuItem item, int index)
+        {
+            if (index < 6)
+            {
+                RAGE.Events.CallRemote("RecTaquillaPD", 1, index);
+            }
+            ui.Visible = false;
+            Cerrar();
+        }
+
+
 
         public void Cerrar()
         {

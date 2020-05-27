@@ -2,6 +2,10 @@ const instructions = require('betterInstructions/better_instructions');
 
 mp.game.audio.setAudioFlag("LoadMPData", true);
 
+mp.events.add('WalkiePdSound', () => {
+  mp.game.audio.playSoundFrontend(-1, "End_Squelch", "CB_RADIO_SFX", true);
+});
+
 mp.events.add('NotificationSound', () => {
   mp.game.audio.playSoundFrontend(-1, "Pin_Good", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS", true);
 });
@@ -48,6 +52,8 @@ mp.events.add('adviceBuyVehicle', () => {
     }
   }, 5000);
 });
+
+mp.even
 
 mp.events.add('tipEngineVehicle', () => {
   mp.game.audio.playSoundFrontend(-1, 'Event_Message_Purple', 'GTAO_FM_Events_Soundset', true);

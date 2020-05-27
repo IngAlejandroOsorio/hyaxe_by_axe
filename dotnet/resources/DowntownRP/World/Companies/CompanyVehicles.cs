@@ -14,6 +14,8 @@ namespace DowntownRP.World.Companies
             if (!player.HasData("USER_CLASS")) return;
             if (player.HasData("COMPANY_RACE")) return;
 
+            if (seatID != 0) return;
+
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
             Data.Entities.VehicleCompany veh = vehicle.GetData<Data.Entities.VehicleCompany>("VEHICLE_COMPANY_DATA");
             if(user.companyMember == veh.company || user.companyProperty == veh.company)
@@ -23,10 +25,15 @@ namespace DowntownRP.World.Companies
                     switch (veh.company.type)
                     {
                         case 1:
+                            player.SendChatMessage($"~y~[TAXI] ~w~Ahora puedes aceptar llamadas de clientes por la ciudad.");
                             break;
 
                         case 2:
                             player.TriggerEvent("StartTruckerJob", veh.company.name);
+                            break;
+
+                        case 6:
+                            Bus.Main.acceptBusRent(player, vehicle);
                             break;
                     }
                 }

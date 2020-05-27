@@ -12,12 +12,12 @@ namespace DowntownRP.World.Factions.PD
     {
         public CargarPolicia (Player Player)
         {
-            CrearMadero(Player);
+            //CrearMadero(Player);
         }
 
         public static async Task CrearMadero(Player player)
         {
-            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+            /*Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
             using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
             {
                 connection.Open();
@@ -46,7 +46,7 @@ namespace DowntownRP.World.Factions.PD
                     
                 }
 
-            }
+            }*/
         }
     }
 

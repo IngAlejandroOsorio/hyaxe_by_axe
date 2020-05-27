@@ -21,5 +21,11 @@ namespace DowntownRP.Data.Entities
         public Vector3 position { get; set; }
         public HouseInventory inventory { get; set; }
         public List<VehicleFaction> vehicles { get; set; } = new List<VehicleFaction>();
+        public bool armasCortas { get; set; }
+        public bool armasLargas { get; set; }
+        public Blip trafico { get; set; }
+
+        public VehicleFaction traficov { get; set; }
+        public DateTime coolDown { get; set; }
     }
 }

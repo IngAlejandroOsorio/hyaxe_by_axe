@@ -14,7 +14,7 @@ namespace DowntownRP
 
             NAPI.Server.SetGlobalServerChat(false);
             NAPI.Server.SetGamemodeName(Data.Info.serverName + " v" + Data.Info.serverVersion);
-            NAPI.Server.SetCommandErrorMessage("<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            NAPI.Server.SetCommandErrorMessage("~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
             NAPI.Server.SetAutoRespawnAfterDeath(false);
 
             NAPI.Task.Run(async () =>

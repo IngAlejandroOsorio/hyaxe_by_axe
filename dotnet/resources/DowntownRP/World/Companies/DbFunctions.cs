@@ -55,7 +55,7 @@ namespace DowntownRP.World.Companies
                                 TextLabel label = NAPI.TextLabel.CreateTextLabel($"{nombre}~n~Pulsa ~y~F5 ~w~para interactuar~n~~p~{area}, {number}", position, 5, 1, 0, new Color(255, 255, 255));
                                 Marker marker = NAPI.Marker.CreateMarker(0, position.Subtract(new Vector3(0, 0, 0.1)), new Vector3(), new Vector3(), 1, new Color(251, 244, 1));
                                 Blip blip = NAPI.Blip.CreateBlip(position);
-                                blip.Color = 3;
+                                blip.Color = 5;
                                 blip.Name = nombre;
                                 blip.ShortRange = true;
 
@@ -79,6 +79,10 @@ namespace DowntownRP.World.Companies
 
                                     case 5:
                                         blip.Sprite = 135;
+                                        break;
+
+                                    case 6:
+                                        blip.Sprite = 513;
                                         break;
                                 }
 
@@ -349,6 +353,7 @@ namespace DowntownRP.World.Companies
                             uint hash = NAPI.Util.GetHashKey(type);
                             Vehicle vehicle = NAPI.Vehicle.CreateVehicle(hash, position, (float)rot, color1, color2, numberplate, 255, false, false);
                             vehicle.NumberPlate = numberplate;
+                            vehicle.EngineStatus = false;
 
                             Data.Entities.VehicleCompany veh = new Data.Entities.VehicleCompany()
                             {
@@ -549,5 +554,38 @@ namespace DowntownRP.World.Companies
                 return (int)command.LastInsertedId;
             }
         }
+
+        public async static Task UpdateFVehPriColor(int id, int color)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE vehicles_companies SET color1 = @c1 WHERE id = @id";
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@c1", color);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+
+        public async static Task UpdateFVehSecColor(int id, int color)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE vehicles_companies SET color1 = @c1 WHERE id = @id";
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@c1", color);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+
+
+
     }
 }

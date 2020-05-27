@@ -80,9 +80,9 @@ namespace DowntownRP.World.Business.Clothes
 
 
         [RemoteEvent("cobroTienda")]
-        public static async System.Threading.Tasks.Task cobroTiendaAsync(Player player)
+        public static async System.Threading.Tasks.Task cobroTiendaAsync(Player player, int precio)
         {
-            if (await Game.Money.MoneyModel.SubMoney(player, 500))
+            if (await Game.Money.MoneyModel.SubMoney(player, precio))
             {
                 Utilities.Notifications.SendNotificationINFO(player, "Gracias por tu compra vuelve pronto.");
             }

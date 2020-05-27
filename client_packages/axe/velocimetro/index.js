@@ -4,7 +4,7 @@ let player = mp.players.local;
 
 mp.events.add('render', () =>
 {
-	if (player.vehicle && player.vehicle.getPedInSeat(-1) === player.handle) // Check if player is in vehicle and is driver
+	if (player.vehicle && player.vehicle.getPedInSeat(-1) === player.handle && !mp.players.local.enTaller) // Check if player is in vehicle and is driver
 	{
 		if(sshowed === false) // Check if speedo is already showed
 		{
@@ -20,7 +20,8 @@ mp.events.add('render', () =>
 		let healthPercent = Math.floor((health / maxHealth) * 100);
 		let gas = player.vehicle.getVariable("FUEL");
 
-		gas = gas < 0 ? 0: gas / 100;
+		gas = 99 < 0 ? 0: 99 / 100;
+
 		
 		if(speedo){
 			speedo.execute(`actualizar(${vel}, ${rpm}, ${gas}, ${healthPercent});`); // Send data do CEF

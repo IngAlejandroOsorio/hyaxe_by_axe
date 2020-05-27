@@ -49,22 +49,17 @@ namespace DowntownRP_cs.game.business
 
             mainMenu.OnMenuClose += MainMenu_OnMenuClose;
         }
-        
-        private async void IniciaContadorRentaCar(object[] args)
+
+        private void IniciaContadorRentaCar(object[] args)
         {
             isRenting = true;
-            do
-            {
-                await Task.Delay(60000);
-                Events.CallRemote("RentVehiclePin");
-            }
-            while (isRenting); 
+            Events.CallLocal("rentingLoopJs");
         }
-        
+
         private void TerminarContadorRenta(object[] args)
         {
             isRenting = false;
-            Events.CallRemote("RentVehicleFinish");
+            Events.CallLocal("rentingLoopEndJs");            
         }
 
         private void OpenRentCarMenu(object[] args)
@@ -127,7 +122,7 @@ namespace DowntownRP_cs.game.business
         private void Rentar(UIMenu mainMenu)
         {
 
-            var rentar = new UIMenuItem("Rentar", $"El precio de renta del vehículo es de ~g~${price / 1000} xMinuto");
+            var rentar = new UIMenuItem("Rentar", $"El precio de renta del vehículo es de ~g~${price} xMinuto");
             isRent = false;
             mainMenu.AddItem(rentar);
         }

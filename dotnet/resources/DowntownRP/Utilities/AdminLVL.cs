@@ -13,14 +13,16 @@ namespace DowntownRP.Utilities
             switch (Numerico)
             {
                 case 1:
-                    return "Soporte";
+                    return "Ayudante";
                 case 2:
-                    return "Moderador";
+                    return "Soporte";
                 case 3:
-                    return "Moderador global";
+                    return "Moderador ";
                 case 4:
-                    return "Manager";
+                    return "Moderador Global";
                 case 5:
+                    return "Manager";
+                case 6:
                     return "Administrador";
                 default:
                     return "N/A";
@@ -43,7 +45,7 @@ namespace DowntownRP.Utilities
                 case 4:
                     return "Moderador Global";
                 case 5:
-                    return "Manager";
+                    return "Administrador";
                 case 6:
                     return "Administrador";
                 default:
@@ -55,8 +57,18 @@ namespace DowntownRP.Utilities
         {
             if (!player.HasData("USER_CLASS")) return false;
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
-
             if(user.adminLv >= level)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool PuedeUsarComando(Data.Entities.User user, int level)
+        {
+            if (user.adminLv >= level)
             {
                 return true;
             }

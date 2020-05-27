@@ -103,7 +103,7 @@ namespace DowntownRP.Game.Authentication
             }
         }
 
-        public async static Task<bool> CheckIfBanned(string socialClubName)
+        public async static Task<bool> CheckIfBanned(ulong socialClubId)
         {
             bool checkName = false;
             using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
@@ -111,11 +111,21 @@ namespace DowntownRP.Game.Authentication
                 await connection.OpenAsync().ConfigureAwait(false);
 
                 MySqlCommand command = connection.CreateCommand();
-                command.CommandText = "SELECT * FROM bans WHERE SocialClubName = @playerName";
-                command.Parameters.AddWithValue("@playerName", socialClubName);
+                command.CommandText = "SELECT * FROM bans WHERE SocialClubId = @playerId";
+                command.Parameters.AddWithValue("@playerId", socialClubId);
 
                 DbDataReader reader = await command.ExecuteReaderAsync().ConfigureAwait(false);
-                checkName = reader.HasRows;
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        if(0 >= DateTime.Compare(reader.GetDateTime(reader.GetOrdinal("Hasta")), DateTime.UtcNow))
+                        {
+                            checkName = true;
+                            return checkName;
+                        }
+                    }
+                }
                 return checkName;
             }
         }

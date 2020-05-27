@@ -37,8 +37,23 @@ namespace DowntownRP.Game.Vehicles
                                     return;
                                 }
                             }
+                        }  
+
+                    }
+                    if (Data.Lists.factions.Find(x => x.id == user.faction).traficov != null)
+                    {
+                        var vh = Data.Lists.factions.Find(x => x.id == user.faction).traficov;
+                        if (player.Position.DistanceTo(vh.entity.Position) < 5f)
+                        {
+                            player.TriggerEvent("OpenVehicleInventory", JsonConvert.SerializeObject(user.inventory), JsonConvert.SerializeObject(vh.trucker));
+                            user.vehicleActualInvFac = vh;
+                            user.typeVehInv = 2;
+                            user.isTruckerOpen = true;
+                            return;
+
                         }
                     }
+
                 }
                 foreach (var veh in user.vehicles)
                 {

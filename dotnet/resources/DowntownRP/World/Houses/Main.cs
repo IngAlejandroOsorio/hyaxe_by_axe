@@ -103,7 +103,7 @@ namespace DowntownRP.World.Houses
                 await World.Houses.DbFunctions.UpdateHouseOwner(user.house.id, user.idpj);
                 user.house.owner = user.idpj;
                 user.house.entityOwner = player;
-                user.house.label.Text = "~r~Cerrado~n~~p~{house.area}, {house.number}";
+                user.house.label.Text = $"~r~Cerrado~n~~p~{user.house.area}, {user.house.number}";
 
                 player.TriggerEvent("chat_goal", "¡Felicidades!", "Ahora eres propietario de una casa");
                 Interiors.EnterHouse(user.house, user);

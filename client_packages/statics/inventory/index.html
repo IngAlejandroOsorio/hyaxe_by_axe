@@ -64,7 +64,7 @@
                             </div>
 
                             <div class="col-md-3 col-sm-4 col-xs-6">
-                                <div class="card" id="slot2" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                <div class="card" id="slot2" style="background-color: rgba(26, 25, 25, 0.8)">
                                     <small><br></small>
                                     <center id="slotaso2"></center>
                                     <small><br></small>
@@ -73,7 +73,7 @@
                             </div>
 
                             <div class="col-md-3 col-sm-4 col-xs-6">
-                                <div class="card" id="slot3" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                <div class="card" id="slot3" style="background-color: rgba(26, 25, 25, 0.8)">
                                     <small><br></small>
                                     <center id="slotaso3"></center>
                                     <small><br></small>
@@ -82,7 +82,7 @@
                             </div>
 
                             <div class="col-md-3 col-sm-4 col-xs-6">
-                                <div class="card" id="slot4" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                <div class="card" id="slot4" style="background-color: rgba(26, 25, 25, 0.8)">
                                     <small><br></small>
                                     <center id="slotaso4"></center>
                                     <small><br></small>
@@ -91,7 +91,7 @@
                             </div>
 
                             <div class="col-md-3 col-sm-4 col-xs-6">
-                                <div class="card" id="slot5" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                <div class="card" id="slot5" style="background-color: rgba(26, 25, 25, 0.8)">
                                     <small><br></small>
                                     <center id="slotaso5"></center>
                                     <small><br></small>
@@ -100,7 +100,7 @@
                             </div>
 
                             <div class="col-md-3 col-sm-4 col-xs-6">
-                                <div class="card" id="slot6" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                <div class="card" id="slot6" style="background-color: rgba(26, 25, 25, 0.8)">
                                     <small><br></small>
                                     <center id="slotaso6"></center>
                                     <small><br></small>
@@ -109,7 +109,7 @@
                             </div>
 
                             <div class="col-md-3 col-sm-4 col-xs-6">
-                                <div class="card" id="slot7" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                <div class="card" id="slot7" style="background-color: rgba(26, 25, 25, 0.8)">
                                     <small><br></small>
                                     <center id="slotaso7"></center>
                                     <small><br></small>
@@ -118,7 +118,7 @@
                             </div>
 
                             <div class="col-md-3 col-sm-4 col-xs-6">
-                                <div class="card" id="slot8" id="camiseta" style="background-color: rgba(26, 25, 25, 0.8)">
+                                <div class="card" id="slot8" style="background-color: rgba(26, 25, 25, 0.8)">
                                     <small><br></small>
                                     <center id="slotaso8"></center>
                                     <small><br></small>
@@ -288,215 +288,8 @@
     </div>
   </div>
 
+<script src="emojiItems.js"></script>
     <script>
-
-        function getItemIcon(name){
-            var emoji;
-            switch(name){
-                case "Cigarro":
-                    //emoji = "🚬";
-                    emoji = "<img src='items/cigarro.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "NO":
-                    //emoji = "❌";
-                    emoji = "<img src='items/no.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Gorra":
-                    emoji = "<img src='items/gorra.png' class='img-fluid img-responsive'>";
-                    break;
-
-                case "Agua":
-                    emoji = "🍼";
-                    break;
-
-                case "Manzana":
-                    emoji = "<img src='items/manzana.png' class='img-fluid img-responsive'>";
-                    break;
-
-                case "Botiquin":
-                    emoji = "<img src='items/botiquin.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Bronce":
-                    emoji = "<img src='items/bronce.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Plata":
-                    emoji = "<img src='items/plata.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Oro":
-                    emoji = "<img src='items/oro.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Diamante":
-                    emoji = "<img src='items/diamante.png' class='img-fluid img-responsive'>";
-                    break;
-
-				    case "Megafono":
-					emoji = "<img src='items/megafono.png' class='img-fluid img-responsive'>";
-					break;
-
-                    case "Pistola":
-                    emoji = "🔫";
-                    break;
-
-                    case "Pistola9mm":
-                    emoji = "<img src='items/pistolacombate.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "PistoladeCombate":
-                    emoji = "<img src='items/pistolacombate.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Taser":
-                    emoji = "<img src='items/tazar.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Pistola.50":
-                    emoji = "<img src='items/pistolapesada.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "PistolaCompacta":
-                    emoji = "<img src='items/pistolapesada.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "PistolaPesada":
-                    emoji = "<img src='items/pistolapesada.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "PistolaVintage":
-                    emoji = "<img src='items/pistolavintage.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "PistoladeBengalas":
-                    emoji = "<img src='items/pistolabengala.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "PistoladeTirador":
-                    emoji = "<img src='items/pistolatirador.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "RevolverPesado":
-                    emoji = "<img src='items/pistolapesada.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "RevolverDobleAccion":
-                    emoji = "<img src='items/pistolapesada.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "PistoladeRayos":
-                    emoji = "<img src='items/pistoladerayos.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "PistolaCeramica":
-                    emoji = "<img src='items/pistolaceramica.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "RevolverLargo":
-                    emoji = "<img src='items/revolverlargo.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Uzi":
-                    emoji = "<img src='items/uzi.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "MP5":
-                    emoji = "<img src='items/mp5.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "SubfusildeAsalto":
-                    emoji = "<img src='items/subfu.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "ADPdeCombate":
-                    emoji = "<img src='items/adcombate.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "TEC9":
-                    emoji = "<img src='items/tec9.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Skorpion":
-                    emoji = "<img src='items/skorpion.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Hellbringer":
-                    emoji = "<img src='items/Hellbringer.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Daga":
-                    emoji = "<img src='items/daga.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Bate":
-                    emoji = "<img src='items/bate.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "BotellaRota":
-                    emoji = "<img src='items/botellarota.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Palanca":
-                    emoji = "<img src='items/palanca.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Desarmado":
-                    emoji = "🦯";
-                    break;
-
-                    case "Linterna":
-                    emoji = "<img src='items/linterna.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "PalodeGolf":
-                    emoji = "<img src='items/palogolf.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Martillo":
-                    emoji = "<img src='items/martillo.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "PuñoAmericano":
-                    emoji = "<img src='items/puñoamericano.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Cuchillo":
-                    emoji = "<img src='items/cuchillo.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Machete":
-                    emoji = "<img src='items/machete.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Navaja":
-                    emoji = "<img src='items/navaja.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "Porra":
-                    emoji = "<img src='items/porra.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "LlaveInglesa":
-                    emoji = "<img src='items/llaveingle.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "HachadeBatalla":
-                    emoji = "<img src='items/hachacombate.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "TacodeBillar":
-                    emoji = "<img src='items/tacobillar.png' class='img-fluid img-responsive'>";
-                    break;
-
-                    case "HachadePiedra":
-                    emoji = "<img src='items/hachapiedra.png' class='img-fluid img-responsive'>";
-                    break;
-            }
-            return emoji;
-        }
 
         var nameslot1;
         var typeslot1;
@@ -853,7 +646,7 @@
             if(nameslot6 == null)
             return;
 
-            if(nameslo6 != "NO"){
+            if(nameslot6 != "NO"){
                 document.getElementById("emojimodal").innerHTML = emoji6;
                 document.getElementById("namemodal").innerHTML = nameslot6;
                 document.getElementById("quantitymodal").innerHTML = quantityslot6;

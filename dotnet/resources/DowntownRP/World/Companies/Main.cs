@@ -190,17 +190,40 @@ namespace DowntownRP.World.Companies
                 {
                     user.isCompanyDuty = false;
                     Utilities.Notifications.SendNotificationOK(player, "Ya no estás en servicio");
-                    player.TriggerEvent("playerLoadPj");
+                    //Utilities.Clothes.ReturnUserClothes(user);
+                    if (user.companyMember.type == 1) Data.Lists.taxistas.Remove(user);
+                    if (user.companyMember.type == 6)
+                    {
+                        NAPI.Data.SetEntityData(player, "TRABAJANDO_BUS", false);
+                        NAPI.ClientEvent.TriggerClientEvent(player, "deleteCheckpoint", 3, 0);
+                        NAPI.ClientEvent.TriggerClientEvent(player, "deleteWorkBlip");
+                        Utilities.Notifications.SendNotificationOK(player, "Pasa a recepción para que la secretaría de pague.");
+                    }
                     return;
                 }
                 else
                 {
                     user.isCompanyDuty = true;
                     Utilities.Notifications.SendNotificationOK(player, "Estás en servicio");
-                    if (user.companyMember.type == 4)
+                    /*if (user.companyMember.type == 4)
                     {
                         user.entity.SetOutfit(233);
                         user.entity.SetClothes(1, 0, 0);
+                    }*/
+                    if (user.companyMember.type == 1)
+                    {
+                        if (Data.Lists.taxistas.Count == 0)
+                        {
+                            foreach (var u in Data.Lists.playersConnected)
+                                u.entity.SendChatMessage($"~y~[TRANSPORTE] ~w~Ya se encuentran taxis disponibles"); 
+                        }
+
+                        Data.Lists.taxistas.Add(user);
+                    }
+
+                    if (user.companyMember.type == 6)
+                    {
+                        player.SetData("BUS_READY", true);
                     }
                 }
             }
@@ -224,7 +247,7 @@ namespace DowntownRP.World.Companies
             Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
             if (user.company != null)
             {
-                if(user.companyProperty != null)
+                if(user.companyProperty != null && user.adminLv <= 4)
                 {
                     Utilities.Notifications.SendNotificationERROR(player, "Ya tienes una compañía");
                     return;
@@ -301,6 +324,10 @@ namespace DowntownRP.World.Companies
                             case 5:
                                 blip.Sprite = 135;
                                 break;
+
+                            case 6:
+                                blip.Sprite = 513;
+                                break;
                         }
 
                         company.id = idempresa;
@@ -339,13 +366,21 @@ namespace DowntownRP.World.Companies
             {
                 if (user.companyInterior.owner != user.idpj)
                 {
-                    if(user.companyMember != user.companyInterior)
-                    {
+                    //if(user.companyMember != user.companyInterior)
+                    //{
                         if (!user.companyInterior.ManualRecruitment)
                         {
                             if (!user.isCompanyCefOpen)
                             {
-                                player.TriggerEvent("CreateContractCompanyBrowser");
+                                bool pagoListo = player.GetData<bool>("COMPANY_PAGO_LISTO");
+                                if (pagoListo)
+                                {
+                                    player.TriggerEvent("PayContractCompanyBrowser");                                    
+                                }
+                                else
+                                {
+                                    player.TriggerEvent("CreateContractCompanyBrowser");
+                                }                                
                                 user.isCompanyCefOpen = true;
                             }
                             else
@@ -355,8 +390,8 @@ namespace DowntownRP.World.Companies
                             }
                         }
                         else Utilities.Notifications.SendNotificationERROR(player, "Esta empresa tiene restringidos los contratos automáticos");
-                    }
-                    else Utilities.Notifications.SendNotificationERROR(player, "Ya trabajas para esta empresa");
+                    //}
+                    //else Utilities.Notifications.SendNotificationERROR(player, "Ya trabajas para esta empresa");
                 }
                 else Utilities.Notifications.SendNotificationERROR(player, "Eres el dueño de esta empresa");
             }
@@ -378,6 +413,33 @@ namespace DowntownRP.World.Companies
                 user.job = user.companyMember.id;
 
                 player.TriggerEvent("chat_goal", "¡Felicidades!", $"Has firmado un contrato de empleo con {user.companyInterior.name}");
+            }
+        }
+
+        [RemoteEvent("CobrarContractCompany")]
+        public async Task RE_CobrarContractCompany(Player player)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+
+            if (user.isInCompanyContract)
+            {
+                user.isCompanyCefOpen = false;
+
+                user.companyMember = null;
+                user.job = 0;
+
+                int pasajeros = player.GetData<int>("PASAJEROS_BUS");
+                if (pasajeros != null && pasajeros > 0)
+                {
+                    int pago = pasajeros * 100;
+                    await Game.Money.MoneyModel.AddMoney(player, pago);
+                    player.TriggerEvent("chat_goal", "¡Felicidades!", $"Has completado un contrato de empleo {user.companyInterior.name}, has recibido ${pago}");
+                    player.SetData("COMPANY_PAGO_LISTO",false);
+                    player.SetData("PASAJEROS_BUS", 0);
+                    NAPI.ClientEvent.TriggerClientEvent(player, "deleteCheckpoint", 3, 0);
+                    NAPI.ClientEvent.TriggerClientEvent(player, "deleteWorkBlip");
+                }                
             }
         }
 
@@ -409,6 +471,9 @@ namespace DowntownRP.World.Companies
 
                 case 5:
                     return "CNN";
+
+                case 6:
+                    return "Buseteros";
 
                 default:
                     return "N/A";

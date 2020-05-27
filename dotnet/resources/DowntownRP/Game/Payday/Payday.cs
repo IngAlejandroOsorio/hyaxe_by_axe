@@ -16,6 +16,8 @@ namespace DowntownRP.Game.Payday
             while (true)
             {
                 await Task.Delay(3600000);
+
+                // Payday player
                 foreach (var player in NAPI.Pools.GetAllPlayers())
                 {
                     //var info = player.GetExternalData<Data.Entities.User>(0);
@@ -26,6 +28,10 @@ namespace DowntownRP.Game.Payday
                         await PaydayPlayerFunction(player, user);
                     }
                 }
+
+                // Payday weed
+                await Drugs.Weed.Main.PaydayMarihuana();
+
             }
         }
 
@@ -36,7 +42,7 @@ namespace DowntownRP.Game.Payday
 
             user.exp = exp + 1;
 
-            if (user.exp == user.level * 4)
+            if (user.exp*4 == user.level)
             {
                 user.level = level + 1;
                 //player.TriggerEvent("testPaydayLevel", "¡Has subido de nivel!");
@@ -49,13 +55,13 @@ namespace DowntownRP.Game.Payday
                 await DatabaseFunctions.UpdateUserXp(user.idpj, user.exp);
             }
 
-            player.SendChatMessage("<font color='purple'>---------<i class='fas fa-info-circle'></i> PAGOS E IMPUESTOS ---------</font>");
-            player.SendChatMessage($"<font color='blue'><i class='fas fa-star'></i></font> Nivel {user.level} | Experiencia {user.exp}");
+            player.SendChatMessage("--------- PAGOS E IMPUESTOS ---------");
+            player.SendChatMessage($"Nivel {user.level} | Experiencia {user.exp}");
 
             if (user.bankAccount != 0)
             {
                 await World.Banks.MoneyFunctions.RemoveMoneyBank(player, 10);
-                player.SendChatMessage($"<font color='green'><i class='fas fa-money-check'></i></font> Impuestos por cuenta bancaria: <font color='green'>$10</font>");
+                player.SendChatMessage($"Impuestos por cuenta bancaria: $10");
                 await World.Banks.MoneyFunctions.AddMoneyBank(player, 50); // Ganancia gubernamental
             }
             else await Money.MoneyModel.AddMoney(player, 50); // Ganancia gubernamental
@@ -63,15 +69,17 @@ namespace DowntownRP.Game.Payday
             /*player.SendChatMessage($"<font color='green'><i class='fas fa-money-check'></i></font> Impuestos por vehículos: <font color='green'>$10</font>");
             player.SendChatMessage($"<font color='green'><i class='fas fa-money-check'></i></font> Impuestos por propiedades: <font color='green'>$10</font>");
             player.SendChatMessage($"<font color='green'><i class='fas fa-money-bill-alt'></i></font> Ganancias por empleo: <font color='green'>$10</font>");*/
-            player.SendChatMessage($"<font color='green'><i class='fas fa-money-bill-alt'></i></font> Ayuda gubernamental: <font color='green'>$50</font>");
-            player.SendChatMessage("<font color='purple'>---------<i class='fas fa-info-circle'></i> PAGOS E IMPUESTOS ---------</font>");
+
+            
+            player.SendChatMessage($"Ayuda gubernamental: $50");
+            player.SendChatMessage("--------- PAGOS E IMPUESTOS ---------");
 
             Data.Entities.FineLSPD multa = Data.Lists.finesPD.Find(x => x.userid == user.idpj);
             if(multa != null)
             {
                 if (!multa.isPaid)
                 {
-                    player.SendChatMessage($"<font color='red'><i class='fas fa-money-check'></i></font> Tienes multas sin pagar. Se te descontarán <font color='green'>$50</font> cada payday hasta que las pagues.");
+                    player.SendChatMessage($"Tienes multas sin pagar. Se te descontarán $50 cada payday hasta que las pagues.");
                     await Money.MoneyModel.SubMoney(player, 50);
                 }
             }

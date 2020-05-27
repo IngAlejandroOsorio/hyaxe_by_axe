@@ -32,6 +32,100 @@
             top: -31px;
             width: 0;
         }
+
+        .container-switch input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.container-switch .switcher {
+  display: inline-block;
+  border-radius: 100px;
+  width: 35px;
+  height: 15px;
+  background-color: #ccc;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.container-switch .switcher:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  margin-top: -2.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.container-switch .switcher:active:before {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 0 0 10px rgba(63, 81, 181, 0.3);
+  transition: all, 0.1s;
+}
+
+.container-switch .label {
+  font-family: "Oxygen";
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.container-switch input[type="checkbox"]:checked + .switcher {
+  background-color: #8591d5;
+}
+
+.container-switch input[type="checkbox"]:checked + .switcher:before {
+  right: 100%;
+  margin-right: -20px;
+  background-color: #3f51b5;
+}
+
+.container-switch [disabled]:not([disabled="false"]) + .switcher {
+  background: #ccc !important;
+}
+
+.container-switch [disabled]:not([disabled="false"]) + .switcher:active:before {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.container-switch [disabled]:not([disabled="false"]) + .switcher:before {
+  background-color: #e2e2e2 !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+}
+        
+#btnExit {
+      line-height: 1;
+      font-size: 2em;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      text-decoration: none;
+      color: #cccccc;
+      background: none;
+      border: none;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+        
     </style>
 
 </head>
@@ -50,8 +144,12 @@
                           <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                             <div class="card-body text-white">
                               <center>Ajustes de voz<br>
-                              <button type="button" id="keymode" class="btn btn-warning btn-sm">Por tecla</button>
-                              <button type="button" id="normalmode" class="btn btn-success btn-sm">Continua</button>
+                              C
+                              <label class="container-switch">
+                                <input type="checkbox" id="chatvoz" >
+                                <span class="switcher"></span>
+                            </label>
+                            PTT
                             </center>
                         </div>
                         </div>
@@ -60,8 +158,12 @@
                         <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                           <div class="card-body text-white">
                             <center>Mensajes privados<br>
-                            <button type="button" id="mpactive" class="btn btn-success btn-sm">Activados</button>
-                            <button type="button" id="mpdisable" class="btn btn-danger btn-sm">Desactivados</button>
+                              On
+                              <label class="container-switch">
+                                <input type="checkbox" id="privmsg" >
+                                <span class="switcher"></span>
+                            </label>
+                            Off
                           </center>
                       </div>
                       </div>
@@ -70,8 +172,12 @@
                       <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                         <div class="card-body text-white">
                           <center>Radar<br>
-                          <button type="button" id="radaractive" class="btn btn-success btn-sm">Activado</button>
-                          <button type="button" id="radardisable" class="btn btn-danger btn-sm">Desactivado</button>
+                            On
+                            <label class="container-switch">
+                              <input type="checkbox" id="radar" >
+                              <span class="switcher"></span>
+                          </label>
+                          Off
                         </center>
                     </div>
                     </div>
@@ -80,16 +186,23 @@
                     <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
                       <div class="card-body text-white">
                         <center>HUD<br>
-                        <button type="button" id="hudactive" class="btn btn-success btn-sm">Activado</button>
-                        <button type="button" id="huddisable" class="btn btn-danger btn-sm">Desactivado</button>
+                          On
+                          <label class="container-switch">
+                            <input type="checkbox" id="hud" >
+                            <span class="switcher"></span>
+                        </label>
+                        Off
                       </center>
                   </div>
                   </div>
                 </div>
                 </div><br>
                 <center><small>Para configuración mas avanzada como cambio de contraseña, dirígete al panel de control del usuario</small><br>
-                <a href="#">https://gtalife.es/</a></center><br>
-                <button id="btnExit" class="btn btn-danger btn-block">Salir</button>
+                <a href="#">https://v.hyaxe.com/foro</a><br>
+                <small>
+                  Nota: Si tienes activa la opción, no saldrá en este menú con el color de activo, eso se pondrá mas adelante.
+                </small></center>
+                <button id="btnExit">X</button>
             </div>
 
         </div>
@@ -97,32 +210,28 @@
 
     <script>
     $('#btnExit').click(() => {
-            mp.trigger('OpenCharacterMenu');
+            mp.trigger('SalirMenuPj');
         });
-    $('#keymode').click(() => {
-            mp.trigger('VoiceChangeType', 1);
-    });
-    $('#normalmode').click(() => {
-            mp.trigger('VoiceChangeType', 0);
-    });
-    $('#mpactive').click(() => {
-            mp.trigger('PMChangeStatus', 0);
-    });
-    $('#mpdisable').click(() => {
-            mp.trigger('PMChangeStatus', 1);
-    });
-    $('#radaractive').click(() => {
-            mp.trigger('RadarChangeStatus', 0);
-    });
-    $('#radardisable').click(() => {
-            mp.trigger('RadarChangeStatus', 1);
-    });
-    $('#hudactive').click(() => {
-            mp.trigger('HudChangeStatus', 0);
-    });
-    $('#huddisable').click(() => {
-            mp.trigger('HudChangeStatus', 1);
-    });
+
+        $("#chatvoz").click( function(){
+          if( $(this).is(':checked') ) mp.trigger('VoiceChangeType', 0);
+          else mp.trigger('VoiceChangeType', 1);
+        });
+
+        $("#privmsg").click( function(){
+          if( $(this).is(':checked') ) mp.trigger('PMChangeStatus', 0);
+          else mp.trigger('PMChangeStatus', 1);
+        });
+
+        $("#radar").click( function(){
+          if( $(this).is(':checked') ) mp.trigger('RadarChangeStatus', 0);
+          else mp.trigger('RadarChangeStatus', 1);
+        });
+
+        $("#hud").click( function(){
+          if( $(this).is(':checked') ) mp.trigger('HudChangeStatus', 0);
+          else mp.trigger('HudChangeStatus', 1);
+        });
         </script>
     <!-- partial -->
     <script src='../libs/bootstrap.min.js'></script>

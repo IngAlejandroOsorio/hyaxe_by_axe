@@ -9,7 +9,7 @@ namespace DowntownRP.Data.Entities
     {
         public int id { get; set; }
         public int owner { get; set; }
-        public int type { get; set; } // 1 taxi, 2 camioneros, 3 mecanicos, 4 mineros, 5 cnn
+        public int type { get; set; } // 1 taxi, 2 camioneros, 3 mecanicos, 4 mineros, 5 cnn, 6 bus
         public string name { get; set; }
         public int price { get; set; }
         public string area { get; set; }

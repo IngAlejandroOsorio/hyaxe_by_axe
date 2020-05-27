@@ -9,7 +9,7 @@ namespace DowntownRP.Game.Commands
     {
         bool isHelpChannelActive = true;
 
-        [Command("n", "<font color='yellow'>Uso:</font> /n(ayuda) [mensaje] (Envias un mensaje al canal de dudas)", GreedyArg = true)]
+        [Command("n", "Uso: /n(ayuda) [mensaje] (Envias un mensaje al canal de dudas)", GreedyArg = true)]
         public void HelpChannelCommand(Player player, string message)
         {
             if (!player.HasData("USER_CLASS")) return;
@@ -20,7 +20,7 @@ namespace DowntownRP.Game.Commands
                 DateTime cooldown = NAPI.Data.GetEntityData(player, "HelpChannelCooldown");
                 if (cooldown > DateTime.Now)
                 {
-                    NAPI.Chat.SendChatMessageToPlayer(player, $"<font color='red'>[ERROR]</font> Necesitas esperar {Math.Round((cooldown - DateTime.Now).TotalSeconds)} segundos para usar este canal.");
+                    NAPI.Chat.SendChatMessageToPlayer(player, $"~r~[ERROR]~w~ Necesitas esperar {Math.Round((cooldown - DateTime.Now).TotalSeconds)} segundos para usar este canal.");
                     return;
                 }
             }
@@ -31,7 +31,7 @@ namespace DowntownRP.Game.Commands
             {
                 if (p.HasData("HelpChannelDisabled")) continue;
 
-                p.SendChatMessage($"<font color='green'>[Dudas]</font> <font color='orange'>{rank}</font> {player.Name} ({player.Value}): {message}");
+                p.SendChatMessage($"~g~[Dudas] ~o~{rank}~w~ {player.Name} ({player.Value}): {message}");
             }
         }
 
@@ -45,22 +45,22 @@ namespace DowntownRP.Game.Commands
             {
                 isHelpChannelActive = !isHelpChannelActive;
                 string newState = isHelpChannelActive ? "desbloqueado" : "bloqueado";
-                NAPI.Chat.SendChatMessageToAll($"<font color='red'>[INFO]</font> Un administrador ha {newState} el canal de ayuda.");
+                NAPI.Chat.SendChatMessageToAll($"~r~[INFO]~w~ Un administrador ha {newState} el canal de ayuda.");
             }
             else
             {
-                NAPI.Notification.SendNotificationToPlayer(player, "<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+                NAPI.Notification.SendNotificationToPlayer(player, "~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
             }
         }
 
-        [Command("canaln", "<font color='yellow'>Uso:</font> /canaln (Activas / desactivas el canal de dudas.)")]
+        [Command("canaln", "Uso: /canaln (Activas / desactivas el canal de dudas.)")]
         public void ToggleHelpChannelUserCommand(Player player)
         {
             bool state = NAPI.Data.HasEntityData(player, "HelpChannelDisabled");
             if (state) NAPI.Data.ResetEntityData(player, "HelpChannelDisabled"); else NAPI.Data.SetEntityData(player, "HelpChannelDisabled", true);
 
             string newState = state ? "Activaste" : "Desactivaste";
-            NAPI.Chat.SendChatMessageToPlayer(player, $"<font color='red'>[INFO]</font> {newState} el canal de ayuda.");
+            NAPI.Chat.SendChatMessageToPlayer(player, $"~r~[INFO]~w~ {newState} el canal de ayuda.");
         }
 
         [Command("mutear")]
@@ -85,7 +85,7 @@ namespace DowntownRP.Game.Commands
                 }
                 return;
             }
-            else NAPI.Chat.SendChatMessageToPlayer(player, "<font color='red'>[ERROR]</font> El comando no existe. (/ayuda para mas información)");
+            else NAPI.Chat.SendChatMessageToPlayer(player, "~r~[ERROR]~w~ El comando no existe. (/ayuda para mas información)");
             return;
         }
 

@@ -38,9 +38,15 @@ namespace DowntownRP.Data.Entities
         public bool acceptDeath { get; set; } = false;
         public TextLabel ame { get; set; } = null;
         public bool hombre { get; set; } = false;
+        public bool estaEsposado { get; set; } = false;
 
-
-        public bool isAnyCefOpen = false;
+        public bool isAnyCefOpen { get; set; } = false;
+        public int phone { get; set; } = 0;
+        public bool isPhoneOpen { get; set; } = false;
+        public bool isInPhoneCall { get; set; } = false;
+        public List<PhoneContact> phoneBook { get; set; } = new List<PhoneContact>();
+        public Data.Entities.User lastCallUser { get; set; } = null;
+        public Data.Entities.User actualCall { get; set; } = null;
      
         // Inventory
         public Inventory inventory { get; set; } = new Inventory();
@@ -107,7 +113,7 @@ namespace DowntownRP.Data.Entities
         public bool CanalAyudasADM { get; set; } = false;
         public bool CanalAyuda { get; set; } = false;
         public bool CanalChatR { get; set; } = true;
-        public Vector3 Marca { get; set; } = new Vector3();
+        public Vector3 Marca { get; set; } = new Vector3(-74.78434, -818.6578, 326.17517);
 
         //Variables facciones
         public Faction ilegalFaction { get; set; } = null;
@@ -115,5 +121,34 @@ namespace DowntownRP.Data.Entities
         public Faction ilegalFactionShape { get; set; } = null;
         public Faction ilegalFactionInterior { get; set; } = null;
         public Policia madero { get; set; }
+        public string Callsign { get; set; } = "XX-ADAM-XX";
+
+        // Clothes
+        public int torso { get; set; } = 0;
+        public int topshirt { get; set; } = 0;
+        public int topshirtTexture { get; set; } = 0;
+        public int undershirt { get; set; } = 0;
+        public int accesory { get; set; } = 0;
+        public int legs { get; set; } = 0;
+        public int feet { get; set; } = 0;
+        public int paracaidas { get; set; } = 0;
+        public int pasamontañas { get; set; } = 0;
+        public int decal { get; set; } = 0;
+
+        public void mandarBlip(Vector3 pos, int sprite, string nombre, int color)
+        {
+            this.entity.TriggerEvent("BlipPersonal", pos, sprite, nombre, color);
+        }
+
+        public bool LlevaChaleco { get; set; } = false;
+        public bool LlevaPara { get; set; } = false;
+        public bool ViendoDocumentacion { get; set; } = false;
+
+        public List<Minisancion> minisanciones = new List<Minisancion>();
+        public List<FineLSPD> multas = new List<FineLSPD>();
+
+        // Taxi variables
+        public TaxiRace taxiRace { get; set; } = null;
+
     }
 }

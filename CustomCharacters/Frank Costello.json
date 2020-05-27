@@ -1,103 +1,100 @@
 {
-    "Gender": 1,
+    "Gender": 0,
     "Parents": {
-        "Father": 5,
-        "Mother": 39,
-        "Similarity": 0.72,
-        "SkinSimilarity": 0.15
+        "Father": 12,
+        "Mother": 45,
+        "Similarity": 0.68,
+        "SkinSimilarity": 0
     },
     "Features": [
         -0.59,
-        -0.77,
-        -0.52,
-        -0.4,
-        -0.05,
         0.69,
-        0.36,
-        0.37,
-        -0.34,
-        -0.16,
-        0.39,
-        0.27,
-        -0.45,
-        0.38,
-        0.58,
-        0.57,
-        -0.61,
-        -0.8,
-        -0.68,
-        0.17
+        -0.95,
+        0.05,
+        -0.57,
+        -0.66,
+        -0.1,
+        0.83,
+        -0.81,
+        -0.35,
+        -0.02,
+        0.09,
+        0.03,
+        -0.32,
+        -0.17,
+        -0.53,
+        0.92,
+        0.83,
+        -0.28,
+        0.82
     ],
     "Appearance": [
         {
             "Value": 255,
-            "Opacity": 0.8
+            "Opacity": 1
         },
         {
-            "Value": 6,
-            "Opacity": 0.43
-        },
-        {
-            "Value": 10,
-            "Opacity": 0.61
-        },
-        {
-            "Value": 11,
-            "Opacity": 0.03
-        },
-        {
-            "Value": 41,
-            "Opacity": 0.85
-        },
-        {
-            "Value": 12,
-            "Opacity": 0.9500000000000001
-        },
-        {
-            "Value": 10,
-            "Opacity": 0.59
-        },
-        {
-            "Value": 7,
-            "Opacity": 0.21
-        },
-        {
-            "Value": 7,
-            "Opacity": 0.5700000000000001
-        },
-        {
-            "Value": 8,
-            "Opacity": 0.4
+            "Value": 20,
+            "Opacity": 1
         },
         {
             "Value": 255,
-            "Opacity": 0.93
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 255,
+            "Opacity": 1
+        },
+        {
+            "Value": 7,
+            "Opacity": 1
         }
     ],
     "Hair": {
-        "Hair": 20,
-        "Color": 53,
-        "HighlightColor": 0
+        "Hair": 10,
+        "Color": 45,
+        "HighlightColor": 45
     },
     "character_data": {
-        "name": "",
-        "gender": 0,
         "torso": 0,
-        "legs": 60,
-        "feet": 1,
-        "undershirt": 57,
-        "topshirt": 1,
+        "legs": 45,
+        "feet": 21,
+        "undershirt": 6,
+        "topshirt": 11,
         "topshirtTexture": 0,
-        "accessory": 0,
-        "hairType": 1,
-        "hairColor": 0,
-        "hairHighlight": 0,
-        "beard": 0
+        "gafas": 9,
+        "sombrero": 32,
+        "mascara": 0
     },
     "EyebrowColor": 0,
-    "BeardColor": 0,
+    "BeardColor": 15,
     "EyeColor": 0,
     "BlushColor": 0,
     "LipstickColor": 0,
-    "ChestHairColor": 0
+    "ChestHairColor": 0,
+    "bindeos": "[0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]"
 }

@@ -1,0 +1,109 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hy AxE | Login</title>
+    <link rel='stylesheet' href='../axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/axe.css'>
+    <script src='../libs/jquery-3.3.1.min.js'></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0);
+        }
+        .butt {
+        background-color: rgba(26, 25, 25, 0.8);
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 12px 16px; /* Some padding */
+        font-size: 16px; /* Set a font size */
+        cursor: pointer; /* Mouse pointer on hover */
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 alarma-i" ></div>
+            <div class="col-md-6 fondo" style="display: block">
+              
+             
+            </div>
+            <audio id="bflat" src="https://www.mboxdrive.com/radio.mp3"></audio>
+            <div class="col-md-3 alarma-d"><input id="habla" type="submit" onclick="textToSpeech()" style="display: block">
+              <input id="audio" type="submit" onclick="document.getElementById('bflat').play()" style="display: block">
+            </div>
+              
+              
+
+        </div>
+      </div>
+ 
+<!--Modal: modalConfirmDelete-->
+
+    <script>
+        var current;
+        var genero = 0;
+        var texto = 'A todas las unidades;';
+
+// list of languages is probably not loaded, wait for it
+if(window.speechSynthesis.getVoices().length == 0) {
+  window.speechSynthesis.addEventListener('voiceschanged', function() {    
+  });
+}
+
+
+function textToSpeech() {
+  // get all voices that browser offers
+  var available_voices = window.speechSynthesis.getVoices();
+
+  // this will hold an english voice
+  var english_voice = '';
+
+  // find voice by language locale "en-US"
+  // if not then select the first voice
+  for(var i=0; i<available_voices.length; i++) {
+    if(available_voices[i].lang === 'es-ES') {
+      english_voice = available_voices[i];
+      break;
+    }
+  }
+  if(english_voice === '')
+    english_voice = available_voices[0];
+
+  // new SpeechSynthesisUtterance object
+  var utter = new SpeechSynthesisUtterance();
+  utter.rate = 1;
+  utter.pitch = 0.5;
+  utter.text = texto;
+  utter.voice = english_voice;
+
+  // event after text has been spoken
+  utter.onend = function() {
+    $("#audio").click();
+  }
+
+  // speak
+  window.speechSynthesis.speak(utter);
+}
+
+function aviso(msg){  
+  $("#audio").click();
+ setTimeout(function(){
+  console.log("avisssssssooooooooooo- - - - >"+msg)
+  texto = 'A todas las unidades; ' + msg;
+  $("#habla").click();
+ }, 1000);
+  
+}
+    </script>
+    <!-- partial -->    
+</body>
+
+</html>

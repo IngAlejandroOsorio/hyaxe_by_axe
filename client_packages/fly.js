@@ -42,13 +42,13 @@ mp.events.add('render', () => {
 		mp.game.graphics.drawText(`Coords: ${JSON.stringify(coords)}`, [0.5, 0.005], {
 			font: 0,
 			color: [255, 255, 255, 185],
-			scale: [0.3, 0.3],
+			scale: [0.5, 0.5],
 			outline: true,
 		});
 		mp.game.graphics.drawText(`pointAtCoord: ${JSON.stringify(pointingAt(fly.point_distance).position)}`, [0.5, 0.025], {
 			font: 0,
 			color: [255, 255, 255, 185],
-			scale: [0.3, 0.3],
+			scale: [0.5, 0.5],
 			outline: true,
 		});
 	

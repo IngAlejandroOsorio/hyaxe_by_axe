@@ -1,6 +1,7 @@
 ﻿using GTANetworkAPI;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,12 +19,12 @@ namespace DowntownRP.World.Factions.MD
             user.isDeath = true;
 
             //player.TriggerEvent("OpenDeathUI");
+            player.TriggerEvent("freeze_player");
             Utilities.Notifications.SendNotificationINFO(player, "En un minuto podrás aceptar muerte");
             NAPI.Player.SpawnPlayer(player, dPosition);
-            //player.PlayAnimation("dead", "dead_d", (int)(Utilities.AnimationFlags.Loop));
-            player.TriggerEvent("playAnimPlayer", "dead", "dead_d");
+            player.PlayAnimation("dead", "dead_d", (int)(Utilities.AnimationFlags.Loop));
 
-            await Task.Delay(1000);
+            //await Task.Delay(1000);
 
             /*if (user.isDeath)
             {
@@ -31,13 +32,22 @@ namespace DowntownRP.World.Factions.MD
                 Utilities.Notifications.SendNotificationINFO(player, "Ya puedes avisar a LSMD");
             }*/
 
-            await Task.Delay(1000);
+            await Task.Delay(60000); //1 min
             if (user.isDeath)
             {
                 user.acceptDeath = true;
                 Utilities.Notifications.SendNotificationINFO(player, "Ya puedes aceptar la muerte usando /aceptarmuerte");
             }
             
+        }
+
+        [ServerEvent(Event.PlayerDamage)]
+        public void Death_PlayerDamage(Player player, float float1, float float2)
+        {
+            if (!player.HasData("USER_CLASS")) return;
+            Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");
+
+            if(user.isDeath) player.PlayAnimation("dead", "dead_d", (int)(Utilities.AnimationFlags.Loop));
         }
 
         [RemoteEvent("SS_AcceptDeath")] // ESTO ES AVISAR A LSMD
@@ -66,6 +76,11 @@ namespace DowntownRP.World.Factions.MD
             }*/
         }
 
+        public int Lowest(params int[] inputs)
+        {
+            return inputs.Min();
+        }
+
         [Command("aceptarmuerte")] // ESTO ES ACEPTAR MUERTE
         public async Task SS_AcceptDeath(Player player)
         {
@@ -81,7 +96,20 @@ namespace DowntownRP.World.Factions.MD
                     await Task.Delay(8000);
 
                     player.TriggerEvent("playerSpawn");
-                    player.Position = new Vector3(358.358, -1382.471, 32.51111);
+                    player.TriggerEvent("unfreeze_player");
+
+                    int hospital1 = (int)player.Position.DistanceTo(new Vector3(347.9363, -1370.1932, 32.50962));
+                    int hospital2 = (int)player.Position.DistanceTo(new Vector3(365.5317, -570.0759, 28.791481));
+                    int hospital3 = (int)player.Position.DistanceTo(new Vector3(1820.1287, 3673.4202, 34.270065));
+                    int hospital4 = (int)player.Position.DistanceTo(new Vector3(-258.4666, 6311.663, 32.4089));
+                    int hospitalCheck = Lowest(hospital1, hospital2, hospital3, hospital4);
+
+                    if (hospitalCheck == hospital1) player.Position = new Vector3(347.9363, -1370.1932, 32.50962);
+                    else if (hospitalCheck == hospital2) player.Position = new Vector3(365.5317, -570.0759, 28.791481);
+                    else if (hospitalCheck == hospital3) player.Position = new Vector3(1820.1287, 3673.4202, 34.270065);
+                    else if (hospitalCheck == hospital4) player.Position = new Vector3(-258.4666, 6311.663, 32.4089);
+                    else player.Position = new Vector3(347.9363, -1370.1932, 32.50962);
+
                     player.Health = 100;
                     player.Armor = 0;
                     player.RemoveAllWeapons();
@@ -100,7 +128,7 @@ namespace DowntownRP.World.Factions.MD
                         Utilities.Notifications.SendNotificationINFO(player, "Se te han restado $300 por la atención médica");
                     }
                 }
-                Utilities.Notifications.SendNotificationERROR(player, "Todavía no puedes aceptar la muerte");
+                else Utilities.Notifications.SendNotificationERROR(player, "Todavía no puedes aceptar la muerte");
             }
         }
 
@@ -118,7 +146,7 @@ namespace DowntownRP.World.Factions.MD
                     {
                         if (Player.faction == 2 && Player.factionDuty)
                         {
-                            Player.entity.SendChatMessage($"<font color='red'>[LSMD]</font> {player.Name} ha aceptado el último aviso.");
+                            Player.entity.SendChatMessage($"~r~[LSMD]~w~ {player.Name} ha aceptado el último aviso.");
                         }
                     }
 

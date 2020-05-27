@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Downtown RP | Login</title>
+    <link rel='stylesheet' href='../axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/axe.css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src='../libs/jquery-3.3.1.min.js'></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0);
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+            <div class="col-2"><BR>
+                <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
+                    <div class="card-body text-white">
+                      <center>
+                        <h5 id="costo"></h5>
+						Costo total: <font color="green">$<span id="costox"></span></font>
+						<br><small>Taximetro | <b><font color="red">OCUPADO</font></b></small>
+                      </center>
+            </div>
+
+        </div>
+    </div>
+    <!-- partial -->
+    <script>
+      var quantity = 0;
+
+
+      function addMorecosto(){                    
+          setInterval(function(){		  
+		  quantity = quantity + 10;
+		  $("#costox").html(quantity);
+		  console.log(quantity);
+      mp.trigger("UpdateCounterTaxi", quantity);
+		  }, 10000);
+      }
+
+      
+      </script>
+    <script src='../libs/bootstrap.min.js'></script>
+</body>
+
+</html>

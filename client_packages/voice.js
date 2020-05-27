@@ -5,6 +5,8 @@ const MaxRange = 17.0;
 var microstatus = false;
 var microway = false;
 
+let player = mp.players.local;
+
 mp.events.add('render', () => {
     if(microway){
 		if(mp.game.controls.isControlPressed(0, 249)){
@@ -12,6 +14,7 @@ mp.events.add('render', () => {
 				mp.voiceChat.muted = false;
 				microstatus = true;
 				mp.events.call("update_hud_microphone", 1);
+				mp.events.callRemote("MicroSetData", 1);
 				return;
 			}
 		}else{
@@ -19,6 +22,7 @@ mp.events.add('render', () => {
 				mp.voiceChat.muted = true;
 				microstatus = false;
 				mp.events.call("update_hud_microphone", 0);
+				mp.events.callRemote("MicroSetData", 0);
 			}
 		}
 	}

@@ -14,36 +14,45 @@ namespace DowntownRP.Game.Authentication
         {
             player.SetSharedData("FACE_SETTINGS", 0);
             player.SetSharedData("EntityAlpha", 255);
+            player.SetData("BUS_READY", false);
+            player.SetData("COMPANY_PAGO_LISTO", false);
+            player.SetData("TRABAJANDO_BUS", false);
 
             Data.Info.playersConnected += 1;
-            NAPI.ClientEvent.TriggerClientEventForAll("update_hud_players", Data.Info.playersConnected);
+
+            int players = 0;
+            foreach (var u in NAPI.Pools.GetAllPlayers())
+                players++;
+
+            NAPI.ClientEvent.TriggerClientEventForAll("update_hud_players", players);
             player.TriggerEvent("ShowLoginWindow");
         }
 
         [RemoteEvent("RE_LoginPlayerAccount")]
         public async Task RE_LoginPlayerAccount(Player player, string username, string password)
         {
+            player.SetSharedData("MICRO_STATUS", false);
+
             if (await DatabaseFunctions.CheckIfPlayerRegistered(username) == true)
             {
                 int playerid = await DatabaseFunctions.LoginPlayer(username, password);
                 if (playerid != 0)
                 {
-                    if(Data.Lists.playersConnected.Find(x => x.id == playerid) != null)
+                    /*foreach(var u in NAPI.Pools.GetAllPlayers())
                     {
-                        Utilities.Notifications.SendNotificationERROR(player, "No puedes iniciar sesión porque ya hay alguien jugando en esta cuenta");
-                        return;
-                    }
-
+                        if(u.Name == player.Name)
+                        {
+                            Utilities.Notifications.SendNotificationERROR(player, "No puedes iniciar sesión porque ya hay alguien jugando en esta cuenta");
+                            return;
+                        }
+                    }*/
                     player.TriggerEvent("DestroyWindow");
 
-
-                    if(await DatabaseFunctions.CheckIfBanned(player.SocialClubName))
+                    if(await DatabaseFunctions.CheckIfBanned(player.SocialClubId))
                     {
                         player.Kick("Estás baneado del servidor, ve al foro o al ts para más información");
                         return;
                     }
-
-
 
                     Data.Entities.User user = new Data.Entities.User
                     {
@@ -55,16 +64,15 @@ namespace DowntownRP.Game.Authentication
 
                     Data.Lists.playersConnected.Add(user);
 
-    
-                    player.SetData("USER_CLASS", user);
-                    if(! await Game.CharacterAlpha.CharacterAlpha.SelectCharacterAlpha(player, playerid))
+                    player.SetData("USER_CLASS", user);                    
+                    /*if (! await Game.CharacterAlpha.CharacterAlpha.SelectCharacterAlpha(player, playerid))
                     {
                         player.TriggerEvent("DestroyBrowserPjAlphaPj");
                         player.TriggerEvent("CreatePjAlphaEvent");
-                    }
+                    }*/
                     //player.SetExternalData<Data.Entities.User>(0, user);
-                    //CharacterSelector.CharacterSelector.RetrieveCharactersList(player);
-                    // await Character.DbFunctions.ShowCharacterList(player); <- NUEVO CHARACTER SELECTOR
+                    CharacterSelector.CharacterSelector.RetrieveCharactersList(player);
+                    //await Character.DbFunctions.ShowCharacterList(player);
                 }
                 else player.TriggerEvent("ShowErrorAlert", 1);
             }
@@ -74,10 +82,12 @@ namespace DowntownRP.Game.Authentication
         [RemoteEvent("RE_RegisterPlayerAccount")]
         public async void RE_RegisterPlayerAccount(Player player, string username, string email, string password, string repassword)
         {
+            //Console.WriteLine(password + "asdas: " + repassword);
             if (await DatabaseFunctions.CheckIfPlayerRegistered(username) == false)
             {
                 if (await DatabaseFunctions.CheckIfEmailRegistered(email) == false)
                 {
+                    //Console.WriteLine(password + "asdas: " + repassword);
                     if (password == repassword)
                     {
                         int playerId = await DatabaseFunctions.RegisterPlayer(username, password, email, player.SocialClubName, player.Address);

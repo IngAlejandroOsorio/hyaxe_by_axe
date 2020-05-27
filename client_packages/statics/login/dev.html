@@ -13,6 +13,7 @@
         body {
             height: 100%;
             background-color: rgba(128, 128, 128, 0);
+            z-index: 3;
         }
         
         .as-full {
@@ -32,6 +33,198 @@
             top: -31px;
             width: 0;
         }
+        .text-white {
+            color: #fff!important;
+            text-align: center;
+        }
+
+        body {
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0);
+            width: 100%;
+            /*font-family: 'Oxygen' !important;*/
+        }
+
+        .main {
+            height: 50%;
+        }
+
+        .main div {
+            display: inline-block;
+            border: none;
+            margin-top: 5%;
+        }
+
+        .logo {
+            margin-bottom: 10%;
+        }
+
+        .right h3 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .right p {
+            margin-top: 0;
+            text-align: center;
+            color: grey;
+        }
+
+        .right form {
+            text-align: center;
+        }
+
+        .right form input {
+            width: 70%;
+            height: 35px;
+            margin-bottom: 10px;
+            border: none;
+            border: 1px solid #F8F8F8;
+            background-color: #F8F8F8;
+            border-radius: 25px;
+            text-align: center;
+            transition: all 0.30s ease-in-out;
+        }
+
+        .right form input:focus {
+            outline: none;
+            border: 1px solid #38a9f0;
+            -webkit-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+            -moz-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+            box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+        }
+
+        ::-webkit-input-placeholder {
+            color: grey;
+            letter-spacing: 1px;
+        }
+
+        .right form input[type="submit"] {
+            background: rgb(141, 2, 31);
+            background: linear-gradient(140deg, rgba(141, 2, 31, 1) 0%, rgba(48, 48, 48, 1) 100%);
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .right .center {
+            position: relative;
+            top: 10%;
+            padding: 10%;
+        }
+
+        .forgot a {
+            color: grey;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .register a {
+            color: grey;
+            text-decoration: none;
+        }
+
+
+        .left h1 {
+            padding-top: 100px;
+            margin-bottom: 10px;
+        }
+
+        .left {
+            color: #fff;
+        }
+
+        .left p {
+            margin: 0;
+        }
+
+        input:focus {
+            outline: none !important;
+            border: 1px solid #38a9f0 !important;
+            -webkit-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75) !important;
+            -moz-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75) !important;
+            box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75) !important;
+        }
+
+        ::-webkit-input-placeholder {
+            color: grey !important;
+            letter-spacing: 1px !important;
+        }
+
+        button {
+            background: rgb(141, 2, 31) !important;
+            background: linear-gradient(140deg, rgba(141, 2, 31, 1) 0%, rgba(48, 48, 48, 1) 100%) !important;
+            color: #fff !important;
+            font-weight: bold !important;
+        }
+
+
+        .indexCard {
+            background-color: rgba(26, 25, 25, 0.8);
+            margin-top: 40%;
+            max-height: 50%;
+            overflow: auto;
+            }
+
+        .ml4 {
+            position: relative;
+            font-weight: 900;
+            font-size: 4.5em;
+        }
+
+        .ml4 .letters {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0.3em;
+            right: 0;
+            opacity: 0; 
+            padding-top: 200px;
+        }
+
+        #entrarRegister,
+        #CargandoLogin {
+            background: rgb(141, 2, 31) !important;
+            background: linear-gradient(140deg, rgba(141, 2, 31, 1) 0%, rgba(48, 48, 48, 1) 100%) !important;
+            color: #fff !important;
+            font-weight: bold !important;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        form input {
+            width: 70%;
+            height: 35px;
+            margin-bottom: 10px;
+            border: none;
+            border: 1px solid #F8F8F8;
+            background-color: #F8F8F8;
+            border-radius: 25px;
+            text-align: center;
+            transition: all 0.30s ease-in-out;
+        }
+
+        form input:focus {
+            outline: none;
+            border: 1px solid #38a9f0;
+            -webkit-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+            -moz-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+            box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+        }
+
+        ::-webkit-input-placeholder {
+            color: grey;
+            letter-spacing: 1px;
+        }
+
+        form input[type="submit"] {
+            background: rgb(141, 2, 31);
+            background: linear-gradient(140deg, rgba(141, 2, 31, 1) 0%, rgba(48, 48, 48, 1) 100%);
+            color: #fff;
+            font-weight: bold;
+        }
+
     </style>
 
 </head>
@@ -40,45 +233,209 @@
     <!-- partial:index.partial.html -->
     <div class="container-fluid as-full">
         <div class="row as-full d-flex justify-content-center">
-            <div class="col-5 align-self-center">
-                <center><img src="../img/logo.png" class="img-fluid img-responsive" style="height: 200px;"></img>
-                </center>
-                <div id="errorMessage" class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR </strong> Los datos proporcionados son inválidos
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+            <div class="col-md-3" style="z-index: 1000">
+                
+                <div id="prelogin" class="card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 40%">
+
+                        <div class="card-body text-white" >
+                                <font color="white" style="text-align: center;"><h1>Versión Beta</h1><small style="text-align: center !important;">Hyaxe Roleplay se encuentra actualmente en versión Alpha, por ende pueden haber existir errores o varias funciones no implementadas. ¡Ayudanos a mejorar dejando tu feedback en nuestro foro! v.hyaxe.com</small><br>
+                            </font> 
+                        </div>
+                        <button type="submit" id="go" class="col-md-12 btn btn-primary">! Ingresar ¡</button>
+                  </div>
+
+                  <div id="prelogin2" class="card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 10%">
+
+                        <div class="card-body text-white" >
+                                <font color="white" style="text-align: center;"><h1>Noticias</h1><small style="text-align: center !important;">Buenas a todos, anuncio por aquí que las POSTULACIONES a BANDA ya están ABIERTAS (SLOT PARA BANDAS 3.)
+Pueden encontrar más información en el siguiente enlace del foro, cualquier duda, pueden hablarme al privado.
+https://v.hyaxe.com/foro/index.php?threads/postulaciones-a-banda-abiertas.23/
+¡Pasen buen día!</small><br>
+                            </font> 
+                        </div>
+                  </div>
+
+
+
+                <div id="login" class="main card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 40%">
+                    <div class="card-body text-white" >
+                        <div class="right">            
+                            <div class="center">
+                                <h1>Iniciar sesión</h1>
+                                <form>
+                                    <input type="text" id="usernameInput" placeholder="Nombre de Usuario">
+                                    <input type="password" id="passwordInput" placeholder="Contraseña">
+                                    <button type="submit" id="entrarLogin" class="col-md-12 btn btn-primary">Login</button>
+                                </form>
+                                <div class="d-flex flex-row justify-content-center">
+                                <p class="register pl-2 large"><a href="#" id="clickRegister">¿No tienes una cuenta?</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
-                    <div class="card-body">
-                        <center>
-                           <font color="white"><h3>Versión Alpha</h3><small>Hyaxe Roleplay se encuentra actualmente en versión Alpha, por ende pueden haber existir errores o varias funciones no implementadas. ¡Ayudanos a mejorar dejando tu feedback en nuestro foro! v.hyaxe.com</small><br>
-                        </font>
+
+
+
+
+
+                <div id="registro" class="main card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 40%">
+                    <div class="card-body text-white center" style="text-align: center;">
+                        <div class="alert alert-danger alert-dismissible fade show" id="errorMessage2"
+                            role="alert">
+                            <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR
+                            </strong> El nombre de usuario ya existe
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show" id="errorMessage3"
+                            role="alert">
+                            <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR
+                            </strong> Ya hay una cuenta registrada con este e-mail
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show" id="errorMessage4"
+                            role="alert">
+                            <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR
+                            </strong> Las contraseñas no coinciden
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show" id="errorMessage5"
+                            role="alert">
+                            <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> ERROR
+                            </strong> La clave Admin no es correcta
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <h3>Crear Cuenta</h3><br>
+                        <form>
+                            <input type="text" id="usernameInputr" placeholder="Nombre de Usuario"><br>
+                            <input type="text" id="emailInputr" placeholder="EMail"><br>
+                            <input type="password" id="passwordInputr" placeholder="Contraseña"><br>
+                            <input type="password" id="passwordInput2r" placeholder="Confirmar Contraseña"><br><br>
+                            <button type="submit" id="entrarRegister" class="col-md-4 btn btn-primary">Crear
+                                cuenta</button>
+                            <button type="submit" id="CargandoLogin" class="col-md-4 btn btn-primary"
+                                disabled>Cargando</button>
+                        </form>
+                        <div class="d-flex flex-row justify-content-center">
+                            <p class="register pl-2"><a href="#" id="clickLogin">¿Ya tienes una cuenta?</a>
+                            </p>
+                        </div>
 
                     </div>
                 </div>
-                <div class="card mt-1" style="background-color: rgba(26, 25, 25, 0.8)">
-                    <div class="card-body">
-                        <small><font color="white"><i class="fa fa-child" aria-hidden="true"></i> ¿Administrador? Logueate haciendo <a href="#" id="clickRegister">click aquí</a></font></small>
-                    </div>
-                </div>
+
+
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+            <div class="col-md-6">
+                
+            <center><img src="../img/logo.png" class="img-fluid img-responsive" style="height: 100px;opacity: 0.3;top: 200px"></img>
+            </center>
+            <center>
+                <h1 class="ml4">
+                  <span class="letters letters-1">Estas listo para la mejor</span>
+                  <span class="letters letters-2">Experiencia roleplay ?</span>
+                  <span class="letters letters-3">Hyaxe V para RageMP</span>
+                  <span class="letters letters-4">La mejor plataforma que existe</span>
+                  <span class="letters letters-5">La mejor calidad de rol</span>
+                  <span class="letters letters-6">La mayor libertad</span>
+                  <span class="letters letters-7">Para desarrollar tu personaje</span>
+                  <span class="letters letters-8">< Ingresa Ahora! Qué esperas ¡?</span>
+                </h1>
+            </center>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
 
             </div>
 
+
+
+              
+            <div class="col-md-3">
+                <div id="prelogin" class="card indexCard" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 40%; font-size: 12px">
+                <div class="card-body text-white center" >
+
+                    <h1>Actualizaciones</h1>             
+                    <small class="float-right">Mayo 25 de 2020</small><br>
+                    A parte de todas las novedades que vas a ver a continuación, prácticamente todos los bugs que existían en el servidor han sido solucionados.<br><br>
+
+                    <h5>Negocios</h5>
+                    Las tiendas de ropa se han re-creado completamente, ahora cuentan con una cámara la cual puedes manejar a tu gusto e infinidad de prendas y accesorios disponibles en estas.<br>
+                    Se han agregado las peluquerías, también con cámaras y variedad de peinados/barbas/maquillaje...<br>
+                    Agregada tienda de electrónica, donde podrás comprar un boombox... ¡o un movil!<br>
+                    Agregada central de anuncios (indispensable tener teléfono móvil)<br>
+                    Agregado taller de mecánicos, ¡por fin puedes hacer full tuning a tus vehículos!<br>
+                    Ahora puedes robar cualquier negocio, apunta a los NPCs situados en estos y llévate el dinero de la caja fuerte. ¡Cuidado con la policía!<br><br>
+
+                    <h5>Empresas / trabajos</h5>
+                    Agregado nuevo tipo de empresa: Taxista<br>
+                    Agregado nuevo tipo de empresa: Buses<br>
+                    Agregado nuevo trabajo: Pescador<br><br>
+
+                    <h5>Facciones</h5>
+                    Agregado multar/esposar/encarcelar<br>
+                    Agregada taquilla policial<br>
+                    Agregado armero policial<br>
+                    Se han habilitado varias comisarias por todo San Andreas<br>
+                    Agregada LSMD (médicos)<br>
+                    Agregada taquilla para médicos<br>
+                    Se han habilitado varios hospitales por todo San Andreas<br><br>
+
+                    <h5>General</h5>
+                    Se cambió completamente el menú de interacción (F2)<br>
+                    Agregado nuevo menú de animaciones y bindeo de teclas para animaciones<br>
+                    Agregado boombox y movil<br>
+                    Agregado menú de humor y estilo de caminar<br>
+                    Agregado Discord Rich Presence<br>
+                    Cambios en los nametag del personaje<br>
+                </div>
+                </div>
+        </div>
+
         </div>
     </div>
+
     <!-- script  -->
     <script>
         $("#errorMessage").hide();
         $("#CargandoLogin").hide();
+        $("#registro").hide();
+        $("#login").hide();
+
 
         $('#entrarLogin').click(() => {
             $("#entrarLogin").hide();
-            $("#CargandoLogin").show();
+            $("#CargandoLogin").show();            
             mp.trigger('LoginUser', $('#usernameInput').val(), $('#passwordInput').val());
         });
+
+        $('#go').click(() => {
+            $("#prelogin").fadeOut(500);
+            $("#prelogin2").fadeOut(500);       
+            setTimeout(function(){ $("#login").fadeIn(500) }, 500);
+        });
+
         $('#clickRegister').click(() => {
-            mp.trigger('AuthLoginUser');
+            $("#login").fadeOut(500);            
+            setTimeout(function(){ $("#registro").fadeIn(500) }, 500);
         });
 
         function ShowError() {
@@ -86,6 +443,178 @@
             $("#entrarLogin").show();
             $("#CargandoLogin").hide();
         }
+        setTimeout(function(){ $("#toUnmute").click() }, 1500);
+
+
+
+        $("#errorMessage2").hide();
+        $("#errorMessage3").hide();
+        $("#errorMessage4").hide();
+        $("#errorMessage5").hide();
+        $("#CargandoLogin").hide();
+
+        $('#entrarRegister').click(() => {
+            $("#CargandoLogin").show();
+            //console.log($('#usernameInputr').val() +" "+  $('#emailInputr').val() +" "+ $('#passwordInputr').val() +" "+ $('#passwordInput2r').val());
+            mp.trigger('RegisterUser', $('#usernameInputr').val(), $('#emailInputr').val(), $('#passwordInputr').val(),$('#passwordInput2r').val());
+        });
+
+        $('#clickLogin').click(() => {
+            $("#registro").fadeOut(500);            
+            setTimeout(function(){ $("#login").fadeIn(500) }, 500);
+        });
+
+
+        function ShowError2() {
+            $("#prelogin").hide();
+            $("#errorMessage2").show();
+            $("#login").fadeOut(500);            
+            setTimeout(function(){ $("#registro").fadeIn(500) }, 500);
+            $("#CargandoLogin").hide();
+        }
+
+        function ShowError3() {
+            $("#prelogin").hide();
+            $("#errorMessage3").show();
+            $("#login").fadeOut(500);            
+            setTimeout(function(){ $("#registro").fadeIn(500) }, 500);
+            $("#CargandoLogin").hide();
+        }
+
+        function ShowError4() {
+            $("#prelogin").hide();
+            $("#errorMessage4").show();
+            $("#login").fadeOut(500);            
+            setTimeout(function(){ $("#registro").fadeIn(500) }, 500);
+            $("#CargandoLogin").hide();
+        }
+
+        function ShowError5() {
+            $("#prelogin").hide();
+            $("#errorMessage5").show();
+            $("#login").fadeOut(500);            
+            setTimeout(function(){ $("#registro").fadeIn(500) }, 500);
+            $("#CargandoLogin").hide();
+        }
+
+
+
+
+
+
+    var ml4 = {};
+    ml4.opacityIn = [0,1];
+    ml4.scaleIn = [0.2, 1];
+    ml4.scaleOut = 3;
+    ml4.durationIn = 800;
+    ml4.durationOut = 600;
+    ml4.delay = 500;
+
+    anime.timeline({loop: true})
+      .add({
+        targets: '.ml4 .letters-1',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+      }).add({
+        targets: '.ml4 .letters-1',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+      }).add({
+        targets: '.ml4 .letters-2',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+      }).add({
+        targets: '.ml4 .letters-2',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+      }).add({
+        targets: '.ml4 .letters-3',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+      }).add({
+        targets: '.ml4 .letters-3',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+      }).add({
+        targets: '.ml4 .letters-4',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+      }).add({
+        targets: '.ml4 .letters-4',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+      }).add({
+        targets: '.ml4 .letters-5',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+      }).add({
+        targets: '.ml4 .letters-5',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+      }).add({
+        targets: '.ml4 .letters-6',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+      }).add({
+        targets: '.ml4 .letters-6',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+      }).add({
+        targets: '.ml4 .letters-7',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+      }).add({
+        targets: '.ml4 .letters-7',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+      }).add({
+        targets: '.ml4 .letters-8',
+        opacity: ml4.opacityIn,
+        scale: ml4.scaleIn,
+        duration: ml4.durationIn
+      }).add({
+        targets: '.ml4 .letters-8',
+        opacity: 0,
+        scale: ml4.scaleOut,
+        duration: ml4.durationOut,
+        easing: "easeInExpo",
+        delay: ml4.delay
+      }).add({
+        targets: '.ml4',
+        opacity: 0,
+        duration: 500,
+        delay: 500
+      });
+
+
     </script>
     <!-- partial -->
     <script src='../libs/bootstrap.min.js'></script>

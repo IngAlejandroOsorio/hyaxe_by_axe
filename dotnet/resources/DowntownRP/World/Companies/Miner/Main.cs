@@ -87,9 +87,9 @@ namespace DowntownRP.World.Companies.Miner
             user.isMining = true;
             user.entity.TriggerEvent("freeze_player");
 
-            user.entity.TriggerEvent("playAnimPlayer", "amb@world_human_const_drill@male@drill@base", "base");
+            NAPI.Player.PlayPlayerAnimation(user.entity, (int)(Utilities.AnimationFlags.Loop), "amb@world_human_const_drill@male@drill@base", "base");
             NAPI.ClientEvent.TriggerClientEventForAll("Object.AttachMina", "prop_tool_jackham", user.entity.Value, 18905);
-            
+
             await Task.Delay(20000); //10s
             NAPI.ClientEvent.TriggerClientEventForAll("Object.Delete", user.entity.Value);
             user.entity.StopAnimation();

@@ -7,8 +7,8 @@ namespace DowntownRP.Game.Commands
 {
     public class Entornos : Script
     {                   //<font color='#4169e1'>
-        [Command ("entorno",Description = "Manda la ubicación y un mensaje al staff.", GreedyArg = true)]
-        public void CMD_entorno(Player player, string tipo, string msg)
+        [Command("entorno",Description = "Manda la ubicación y un mensaje a LSPD.", GreedyArg = true)]
+        public void CMD_entorno(Player player, string msg)
         {
             bool tieneAbierto = false;
             foreach (Data.Entities.Entorno aS in Data.Lists.entornos)
@@ -23,14 +23,7 @@ namespace DowntownRP.Game.Commands
 
             var entorno = new Data.Entities.Entorno(player, msg);
 
-            if (tipo.Contains("pd"))
-            {
-                entorno.pd = true;
-            }
-            if (tipo.Contains("md"))
-            {
-                entorno.md = true;
-            }
+            entorno.pd = true;
 
             Data.Lists.entornos.Add(entorno);
 
@@ -38,14 +31,14 @@ namespace DowntownRP.Game.Commands
             {
                 if(u.faction == 1 & u.factionDuty == true & entorno.pd)
                 {
-                    player.SendChatMessage($"<font color='#ff0000'> [ENTORNOS]</font> <font color='#33cc33'>ID: {entorno.userid} - {entorno.Pj} </font> <font color='#FF0000'>=></font> <font color='#66ffff'>{msg} </font>");
+                    player.SendChatMessage($"[ENTORNOS] ID: {entorno.userid} - {entorno.Pj} => {msg}");
                 }else if (u.faction == 2 & u.factionDuty == true & entorno.md)
                 {
-                    player.SendChatMessage($"<font color='#ff0000'> [ENTORNOS]</font> <font color='#33cc33'>ID: {entorno.userid} - {entorno.Pj} </font> <font color='#FF0000'>=></font> <font color='#66ffff'>{msg} </font>");
+                    player.SendChatMessage($"[ENTORNOS] ID: {entorno.userid} - {entorno.Pj} => {msg}");
                 }
             }
 
-            Utilities.Notifications.SendNotificationOK(player, "Tu mensaje ha sido enviado al staff");
+            Utilities.Notifications.SendNotificationOK(player, "Tu mensaje ha sido enviado a las autoridades");
         }
 
         [Command ("entornos")]
@@ -54,16 +47,16 @@ namespace DowntownRP.Game.Commands
             Data.Entities.User usr = player.GetData<Data.Entities.User>("USER_CLASS");
                 if (arg == "")
                 {
-                    player.SendChatMessage($"<font color='#FF0000'>---------ENTORNOS---------</font>");
+                    player.SendChatMessage($"---------ENTORNOS---------");
                     foreach (Data.Entities.Entorno aS in Data.Lists.entornos)
                     {
                         if (aS.estado == 0)
                         {
-                            if(aS.pd && usr.faction == 1) player.SendChatMessage($"<font color='#00FF00'>ID: {aS.id} - {aS.Pj}</font> <font color='#FF0000'> = </font>   <font color='#1111FF'> {aS.mensaje}</font>");
-                            if(aS.md && usr.faction == 2) player.SendChatMessage($"<font color='#00FF00'>ID: {aS.id} - {aS.Pj}</font> <font color='#FF0000'> = </font>   <font color='#1111FF'> {aS.mensaje}</font>");
+                            if(aS.pd && usr.faction == 1) player.SendChatMessage($"ID: {aS.id} - {aS.Pj} = {aS.mensaje}");
+                            if(aS.md && usr.faction == 2) player.SendChatMessage($"ID: {aS.id} - {aS.Pj} = {aS.mensaje}");
                     }
                     }
-                    player.SendChatMessage($"<font color='#FF0000'>--------------------------------------------</font>");
+                    player.SendChatMessage($"--------------------------------------------");
                 }else if (arg == "t")
                 {
                     Data.Entities.User user = player.GetData<Data.Entities.User>("USER_CLASS");

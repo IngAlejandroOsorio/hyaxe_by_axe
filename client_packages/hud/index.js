@@ -1,6 +1,7 @@
 const useSpeedo = true;
 const updateInterval = 500; // milliseconds, lower value = more accurate, at the cost of performance
 let player = mp.players.local;
+mp.players.local.enTaller = false;
 
 const Natives = {
     IS_RADAR_HIDDEN: "0x157F93B036700462",
@@ -71,7 +72,7 @@ setInterval(() => {
 }, updateInterval);
 
 mp.events.add("render", () => {
-    if (streetName && zoneName) {
+    if (streetName && zoneName && !mp.players.local.enTaller) {
         drawText("~r~"+streetName, [minimap.rightX + 0.0147, minimap.bottomY - 0.065], 4, [255, 255, 255, 255], 0.55);
         drawText(zoneName, [minimap.rightX + 0.0147, minimap.bottomY - 0.035], 4, [255, 255, 255, 255], 0.5);
 

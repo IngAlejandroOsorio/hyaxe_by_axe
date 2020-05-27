@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hy AxE | Login</title>
+    <link rel='stylesheet' href='./axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='./axe/axe.css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src='../libs/jquery-3.3.1.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js" type="text/javascript"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../libs/colorpalettepicker.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0);
+        }
+        .butt {
+        background-color: rgba(26, 25, 25, 0.8);
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 12px 16px; /* Some padding */
+        font-size: 16px; /* Set a font size */
+        cursor: pointer; /* Mouse pointer on hover */
+        }
+
+        /* Darker background on mouse-over */
+        .butt:hover {
+          background-color: #68040e;
+        }
+
+        input.active[type=range]::-webkit-slider-thumb {
+
+        border: 3px solid #000000;
+        border-radius: 4px;
+        background: #ffffff;
+        margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+        box-shadow: 3px 3px 3px #000000, 0px 0px 3px #0d0d0d; /* Add cool effects to your sliders! */
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+
+
+                <div id="navigate" >
+      <!--Modal: modalConfirmDelete-->
+<div class="modal fade" id="modalConfirmOk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">¿Deseas vender tus Peces al por menor? <br> - Quizás te rente más procesarlos en la Pesquera y venderlos a la lonja en el Mercado...</p>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <a href="#" onclick="gogo()" class="btn btn-success btn-block move" data-dismiss="modal">Si</a>
+        <a type="button" onclick="salir()" class="btn  btn-danger2 waves-effect move" data-dismiss="modal">No</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalConfirmDelete-->      
+<div id="wrap" style="display: none">           
+                <center><img src="../img/logoaxe.png" class="img-fluid img-responsive"></center>                   
+                    <div class="card" style="background-color: rgba(26, 25, 25, 0.8)">
+                          <div class="alert alert-primary" role="alert">
+                                  Venta de Pescado al Detal
+                                </div>
+                          <div class="card-body text-white">
+                                  <label for="customRange3"><img src="merluzo.png" class="img-fluid img-responsive" style="height: 50px;"> - Merluzo <span id="ctdmerluzo">0</span></label>
+                                  <input id="selectedDefault" type="range" class="custom-range move" min="0" max="20" step="1" oninput="merluzo(this.value)" onchange="merluzo(this.value)" value="0">
+                                  <label for="customRange3"><img src="trucha.png" class="img-fluid img-responsive" style="height: 50px;"> - Trucha <span id="ctdtrucha">0</span></label>
+                                  <input type="range" class="custom-range move" min="0" max="20" step="1" oninput="trucha(this.value)" onchange="trucha(this.value)" id="peloBrillo" value="0">
+                                  <label for="customRange3"><img src="salmon.png" class="img-fluid img-responsive" style="height: 50px;"> - Salmón <span id="ctdsalmon">0</span></label>
+                                  <input type="range" class="custom-range move" min="1" max="20" step="1" oninput="salmon(this.value)" onchange="salmon(this.value)" id="paseloBrillo" value="0">
+                          </div>
+                    </div>             
+                    <br>
+                        <button id="crearBtn" class="btn btn-success btn-block move">Venter $<span id="precio">0</span></button>
+                        <button id="volverBtn" class="btn btn-danger btn-block move">Cancelar</button>
+              </div>                        
+            </div>
+            <div class="col-md-7"></div>
+            <div class="col-md-3">
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade text-white" id="modalError">
+        <div class="modal-dialog">
+          <div class="modal-content" style="background-color: rgba(26, 25, 25, 0.8)">
+          
+            <!-- Modal Header -->
+            <div class="modal-header" style="background-color: rgba(26, 25, 25, 0.8)">
+              <h4 class="modal-title"><font color="#FF4136">Error</font></h4>
+              <button type="button" class="close" data-dismiss="modal"><font color="#FF4136">×</font></button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body" style="background-color: rgba(26, 25, 25, 0.8)">
+              <center>
+                  <p id="mensajeError"></p>
+                  <center><button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Salir</button></center>
+              </center>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+<button id="modalerror" type="button" class="btn btn-primary" data-toggle="modal" style="display: none" data-target="#modalConfirmError">modal</button>
+<button id="modalok" type="button" class="btn btn-primary" data-toggle="modal" style="display: none" data-target="#modalConfirmOk">modal</button>
+      <!--Modal: modalConfirmDelete-->
+<div class="modal fade" id="modalConfirmError" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Tienes un error con el nombre de tu Pj.</p>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer flex-center">
+        <a type="button" class="btn  btn-danger2 " data-dismiss="modal">Ok</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalConfirmDelete-->
+
+
+    <script src="assets/js/character-clothes.js"></script>
+    <script src="assets/js/colores.js"></script>
+    <script>
+        var merluzox = 0;
+        var truchax = 0;
+        var salmonx = 0;
+        var costo = 0;
+        var precio = 0;
+        var precio1 = 0;
+        var precio2 = 0;
+        var precio3 = 0;
+
+        function showError(error){
+            document.getElementById("mensajeError").innerHTML = error;
+            $("#modalError").modal();
+        }
+
+        function updatePrecio(){
+          costo = precio1 + precio2 + precio3;
+          $("#precio").html(costo);
+        }
+
+        function merluzo(valu){
+          merluzox = parseInt(valu);
+          precio1 = 50 * merluzox;
+          $("#precio").html(costo);
+          $("#ctdmerluzo").html(merluzox);
+          updatePrecio()
+        }
+
+        
+        function salmon(valu){
+          salmonx = parseInt(valu);
+          precio2 = 50 * salmonx;
+          $("#precio").html(costo);
+          $("#ctdsalmon").html(salmonx);
+          updatePrecio()
+        }
+
+        function trucha(valu){
+          truchax = parseInt(valu);
+          precio3 = 50 * truchax;
+          $("#precio").html(costo);
+          $("#ctdtrucha").html(truchax);
+          updatePrecio()
+        }        
+
+        $('#crearBtn').click(() => {
+          if (merluzox > 0){            
+            mp.trigger("comproPesca","Merluzo",merluzox); 
+          }
+          if (truchax > 0){            
+            mp.trigger("comproPesca","Trucha",truchax); 
+          }
+          if (salmonx > 0){            
+            mp.trigger("comproPesca","Salmon",salmonx); 
+          }
+        });
+
+
+        $('#volverBtn').click(() => {
+            //console.log("volver");            
+            mp.trigger("SalirVentaPesca");
+        });
+
+        function salir(){
+          mp.trigger("SalirVentaPesca");
+        }
+
+
+        // Funciones CEF -> Cliente Rage
+
+        //$("#navigate").hide();
+         $("#modalok").click();
+
+        function gogo(){               
+          $("#wrap").show();
+           setTimeout(function(){$("#modalConfirmOk").remove(); },500);
+        }
+       
+        function logeo(cosa){
+          console.log(cosa);
+        }
+
+
+var active = 0;
+rePosition();
+
+$(document).keydown(function(e){
+    reCalculate(e);
+    rePosition();
+    return false;
+});
+
+
+function reCalculate(e){
+    var rows = $('#navigate .move').length;
+    var columns = $('#navigate .move:eq(0)').length;
+    //alert(columns + 'x' + rows);
+    
+    if (e.keyCode == 37) { //move left or wrap
+          $('input.active[type=range]').focus();
+          $('input.active[type=range]').slider("value",$('input.active[type=range]').val() + 1)
+          var val1 = parseInt($('input.active[type=range]').val());
+          var val2 = val1 - 1;
+          $('input.active[type=range]').val(val2);
+          $('input.active[type=range]').change();
+    }
+    if (e.keyCode == 38) { // move up
+        active = (active-columns>=0)?active-columns:active;
+    }
+    if (e.keyCode == 39) { // move right or wrap
+          $('input.active[type=range]').focus();
+          $('input.active[type=range]').slider("value",$('input.active[type=range]').val() + 1)
+          var val1 = parseInt($('input.active[type=range]').val());
+          var val2 = val1 + 1;
+          $('input.active[type=range]').val(val2);
+          $('input.active[type=range]').change();
+    }
+    if (e.keyCode == 40) { // move down
+        active = (active+columns<=(rows*columns)-1)?active+columns:active;
+    }
+    if (e.keyCode == 13) {
+        $('.active').click();
+    }
+    if (e.keyCode == 8) {
+        mp.trigger("salirCreador");
+    }
+}
+
+function rePosition(){
+    $('.active').removeClass('active');
+    $('#navigate .move').eq(active).addClass('active');
+    scrollInView();
+}
+
+function scrollInView(){
+    var target = $('#navigate .move:eq('+active+')');
+    if (target.length)
+    {
+        var top = target.offset().top;
+        
+        $('html,body').stop().animate({scrollTop: top-300}, 400);
+        return false;
+    }
+}
+
+    </script>
+    <!-- partial -->
+    <script src='../libs/bootstrap.min.js'></script>
+</body>
+
+</html>

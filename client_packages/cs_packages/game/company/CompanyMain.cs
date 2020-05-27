@@ -15,6 +15,8 @@ namespace DowntownRP_cs.game.company
         {
             Events.Add("GenerateSecretaryPedCompany", GenerateSecretaryPedCompany);
             Events.Add("CreateContractCompanyBrowser", CreateContractCompanyBrowser);
+            Events.Add("PayContractCompanyBrowser", PayContractCompanyBrowser);
+            Events.Add("CobrarContractCompany", CobrarContractCompany);
             Events.Add("DestroyContractCompanyBrowser", DestroyContractCompanyBrowser);
             Events.Add("SignContractCompanySS", SignContractCompanySS);
             Events.Add("CloseContractCompanySS", CloseContractCompanySS);
@@ -33,6 +35,20 @@ namespace DowntownRP_cs.game.company
         private void CreateContractCompanyBrowser(object[] args)
         {
             contractBrowser = new HtmlWindow("package://statics/company/contrato.html");
+            Cursor.Visible = true;
+        }
+
+        private void CobrarContractCompany(object[] args)
+        {
+            contractBrowser.Destroy();
+            Cursor.Visible = false;
+            Events.CallRemote("CobrarContractCompany");
+        }
+
+            private void PayContractCompanyBrowser(object[] args)
+        {
+            contractBrowser = new HtmlWindow("package://statics/company/pago.html");
+            //contractBrowser.ExecuteJs("pago(" + args[0] + ");");
             Cursor.Visible = true;
         }
 

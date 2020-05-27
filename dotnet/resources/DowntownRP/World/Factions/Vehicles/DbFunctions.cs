@@ -11,14 +11,14 @@ namespace DowntownRP.World.Factions.Vehicles
 {
     public class DbFunctions : Script
     {
-        public async static Task<int> CreateFactionVehicle(int faction, string model, int color1, int color2, string numberplate, double x, double y, double z, double rot)
+        public async static Task<int> CreateFactionVehicle(int faction, string model, int color1, int color2, string numberplate, double x, double y, double z, double rot, uint dim)
         {
             using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
             {
                 await connection.OpenAsync().ConfigureAwait(false);
                 MySqlCommand command = connection.CreateCommand();
 
-                command.CommandText = "INSERT INTO faction_vehicles (faction, vehicle, color1, color2, plate, x, y, z, rot) VALUES (@faction, @model, @color1, @color2, @numberplate, @x, @y, @z, @rot)";
+                command.CommandText = "INSERT INTO faction_vehicles (faction, vehicle, color1, color2, plate, x, y, z, rot, dimension) VALUES (@faction, @model, @color1, @color2, @numberplate, @x, @y, @z, @rot, @dim)";
                 command.Parameters.AddWithValue("@faction", faction);
                 command.Parameters.AddWithValue("@model", model);
                 command.Parameters.AddWithValue("@color1", color1);
@@ -28,13 +28,14 @@ namespace DowntownRP.World.Factions.Vehicles
                 command.Parameters.AddWithValue("@y", y);
                 command.Parameters.AddWithValue("@z", z);
                 command.Parameters.AddWithValue("@rot", rot);
+                command.Parameters.AddWithValue("@dim", dim);
 
                 await command.ExecuteNonQueryAsync().ConfigureAwait(false);
                 return (int)command.LastInsertedId;
             }
         }
 
-        public static async void SpawnFactionVehicles()
+        public static async void  SpawnFactionVehicles()
         {
             using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
             {
@@ -52,12 +53,14 @@ namespace DowntownRP.World.Factions.Vehicles
                         string vehicle = reader.GetString(reader.GetOrdinal("vehicle"));
                         int color1 = reader.GetInt32(reader.GetOrdinal("color1"));
                         int color2 = reader.GetInt32(reader.GetOrdinal("color1"));
+                        
                         string numberplate = reader.GetString(reader.GetOrdinal("plate"));
 
                         double x = reader.GetDouble(reader.GetOrdinal("x"));
                         double y = reader.GetDouble(reader.GetOrdinal("y"));
                         double z = reader.GetDouble(reader.GetOrdinal("z"));
                         double rot = reader.GetDouble(reader.GetOrdinal("rot"));
+                        uint dimension = (uint) reader.GetInt64(reader.GetOrdinal("dimension"));
 
                         Vector3 position = new Vector3(x, y, z);
 
@@ -65,7 +68,7 @@ namespace DowntownRP.World.Factions.Vehicles
                         Data.Entities.VehicleFaction vehdata;
                         NAPI.Task.Run(async () =>
                         {
-                            Vehicle veh = NAPI.Vehicle.CreateVehicle(model, position, (float)rot, color1, color2, numberplate);
+                            Vehicle veh = NAPI.Vehicle.CreateVehicle(model, position, (float)rot, color1, color2, numberplate, dimension: dimension);
 
                             vehdata = new Data.Entities.VehicleFaction()
                             {
@@ -184,6 +187,71 @@ namespace DowntownRP.World.Factions.Vehicles
             }
 
             return inventory;
+        }
+
+        public async static Task UpdateFVehPosAndDim(int id, Vector3 pos, uint dim)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE faction_vehicles SET (x, y, z, dim) VALUES (@x, @y, @z, @dim) WHERE id = @id";
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@x", pos.X);
+                command.Parameters.AddWithValue("@y", pos.Y);
+                command.Parameters.AddWithValue("@z", pos.Z);
+                command.Parameters.AddWithValue("@dim", dim);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+        //Data.Entities.VehicleFaction v = player.Vehicle.GetData<Data.Entities.VehicleFaction>("VEHICLE_FACTION_DATA");
+        public async static Task UpdateFVehPosAndDim(Vehicle v)
+        {
+            if (!v.HasData("VEHICLE_FACTION_DATA")) return;
+            Data.Entities.VehicleFaction vf = v.GetData<Data.Entities.VehicleFaction>("VEHICLE_FACTION_DATA");
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE faction_vehicles SET (x, y, z, dim) VALUES (@x, @y, @z, @dim) WHERE id = @id";
+                command.Parameters.AddWithValue("@id", vf.id);
+                command.Parameters.AddWithValue("@x", v.Position.X);
+                command.Parameters.AddWithValue("@y", v.Position.Y);
+                command.Parameters.AddWithValue("@z", v.Position.Z);
+                command.Parameters.AddWithValue("@dim", v.Dimension);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+
+        public async static Task UpdateFVehPriColor(int id, int color)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE faction_vehicles SET color1 = @c1 WHERE id = @id";
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@c1", color);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
+        }
+
+        public async static Task UpdateFVehSecColor(int id, int color)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Data.DatabaseHandler.connectionHandle))
+            {
+                await connection.OpenAsync().ConfigureAwait(false);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "UPDATE faction_vehicles SET color2 = @c1 WHERE id = @id";
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@c1", color);
+
+                await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+            }
         }
     }
 }

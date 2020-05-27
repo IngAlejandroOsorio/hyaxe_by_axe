@@ -12,8 +12,8 @@ namespace DowntownRP.Game.Vehicles
         public async Task Fuel_PlayerEnterVehicle(Player player, Vehicle vehicle, sbyte seatID)
         {
             if (!vehicle.HasSharedData("FUEL")) vehicle.SetSharedData("FUEL", 100);
-            if (vehicle.HasData("VEHICLE_COMPANY_DATA")) return;
-            if(seatID == -1) // Cambiar en la 1.1 a 0
+            /*if (vehicle.HasData("VEHICLE_COMPANY_DATA")) return;
+            if(seatID == 0) // Cambiar en la 1.1 a 0
             {
                 while (player.IsInVehicle)
                 {
@@ -31,7 +31,7 @@ namespace DowntownRP.Game.Vehicles
                     }
                     break;
                 }
-            }
+            }*/
         }
 
         [Command("checkfuel")]

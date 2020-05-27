@@ -32,6 +32,33 @@
             top: -31px;
             width: 0;
         }
+        input {
+            border: 1px solid #F8F8F8 !important;
+            background-color: #F8F8F8 !important;
+            border-radius: 25px !important;
+            text-align: left !important;
+            transition: all 0.30s ease-in-out !important;
+        }
+
+        input:focus {
+            outline: none !important;
+            border: 1px solid #38a9f0 !important;
+            -webkit-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75) !important;
+            -moz-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75) !important;
+            box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75) !important;
+        }
+
+        ::-webkit-input-placeholder {
+            color: grey !important;
+            letter-spacing: 1px !important;
+        }
+
+        #crearPersonaje, #CargandoLogin {
+            background: rgb(141, 2, 31) !important;
+            background: linear-gradient(140deg, rgba(141, 2, 31, 1) 0%, rgba(48, 48, 48, 1) 100%) !important;
+            color: #fff !important;
+            font-weight: bold !important;
+        }
     </style>
 
 </head>
@@ -53,7 +80,7 @@
                         <div class="form-group">
                             <input type="text" class="form-control" id="personajeNombre" aria-describedby="emailHelp" placeholder="Nombre del jugador (Nombre Apellidos)"><i class="iconinput fa fa-user"></i><br>
                         </div>
-                        <button type="submit" id="crearPersonaje" class="col-md-12 btn btn-primary">Crear cuenta</button>
+                        <button type="submit" id="crearPersonaje" class="col-md-12 btn btn-primary">Crear Personaje</button>
                         <button type="submit" id="CargandoLogin" class="col-md-12 btn btn-primary" disabled>Cargando</button>
 
                     </div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Downtown RP | Login</title>
+    <link rel='stylesheet' href='../axe/bootstrap.min.css'>
+    <link rel='stylesheet' href='../axe/axe.css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src='../libs/jquery-3.3.1.min.js'></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0);
+        }
+        
+        .as-full {
+            width: 100%;
+            height: 100%;
+        }
+        
+        
+        .iconinput {
+            position: absolute;
+            z-index: 1;
+			
+            width: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <center>
+	<div width="1000px">
+		<iframe src="http://v.hyaxe.com" width="1000px" height="600px" align="center" id="iframe"> </iframe>     
+		<button id="btnExit" class="btn btn-danger btn-block" width="1000px" >Cancelar</button>
+	</div>
+	</center>
+    <!-- partial -->
+    <script>
+		function setURL (url){
+			document.querySelector("#iframe").src = url;
+		}
+        $('#btnExit').click(() => {
+            mp.trigger('cerrarpcu');
+        });</script>
+    <script src='../libs/bootstrap.min.js'></script>
+</body>
+
+</html>

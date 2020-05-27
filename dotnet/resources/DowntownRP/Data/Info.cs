@@ -18,5 +18,7 @@ namespace DowntownRP.Data
         public static int housesSpawned = 0;
 
         public static Vector3 lastDeathAdviceLSMD = new Vector3(0, 0, 0);
+
+        public static int AiTaxiRaces = 0;
     }
 }
