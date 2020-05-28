@@ -8,6 +8,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc110c08', e
 
 }
 
+@font-face {
+  font-family: 'gta';
+  src: url('pricedown.ttf');
+}
+
 .btn-success {
     color: #000;
     background-color: #d6d6d6;

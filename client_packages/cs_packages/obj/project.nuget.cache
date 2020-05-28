@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h7E7jHcPwXfXELx5g/XJyooVzV/L4JaA9ehAHgjnAWHrbNO1lZFC6ejTR3gh37+vJtMBtaPoXDJ6PPyPDduf4Q==",
+  "dgSpecHash": "16MFUlAJFvaeJfRHQubz/hKmdfbJaTkLaR3PyuXYE4rGNcbT3mLo+FY7KOnY0v28B8DDDaPYIZBoH+MXtSSriA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages\\cs_packages\\DowntownRP-cs.csproj",
+  "projectFilePath": "C:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\client_packages\\cs_packages\\DowntownRP-cs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alejo\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
   ],

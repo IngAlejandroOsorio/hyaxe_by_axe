@@ -19,6 +19,7 @@
         .as-full {
             width: 100%;
             height: 100%;
+            overflow: hidden;
         }
         
         .form-control {
@@ -40,9 +41,7 @@
 
         body {
             height: 100%;
-            background-color: rgba(128, 128, 128, 0);
             width: 100%;
-            /*font-family: 'Oxygen' !important;*/
         }
 
         .main {
@@ -235,13 +234,12 @@
         <div class="row as-full d-flex justify-content-center">
             <div class="col-md-3" style="z-index: 1000">
                 
-                <div id="prelogin" class="card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 40%">
+                <div id="prelogin" class="card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 30%">
 
                         <div class="card-body text-white" >
                                 <font color="white" style="text-align: center;"><h1>Versión Beta</h1><small style="text-align: center !important;">Hyaxe Roleplay se encuentra actualmente en versión Alpha, por ende pueden haber existir errores o varias funciones no implementadas. ¡Ayudanos a mejorar dejando tu feedback en nuestro foro! v.hyaxe.com</small><br>
                             </font> 
-                        </div>
-                        <button type="submit" id="go" class="col-md-12 btn btn-primary">! Ingresar ¡</button>
+                        </div>                        
                   </div>
 
                   <div id="prelogin2" class="card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 10%">
@@ -252,12 +250,13 @@ Pueden encontrar más información en el siguiente enlace del foro, cualquier du
 https://v.hyaxe.com/foro/index.php?threads/postulaciones-a-banda-abiertas.23/
 ¡Pasen buen día!</small><br>
                             </font> 
-                        </div>
+                        </div>                        
                   </div>
+                  <button type="submit" id="go" class="btn btn-block btn-primary" style="margin-top: 10px">Ingresar</button>
 
 
 
-                <div id="login" class="main card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 40%">
+                <div id="login" class="main card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 30%">
                     <div class="card-body text-white" >
                         <div class="right">            
                             <div class="center">
@@ -272,14 +271,14 @@ https://v.hyaxe.com/foro/index.php?threads/postulaciones-a-banda-abiertas.23/
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
 
 
 
 
 
-                <div id="registro" class="main card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 40%">
+                <div id="registro" class="main card" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 30%">
                     <div class="card-body text-white center" style="text-align: center;">
                         <div class="alert alert-danger alert-dismissible fade show" id="errorMessage2"
                             role="alert">
@@ -358,7 +357,7 @@ https://v.hyaxe.com/foro/index.php?threads/postulaciones-a-banda-abiertas.23/
                   <span class="letters letters-5">La mejor calidad de rol</span>
                   <span class="letters letters-6">La mayor libertad</span>
                   <span class="letters letters-7">Para desarrollar tu personaje</span>
-                  <span class="letters letters-8">< Ingresa Ahora! Qué esperas ¡?</span>
+                  <span class="letters letters-8">Ingresa Ahora ¿Qué esperas?</span>
                 </h1>
             </center>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
@@ -370,7 +369,7 @@ https://v.hyaxe.com/foro/index.php?threads/postulaciones-a-banda-abiertas.23/
 
               
             <div class="col-md-3">
-                <div id="prelogin" class="card indexCard" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 40%; font-size: 12px">
+                <div id="prelogin" class="card indexCard" style="background-color: rgba(26, 25, 25, 0.8); margin-top: 30%; font-size: 12px;">
                 <div class="card-body text-white center" >
 
                     <h1>Actualizaciones</h1>             
@@ -430,6 +429,7 @@ https://v.hyaxe.com/foro/index.php?threads/postulaciones-a-banda-abiertas.23/
         $('#go').click(() => {
             $("#prelogin").fadeOut(500);
             $("#prelogin2").fadeOut(500);       
+            $("#go").fadeOut(500); 
             setTimeout(function(){ $("#login").fadeIn(500) }, 500);
         });
 

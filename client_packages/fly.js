@@ -75,13 +75,13 @@ mp.events.add('render', () => {
         }
 
         if (controls.isControlPressed(0, controlsIds.A)) {
-            if (fly.l < 8.0) { fly.l *= 1.025; }
+            if (fly.l < 8.0) { fly.l *= 1.015; }
 
             position.x += (-direction.y) * fly.l;
             position.y += direction.x * fly.l;
             updated = true;
         } else if (controls.isControlPressed(0, controlsIds.D)) {
-            if (fly.l < 8.0) { fly.l *= 1.05; }
+            if (fly.l < 8.0) { fly.l *= 1.01; }
 
             position.x -= (-direction.y) * fly.l;
             position.y -= direction.x * fly.l;
@@ -91,12 +91,12 @@ mp.events.add('render', () => {
         }
 
         if (controls.isControlPressed(0, controlsIds.Space)) {
-            if (fly.h < 8.0) { fly.h *= 1.025; }
+            if (fly.h < 8.0) { fly.h *= 1.015; }
 
             position.z += fly.h;
             updated = true;
         } else if (controls.isControlPressed(0, controlsIds.LCtrl)) {
-            if (fly.h < 8.0) { fly.h *= 1.05; }
+            if (fly.h < 8.0) { fly.h *= 1.01; }
 
             position.z -= fly.h;
             updated = true;
@@ -123,7 +123,7 @@ mp.events.add('flyModeStart', () => {
         player.setInvincible(fly.flying);
         player.freezePosition(fly.flying);
         player.setAlpha(fly.flying ? 0 : 255);
-
+ 
             /*const position = mp.players.local.position;
             position.z = mp.game.gameplay.getGroundZFor3dCoord(position.x, position.y, position.z, 0.0, false);
             mp.players.local.setCoordsNoOffset(position.x, position.y, position.z, false, false, false);*/

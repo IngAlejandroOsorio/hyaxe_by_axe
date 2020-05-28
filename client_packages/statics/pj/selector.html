@@ -110,12 +110,12 @@
 
         .plus {
             font-weight: 900;
-            color: #000000;
+            color: #b30000;
             font-size: 96px;
             position: relative;
             top: 50%;
             left: 48%;
-            opacity: 0.6;
+            opacity: 1;
             -webkit-transition: opacity 0.4s ease-in-out;
             -moz-transition: opacity 0.4s ease-in-out;
             -ms-transition: opacity 0.4s ease-in-out;
@@ -200,6 +200,64 @@
             background: linear-gradient(90deg, rgba(81,24,69,1) 0%, rgba(199,0,57,1) 100%);
         }
 
+        input:focus {
+            outline: none !important;
+            border: 1px solid #38a9f0 !important;
+            -webkit-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75) !important;
+            -moz-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75) !important;
+            box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75) !important;
+        }
+
+        ::-webkit-input-placeholder {
+            color: grey !important;
+            letter-spacing: 1px !important;
+        }
+
+        button {
+            background: rgb(141, 2, 31) !important;
+            background: linear-gradient(140deg, rgba(141, 2, 31, 1) 0%, rgba(48, 48, 48, 1) 100%) !important;
+            color: #fff !important;
+            font-weight: bold !important;
+        }
+
+        form input {
+            width: 70%;
+            height: 35px;
+            margin-bottom: 10px;
+            border: none;
+            border: 1px solid #F8F8F8;
+            background-color: #F8F8F8;
+            border-radius: 25px;
+            text-align: center;
+            transition: all 0.30s ease-in-out;
+        }
+
+        form input:focus {
+            outline: none;
+            border: 1px solid #38a9f0;
+            -webkit-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+            -moz-box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+            box-shadow: 0px 0px 5px rgba(56, 169, 240, 0.75);
+        }
+
+        ::-webkit-input-placeholder {
+            color: grey;
+            letter-spacing: 1px;
+        }
+
+        form input[type="submit"] {
+            background: rgb(141, 2, 31);
+            background: linear-gradient(140deg, rgba(141, 2, 31, 1) 0%, rgba(48, 48, 48, 1) 100%);
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .textoway {
+            color: #590000;
+            text-shadow: 1px 1px 0px #FFFFFF, 1px 1px 0px rgba(0,0,0,0.15);
+            font-size: 2.0rem;
+        }
+
     </style>
 
 </head>
@@ -211,26 +269,27 @@
             </div>
             <div class="col-md-6">
 
-                <h3 class="text-center username" id="pj"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                <h3 class="text-center username textoway" id="pj"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     Ninguno</h3>
 
                 <div class="directional_nav">
                     <div class="previous_btn" title="Anterior">
-                        <span class="plus"><</span>
+                        <span class="plus textoway"><</span>
                     </div>
                     <div class="new_btn">
-                        <span id="plus" class="plus">+</span>
+                        <span id="plus" class="plus textoway">+</span>
                     </div>
                     <div class="next_btn" title="Siguiente">
-                        <span class="plus">></span>
+                        <span class="plus textoway">></span>
                     </div>
                 </div>
 
-            </div>
+                
+            </div>            
             <div class="col-md-3 text-center">
                 <img src="../img/logo.png" class="d-block mx-auto img-fluid img-responsive logoimg" width="300"
                     height="50">
-                <h4><b>Selecciona un personaje</b></h4>
+                <h4 class="textoway"><b>Selecciona un personaje</b></h4>
             </div>
         </div>
         <div class="row stats-body stats-box" id="stats">
@@ -243,9 +302,9 @@
                         <div class="card-body text-white">
                             <h3 class="text-center" id="curPJ">Stats</h3>
                             <hr />
-                            <p id="PJInfo"></p>
+                            <p id="PJInfo"></p>                            
                         </div>
-                    </div>
+                    </div>                    
                 </div>
                 <div class="col-md-7 text-white col-centered">
                     <div class="card">
@@ -261,10 +320,10 @@
         </div>
         <div class="stats-backdrop"></div>
     </div>
+    <div class="flotable" style="position: relative;top: 10%;height: 40%;"><button type="submit" id="playbtn" class="btn btn-block btn-primary" style="position: absolute; top: 50%; left: 51%; transform: translate(-50%, -50%);width: 10%;">Jugar</button></div>
     <footer id="fixed-footer">
         <div class="container-fluid">
-            <button class="btn btn-primary" id="statsbtn"><i class="fa fa-user"></i></button>
-            <button class="btn btn-primary pull-right" id="playbtn"><i class="fa fa-play"></i> Jugar</button>
+            <button class="btn btn-primary" id="statsbtn"><i class="fa fa-user"></i></button>           
         </div>
     </footer>
 
@@ -274,6 +333,7 @@
         var characters = [];
         var selected_character = 0;
         plus.style.opacity = 0;
+        $("body").hide();
 
         function PJSlider() {}
 
@@ -333,15 +393,16 @@
 
 
         function updateList(data) {
-            console.log(JSON.stringify(data, null, 4));
+            //console.log(JSON.stringify(data, null, 4));
             characters = data;
+            $("body").fadeIn();
+            GetPJInfo(0);
+            changetext(characters[0].name);
             if (characters != null) {
                 if (characters.length > 0) {                    
                     setPj1(0, characters[0].name);
                     setPj2(1, characters[1].name);
-                    setPj3(2, characters[2].name);
-                    GetPJInfo(0);
-                    changetext(characters[0].name);
+                    setPj3(2, characters[2].name);                    
                 //for (var i = 0; i < characters.length; i++) {   var lastLogin = new Date(characters[i].lastLogin); }
 
                 }
@@ -357,17 +418,10 @@
 
 
 
-
-
-
-
-
-
-
         function GetPJInfo(i) { //tengo que hacer que cuando cambie seleccione esto con el idx del pj actual
             /*Obtenemos las stats del player (esto no se como lo harías xd)*/
             if (characters.length > 0) {
-                if (characters[i].name){
+                if (characters[i].name != ""){
                     mp.trigger("alphaJugador",false);
                     mp.trigger("ApplyCharacterFeatures", i);
 
@@ -394,24 +448,24 @@
                     /*$("#statusbar").html(`${pjstats.estgeneral}%`);
                     $('#statusbar').attr('aria-valuenow', pjstats.estgeneral).css('width', pjstats.estgeneral+"%");*/
 
-                    $("#PJInfo").html("Dinero $"+pjstats.dinero+"<br/>Banco $"+pjstats.banco+"<br/>Ultima Conexión "+fecha);   
+                    $("#PJInfo").html("Dinero $"+pjstats.dinero+"<br/>Banco $"+pjstats.banco+"<br/>Ultima Conexión "+fecha);                    
 
-                }else{
+            }else{
                     mp.trigger("alphaJugador",true);
                 }
-                
-            }
+           }
         }
 
         function changetext(name) {
             $("#pj").fadeOut(function () {
                 $(this).html(name);
                 if (name != "") {
+                    mp.trigger("alphaJugador",false);
                     $("#plus").removeClass('plus-active');
                     plus.style.opacity = 0;
                 } else {
                     plus.style.opacity = 0.6;
-
+                    mp.trigger("alphaJugador",true);
                     $("#plus").addClass('plus-active');
                     $(this).html('<i class="fa fa-user-circle-o" aria-hidden="true"></i> Ninguno');
                 }

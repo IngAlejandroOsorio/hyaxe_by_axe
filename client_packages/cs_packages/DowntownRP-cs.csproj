@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <Reference Include="rage-sharp">
-      <HintPath>..\..\..\..\RAGENEW\dotnet\rage-sharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\RAGEMP\dotnet\rage-sharp.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HYAXE\\hyaxe-v\\client_packages\\cs_packages\\DowntownRP-cs.csproj": {}
+    "C:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\client_packages\\cs_packages\\DowntownRP-cs.csproj": {}
   },
   "projects": {
-    "C:\\HYAXE\\hyaxe-v\\client_packages\\cs_packages\\DowntownRP-cs.csproj": {
+    "C:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\client_packages\\cs_packages\\DowntownRP-cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HYAXE\\hyaxe-v\\client_packages\\cs_packages\\DowntownRP-cs.csproj",
+        "projectUniqueName": "C:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\client_packages\\cs_packages\\DowntownRP-cs.csproj",
         "projectName": "DowntownRP-cs",
-        "projectPath": "C:\\HYAXE\\hyaxe-v\\client_packages\\cs_packages\\DowntownRP-cs.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\HYAXE\\hyaxe-v\\client_packages\\cs_packages\\obj\\",
+        "projectPath": "C:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\client_packages\\cs_packages\\DowntownRP-cs.csproj",
+        "packagesPath": "C:\\Users\\Alejo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\client_packages\\cs_packages\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Alejo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -62,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

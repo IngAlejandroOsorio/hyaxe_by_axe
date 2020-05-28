@@ -1150,10 +1150,11 @@ namespace DowntownRP.Game.Inventory
                         default:
                             return;
                     }
-                
+
+                int pagox = itemCheck.quantity;
                 itemCheck.quantity = itemCheck.quantity - ctd;
 
-                int price = ctd * 500;
+                int price = pagox * 500;
                     await Game.Money.MoneyModel.AddMoney(player, price);
                     Utilities.Notifications.SendNotificationOK(player, $"Has recibido {price} por tu venta de pescados.");
                 }

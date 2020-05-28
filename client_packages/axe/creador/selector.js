@@ -18,11 +18,13 @@ mp.events.add("UpdateCharactersList", (data) => {
   }
 
   characters = data;
-  chajson = JSON.stringify(data);
+  var character = JSON.parse(characters);  
   setTimeout(() => {
     mp.gui.cursor.visible = true;
-    browser.execute(`updateList(${data})`);    
+    browser.execute(`updateList(${data})`); 
+    browser.execute(`changetext('${character[0].name}')`);
   }, 500);
+  mp.events.callRemote("playerLoadSelector", character[0].name);
 
   mp.gui.cursor.visible = true;
 
@@ -34,10 +36,11 @@ mp.events.add("UpdateCharactersList", (data) => {
   start_camera.pointAtCoord(-2650.219482421875, 1872.9462890625, 161.7822265625);
   start_camera.setActive(true);
   mp.game.cam.renderScriptCams(true, false, 0, true, false);
-
-  var end_camera = mp.cameras.new("end", new mp.Vector3(-2639.25390625, 1870.9058837890625, 159.90162658691406), new mp.Vector3(0, 0, -30), 60.0);
-  end_camera.pointAtCoord(-2635.5693359375, 1873.7939453125, 159.1344757080078);
-  end_camera.setActiveWithInterp(start_camera.handle, 5000, 0, 0);
+//-2639.25390625, 1870.9058837890625, 159.90162658691406
+//-2635.5693359375, 1873.7939453125, 159.1344757080078
+  var end_camera = mp.cameras.new("end", new mp.Vector3(-2637.28662109375, 1872.0269775390625, 161.44723510742188), new mp.Vector3(0, 0, -30), 60.0);
+  end_camera.pointAtCoord(-2633.343505859375, 1875.396484375, 159.22457885742188);
+  end_camera.setActiveWithInterp(start_camera.handle, 4000, 0, 0);
 
 
 });
@@ -86,7 +89,12 @@ mp.events.add("animFinCreador", () => {
 });
 
 mp.events.add('alphaJugador', (modo) => {
-  mp.players.local.setAlpha(modo ? 0 : 255);
+  if (modo){
+    setTimeout(() => { mp.players.local.setAlpha(0)}, 500);
+  }else{
+    setTimeout(() => { mp.players.local.setAlpha(255)}, 500);
+  }
+  
 });
 
 
