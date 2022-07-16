@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "16MFUlAJFvaeJfRHQubz/hKmdfbJaTkLaR3PyuXYE4rGNcbT3mLo+FY7KOnY0v28B8DDDaPYIZBoH+MXtSSriA==",
+  "dgSpecHash": "qF27YHB09nhwRSpUy9Z1xyC+73H70Y1Sa52Tt/dM8H5Tf3zBQy75MkVJVtMqIh4CKRJAp2B5/Z+8pyvNcVCxRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\client_packages\\cs_packages\\DowntownRP-cs.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Alejo\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+    "C:\\Users\\Alejo\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Alejo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }

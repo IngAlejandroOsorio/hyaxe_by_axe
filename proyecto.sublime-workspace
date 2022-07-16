@@ -1,0 +1,1178 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin-",
+				"margin-bottom\tproperty"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"VARI",
+				"Variedades"
+			],
+			[
+				"top",
+				"topshirtTexture"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "client_packages/statics/login/dev.html",
+			"settings":
+			{
+				"buffer_size": 22148,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client_packages/axe/creador/selector.js",
+			"settings":
+			{
+				"buffer_size": 3550,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client_packages/statics/pj/selector.html",
+			"settings":
+			{
+				"buffer_size": 19059,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client_packages/axe/checkpoints.js",
+			"settings":
+			{
+				"buffer_size": 2660,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client_packages/fly.js",
+			"settings":
+			{
+				"buffer_size": 4125,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client_packages/axe/rentacar.js",
+			"settings":
+			{
+				"buffer_size": 1663,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client_packages/axe/npc/index.js",
+			"settings":
+			{
+				"buffer_size": 6312,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client_packages/axe/menu/index.js",
+			"settings":
+			{
+				"buffer_size": 5204,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client_packages/statics/pj/tiendaRopa.html",
+			"settings":
+			{
+				"buffer_size": 19828,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "packages/axe/personaje/index.js",
+			"settings":
+			{
+				"buffer_size": 18012,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 466 files for \"cashRegisters\"\n\nC:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\client_packages\\axe\\npc\\cajas.js:\n    5  };\n    6  \n    7: const cashRegisterState = {\n    8      none: 0,\n    9      normal: 1,\n   ..\n   47      }   \n   48  \n   49:     if (hitEntity.hasVariable(\"cashRegisterId\") && hitEntity.getVariable(\"cashRegisterState\") === cashRegisterState.normal && mp.players.local.cagada == 1) {\n   50          mp.events.callRemote(\n   51:             \"cashRegisters::shot\",\n   52              hitEntity.getVariable(\"cashRegisterId\"),\n   53              JSON.stringify(mp.game.invokeVector3(Natives.GET_SAFE_PICKUP_COORDS, targetPosition.x, targetPosition.y, targetPosition.z, 0.85, 1.35))\n   ..\n   56  });\n   57  \n   58: mp.events.addDataHandler(\"cashRegisterState\", (entity, value) => {\n   59:     if (entity.handle && value === cashRegisterState.shot) {\n   60          mp.game.graphics.setPtfxAssetNextCall(\"scr_ornate_heist\");\n   61          mp.game.graphics.startParticleFxNonLoopedOnEntity(\"scr_heist_ornate_banknotes\", entity.handle, 0.0, -0.25, 0.1, 0.0, 0.0, 0.0, 1.0, false, false, false);\n   ..\n   73              if (mp.game.controls.isControlJustPressed(0, 51)) {\n   74                  destroyRender();\n   75:                 mp.events.callRemote(\"cashRegisters::empty\");\n   76              }\n   77          });\n\nC:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\packages\\axe\\cajas\\index.js:\n    1  const { minShotReward, maxShotReward, minEmptyReward, maxEmptyReward, cashLife } = require(\"./json/config\");\n    2: const { cashRegisterState, CashRegister } = require(\"./classes/CashRegister\");\n    3  const { UUID, getRandomArbitrary, getRandomInt, distanceVector } = require(\"./util\");\n    4: const cashRegisterData = require(\"./json/cashRegisters\");\n    5: const cashRegisters = {};\n    6  \n    7  // Create cash registers\n    8  for (const item of cashRegisterData) {\n    9      const uuid = UUID();\n   10:     cashRegisters[uuid] = new CashRegister(uuid, item.position, item.heading);\n   11  }\n   12  \n   ..\n   34                 \n   35  \n   36:         if (colshape.cashRegisterId && cashRegisters[colshape.cashRegisterId] && cashRegisters[colshape.cashRegisterId].state === cashRegisterState.normal) {\n   37              player.setOwnVariable(\"nearCashRegisterId\", colshape.cashRegisterId);\n   38          }\n   ..\n   50  \n   51  \n   52: mp.events.add(\"cashRegisters::shot\", (player, cashRegisterId, dropPos) => {\n   53:     const cashRegister = cashRegisters[cashRegisterId];\n   54:     if (!cashRegister || cashRegister.state !== cashRegisterState.normal) {\n   55          return;\n   56      }\n   ..\n   61      }\n   62      //setTimeout(() => {hitEntity.model = mp.game.joaat('prop_till_01')},300000);\n   63:     cashRegister.setState(cashRegisterState.shot);\n   64  \n   65      // Create cash \"pickup\"\n\nC:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\packages\\axe\\cajas\\classes\\CashRegister.js:\n    2  const { xyInFrontOfPos } = require(\"../util\");\n    3  \n    4: const cashRegisterState = {\n    5      none: 0,\n    6      normal: 1,\n    .\n   14          this._rotation = new mp.Vector3(0.0, 0.0, heading);\n   15          this._heading = heading;\n   16:         this._state = cashRegisterState.normal;\n   17          this._timer = null;\n   18          this._label = null;\n   ..\n   25          this._prop.setVariables({\n   26              cashRegisterId: UUID,\n   27:             cashRegisterState: this._state\n   28          });\n   29  \n   ..\n   64          }\n   65  \n   66:         if (newState < cashRegisterState.normal || newState > cashRegisterState.emptied) {\n   67              throw new RangeError(\"Invalid state\");\n   68          }\n   ..\n   73  \n   74          if (this._prop && mp.objects.exists(this._prop)) {\n   75:             this._prop.setVariable(\"cashRegisterState\", newState);\n   76          }\n   77  \n   78:         if (newState == cashRegisterState.shot || newState == cashRegisterState.emptied) {\n   79              /*this._label = mp.labels.new(\"Robada\", this._position.add(new mp.Vector3(0.0, 0.0, 0.25)), {\n   80                  los: false,\n   ..\n   85  \n   86              this._timer = setTimeout(() => {\n   87:                 this.setState(cashRegisterState.normal);               \n   88              }, cashRegisterCooldown);\n   89          }\n   ..\n   92  \n   93  module.exports = {\n   94:     cashRegisterState,\n   95      CashRegister\n   96  };\n\n28 matches across 3 files\n\n\nSearching 466 files for \"playerWeaponShot\"\n\nC:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\client_packages\\axe\\npc\\cajas.js:\n   28  \n   29  // RAGEMP Events\n   30: mp.events.add(\"playerWeaponShot\", (targetPosition, targetEntity) => {\n   31      if (targetEntity) {\n   32          return;\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 4711,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "client_packages/axe/npc/cajas.js",
+			"settings":
+			{
+				"buffer_size": 2638,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client_packages/statics/pj/creator.html",
+			"settings":
+			{
+				"buffer_size": 41010,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client_packages/axe/creador/creador.js",
+			"settings":
+			{
+				"buffer_size": 34998,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Add Repository"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/axe",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/axe/creador",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/axe/npc",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/axe/trabajos",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/statics",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/statics/login",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/statics/pj",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/packages",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/packages/axe",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/packages/axe/cajas",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/packages/axe/caraudio",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/packages/axe/personaje",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/packages/axe/trabajos"
+	],
+	"file_history":
+	[
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/packages/axe/caraudio/index.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/packages/axe/trabajos/index.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/packages/axe/index.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/packages/axe/personaje/index.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/axe/npc/index.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/axe/trabajos/pesca.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/axe/trabajos/pesca/script.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/creador/creador.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/npc/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/caraudio/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/trabajos/pesca.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/statics/pj/menuPesca.html",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/fly.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/statics/pj/peluqueria.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/binds.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/axe/creador/selector.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/statics/pj/tiendaRopa.html",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/statics/pj/creator.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/axe/axe.css",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/axe/bootstrap.css",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/login/dev.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/selector3.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/selector.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/axe/personaje/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/cs_packages/login/Login.cs",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/cs_packages/character/CreatePjAlpha.cs",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/creador/selector.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/fly.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/axe/custom.sass",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/axe/bootstrap.min.css",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/creator.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/selector2.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/login/index.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/login/pj.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/login/registerrrr.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/tiendaRopa.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/ropa/selector.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/ropa/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/character/selector.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/cs_packages/Main.cs",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/checkpoints.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/cs_packages/game/company/CompanyMain.cs",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/character/selector.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/cs_packages/character/Selector.cs",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/menu/index.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/company/pago.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/ropa/ropa.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/axe/caraudio/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/rentacar.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/cs_packages/game/company/CompanyBrowser.cs",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/company/venta.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/menu/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/inventory/emojiItems.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/inventory/index.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/trabajos/pesca/index.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/trabajos/pesca/script.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/trabajos/pesca/pesca.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/menu/js/main.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/nitro/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/caraudio/menu.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/nitro/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/caraudio/main.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/CarMenu/main.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/caraudio/menu.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/velocimetro/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/character/animations/anim.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/hud/info.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/hud/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/caraudio/estilo.css",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/caraudio/colores.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/axe/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/caraudio/color.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/caraudio/carmenu.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/dotnet/resources/DowntownRP/Game/Commands/Admin.cs",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/velocimetro/html/velocimetro.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/axe/trabajos/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/menuPesca.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/trabajos/pesca/style.css",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/inventory/twelve.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/inventory/sixteen.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/keys.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/attachs.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/trabajos/minijuego.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/creador/creador_bkp.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/menu/css/main.css",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/menu/animaciones.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/axe/bindeos.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/player/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/menu/js/RadialMenu.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/menu/css/custom.sass",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/menu/service-worker.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/peluqueria.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/settings/info.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/settings/menu.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/settings/settings.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/menu/css/RadialMenu.css",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/menu/css/bootstrap.min.css",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/axe/cajas/classes/CashRegister.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/axe/cajas/json/config.json",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/npc/cajas.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/fingerpoint.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/aviso-robo.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/player/musicPlayer/index.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/axe/npc/aviso-robo.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/sound/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/boombox.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/dotnet/resources/DowntownRP/World/Factions/Vehicles/VehHandler.cs",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/faction/cajafuerte.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/cs_packages/game/factions/md/seguromedico.cs",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/axe/cajas/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/cashregisters/index.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/dotnet/resources/DowntownRP/World/Factions/Main.cs",
+		"/C/Users/Alejo/Documents/hyaxe-v/packages/axe/mysql.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/cs_packages/character/CharacterMenu.cs",
+		"/C/Users/Alejo/Documents/SmartHMovich/SmartHotelTV-Cartagena/index.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/assets/js/character-clothes.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/axe/data.js",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/phone/assets/css/style.css",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/phone/index.html",
+		"/C/Users/Alejo/Documents/hyaxe-v/client_packages/statics/pj/assets/js/colores.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/charcreator/data.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/ropa/ponsoboys.html",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/charcreator/index.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/ropa/binco.html",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/axe/creador/creador.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/index.js",
+		"/C/Users/Alejo/Documents/hyaxe_by_axe/client_packages/ropa/index.js"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 111.2,
+		"where_history":
+		[
+			"",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v",
+			"C:\\Users\\Alejo\\Documents\\hyaxe-v\\client_packages",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"playerWeaponShot",
+			"cashRegisters",
+			"require(\"fs\");",
+			"writeFile",
+			"SetProp",
+			"SelProp",
+			"sombrero",
+			"guardarCreador",
+			"crearBtn",
+			"sonido",
+			"sonidoEnRango",
+			"fly",
+			"sonidoEnRango",
+			"menuCef",
+			"sonidoEnRango",
+			"game.",
+			"MoveCameraPosition",
+			"\"MoveCameraPosition\"",
+			"VK_BACK",
+			"0x08",
+			"VIK_BACK",
+			"comproPesca",
+			"ingresar",
+			"freeze",
+			"PjFinishAlphaCreation",
+			"GetPlayerReadyToPlay",
+			"transicion",
+			"DestroyWindow",
+			"LoginUser",
+			"transicion",
+			"saveCamCoords",
+			"flyModeStart",
+			"freeze",
+			"start_camera.handle",
+			"LoginUser",
+			"getCurrentName",
+			"changetext",
+			"PJInfo",
+			"GetPJInfo",
+			"SelectCharacterToPlay",
+			"PlayWithCharacter",
+			"UpdateCharacterInfo",
+			"entrarRegister",
+			"RE_RegisterPlayerAccount",
+			"RegisterUser",
+			"passwordInput2",
+			"ShowErrorAlert",
+			"RegisterUser",
+			"entrarRegister",
+			"clickRegister",
+			"\"playerLoadSelector\"",
+			"\"SelectCharacterToPlay\"",
+			"entrarLogin",
+			"AuthLoginUser",
+			"video_pattern",
+			"\"playerLoadCharacter\"",
+			"LoadCharacterFace",
+			"\"LoadCharacterFace\"",
+			"creatorStart",
+			"\"CreatePjAlphaEvent\"",
+			"SendToCharacterCreator",
+			"\"UpdateCharactersList\"",
+			"ApplyCharacterFeatures",
+			"ShowCharacterIS",
+			"playerLoadCharacter",
+			"loadCharacter",
+			"UpdateCharactersList",
+			"\"OpenCharacterSelector\"",
+			"\"ShowLoginWindow\"",
+			"UpdateCharactersList",
+			"de servicio",
+			"Ya no estás de servicio",
+			"Ya no estas de servicio",
+			"Cobrar",
+			"deleteCheckpoint",
+			"guardarModsServ",
+			"mp.players.local.vehicle",
+			"wtf",
+			"S_CerrarTiendaData",
+			"tpdeTallerServer",
+			"tpaTallerServer",
+			"posjs",
+			"\"posjs\"",
+			"mp.players.local.vehicle",
+			"log",
+			"creadorCef",
+			"guardarCreador",
+			"crearBtn",
+			"cef",
+			"guardarCreador",
+			"rearBtn",
+			"VIK_I",
+			"rent",
+			"statics/company/contrato.html",
+			"file:///C:/Users/Alejo/Documents/hyaxe-v/client_packages/statics/company/contrato.html",
+			"CompanyCloseBrowserSS",
+			"empresa en venta",
+			"plus",
+			"statics/login/index.html",
+			"index.html",
+			"salmon.png",
+			"caña",
+			"nitro",
+			"toggleNitroEffect",
+			"mp.camCarModss",
+			"camera",
+			"defaultParsed",
+			"vehicles.atHandle",
+			"vehicle",
+			"handle",
+			"CargoBindeosClie",
+			"ventana",
+			"neonToggle",
+			" min=\"-1\"",
+			"dimension",
+			"rot",
+			"player.dimension",
+			"dimension",
+			"vector3",
+			"execute",
+			"llanta",
+			"max=\"3\"",
+			"laton",
+			"ColorCocheToServer2",
+			"blinda",
+			"carColorChangeToServer",
+			"selected_color_shape",
+			"zoom_button"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"mp.players.local.vehTaller",
+			"mp.cameras",
+			"camCarMods",
+			"modsDefaultParsed",
+			"ventana",
+			"max=\"31\"",
+			"misc",
+			"llantas",
+			"perla",
+			"laton",
+			"aleron",
+			"blinda",
+			"nitro",
+			"turbo",
+			"hidra",
+			"susp",
+			"frenos",
+			"trans",
+			"Control",
+			"#610000d0",
+			"",
+			"#a40202d0",
+			"class=\"custom-range move\"",
+			"move",
+			"class=\"custom-range selectable\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 11,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "client_packages/statics/login/dev.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4008,
+								3268
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2573.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client_packages/axe/creador/selector.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3550,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2806,
+								2806
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1297.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client_packages/statics/pj/selector.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19059,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7302,
+								7302
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4170.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client_packages/axe/checkpoints.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2660,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2305,
+								2360
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1404.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client_packages/fly.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4125,
+								4125
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1730.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client_packages/axe/rentacar.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1663,
+								1663
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client_packages/axe/npc/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6312,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1246,
+								1246
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 520.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client_packages/axe/menu/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1637,
+								1579
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 408.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "client_packages/statics/pj/tiendaRopa.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19828,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14338,
+								14338
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1554.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "packages/axe/personaje/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18012,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17614,
+								17614
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6085.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4711,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										144,
+										157
+									],
+									[
+										319,
+										332
+									],
+									[
+										343,
+										356
+									],
+									[
+										460,
+										473
+									],
+									[
+										755,
+										768
+									],
+									[
+										838,
+										851
+									],
+									[
+										1269,
+										1282
+									],
+									[
+										1532,
+										1545
+									],
+									[
+										1744,
+										1757
+									],
+									[
+										1774,
+										1787
+									],
+									[
+										1923,
+										1936
+									],
+									[
+										2098,
+										2111
+									],
+									[
+										2140,
+										2153
+									],
+									[
+										2189,
+										2202
+									],
+									[
+										2367,
+										2380
+									],
+									[
+										2460,
+										2473
+									],
+									[
+										2546,
+										2559
+									],
+									[
+										2751,
+										2764
+									],
+									[
+										2977,
+										2990
+									],
+									[
+										3183,
+										3196
+									],
+									[
+										3386,
+										3399
+									],
+									[
+										3505,
+										3518
+									],
+									[
+										3544,
+										3557
+									],
+									[
+										3771,
+										3784
+									],
+									[
+										3858,
+										3871
+									],
+									[
+										3896,
+										3909
+									],
+									[
+										4176,
+										4189
+									],
+									[
+										4331,
+										4344
+									],
+									[
+										4583,
+										4599
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								4586,
+								4586
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1456.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "client_packages/axe/npc/cajas.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2638,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								685,
+								669
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 244.8,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "client_packages/statics/pj/creator.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 41010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36790,
+								36790
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "client_packages/axe/creador/creador.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 34998,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23742,
+								23749
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8455.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "proyecto.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 288.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

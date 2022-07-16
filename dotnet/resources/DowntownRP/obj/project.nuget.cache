@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A7qIn7JJoo3T+Ono9QRNabYBV04Kx138rR0D1BzzLGDqaR7x2eLFfs/idFrTWBzMLlmDIXNnsSrUxDTvU0nqDw==",
+  "dgSpecHash": "kig6RW0oKA0JlHM8wh9TUUYaD0cJwI812Iw+VR6oTmikYOKY4iCg961IpOYAiqAkclf9eK7uCkJ5y1c4dm0NVA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alejo\\Documents\\hyaxe_by_axe\\dotnet\\resources\\DowntownRP\\DowntownRP.csproj",
   "expectedPackageFiles": [
@@ -109,7 +109,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.0.1\\system.xml.xmldocument.4.0.1.nupkg.sha512",
     "C:\\Users\\Alejo\\.nuget\\packages\\system.xml.xpath\\4.0.1\\system.xml.xpath.4.0.1.nupkg.sha512",
-    "C:\\Users\\Alejo\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.0.1\\system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
+    "C:\\Users\\Alejo\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.0.1\\system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
+    "C:\\Users\\Alejo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }
